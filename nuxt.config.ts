@@ -99,10 +99,6 @@ export default withDocus({
     },
     domains: []
   },
-  colorMode: {
-    preference: 'system',
-    fallback: 'light'
-  },
   publicRuntimeConfig: {
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN
