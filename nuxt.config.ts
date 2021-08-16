@@ -16,7 +16,6 @@ export default withDocus({
     meta: [
       { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt.js' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
       {
         hid: 'twitter:card',
         name: 'twitter:card',

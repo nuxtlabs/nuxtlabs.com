@@ -1,5 +1,5 @@
 export default {
-    title: 'NuxtJS',
+    title: 'NuxtLabs',
     description: '',
     url: 'https://nuxtlabs.com',
     template: 'page',
@@ -11,8 +11,7 @@ export default {
         title: false
       },
       colors: {
-        primary: '#00DC82',
-        logo: '#003543'
+        primary: '#FFFFFF', //white
       },
       shortcuts: {
         'd-logo': 'w-auto h-6 md:h-7 text-logo dark:text-white',
