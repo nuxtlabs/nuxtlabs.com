@@ -34,8 +34,7 @@ export default {
         'd-prose-code-filename-text': 'text-gray-600 dark:text-secondary-light',
         'd-tertiary-text': 'text-gray-400 dark:text-cloud-dark',
         'd-prose-ul-li-bullet': 'd-secondary-bg',
-        'd-scrollbar':
-          'scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-secondary-dark scrollbar-thumb-rounded',
+        'd-scrollbar': '',
           // Container
         'd-max-w-container': 'max-w-12xl',
         'd-px-container': 'px-4 sm:px-8',
