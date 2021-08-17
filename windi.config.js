@@ -5,12 +5,21 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      black: '#000',
+      white: '#fff',
+      blue: colors.lightBlue,
+      green: colors.emerald,
+      red: colors.red,
+      rose: colors.rose,
+      yellow: colors.amber,
+      gray: colors.gray
     },
     extend: {
       fontFamily: {
         sans: 'DM Sans',
         serif: 'DM Serif Display',
-        mono: 'DM Mono'
+        mono: 'DM Mono',
+        inter: 'Inter'
       },
       transitionProperty: {
         height: 'height',
