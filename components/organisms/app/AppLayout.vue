@@ -10,7 +10,7 @@
       </slot>
 
       <!-- TODO: possibility to unwrap div ? -->
-      <div class="flex-auto w-full min-w-0 lg:static lg:max-h-screen lg:overflow-visible mt-8 fix-wrapper">
+      <div class="flex-auto w-full min-w-0 lg:static lg:max-h-screen mt-8 fix-wrapper">
         <slot />
       </div>
     </div>
@@ -38,7 +38,7 @@ export default defineComponent({
 </script>
 <style lang="postcss">
 .fix-wrapper > div {
-  @apply h-full p-6 xl:p-8 2xl:p-16;
+  @apply h-full;
   padding-top: calc(var(--header-height));
 }
 </style>
