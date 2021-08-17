@@ -2,17 +2,17 @@
     --header-height: theme('spacing.14');
     --docs-scroll-margin-block: calc(var(--header-height) + 4rem);
     --blogpost-scroll-margin-block: calc(var(--header-height));
-  }
+}
 
-  @screen md {
-    :root {
-      --header-height: theme('spacing.18');
-      --blogpost-scroll-margin-block: calc(var(--header-height) - 0.5rem);
-    }
+@screen md {
+  :root {
+    --header-height: theme('spacing.20');
+    --blogpost-scroll-margin-block: calc(var(--header-height) - 0.5rem);
   }
+}
 
-  @screen xl {
-    :root {
-      --docs-scroll-margin-block: calc(var(--header-height) + 1rem);
-    }
+@screen xl {
+  :root {
+    --docs-scroll-margin-block: calc(var(--header-height) + 1rem);
   }
+}
