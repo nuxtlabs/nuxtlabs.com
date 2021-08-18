@@ -16,3 +16,15 @@
     --docs-scroll-margin-block: calc(var(--header-height) + 1rem);
   }
 }
+
+.title {
+  font-family: 'Inter';
+  font-weight: 900;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+.title-shadow {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: black;
+}
