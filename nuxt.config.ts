@@ -96,7 +96,15 @@ export default withDocus({
       migration: 536,
       blogImage: 864
     },
-    domains: []
+    domains: [
+      'pbs.twimg.com',
+      'source.unsplash.com',
+      'images.unsplash.com',
+      'github.com',
+      'unsplash.com',
+      'user-images.githubusercontent.com',
+      'abs.twimg.com',
+    ]
   },
   publicRuntimeConfig: {
     plausible: {
