@@ -3,7 +3,7 @@
     @click="navigateToUrl(post.to)"
     class="flex space-x-8 items-center cursor-pointer hover:bg-gray-900 rounded-r-lg pr-2"
   >
-    <NuxtImg :src="post.imgUrl" class="h-40 w-40 object-cover rounded-lg" :alt="title" />
+    <NuxtImg :src="post.imgUrl" class="h-40 w-40 object-cover rounded-lg" :alt="post.title" />
     <div class="flex-col space-y-2 overflow-x-hidden">
       <BlogAuthor :authors="post.authors" size="sm" />
 
@@ -31,7 +31,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup() {
+  setup(props) {
     function navigateToUrl(href) {
       const isInternal = href.startsWith('/') && href.startsWith('//') === false
       if (isInternal) {
