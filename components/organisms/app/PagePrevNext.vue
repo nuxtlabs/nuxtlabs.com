@@ -148,7 +148,7 @@ export default defineComponent({
     }
 }
 .nav-button:hover:after, .nav-button:hover:before {
-    -webkit-animation-duration:900ms;
+    -webkit-animation-duration:600ms;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards
