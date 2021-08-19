@@ -63,6 +63,14 @@
 
     <DocusContent :document="page" class="docus-content pb-8" />
 
+    <div class="flex space-x-4 justify-end">
+      <div class="font-font-semibold">Share on:</div>
+      <Link to="#" alt="Share on LinkedIn">LinkedIn</Link>
+      <Link to="#" alt="Share on twitter">Twitter</Link>
+    </div>
+
+    <hr class="mt-8 mb-4" />
+
     <PagePrevNext :prev="prev" :next="next" class="pb-8" />
   </div>
 </template>
@@ -78,13 +86,9 @@ export default defineComponent({
     }
   },
   setup(props) {
-
     const { $docus, i18n } = useContext()
     const prev = ref(null)
     const next = ref(null)
-
-    console.log('props.page', props.page)
-    console.log('$docus', $docus)
 
     useFetch(async ctx => {
       const draft = $docus.ui?.draft ? undefined : false
@@ -99,9 +103,6 @@ export default defineComponent({
 
       prev.value = prevLink
       next.value = nextLink
-
-      console.log('prevLink', prevLink.slug)
-      console.log('nextLink', nextLink.slug)
     })
 
     onMounted(() => {
