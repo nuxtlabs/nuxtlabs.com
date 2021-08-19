@@ -2,7 +2,7 @@ export default {
     title: 'NuxtLabs',
     description: '',
     url: 'https://nuxtlabs.com',
-    template: 'page',
+    template: 'docs',
     credits: true,
     socialImage: false,
     theme: {
@@ -19,8 +19,8 @@ export default {
         'd-body-text-color': 'text-white',
         'd-header': 'sticky w-full top-0 z-50 d-bg-header h-header',
         'd-primary-text-hover': 'text-gray-600 dark:text-cloud-lighter',
-        'd-prose-code-inline-bg': 'bg-gray-100 dark:bg-secondary-darkest',
-        'd-prose-code-bg': 'bg-gray-100 dark:bg-secondary-darkest',
+        'd-prose-code-inline-bg': 'bg-gray-800',
+        'd-prose-code-bg': 'bg-gray-900',
         'd-bg-header': 'bg-black',
         'd-page-mobile-toc-bg': 'd-body-bg bg-opacity-80 dark:bg-opacity-80',
         'd-aside-header-bg': 'bg-gray-50 dark:bg-secondary-darkest',
@@ -28,11 +28,19 @@ export default {
           'bg-primary-50 dark:bg-secondary-darkest',
         'd-active-aside-navigation-item-text':
           'text-primary-500 dark:text-primary-400 ',
-        'd-code-group-header-bg': 'bg-gray-200 dark:bg-secondary-darker',
-        'd-code-group-tab': 'bg-gray-300 dark:bg-secondary-dark',
-        'd-prose-code-filename-bg': 'bg-gray-100 dark:bg-secondary-darker',
-        'd-prose-code-filename-text': 'text-gray-600 dark:text-secondary-light',
+        'd-code-group-header-bg': 'bg-gray-800',
+        'd-code-group-tab': 'bg-gray-700',
+        'd-prose-code-filename-bg': 'bg-gray-700',
+        'd-prose-code-filename-text': 'text-gray-400',
+        'd-prose-thead-border':
+          'border-b border-gray-200 dark:border-secondary-dark',
+        'd-prose-tr-border':
+          'border-b border-gray-100 dark:border-secondary-darker',
+        'd-prose-blockquote-border':
+          'border-l-2 border-gray-200 dark:border-secondary-darker',
         'd-tertiary-text': 'text-gray-400 dark:text-cloud-dark',
+        'd-prose-hr-border':
+          'border-t border-gray-100 dark:border-secondary-darker',
         'd-prose-ul-li-bullet': 'd-secondary-bg',
         'd-scrollbar': '',
           // Container
