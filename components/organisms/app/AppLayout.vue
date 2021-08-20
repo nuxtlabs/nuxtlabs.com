@@ -1,5 +1,7 @@
 <template>
   <div class="w-full h-screen">
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
     <slot v-if="layout.header" name="header">
       <AppHeader :aside="layout.aside" />
     </slot>
@@ -40,5 +42,28 @@ export default defineComponent({
 .fix-wrapper > div {
   @apply h-full;
   padding-top: calc(var(--header-height));
+}
+body {
+  cursor: none;
+}
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.cursor--small {
+  width: 5px;
+  height: 5px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+  z-index: 11000;
+  background: var(--color-text);
+}
+.cursor--canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
 }
 </style>
