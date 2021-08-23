@@ -50,7 +50,6 @@ export default defineComponent({
       hover.value = true
 
       if (!document.getElementById(componentName).classList.contains(componentName)) {
-        console.log('first time')
         document.getElementById(componentName).classList.add(componentName)
       }
     }

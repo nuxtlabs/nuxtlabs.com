@@ -48,19 +48,19 @@
       animation: fadeInLogoOut 0.5s forwards;
     }
     > #gem1 {
-      animation: gem1AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 5s infinite alternate linear;
+      animation: gem1AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
     > #gem2 {
-      animation: gem2AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear;
+      animation: gem2AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
     > #gem3 {
-      animation: gem3AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatXY 5s infinite alternate linear;
+      animation: gem3AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
     > #gem4 {
-      animation: gem4AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 4s infinite alternate linear;
+      animation: gem4AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
     > #gem5 {
-      animation: gem5AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear;
+      animation: gem5AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
   }
 }
