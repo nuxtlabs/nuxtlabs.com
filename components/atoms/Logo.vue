@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img @click="home" :src="`/img/Logo.png`" />
+    <img @click="home" :src="`/img/Logo.png`" alt="NuxtLabs logo" />
     <div class="pt-1">
       Intuitive web development
     </div>
