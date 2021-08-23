@@ -3,10 +3,10 @@
     <li v-for="({ title, component }, index) in titles" :key="index">
       <div class="flex flex-row-reverse items-center">
         <Link :class="component" to="#">
-          <h1 class="text-display-1 title relative z-10 title-shadow">{{ title }}</h1>
+          <h1 class="lg:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-right">{{ title }}</h1>
         </Link>
-        <hr id="line" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-4 mr-12 opacity-0" />
-        <p class="text-2xl font-sans w-max-128 font-normal opacity-0">
+        <hr id="line" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
+        <p class="text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
           {{ subtitles[index] }}
         </p>
         <component :is="component" />
@@ -76,10 +76,10 @@ export default defineComponent({
     opacity: 1;
   }
   0% {
-    @apply w-4
+    @apply w-2 2xl:w-4
   }
   100% {
-    @apply w-16
+    @apply w-12 2xl:w-16
   }
 }
 </style>
