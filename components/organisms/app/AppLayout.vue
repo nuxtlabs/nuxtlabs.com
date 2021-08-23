@@ -43,9 +43,11 @@ export default defineComponent({
   @apply h-full;
   padding-top: calc(var(--header-height));
 }
-body {
+
+* {
   cursor: none;
 }
+
 .cursor {
   position: fixed;
   left: 0;
