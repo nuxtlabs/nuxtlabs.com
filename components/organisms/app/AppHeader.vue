@@ -10,7 +10,7 @@
           :to="localePath('/')"
         >
           <!-- "mr-4 lg:mr-0" to optically center logo text -->
-          <Logo :settings="settings" class="h-5 sm:h-6 md:h-7 mr-4 lg:mr-0" />
+          <Logo :settings="settings" class="h-5 w-4/5 sm:h-6 md:h-7 mr-4 lg:mr-0" />
         </Link>
 
         <div class="items-center hidden lg:flex lg:flex-1">
