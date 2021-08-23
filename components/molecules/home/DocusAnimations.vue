@@ -9,26 +9,39 @@
   &:hover {
     ~ div {
       > #shape {
-        animation: fadeInShape 3s forwards;
+        animation: fadeInShapeIn 1s forwards;
       }
       > #ghost {
-        animation: ghostAnim 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
+        animation: ghostAnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
       }
+    }
+  }
+  ~ div {
+    > #shape {
+      animation: fadeInShapeOut 1s forwards;
+    }
+    > #ghost {
+      animation: ghostAnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
   }
 }
 
-@keyframes fadeInShape {
+@keyframes fadeInShapeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-@-webkit-keyframes ghostAnim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply -bottom-20 z-20;
-  }
+@keyframes fadeInShapeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-webkit-keyframes ghostAnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply -bottom-20 z-20; }
+}
+@-webkit-keyframes ghostAnimOut {
+  0% { @apply -bottom-20 z-20; }
+  100% { @apply -bottom-full; }
 }
 
 </style>
