@@ -53,6 +53,7 @@ export default withDocus({
   buildModules: [
     '@nuxt/typescript-build'
   ],
+  plugins: ['~/plugins/cursor.js'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')
