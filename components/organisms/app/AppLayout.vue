@@ -4,7 +4,7 @@
       <AppHeader :aside="layout.aside" />
     </slot>
 
-    <div class="lg:flex h-full" :class="layout.fluid ? '' : 'd-container'">
+    <div class="flex h-full" :class="layout.fluid ? '' : 'd-container'">
       <slot v-if="layout.aside" name="aside">
         <AppAside :class="layout.asideClass" />
       </slot>
