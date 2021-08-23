@@ -1,27 +1,28 @@
 <template>
-  <ul class="flex-1 flex flex-col items-end justify-center space-y-4">
+  <ul class="flex-1 flex flex-col items-end justify-center space-y-4" id="container">
     <li v-for="({ title, component }, index) in titles" :key="index">
       <div class="flex flex-row-reverse items-center">
-        <Link :class="component" to="#" @mouseover.native="hover = true" @mouseleave.native="hover = !hover">
-          <h1 class="lg:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-right" :class="{ 'opacity-30': hover }" >{{ title }}</h1>
+        <Link :id="component" :class="component" to="#" @mouseover.native="mouseHover(component)" @mouseleave.native="hover = !hover">
+          <h1 :id="`${component}Title`" class="lg:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-right"
+            :class="hover ? 'opacity-30' : 'opacity-100'" >{{ title }}</h1>
         </Link>
         <hr id="line" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
         <p class="text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
           {{ subtitles[index] }}
         </p>
-        <component :is="component" />
+        <component :is="component" :id="component" />
       </div>
     </li>
   </ul>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
     subtitles: {
       type: Array,
-      default: [
+      default: () => [
         'Build your next Vue.js application with confidence using NuxtJS.',
         'Your website builder faster than light and made with Markdown.',
         'Vue plugins and technology stack powering any website revealed.'
@@ -30,15 +31,35 @@ export default defineComponent({
   },
   setup() {
     const hover = ref(false)
+    const componentHovered = ref(null)
     const titles = ref([
       { title: 'NuxtJS', component: 'NuxtAnimations' },
       { title: 'Docus', component: 'DocusAnimations' },
       { title: 'Vue Telescope', component: 'VueTelescopeAnimations' }
     ])
 
+    //to avoid animation start on load
+    onMounted(() => {
+      titles.value.forEach(title => {
+        document.getElementById(title.component).classList.remove(title.component)
+      });
+    })
+
+    //add css classes first time on hover
+    function mouseHover(componentName: string) {
+      hover.value = true
+
+      if (!document.getElementById(componentName).classList.contains(componentName)) {
+        console.log('first time')
+        document.getElementById(componentName).classList.add(componentName)
+      }
+    }
+
     return {
       titles,
-      hover
+      hover,
+      mouseHover,
+      componentHovered
     }
   }
 })
@@ -65,14 +86,13 @@ export default defineComponent({
 .DocusAnimations,
 .VueTelescopeAnimations {
   > h1 {
-    animation: colorTextOut 1s forwards;
-    opacity: 1;
+    animation: colorTextOut 0.5s forwards;
   }
   ~ p {
-    animation: subTitleOut 1s forwards
+    animation: subTitleOut 0.5s forwards
   }
   ~ hr {
-    animation: lineOut 1s forwards
+    animation: lineOut 0.5s forwards
   }
 }
 
