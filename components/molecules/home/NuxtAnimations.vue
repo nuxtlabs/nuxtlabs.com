@@ -21,78 +21,102 @@
   &:hover {
     ~ div {
       > #nuxtLogo {
-        animation: fadeInLogo 3s forwards;
+        animation: fadeInLogoIn 1s forwards;
       }
       > #nuxtGradient {
         @apply bottom-0
       }
       > #gem1 {
-        animation: gem1Anim 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 5s infinite alternate linear;
+        animation: gem1AnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 5s infinite alternate linear;
       }
       > #gem2 {
-        animation: gem2Anim 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear;
+        animation: gem2AnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear;
       }
       > #gem3 {
-        animation: gem3Anim 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatXY 5s infinite alternate linear;
+        animation: gem3AnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatXY 5s infinite alternate linear;
       }
       > #gem4 {
-        animation: gem4Anim 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 4s infinite alternate linear;
+        animation: gem4AnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 4s infinite alternate linear;
       }
       > #gem5 {
-        animation: gem5Anim 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear;
+        animation: gem5AnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear;
       }
+    }
+  }
+  ~ div {
+    > #nuxtLogo {
+      animation: fadeInLogoOut 1s forwards;
+    }
+    > #gem1 {
+      animation: gem1AnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 5s infinite alternate linear;
+    }
+    > #gem2 {
+      animation: gem2AnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear;
+    }
+    > #gem3 {
+      animation: gem3AnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatXY 5s infinite alternate linear;
+    }
+    > #gem4 {
+      animation: gem4AnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 4s infinite alternate linear;
+    }
+    > #gem5 {
+      animation: gem5AnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear;
     }
   }
 }
 
-@keyframes fadeInLogo {
+@keyframes fadeInLogoIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
-@-webkit-keyframes gem1Anim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply bottom-1/4;
-  }
+@keyframes fadeInLogoOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
-@-webkit-keyframes gem2Anim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply bottom-1/3 z-20;
-  }
+@-webkit-keyframes gem1AnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply bottom-1/4; }
+}
+@-webkit-keyframes gem1AnimOut {
+  0% { @apply bottom-1/4; }
+  100% { @apply -bottom-full; }
 }
 
-@-webkit-keyframes gem3Anim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply bottom-1/12;
-  }
+@-webkit-keyframes gem2AnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply bottom-1/3 z-20; }
+}
+@-webkit-keyframes gem2AnimOut {
+  0% { @apply bottom-1/3 z-20; }
+  100% { @apply -bottom-full; }
 }
 
-@-webkit-keyframes gem4Anim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply bottom-1/3 z-20;
-  }
+@-webkit-keyframes gem3AnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply bottom-1/12; }
+}
+@-webkit-keyframes gem3AnimOut {
+  0% { @apply bottom-1/12; }
+  100% { @apply -bottom-full; }
 }
 
-@-webkit-keyframes gem5Anim {
-  0% {
-    @apply -bottom-full;
-  }
-  100% {
-    @apply bottom-10;
-  }
+@-webkit-keyframes gem4AnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply bottom-1/3 z-20; }
+}
+@-webkit-keyframes gem4AnimOut {
+  0% { @apply bottom-1/3 z-20; }
+  100% { @apply -bottom-full; }
+}
+
+@-webkit-keyframes gem5AnimIn {
+  0% { @apply -bottom-full; }
+  100% { @apply bottom-10; }
+}
+@-webkit-keyframes gem5AnimOut {
+  0% { @apply bottom-10; }
+  100% { @apply -bottom-full; }
 }
 
 @-webkit-keyframes gemFloatY {
