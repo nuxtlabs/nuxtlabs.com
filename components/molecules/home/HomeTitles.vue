@@ -65,14 +65,14 @@ export default defineComponent({
 .DocusAnimations,
 .VueTelescopeAnimations {
   > h1 {
-    animation: colorTextOut 1s forwards;
+    animation: colorTextOut 0.5s forwards;
     opacity: 1;
   }
   ~ p {
-    animation: subTitleOut 1s forwards
+    animation: subTitleOut 0.5s forwards
   }
   ~ hr {
-    animation: lineOut 1s forwards
+    animation: lineOut 0.5s forwards
   }
 }
 

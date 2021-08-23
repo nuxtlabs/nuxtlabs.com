@@ -24,13 +24,13 @@
   }
   ~ div {
     > #vue-telescope {
-      animation: vueTelescopeAnimOut 600ms forwards cubic-bezier(0.83, 0, 0.17, 1);
+      animation: vueTelescopeAnimOut 300ms forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
     .barLeft, .barMid, .barBottom {
       opacity: 1;
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-      animation: dashBarOut 600ms forwards cubic-bezier(0.83, 0, 0.17, 1);
+      animation: dashBarOut 300ms forwards cubic-bezier(0.83, 0, 0.17, 1);
       z-index: 2;
     }
   }
