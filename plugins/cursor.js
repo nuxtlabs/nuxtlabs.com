@@ -47,7 +47,7 @@ export default () => {
 
             const circle = new paper.Path.Circle({
                 center: [0, 0],
-                radius: 3,
+                radius: 2,
                 fillColor: 'white'
             });
 
@@ -74,13 +74,13 @@ export default () => {
                 lastX = lerp(lastX, clientX, 0.2);
                 lastY = lerp(lastY, clientY, 0.2);
                 group.position = new paper.Point(lastX, lastY);
-                if (isHovered && counter < 4) {
-                    polygon.strokeWidth = 3;
-                    circle.scale(1.1);
+                if (isHovered && counter < 20) {
+                    polygon.strokeWidth = 2;
+                    circle.scale(1.03);
                     counter += 1;
                 } else if (!isHovered && counter > 1) {
                     polygon.strokeWidth = 1;
-                    circle.scale(0.9);
+                    circle.scale(0.97);
                     counter -= 1;
                 }
             }
