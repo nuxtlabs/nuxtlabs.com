@@ -51,7 +51,8 @@ export default withDocus({
     transpile: ['ohmyfetch']
   },
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    'vue-plausible'
   ],
   plugins: ['~/plugins/cursor.js'],
   windicss: {
