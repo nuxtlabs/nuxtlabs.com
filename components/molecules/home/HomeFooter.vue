@@ -2,14 +2,7 @@
   <div class="w-full flex flex-col space-y-1">
     <div class="relative z-10">{{ location }}</div>
     <div class="font-bold relative z-10">hello@nuxtlabs.com</div>
-    <ul class="flex space-x-2">
-      <li v-for="link in links" :key="link.name">
-        <Link :to="link.href" :alt="link.name" blank class="relative z-10 gradient">{{ link.name }}</Link>
-        <div class="absolute opacity-60 w-128 h-128 z-0 pointer-events-none -bottom-full -left-full">
-          <img :src="`/img/socialGradients/${link.gradientImg}.svg`" class="relative" />
-        </div>
-      </li>
-    </ul>
+    <SocialLinks class="hidden lg:flex text-base space-x-2" />
   </div>
 </template>
 <script lang="ts">
@@ -20,34 +13,6 @@ export default defineComponent({
     location: {
       type: String,
       default: 'Bordeaux, France'
-    }
-  },
-  setup() {
-    const links = [
-      {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
-        gradientImg: 'linkedin'
-      },
-      {
-        name: 'Github',
-        href: 'https://github.com/nuxt',
-        gradientImg: 'github'
-      },
-      {
-        name: 'Twitter',
-        href: 'https://twitter.com/nuxt_js',
-        gradientImg: 'twitter'
-      },
-      {
-        name: 'Discord',
-        href: 'https://discord.com/invite/ps2h6QT',
-        gradientImg: 'discord'
-      }
-    ]
-
-    return {
-      links
     }
   }
 })
