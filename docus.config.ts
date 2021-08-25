@@ -23,7 +23,7 @@ export default {
         'd-prose-code-bg': 'bg-gray-900',
         'd-bg-header': 'bg-black',
         'd-page-mobile-toc-bg': 'd-body-bg bg-opacity-80 dark:bg-opacity-80',
-        'd-aside-header-bg': 'bg-gray-50 dark:bg-secondary-darkest',
+        'd-aside-header-bg': 'bg-dark',
         'd-active-aside-navigation-item-bg':
           'bg-primary-50 dark:bg-secondary-darkest',
         'd-active-aside-navigation-item-text':
