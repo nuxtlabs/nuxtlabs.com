@@ -1,15 +1,24 @@
 <template>
-  <ul class="flex-1 flex flex-col items-end justify-center space-y-4" id="container">
+  <ul class="flex-1 flex flex-col items-center lg:items-end mb-32 md:space-y-8 lg:space-y-4"
+    :class="!clicked ? 'justify-center' : 'justify-start'"
+    id="container">
     <li v-for="({ title, component }, index) in titles" :key="index">
-      <div class="flex flex-row-reverse items-center">
-        <Link :id="component" :class="component" to="#" @mouseover.native="mouseHover(component)" @mouseleave.native="hover = !hover">
-          <h1 :id="`${component}Title`" class="lg:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-right"
-            :class="hover ? 'opacity-30' : 'opacity-100'" >{{ title }}</h1>
+      <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center" :class="clicked && componentClicked !== component ? 'hidden h-0' : 'block'">
+        <Link :id="component" to="#"
+        :class="component"
+        @click.native="titleClicked(component)">
+          <h1 :id="`${component}Title`" @mouseover="mouseHover(component)" @mouseleave="mouseLeave(component)" class="text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right"
+            :class="hover ? 'opacity-30' : 'opacity-100'">
+            {{ title }}
+          </h1>
         </Link>
         <hr id="line" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
-        <p class="text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
+        <p class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
           {{ subtitles[index] }}
         </p>
+        <Link to="#" class="hidden" :class="{ 'block z-20 text-white': componentClicked === component }">
+          Discover
+        </Link>
         <component :is="component" :id="component" />
       </div>
     </li>
@@ -31,7 +40,8 @@ export default defineComponent({
   },
   setup() {
     const hover = ref(false)
-    const componentHovered = ref(null)
+    const clicked = ref(false)
+    const componentClicked = ref(null)
     const titles = ref([
       { title: 'NuxtJS', component: 'NuxtAnimations' },
       { title: 'Docus', component: 'DocusAnimations' },
@@ -47,38 +57,67 @@ export default defineComponent({
 
     //add css classes first time on hover
     function mouseHover(componentName: string) {
-      hover.value = true
+        hover.value = true
 
-      if (!document.getElementById(componentName).classList.contains(componentName)) {
-        document.getElementById(componentName).classList.add(componentName)
-      }
+        if (!document.getElementById(componentName).classList.contains(componentName)) {
+          document.getElementById(componentName).classList.add(componentName)
+        }
+    }
+
+    function mouseLeave() {
+      clicked.value = false
+      hover.value = false
+    }
+
+    function titleClicked(componentName: string) {
+      /*console.log('title clicked')
+      clicked.value = true
+      componentClicked.value = componentName
+
+      titles.value.forEach(title => {
+        if (title.component !== componentName) {
+          document.getElementById(title.component).classList.remove(title.component)
+        }
+      });*/
+    }
+
+    function back(componentName) {
+      clicked.value = false
+      hover.value = false
+      componentClicked.value = null
     }
 
     return {
       titles,
       hover,
       mouseHover,
-      componentHovered
+      mouseLeave,
+      componentClicked,
+      titleClicked,
+      clicked,
+      back
     }
   }
 })
 </script>
 <style lang="postcss" scoped>
+
+
 .NuxtAnimations,
 .DocusAnimations,
 .VueTelescopeAnimations {
-  &:hover {
-    > h1 {
-      animation: colorTextIn 1s forwards;
-      opacity: 1;
+    &:hover {
+      > h1 {
+        animation: colorTextIn 1s forwards;
+        opacity: 1;
+      }
+      ~ p {
+        animation: subTitleIn 1s forwards
+      }
+      ~ hr {
+        animation: lineIn 1s forwards
+      }
     }
-    ~ p {
-      animation: subTitleIn 1s forwards
-    }
-    ~ hr {
-      animation: lineIn 1s forwards
-    }
-  }
 }
 
 .NuxtAnimations,
