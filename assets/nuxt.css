@@ -28,3 +28,13 @@
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
 }
+
+.slide-from-bottom-to-top-enter-active,
+.slide-from-bottom-to-top-leave-active {
+  transition: transform 200ms ease-out, opacity 200ms linear;
+}
+.slide-from-bottom-to-top-enter,
+.slide-from-bottom-to-top-leave-to {
+  opacity: 0;
+  transform: translate3d(0, 0px, 0px, -50px);
+}
