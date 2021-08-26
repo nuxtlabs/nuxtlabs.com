@@ -21,7 +21,7 @@ export default defineComponent({
       required: false,
       default: () => [
         {
-          title: 'Home',
+          title: 'Solutions',
           href: '/'
         },
         {
