@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Ghost class="absolute -left-full bottom-30 lg:-bottom-full lg:right-32 transform h-60 w-60 lg:h-72 lg:w-72" />
+    <Ghost class="absolute -left-full bottom-30 lg:-bottom-full lg:right-32 transform h-40 w-40 lg:h-72 lg:w-72" />
     <img id="shape" :src="`img/docus/shape.svg`" class="absolute w-60 lg:w-80 right-0 top-0 lg:bottom-38 lg:left-0 opacity-0 transform" />
   </div>
 </template>

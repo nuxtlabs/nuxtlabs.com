@@ -1,9 +1,6 @@
 <template>
   <div>
     <img @click="home" :src="`${logoPath}`" alt="NuxtLabs logo" />
-    <div class="hidden lg:block pt-1">
-      Intuitive web development
-    </div>
   </div>
 </template>
 <script lang="ts">

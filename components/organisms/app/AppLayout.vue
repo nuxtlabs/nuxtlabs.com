@@ -44,10 +44,6 @@ export default defineComponent({
   padding-top: calc(var(--header-height));
 }
 
-* {
-  cursor: none;
-}
-
 .cursor {
   position: fixed;
   left: 0;

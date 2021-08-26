@@ -1,14 +1,13 @@
 <template>
-  <ul class="flex-1 flex flex-col items-center lg:items-end mb-32 md:space-y-8 lg:space-y-4"
+  <ul class="flex-1 flex flex-col items-center lg:items-end mb-32 md:space-y-8 lg:space-y-4 z-50"
     :class="!clicked ? 'justify-center' : 'justify-start'"
     id="container">
-    <li v-for="({ title, component }, index) in titles" :key="index">
-      <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center" :class="clicked && componentClicked !== component ? 'hidden h-0' : 'block'">
+    <li v-for="({ title, component }, index) in titles" :key="index" :class="clicked && component !== componentClicked ? 'hidden h-0' : 'block'" >
+      <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center">
         <Link :id="component" to="#"
-        :class="component"
-        @click.native="titleClicked(component)">
-          <h1 :id="`${component}Title`" @mouseover="mouseHover(component)" @mouseleave="mouseLeave(component)" class="text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right"
-            :class="hover ? 'opacity-30' : 'opacity-100'">
+        :class="component">
+          <h1 :id="`${component}Title`" @click="titleClicked(component)" @mouseleave="mouseLeave(component)" @mouseover="mouseHover(component)" class="text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right"
+            :class="[hover ? 'opacity-30' : 'opacity-100', clicked && component !== componentClicked ? 'hidden h-0' : 'block']">
             {{ title }}
           </h1>
         </Link>
@@ -42,6 +41,7 @@ export default defineComponent({
     const hover = ref(false)
     const clicked = ref(false)
     const componentClicked = ref(null)
+    const leave = ref(false)
     const titles = ref([
       { title: 'NuxtJS', component: 'NuxtAnimations' },
       { title: 'Docus', component: 'DocusAnimations' },
@@ -57,20 +57,22 @@ export default defineComponent({
 
     //add css classes first time on hover
     function mouseHover(componentName: string) {
+      if (!document.getElementById(componentName).classList.contains(componentName)) {
+        document.getElementById(componentName).classList.add(componentName)
+      }
+      if (window.innerWidth > 1024) {
         hover.value = true
-
-        if (!document.getElementById(componentName).classList.contains(componentName)) {
-          document.getElementById(componentName).classList.add(componentName)
-        }
+      }
     }
 
-    function mouseLeave() {
+    function mouseLeave(componentName) {
+      leave.value = true
       clicked.value = false
       hover.value = false
     }
 
     function titleClicked(componentName: string) {
-      /*console.log('title clicked')
+      hover.value = true
       clicked.value = true
       componentClicked.value = componentName
 
@@ -78,13 +80,7 @@ export default defineComponent({
         if (title.component !== componentName) {
           document.getElementById(title.component).classList.remove(title.component)
         }
-      });*/
-    }
-
-    function back(componentName) {
-      clicked.value = false
-      hover.value = false
-      componentClicked.value = null
+      });
     }
 
     return {
@@ -95,13 +91,17 @@ export default defineComponent({
       componentClicked,
       titleClicked,
       clicked,
-      back
+      leave
     }
   }
 })
 </script>
 <style lang="postcss" scoped>
 
+.invisible {
+  pointer-events: none;
+  z-index: -1;
+}
 
 .NuxtAnimations,
 .DocusAnimations,
