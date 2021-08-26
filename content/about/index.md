@@ -1,22 +1,12 @@
 ---
-template: blog-post
-title: "Announcing Nuxt's $2M seed round"
-description: 'Three years ago, my brother Sébastien and I were open sourcing our code to build Vue.js application server side rendered easily. Today, we are incredibly excited to announce that Nuxt has raised $2M in seed funding.'
-imgUrl: blog/seed-round/main.jpeg
-imgCredits: Raimond Klavins
-imgCreditsUrl: https://unsplash.com/@raimondklavins
-date: 2020-05-01
-authors:
-  - name: Alexandre Chopin
-    avatarUrl: https://pbs.twimg.com/profile_images/1255027239458091009/qMp_q8vy_400x400.jpg
-    link: https://twitter.com/IamNuxt
-tags:
-  - Nuxt
-  - Company
-category: Anouncement
+template: Page
+title: "About us"
+description: 'Discover the story behind NuxtLabs and our vision for the modern web development.'
 ---
 
-Three years ago, my brother Sébastien and I were [open sourcing our code](https://github.com/nuxt/nuxt.js) to build Vue.js applications with server side rendering. Today, we are incredibly excited to announce that Nuxt has raised \$2M in seed funding led by [firstminute capital](https://www.firstminute.capital/) with participation from [Kima Ventures](https://www.kimaventures.com), [Eduardo Ronzano](https://www.linkedin.com/in/eduardoronzano/) (founder & CEO, KelDoc), [Thibaud Elzière](https://www.linkedin.com/in/thibaud-elziere-a787913/) (founder & CEO, Fotolia), [Nicolas Steegmann](https://www.linkedin.com/in/steegmann/) (founder of Stupeflix), and [Renaud Visage](https://www.linkedin.com/in/renaudvisage/) (Co-founder & CTO, Eventbrite).
+# Story 
+
+October 26th 2016, Sébastien and Alexandre Chopin were [open sourcing their source code](https://github.com/nuxt/nuxt.js) to build Vue.js applications with server side rendering. Today, we are incredibly excited to announce that Nuxt has raised \$2M in seed funding led by [firstminute capital](https://www.firstminute.capital/) with participation from [Kima Ventures](https://www.kimaventures.com), [Eduardo Ronzano](https://www.linkedin.com/in/eduardoronzano/) (founder & CEO, KelDoc), [Thibaud Elzière](https://www.linkedin.com/in/thibaud-elziere-a787913/) (founder & CEO, Fotolia), [Nicolas Steegmann](https://www.linkedin.com/in/steegmann/) (founder of Stupeflix), and [Renaud Visage](https://www.linkedin.com/in/renaudvisage/) (Co-founder & CTO, Eventbrite).
 
 ## From a boilerplate to a web framework.
 

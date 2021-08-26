@@ -25,10 +25,6 @@ export default defineComponent({
           href: '/'
         },
         {
-          title: 'Blog',
-          href: '/blog'
-        },
-        {
           title: 'About us',
           href: '/about'
         }
@@ -37,6 +33,7 @@ export default defineComponent({
   }
 })
 </script>
+
 <style scoped lang="postcss">
 .nuxt-link-active {
   //text-decoration: underline;

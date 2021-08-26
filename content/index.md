@@ -1,11 +1,11 @@
 ---
-template: page
+template: Landing
+title: 'Intuitive Web Development'
+description: ''
 navigation: false
 layout.asideClass: 'block lg:hidden'
 layout.aside: true
 layout.fluid: true
-title: ''
-description: ''
 head.titleTemplate: null
 ---
 

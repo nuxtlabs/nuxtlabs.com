@@ -18,8 +18,6 @@
     </div>
 
     <slot v-if="layout.footer" name="footer"><AppFooter /></slot>
-
-    <PoweredByDocus v-if="$docus.settings.credits" />
   </div>
 </template>
 

@@ -1,10 +1,11 @@
 <template>
   <div class="w-full flex flex-col space-y-1">
     <div class="relative z-10">{{ location }}</div>
-    <div class="font-bold relative z-10">hello@nuxtlabs.com</div>
+    <div class="font-bold relative z-10">{{ email }}</div>
     <SocialLinks class="hidden lg:flex text-base space-x-2" />
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
@@ -13,10 +14,15 @@ export default defineComponent({
     location: {
       type: String,
       default: 'Bordeaux, France'
+    },
+    email: {
+      type: String,
+      default: 'hello@nuxtlabs.com'
     }
   }
 })
 </script>
+
 <style lang="postcss">
 .gradient {
   ~ div {
