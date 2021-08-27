@@ -6,5 +6,5 @@ description: ''
 
 ::solutions-list
 ::
-::home-footer
+::solutions-footer
 ::

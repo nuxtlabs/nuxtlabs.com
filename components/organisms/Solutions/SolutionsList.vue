@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex-1 flex flex-col items-center lg:items-end md:space-y-8 lg:space-y-4 z-50"
+  <ul class="flex-1 flex flex-col items-center overflow-hidden lg:items-end md:space-y-8 lg:space-y-4 z-50"
     :class="!clicked ? 'justify-center' : 'justify-start'"
     id="container">
     <li v-for="({ title, component }, index) in titles" :key="index" :class="clicked && component !== componentClicked ? 'hidden h-0' : 'block'" >
