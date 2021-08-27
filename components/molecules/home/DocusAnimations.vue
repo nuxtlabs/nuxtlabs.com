@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Ghost class="absolute -left-full bottom-30 lg:-bottom-full lg:right-32 transform h-40 w-40 lg:h-72 lg:w-72" />
-    <img id="shape" :src="`img/docus/shape.svg`" class="absolute w-60 lg:w-80 right-0 top-0 lg:bottom-38 lg:left-0 opacity-0 transform" />
+    <Ghost class="absolute bottom-30 -left-full lg:right-32 lg:left-auto lg:-bottom-full transform h-40 w-40 z-20 lg:w-72 lg:h-72" />
+    <img id="shape" :src="`img/docus/shape.svg`" class="absolute w-60 lg:w-80 right-0 top-0 lg:bottom-38 lg:h-4/5 lg:-left-10 opacity-0 transform" />
   </div>
 </template>
 <style lang="postcss" scoped>
@@ -17,7 +17,12 @@
         }
       }
       .ghost {
-        animation: ghostAnimIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), ghostFloatX 15s infinite alternate linear;
+        animation: ghostAnimMobileIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), ghostFloatX 15s infinite alternate linear;
+      }
+      @screen lg {
+        .ghost {
+          animation: ghostAnimDesktopIn 1s forwards cubic-bezier(0.83, 0, 0.17, 1), ghostFloatX 15s infinite alternate linear;
+        }
       }
     }
   }
@@ -31,7 +36,12 @@
       }
     }
     .ghost {
-      animation: ghostAnimOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
+      animation: ghostAnimMobileOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    @screen lg {
+      .ghost {
+        animation: ghostAnimDesktopOut 1s forwards cubic-bezier(0.83, 0, 0.17, 1);
+      }
     }
   }
 }
@@ -53,20 +63,36 @@
   to { opacity: 0; }
 }
 
-@-webkit-keyframes ghostAnimIn {
+@-webkit-keyframes ghostAnimMobileIn {
   0% {
-    @apply -left-full lg:-bottom-full;
+    @apply -left-full;
   }
   100% {
-    @apply -left-10 lg:-bottom-20 z-20;
+    @apply -left-10 z-20;
   }
 }
-@-webkit-keyframes ghostAnimOut {
+@-webkit-keyframes ghostAnimDesktopIn {
   0% {
-    @apply left-10 lg:-bottom-20 z-20;
+    @apply -bottom-full;
   }
   100% {
-    @apply -left-full lg:-bottom-full;
+    @apply -bottom-20 z-20;
+  }
+}
+@-webkit-keyframes ghostAnimMobileOut {
+  0% {
+    @apply left-10 z-20;
+  }
+  100% {
+    @apply -left-full;
+  }
+}
+@-webkit-keyframes ghostAnimDesktopOut {
+  0% {
+    @apply -bottom-20 z-20;
+  }
+  100% {
+    @apply -bottom-full;
   }
 }
 @-webkit-keyframes ghostFloatX {
