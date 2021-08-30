@@ -1,5 +1,26 @@
+<script>
+  import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
+
+  export default defineComponent({
+    setup() {
+      const { $docus } = useContext()
+      const settings = computed(() => $docus.settings.value)
+
+      return { settings }
+    }
+  })
+</script>
+<style scoped lang="postcss">
+  .nuxt-link-active {
+    //text-decoration: underline;
+  }
+  .menu li {
+    display: block;
+    position: relative;
+  }
+</style>
 <template>
-  <header class="absolute w-full top-0 z-50 h-20">
+  <header class="d-header">
     <div class="flex flex-row-reverse lg:flex-row h-full flex-none mx-auto px-1 sm:px-3 lg:px-6">
       <Link
         class="flex items-center flex-1 lg:flex-none lg:w-60"
@@ -13,55 +34,14 @@
       <div class="items-center hidden lg:flex lg:flex-1">
         <nav class="relative flex items-center justify-end w-full h-full">
           <Link
-            v-for="{ title, href } in links"
-            :key="title"
-            :aria-label="title"
+            aria-label="title"
             class="relative flex flex-col items-center justify-center h-full px-4 font-medium text-center capitalize group"
-            :to="href"
+            to="/about"
           >
-          {{ title }}
+          About us
           </Link>
         </nav>
       </div>
     </div>
   </header>
 </template>
-
-<script>
-import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  props: {
-    links: {
-      type: Array,
-      required: false,
-      default: () => [
-        {
-          title: 'Solutions',
-          href: '/'
-        },
-        {
-          title: 'About us',
-          href: '/about'
-        }
-      ]
-    }
-  },
-  setup() {
-    const { $docus } = useContext()
-    const settings = computed(() => $docus.settings.value)
-
-    return { settings }
-  }
-})
-</script>
-
-<style scoped lang="postcss">
-  .nuxt-link-active {
-    //text-decoration: underline;
-  }
-  .menu li {
-    display: block;
-    position: relative;
-  }
-  </style>
