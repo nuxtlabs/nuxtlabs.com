@@ -1,8 +1,8 @@
 <template>
   <div class="w-full flex flex-col space-y-1">
-    <div class="relative z-10">{{ location }}</div>
-    <div class="font-bold relative z-10">{{ email }}</div>
-    <SocialLinks class="hidden lg:flex text-base space-x-2" />
+    <div class="relative z-10 font-bold">{{ contact }}</div>
+    <div class="relative z-10">{{ email }}</div>
+    <SocialLinks class="hidden lg:flex text-base space-x-4" />
   </div>
 </template>
 
@@ -11,9 +11,9 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
-    location: {
+    contact: {
       type: String,
-      default: 'Bordeaux, France'
+      default: 'Contact Us'
     },
     email: {
       type: String,

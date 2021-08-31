@@ -2,11 +2,11 @@
   <li>
     <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full text-center">
       <div :class="componentAnim">
-        <Link :to="to"
+        <NuxtLink :to="to"
           @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
             class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
-        </Link>
+        </NuxtLink>
       </div>
       <hr :id="`${componentAnim}Line`" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
       <p :id="`${componentAnim}SubTitle`" class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">

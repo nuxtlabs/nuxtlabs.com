@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img id="nuxtLogo" :src="`img/nuxt/nuxt-logo.svg`" class="absolute top-15 -left-28 opacity-0" />
+    <img id="nuxtLogo" :src="`img/nuxt/nuxt-logo.svg`" class="absolute top-30 -left-28 opacity-0 h-3/5" />
     <img id="nuxtGradient" :src="`img/nuxt/gradient.svg`" class="absolute w-full left-0 right-0 -bottom-full" />
     <img id="gem1" :src="`img/nuxt/gem1.svg`" class="absolute -bottom-full left-1/12 lg:left-1/4" />
     <img id="gem2" :src="`img/nuxt/gem2.svg`" class="absolute -bottom-full left-5/12" />
