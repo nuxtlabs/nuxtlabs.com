@@ -3,13 +3,13 @@
     <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full">
       <div :class="componentAnim">
         <Link to="#"
-          @click.native="titleClicked(componentAnim)" @mouseleave.native="mouseLeave()" @mouseover.native="mouseHover()"
+          @click.native="titleClicked(componentAnim)" @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
             class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </Link>
       </div>
-      <hr id="line" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
-      <p class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
+      <hr :id="`${componentAnim}Line`" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
+      <p :id="`${componentAnim}SubTitle`" class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
         {{ subTitle }}
       </p>
       <Link to="#" class="hidden">
@@ -20,7 +20,7 @@
   </li>
 </template>
 <script lang="ts">
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -42,55 +42,56 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const titles = ref(['NuxtAnimations', 'DocusAnimations', 'VueTelescopeAnimations'])
+    let line = null
+    let subTitle = null
+    let anim = null
+    let titles = ['NuxtAnimations', 'DocusAnimations', 'VueTelescopeAnimations']
 
     //to avoid animation start on load
     onMounted(() => {
-      titles.value.forEach(title => {
-        if (document.getElementsByClassName(title)[0] && document.getElementsByClassName(title)[0].classList.contains(title)) {
-          document.getElementById(title).classList.add('hidden')
-        }
-      })
+      line = document.getElementById(`${props.componentAnim}Line`)
+      subTitle = document.getElementById(`${props.componentAnim}SubTitle`)
+      anim = document.getElementById(props.componentAnim)
+      animationsVisibility('hidden')
     })
 
     function mouseHover() {
       if (window.innerWidth > 1024) {
-        loadAnimations()
+        animationsVisibility('visible')
       }
     }
 
     function mouseLeave() {
-      titles.value.forEach(title => {
-          document.getElementById(title).classList.add('hidden')
-          document.getElementById(title).parentElement.classList.remove('hidden')
-          document.getElementById(title).parentElement.classList.remove('block')
-        }
-      )
+      animationsVisibility('hidden')
+      //display other title
+      titles.forEach(element => {
+        const title = document.getElementById(element).parentElement
+        title.style.display = 'flex'
+      })
     }
 
     function titleClicked(component: string) {
-
       if (window.innerWidth < 1024) {
-        //hide other title on click
-        titles.value.forEach(title => {
-          if (title === component) {
-            document.getElementById(title).parentElement.classList.add('block')
+        titles.forEach(element => {
+          const title = document.getElementById(element).parentElement
+          if (element === component) {
+            title.style.display = 'flex'
           } else {
-            document.getElementById(title).parentElement.classList.add('hidden')
+            title.style.display = 'none'
           }
         })
       }
 
-      loadAnimations()
+      animationsVisibility('visible')
     }
 
-    function loadAnimations() {
-      document.getElementById(props.componentAnim).classList.remove('hidden')
-      document.getElementById(props.componentAnim).classList.add('block')
+    function animationsVisibility(visibility: string) {
+      anim.style.visibility = visibility
+      subTitle.style.visibility = visibility
+      line.style.visibility = visibility
     }
 
     return {
-      titles,
       mouseHover,
       mouseLeave,
       titleClicked,
