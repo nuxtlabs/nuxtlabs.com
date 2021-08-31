@@ -1,9 +1,6 @@
 <template>
-  <div class="p-4 xl:px-68 2xl:px-76">
-    <BlogHero />
-    <div>
-      <BlogList />
-    </div>
+  <div class="py-8 sm:py-16 max-w-2xl mx-auto px-4">
+    <DocusContent :document="page" />
   </div>
 </template>
 
@@ -19,7 +16,7 @@ export default defineComponent({
   },
   templateOptions: {
     aside: false,
-    fluid: true
+    fluid: false
   }
 })
 </script>

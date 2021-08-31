@@ -1,12 +1,5 @@
 <template>
-  <svg class="barLeft" width="372" height="406" viewBox="0 0 372 406" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0)">
-    <line x1="-260.536" y1="590.464" x2="587.464" y2="-257.536" stroke="#4DDFB5" stroke-width="51"/>
-    </g>
-    <defs>
-    <clipPath id="clip0">
-    <rect width="372" height="406" fill="white"/>
-    </clipPath>
-    </defs>
+  <svg class="barLeft" viewBox="700 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="300" x2="400" y2="-50" stroke="#4DDFB5" />
   </svg>
 </template>

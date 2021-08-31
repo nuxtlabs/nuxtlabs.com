@@ -1,19 +1,34 @@
 ---
-template: page
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
-layout.fluid: true
-title: ''
-description: ''
-head.titleTemplate: null
+template: Home
+title: 'Intuitive Web Development'
+description: 'The NuxtLabs company is an Open Source software company dedicated to build software focused on developer experience such as NuxtJS, Docus and Vue Telescope.'
 ---
 
-::home-container
-#titles
-  :::home-titles
+::home-titles
+  :::home-title
+  ---
+  title: Nuxtjs
+  subTitle: The Intuitive Vue Framework for modern web developers.
+  componentAnim: HomeNuxtAnimations
+  to: nuxtjs
+  ---
   :::
-#footer
-  :::home-footer
+  :::home-title
+  ---
+  title: Docus
+  subTitle: The progressive web applications platform and framework.
+  componentAnim: HomeDocusAnimations
+  to: docus
+  ---
   :::
+  :::home-title
+  ---
+  title: Vue Telescope
+  subTitle: Discover web applications made with VueJS and its ecosystem.
+  componentAnim: HomeVueTelescopeAnimations
+  to: vuetelescope
+  ---
+  :::
+::
+::home-footer
 ::

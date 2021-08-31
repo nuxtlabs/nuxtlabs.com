@@ -1,21 +1,24 @@
 <template>
-  <div>
-    <img @click="home" :src="`/img/Logo.png`" alt="NuxtLabs logo" />
-    <div class="pt-1">
-      Intuitive web development
-    </div>
-  </div>
+  <img @click="home" :src="`${logoPath}`" alt="NuxtLabs logo" />
 </template>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
 
-<script>
-export default {
-  methods: {
-    home() {
-      if (this.$route.path === '/') {
-        // scroll to top
-        window.scrollTo(0, 0)
-      }
+export default defineComponent({
+  props: {
+    logoPath: {
+      type: String,
+      default: false
     }
-  }
-}
+  },
+  setup() {
+    function home() {
+      window.scrollTo(0, 0)
+    }
+
+    return {
+      home
+    }
+  },
+})
 </script>

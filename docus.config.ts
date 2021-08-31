@@ -17,13 +17,13 @@ export default {
         'd-logo': 'w-auto h-6 md:h-7 text-white',
         'd-body-bg': 'bg-black',
         'd-body-text-color': 'text-white',
-        'd-header': 'sticky w-full top-0 z-50 d-bg-header h-header',
+        'd-header': 'sticky w-full top-0 z-50 d-bg-header d-blur-header h-header ',
         'd-primary-text-hover': 'text-gray-600 dark:text-cloud-lighter',
         'd-prose-code-inline-bg': 'bg-gray-800',
         'd-prose-code-bg': 'bg-gray-900',
-        'd-bg-header': 'bg-black',
+        'd-bg-header': 'bg-black bg-opacity-75',
         'd-page-mobile-toc-bg': 'd-body-bg bg-opacity-80 dark:bg-opacity-80',
-        'd-aside-header-bg': 'bg-gray-50 dark:bg-secondary-darkest',
+        'd-aside-header-bg': 'bg-dark',
         'd-active-aside-navigation-item-bg':
           'bg-primary-50 dark:bg-secondary-darkest',
         'd-active-aside-navigation-item-text':

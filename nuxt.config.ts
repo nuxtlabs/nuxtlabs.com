@@ -5,7 +5,7 @@ import { withDocus } from '@docus/app'
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: '%s | Nuxt',
+    titleTemplate: 'NuxtLabs - %s',
     link: [
       {
         rel: 'stylesheet',
@@ -54,7 +54,6 @@ export default withDocus({
     '@nuxt/typescript-build',
     'vue-plausible'
   ],
-  plugins: ['~/plugins/cursor.js'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')
