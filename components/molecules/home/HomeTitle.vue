@@ -1,6 +1,6 @@
 <template>
   <li>
-    <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full text-center">
+    <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
       <div :class="componentAnim">
         <NuxtLink :to="to"
           @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"

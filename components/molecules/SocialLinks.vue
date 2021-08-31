@@ -15,25 +15,25 @@ export default defineComponent({
   setup() {
     const links = [
       {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
-        gradientImg: 'linkedin'
-      },
-      {
         name: 'Github',
-        href: 'https://github.com/nuxt',
+        href: 'https://github.com/nuxtlabs',
         gradientImg: 'github'
       },
       {
         name: 'Twitter',
-        href: 'https://twitter.com/nuxt_js',
+        href: 'https://twitter.com/nuxtlabs',
         gradientImg: 'twitter'
       },
       {
-        name: 'Discord',
-        href: 'https://discord.com/invite/ps2h6QT',
-        gradientImg: 'discord'
-      }
+        name: 'Youtube',
+        href: 'https://www.youtube.com/c/NuxtLabs',
+        gradientImg: 'youtube'
+      },
+      {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
+        gradientImg: 'linkedin'
+      },
     ]
 
     return {
