@@ -1,6 +1,6 @@
 <template>
   <li>
-    <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full">
+    <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full text-center">
       <div :class="componentAnim">
         <Link :to="to"
           @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
