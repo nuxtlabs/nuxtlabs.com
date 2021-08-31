@@ -4,7 +4,7 @@ title: 'Intuitive Web Development'
 description: ''
 navigation: false
 layout.asideClass: 'block lg:hidden'
-layout.aside: true
+layout.aside: false
 layout.fluid: true
 head.titleTemplate: null
 ---
@@ -16,6 +16,7 @@ head.titleTemplate: null
   title: Nuxtjs
   subTitle: Build your next Vue.js application with confidence using NuxtJS.
   componentAnim: HomeNuxtAnimations
+  to: nuxtjs
   ---
   :::
   :::home-title
@@ -23,6 +24,7 @@ head.titleTemplate: null
   title: Docus
   subTitle: Your website builder faster than light and made with Markdown.
   componentAnim: HomeDocusAnimations
+  to: docus
   ---
   :::
   :::home-title
@@ -30,6 +32,7 @@ head.titleTemplate: null
   title: Vue Telescope
   subTitle: Vue plugins and technology stack powering any website revealed.
   componentAnim: HomeVueTelescopeAnimations
+  to: vuetelescope
   ---
   :::
 ::

@@ -2,8 +2,8 @@
   <li>
     <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse items-center h-full">
       <div :class="componentAnim">
-        <Link to="#"
-          @click.native="titleClicked(componentAnim)" @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
+        <Link :to="to"
+          @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
             class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </Link>
@@ -12,9 +12,6 @@
       <p :id="`${componentAnim}SubTitle`" class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
         {{ subTitle }}
       </p>
-      <Link to="#" class="hidden">
-        {{ buttonMobileText }}
-      </Link>
       <component :is="componentAnim" :id="componentAnim" />
     </div>
   </li>
@@ -36,7 +33,7 @@ export default defineComponent({
       type: String,
       default: ''
     },
-    buttonMobileText: {
+    to: {
       type: String,
       default: ''
     }
@@ -70,7 +67,7 @@ export default defineComponent({
       })
     }
 
-    function titleClicked(component: string) {
+    /*function titleClicked(component: string) {
       if (window.innerWidth < 1024) {
         titles.forEach(element => {
           const title = document.getElementById(element).parentElement
@@ -83,7 +80,7 @@ export default defineComponent({
       }
 
       animationsVisibility('visible')
-    }
+    }*/
 
     function animationsVisibility(visibility: string) {
       anim.style.visibility = visibility
@@ -93,8 +90,8 @@ export default defineComponent({
 
     return {
       mouseHover,
-      mouseLeave,
-      titleClicked,
+      mouseLeave
+      //titleClicked,
     }
   }
 })

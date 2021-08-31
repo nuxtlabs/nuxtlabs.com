@@ -1,13 +1,11 @@
 ---
 template: Project
-title: "Nuxt js"
+title: 'NuxtJS'
 description: ''
+logo: 'nuxt/nuxt-logo.svg'
 ---
 
-# NuxtJS
-
 ## The Intuitive Vue framework.
-
 
 Sébastien ([@Atinux](https://twitter.com/Atinux)) made his first commit for Nuxt.js on GitHub on October 26th 2016. The code base was born after we refactored an e-commerce website with modern open source web technologies: Vue 2, Node.js and Webpack. At the time, there was no documentation for server-side rendering Vue.js applications - we learnt through the [Hacker News example](https://github.com/vuejs/vue-hackernews-2.0) published by [Evan You](https://twitter.com/youyuxi) (Creator of Vue.js). The idea of creating a boilerplate and reusing the code base for other projects became clear once we discovered [Guillermo Rauch](https://twitter.com/rauchg)'s [introduction of Next.js](https://vercel.com/blog/next).
 

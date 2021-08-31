@@ -1,9 +1,9 @@
 ---
 template: Project
-title: "Docus"
+title: 'Docus'
 description: ''
+logo: 'docus/docus-logo.svg'
 ---
-# Docus
 ### From an idea to a website
 #### The intuitive Web Framework
 We love to create apps with Vue, but we are too lazy to configure everything over and over. NuxtLabs provides a simple and intuitive developer experience to prototype blazing fast modern web application. The goal is to decrease the number of decisions the programmer has to make and eliminate the complexity of having to configure all and each of the areas of application development. The immediate result is that you can create many more things in less time. Building a production ready web app from an idea has never been so simple. If you follow the established conventions, you can develop a web application in much less time and with many fewer lines of code than you would need developing a similar web application from scratch. If, on the other hand, you want to ignore conventions, you can always replace them with your own code. However, since conventions are not arbitrary, but have been established by a community of high level programmers, it rarely does make sense to waste time overwriting them.
