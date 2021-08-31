@@ -10,7 +10,7 @@
   </div>
 </template>
 <style lang="postcss" scoped>
-.NuxtAnimations {
+.HomeNuxtAnimations {
   ~ div {
     > #nuxtGradient, #gem1, #gem2, #gem3, #gem4, #gem5 {
       @apply transform;

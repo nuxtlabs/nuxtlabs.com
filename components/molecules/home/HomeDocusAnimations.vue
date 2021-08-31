@@ -1,11 +1,11 @@
 <template>
   <div>
     <Ghost class="absolute bottom-30 -left-full lg:right-32 lg:left-auto lg:-bottom-full transform h-40 w-40 z-20 lg:w-72 lg:h-72" />
-    <img id="shape" :src="`img/docus/shape.svg`" class="absolute w-60 lg:w-80 right-0 top-0 lg:bottom-38 lg:h-4/5 lg:-left-10 opacity-0 transform" />
+    <img id="shape" :src="`img/docus/shape.svg`" class="absolute w-60 lg:w-80 right-0 top-0 lg:top-20 lg:-left-10 opacity-0 transform" />
   </div>
 </template>
 <style lang="postcss" scoped>
-.DocusAnimations {
+.HomeDocusAnimations {
   &:hover {
     ~ div {
       > #shape {

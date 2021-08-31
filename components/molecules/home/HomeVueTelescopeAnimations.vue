@@ -3,11 +3,11 @@
     <BarLeft class="absolute transform -left-30 -top-10 lg:top-0 bottom-0 opacity-0 stroke-20 sm:stroke-25 md:stroke-30 lg:stroke-50 h-full w-full" />
     <BarMid class="absolute transform left-1/5 lg:left-1/4 -top-75 lg:-top-10 bottom-0 opacity-0 overflow-visible h-full w-full stroke-25 lg:stroke-32" />
     <BarBottom class="absolute transform opacity-0 -bottom-100 left-1/2 lg:right-0 h-full w-full stroke-25 lg:stroke-35 xl:stroke-70"/>
-    <img id="vue-telescope" :src="`img/vuetelescope/vue-telescope.svg`" class="absolute transform h-2/5 lg:h-3/5 w-full -left-full bottom-20 lg:-bottom-full lg:-left-1/5" />
+    <img id="vue-telescope" :src="`img/vuetelescope/vue-telescope.svg`" class="absolute transform h-2/5 lg:h-3/6 w-full -left-full bottom-20 lg:-bottom-full lg:-left-1/6" />
   </div>
 </template>
 <style lang="postcss" scoped>
-.VueTelescopeAnimations {
+.HomeVueTelescopeAnimations {
   &:hover {
     ~ div {
       > #vue-telescope {

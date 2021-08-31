@@ -45,7 +45,7 @@ export default defineComponent({
     let line = null
     let subTitle = null
     let anim = null
-    let titles = ['NuxtAnimations', 'DocusAnimations', 'VueTelescopeAnimations']
+    let titles = ['HomeNuxtAnimations', 'HomeDocusAnimations', 'HomeVueTelescopeAnimations']
 
     //to avoid animation start on load
     onMounted(() => {
@@ -100,26 +100,9 @@ export default defineComponent({
 })
 </script>
 <style lang="postcss" scoped>
-.NuxtAnimations,
-.DocusAnimations,
-.VueTelescopeAnimations {
-    &:hover {
-      > a {
-        animation: colorTextIn 1s forwards;
-        opacity: 1;
-      }
-      ~ p {
-        animation: subTitleIn 1s forwards
-      }
-      ~ hr {
-        animation: lineIn 1s forwards
-      }
-    }
-}
-
-.NuxtAnimations,
-.DocusAnimations,
-.VueTelescopeAnimations {
+.HomeNuxtAnimations,
+.HomeDocusAnimations,
+.HomeVueTelescopeAnimations {
   > a {
     animation: colorTextOut 0.5s forwards;
   }
@@ -128,6 +111,18 @@ export default defineComponent({
   }
   ~ hr {
     animation: lineOut 0.5s forwards
+  }
+  &:hover {
+    > a {
+      animation: colorTextIn 1s forwards;
+      opacity: 1;
+    }
+    ~ p {
+      animation: subTitleIn 1s forwards
+    }
+    ~ hr {
+      animation: lineIn 1s forwards
+    }
   }
 }
 
