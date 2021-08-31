@@ -3,6 +3,7 @@ template: Page
 title: 'About us'
 description: ''
 ---
+
 # The NuxtLabs Story
 ## From a passion to a company.
 ### The Pyrenees Mountains

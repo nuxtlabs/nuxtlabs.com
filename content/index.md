@@ -2,13 +2,7 @@
 template: Home
 title: 'Intuitive Web Development'
 description: ''
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: false
-layout.fluid: true
-head.titleTemplate: null
 ---
-
 
 ::home-titles
   :::home-title
