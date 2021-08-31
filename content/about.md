@@ -1,7 +1,7 @@
 ---
 template: Page
 title: 'About us'
-description: ''
+description: 'The NuxtLabs company founded in 2017 by Alexandre Chopin and Sébastien Chopin is an Open Source software company dedicated to build software focused on developer experience.'
 ---
 
 # The NuxtLabs Story

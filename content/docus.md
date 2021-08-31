@@ -1,7 +1,7 @@
 ---
 template: Project
 title: 'Docus'
-description: ''
+description: 'The all-in-one solution for NuxtJS developers. Fully customisable theming system and file based content management system included. Create your next progressive web application with Docus now!'
 logo: 'docus/docus-logo.svg'
 ---
 ### From an idea to a website

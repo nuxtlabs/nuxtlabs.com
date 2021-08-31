@@ -1,7 +1,7 @@
 ---
 template: Project
 title: 'NuxtJS'
-description: ''
+description: 'The Intuitive Vue framework created by Alexandre Chopin and Sébastien Chopin in 2016. Already adopted by over 5 millions developers around the world.'
 logo: 'nuxt/nuxt-logo.svg'
 ---
 
