@@ -20,8 +20,3 @@ export default defineComponent({
   }
 })
 </script>
-<style lang="postcss" scoped>
-.fix-wrapper {
-  height: calc(100vh - var(--header-height));
-}
-</style>
