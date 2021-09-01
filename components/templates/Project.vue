@@ -4,6 +4,11 @@
     <h1 class="text-3xl sm:text-4xl text-center text-white font-semibold tracking-tight pb-8">
       {{ page.title }}
     </h1>
+    <div class="flex justify-center space-x-3">
+      <a v-if="page.website" :href="page.website" rel="noopener" target="_blank" class="cta">Website</a>
+      <a v-if="page.github" :href="page.github" rel="noopener" target="_blank" class="cta">GitHub</a>
+      <a v-if="page.twitter" :href="page.twitter" rel="noopener" target="_blank" class="cta">Twitter</a>
+    </div>
     <DocusContent :document="page" class="docus-content" />
   </div>
 </template>
@@ -24,3 +29,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.cta {
+  @apply border-1 px-4 rounded py-2 font-medium border-gray-200 hover:bg-white hover:text-black;
+}
+</style>

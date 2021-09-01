@@ -1,8 +1,8 @@
 <template>
   <header class="d-header">
-    <nav class="flex h-full flex-none text-gray-400 mx-auto px-4 sm:px-5 lg:px-16">
+    <nav class="flex h-full flex-none text-gray-400 justify-between mx-auto px-4 sm:px-5 lg:px-16">
       <Link
-        class="flex items-center flex-1"
+        class="flex items-center"
         :to="localePath('/')"
       >
         <!-- "mr-4 lg:mr-0" to optically center logo text -->
@@ -13,7 +13,7 @@
           class="lg:hidden h-10 w-14 sm:h-14 sm:w-18 md:h-20 md:w-24 lg:w-4/5 lg:h-8" / -->
       </Link>
 
-      <div v-if="!isHome" class="justify-center hidden lg:flex">
+      <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
         <Link
           v-for="{ title, href } in articleLinks"
           :key="title"
@@ -24,7 +24,7 @@
         {{ title }}
         </Link>
       </div>
-      <div class="flex items-center justify-end flex-1">
+      <div class="flex items-center">
         <Link
           v-for="{ title, href } in links"
           :key="title"
