@@ -1,18 +1,17 @@
 <template>
   <li>
     <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
-      <div :class="componentAnim">
-        <NuxtLink :to="to"
-          @mouseleave.native="mouseLeave(componentAnim)" @mouseover.native="mouseHover()"
+      <div :id="`${componentAnim}Link`">
+        <NuxtLink :to="to" @mouseover.native="mouseHover()"
             class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </NuxtLink>
       </div>
-      <hr :id="`${componentAnim}Line`" class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
-      <p :id="`${componentAnim}SubTitle`" class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
+      <hr class="relative border-none h-0.5 rounded-lg bg-white text-white w-4 ml-2 2xl:ml-4 mr-6 xl:mr-8 2xl:mr-12 opacity-0" />
+      <p class="text-center lg:text-left text-lg xl:text-xl 2xl:text-2xl font-sans lg:max-w-96 xl:w-max-128 font-normal opacity-0">
         {{ subTitle }}
       </p>
-      <component :is="componentAnim" :id="componentAnim" />
+      <component :is="componentAnim" />
     </div>
   </li>
 </template>
@@ -39,59 +38,19 @@ export default defineComponent({
     }
   },
   setup(props) {
-    let line = null
-    let subTitle = null
-    let anim = null
-    let titles = ['HomeNuxtAnimations', 'HomeDocusAnimations', 'HomeVueTelescopeAnimations']
+    let link = null
 
-    //to avoid animation start on load
     onMounted(() => {
-      line = document.getElementById(`${props.componentAnim}Line`)
-      subTitle = document.getElementById(`${props.componentAnim}SubTitle`)
-      anim = document.getElementById(props.componentAnim)
-      animationsVisibility('hidden')
+      link = document.getElementById(`${props.componentAnim}Link`)
     })
 
+    //add animations class (not before to avoid animations start on load)
     function mouseHover() {
-      if (window.innerWidth > 1024) {
-        animationsVisibility('visible')
-      }
-    }
-
-    function mouseLeave() {
-      animationsVisibility('hidden')
-      //display other title
-      titles.forEach(element => {
-        const title = document.getElementById(element).parentElement
-        title.style.display = 'flex'
-      })
-    }
-
-    /*function titleClicked(component: string) {
-      if (window.innerWidth < 1024) {
-        titles.forEach(element => {
-          const title = document.getElementById(element).parentElement
-          if (element === component) {
-            title.style.display = 'flex'
-          } else {
-            title.style.display = 'none'
-          }
-        })
-      }
-
-      animationsVisibility('visible')
-    }*/
-
-    function animationsVisibility(visibility: string) {
-      anim.style.visibility = visibility
-      subTitle.style.visibility = visibility
-      line.style.visibility = visibility
+      link.classList.add(props.componentAnim)
     }
 
     return {
-      mouseHover,
-      mouseLeave
-      //titleClicked,
+      mouseHover
     }
   }
 })
@@ -100,9 +59,6 @@ export default defineComponent({
 .HomeNuxtAnimations,
 .HomeDocusAnimations,
 .HomeVueTelescopeAnimations {
-  > a {
-    animation: colorTextOut 0.5s forwards;
-  }
   ~ p {
     animation: subTitleOut 0.5s forwards
   }
