@@ -3,7 +3,7 @@
     <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
       <div :id="`${componentAnim}Link`">
         <NuxtLink :to="to" @mouseenter.native="mouseHover()" @mouseleave.native="mouseLeave()"
-            class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
+            class="text-white text-display-5 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </NuxtLink>
       </div>
