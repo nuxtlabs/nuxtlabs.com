@@ -15,10 +15,10 @@ export default defineComponent({
   setup() {
     const links = [
       {
-        name: 'Github',
+        name: 'GitHub',
         href: 'https://github.com/nuxtlabs',
         gradientImg: 'github',
-        alt: 'Github gradient effect'
+        alt: 'GitHub gradient effect'
       },
       {
         name: 'Twitter',
@@ -27,10 +27,10 @@ export default defineComponent({
         alt: 'Twitter gradient effect'
       },
       {
-        name: 'Youtube',
+        name: 'YouTube',
         href: 'https://www.youtube.com/c/NuxtLabs',
         gradientImg: 'youtube',
-        alt: 'Youtube gradient effect'
+        alt: 'YouTube gradient effect'
       },
       {
         name: 'LinkedIn',
