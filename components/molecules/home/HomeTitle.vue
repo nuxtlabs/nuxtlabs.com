@@ -2,7 +2,7 @@
   <li>
     <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
       <div :id="`${componentAnim}Link`">
-        <NuxtLink :to="to" @mouseover.native="mouseHover()"
+        <NuxtLink :to="to" @mouseover.native="mouseHover()" @mouseleave.native="mouseLeave()"
             class="text-white text-display-4 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </NuxtLink>
@@ -38,19 +38,43 @@ export default defineComponent({
     }
   },
   setup(props) {
-    let link = null
+    let currentTitle = null
+    let animsComponent = ['HomeNuxtAnimations', 'HomeDocusAnimations', 'HomeVueTelescopeAnimations']
 
     onMounted(() => {
-      link = document.getElementById(`${props.componentAnim}Link`)
+      currentTitle = document.getElementById(`${props.componentAnim}Link`)
     })
 
     //add animations class (not before to avoid animations start on load)
     function mouseHover() {
-      link.classList.add(props.componentAnim)
+      currentTitle.classList.add(props.componentAnim)
+
+      //opacity
+      animsComponent.forEach(component => {
+        if (component === props.componentAnim) {
+          opacity(currentTitle)
+        } else {
+          opacity(component, true)
+        }
+      });
+    }
+
+    function mouseLeave() {
+      animsComponent.forEach(component => {
+        opacity(component)
+      });
+    }
+
+    function opacity(componentName: any, opacity: Boolean = false) {
+      let title = typeof componentName === 'string' ?
+        document.getElementById(`${componentName}Link`) : componentName
+      title.classList.add(opacity ? 'opacity-30' : 'opacity-100')
+      title.classList.remove(opacity ? 'opacity-100' : 'opacity-30')
     }
 
     return {
-      mouseHover
+      mouseHover,
+      mouseLeave
     }
   }
 })
@@ -68,7 +92,6 @@ export default defineComponent({
   &:hover {
     > a {
       animation: colorTextIn 1s forwards;
-      opacity: 1;
     }
     ~ p {
       animation: subTitleIn 1s forwards

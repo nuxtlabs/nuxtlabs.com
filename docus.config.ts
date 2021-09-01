@@ -1,6 +1,6 @@
 export default {
     title: 'NuxtLabs',
-    description: '',
+    description: 'Intuitive Web Development',
     url: 'https://nuxtlabs.com',
     template: 'docs',
     credits: true,
