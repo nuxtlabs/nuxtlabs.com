@@ -3,7 +3,7 @@
     <li v-for="link in links" :key="link.name">
       <Link :to="link.href" :alt="link.name" blank class="relative z-50 gradient">{{ link.name }}</Link>
       <div class="hidden lg:block absolute opacity-60 w-128 h-128 z-0 pointer-events-none -bottom-full -left-full">
-        <img :src="`/img/socialGradients/${link.gradientImg}.svg`" class="relative" />
+        <img :src="`/img/socialGradients/${link.gradientImg}.svg`" :alt="link.alt" class="relative" />
       </div>
     </li>
   </ul>
@@ -17,22 +17,26 @@ export default defineComponent({
       {
         name: 'Github',
         href: 'https://github.com/nuxtlabs',
-        gradientImg: 'github'
+        gradientImg: 'github',
+        alt: 'Github gradient effect'
       },
       {
         name: 'Twitter',
         href: 'https://twitter.com/nuxtlabs',
-        gradientImg: 'twitter'
+        gradientImg: 'twitter',
+        alt: 'Twitter gradient effect'
       },
       {
         name: 'Youtube',
         href: 'https://www.youtube.com/c/NuxtLabs',
-        gradientImg: 'youtube'
+        gradientImg: 'youtube',
+        alt: 'Youtube gradient effect'
       },
       {
         name: 'LinkedIn',
         href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
-        gradientImg: 'linkedin'
+        gradientImg: 'linkedin',
+        alt: 'LinkedIn gradient effect'
       },
     ]
 

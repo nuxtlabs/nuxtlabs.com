@@ -2,7 +2,7 @@
   <div>
     <Ghost class="absolute bottom-30 -left-full lg:right-32 lg:left-auto lg:-bottom-full transform h-40 w-40 z-20 lg:w-72 lg:h-72" />
     <div class="absolute right-0 top-0 lg:top-0 lg:bottom-12 lg:-left-10 flex items-center opacity-0 transform" id="shape">
-      <img :src="`img/docus/shape.svg`" class="h-2/3" />
+      <img :src="`img/docus/shape.svg`" alt="Docus shape" class="h-2/3" />
     </div>
   </div>
 </template>

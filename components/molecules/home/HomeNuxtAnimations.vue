@@ -1,12 +1,12 @@
 <template>
   <div>
-    <img id="nuxtLogo" :src="`img/nuxt/nuxt-logo.svg`" class="absolute top-30 -left-28 opacity-0 h-3/5" />
-    <img id="nuxtGradient" :src="`img/nuxt/gradient.svg`" class="absolute w-full left-0 right-0 -bottom-full" />
-    <img id="gem1" :src="`img/nuxt/gem1.svg`" class="absolute -bottom-full left-1/12 lg:left-1/4" />
-    <img id="gem2" :src="`img/nuxt/gem2.svg`" class="absolute -bottom-full left-5/12" />
-    <img id="gem3" :src="`img/nuxt/gem4.svg`" class="absolute -bottom-full left-8/12" />
-    <img id="gem4" :src="`img/nuxt/gem3.svg`" class="absolute -bottom-full right-1/4" />
-    <img id="gem5" :src="`img/nuxt/gem5.svg`" class="absolute -bottom-full right-1/12" />
+    <img id="nuxtLogo" :src="`img/nuxt/nuxt-logo.svg`" alt="Nuxt logo" class="absolute top-30 -left-28 opacity-0 h-3/5" />
+    <img id="nuxtGradient" :src="`img/nuxt/gradient.svg`" alt="Nuxt gradient background" class="absolute w-full left-0 right-0 -bottom-full" />
+    <img id="gem1" :src="`img/nuxt/gem1.svg`" alt="Nuxt floating gem 1" class="absolute -bottom-full left-1/12 lg:left-1/4" />
+    <img id="gem2" :src="`img/nuxt/gem2.svg`" alt="Nuxt floating gem 2" class="absolute -bottom-full left-5/12" />
+    <img id="gem3" :src="`img/nuxt/gem4.svg`" alt="Nuxt floating gem 3" class="absolute -bottom-full left-8/12" />
+    <img id="gem4" :src="`img/nuxt/gem3.svg`" alt="Nuxt floating gem 4" class="absolute -bottom-full right-1/4" />
+    <img id="gem5" :src="`img/nuxt/gem5.svg`" alt="Nuxt floating gem 5" class="absolute -bottom-full right-1/12" />
   </div>
 </template>
 <style lang="postcss" scoped>
