@@ -1,104 +1,94 @@
 <template>
   <div>
-    <div class="absolute -left-28 top-0 opacity-0 flex items-center transform h-full" id="nuxtLogo">
+    <div  id="nuxtLogo" class="absolute -left-28 top-0 opacity-0 flex items-center transform h-full">
       <img :src="`img/nuxt/nuxt-logo.svg`" alt="Nuxt logo" class="h-3/5 lg:h-1/2 xl:h-3/5" />
     </div>
     <img id="nuxtGradient" :src="`img/nuxt/gradient.svg`" alt="Nuxt gradient background" class="absolute w-full h-full -bottom-full left-0 right-0 object-cover opacity-80" />
-    <img id="gem1" :src="`img/nuxt/gem1.svg`" alt="Nuxt floating gem 1" class="absolute -bottom-full left-1/12 lg:left-1/4" />
-    <img id="gem2" :src="`img/nuxt/gem2.svg`" alt="Nuxt floating gem 2" class="absolute -bottom-full left-5/12" />
-    <img id="gem3" :src="`img/nuxt/gem4.svg`" alt="Nuxt floating gem 3" class="absolute -bottom-full left-8/12" />
-    <img id="gem4" :src="`img/nuxt/gem3.svg`" alt="Nuxt floating gem 4" class="absolute -bottom-full right-1/4" />
-    <img id="gem5" :src="`img/nuxt/gem5.svg`" alt="Nuxt floating gem 5" class="absolute -bottom-full right-1/12" />
+    <img v-for="i in 5" :key="i" :id="`gem${i}`" :src="`img/nuxt/gem${i}.svg`" :alt="`Nuxt floating gem ${i}`" class="absolute transform -bottom-full" />
   </div>
 </template>
 <style lang="postcss" scoped>
 .HomeNuxtAnimations {
   ~ div {
-    > #nuxtGradient, #gem1, #gem2, #gem3, #gem4, #gem5 {
-      @apply transform;
+    #nuxtGradient, #gem1, #gem2, #gem3, #gem4, #gem5 {
       transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
       z-index: 1;
     }
   }
   &:hover {
     ~ div {
-      > #nuxtLogo {
-          animation: fadeInLogoMobileIn 1s forwards;
+      #nuxtLogo {
+        animation: fadeInLogoMobileIn 1s forwards;
       }
-      @screen lg {
-        > #nuxtLogo {
-          animation: fadeInLogoDesktopIn 1s forwards;
-        }
+      #nuxtLogo {
+        @screen lg { animation: fadeInLogoDesktopIn 1s forwards; }
       }
-      > #nuxtGradient {
+      #nuxtGradient {
         @apply bottom-0
       }
-      > #gem1 {
+      #gem1 {
         animation: gem1AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 5s infinite alternate linear;
       }
-      @screen sm {
-        > #gem2 {
-          animation: gem2AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear;
-        }
+      #gem2 {
+        @screen sm { animation: gem2AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatYX 6s infinite alternate linear; }
       }
-      > #gem3 {
+      #gem3 {
         animation: gem3AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatXY 5s infinite alternate linear;
       }
-      > #gem4 {
+      #gem4 {
         animation: gem4AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatY 4s infinite alternate linear;
       }
-      @screen sm {
-        > #gem5 {
-          animation: gem5AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear;
-        }
+      #gem5 {
+        @screen sm { animation: gem5AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1), gemFloatX 5s infinite alternate linear; }
       }
     }
   }
   ~ div {
-    > #nuxtLogo {
+    #nuxtLogo {
       animation: fadeInLogoMobileOut 0.5s forwards;
+      @screen lg { animation: fadeInLogoDesktopOut 0.5s forwards; }
     }
-    @screen lg {
-      > #nuxtLogo {
-        animation: fadeInLogoDesktopOut 0.5s forwards;
-      }
-    }
-    > #gem1 {
+    #gem1 {
+      @apply left-1/12 lg:left-1/4;
       animation: gem1AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
-    > #gem2 {
+    #gem2 {
+      @apply left-5/12;
       animation: gem2AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
-    > #gem3 {
+    #gem3 {
+      @apply left-8/12;
       animation: gem3AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
-    > #gem4 {
+    #gem4 {
+      @apply right-1/4;
       animation: gem4AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
-    > #gem5 {
+    #gem5 {
+      @apply right-1/12;
       animation: gem5AnimOut 0.5s forwards cubic-bezier(0.83, 0, 0.17, 1);
     }
   }
 }
-
+//nuxt logo desktop
 @keyframes fadeInLogoDesktopIn {
   from { opacity: 0 }
   to { opacity: 1 }
+}
+@keyframes fadeInLogoDesktopOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+//nuxt logo mobile
+@keyframes fadeInLogoMobileOut {
+  from { opacity: 20%; }
+  to { opacity: 0; }
 }
 @keyframes fadeInLogoMobileIn {
   from { opacity: 0 }
   to { opacity: 20% }
 }
-
-@keyframes fadeInLogoDesktopOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@keyframes fadeInLogoMobileOut {
-  from { opacity: 20%; }
-  to { opacity: 0; }
-}
-
+//gem
 @-webkit-keyframes gem1AnimIn {
   0% { @apply -bottom-full; }
   100% { @apply bottom-1/4; }
@@ -143,50 +133,25 @@
   0% { @apply bottom-10; }
   100% { @apply -bottom-full; }
 }
-
+//gem movement
 @-webkit-keyframes gemFloatY {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10%);
-  }
-  100% {
-    transform: translateY(-10%);
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10%); }
+  100% { transform: translateY(-10%); }
 }
 @-webkit-keyframes gemFloatX {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10%);
-  }
-  100% {
-    transform: translateX(-10%);
-  }
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(-10%); }
 }
 @-webkit-keyframes gemFloatYX {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateX(10%);
-  }
-  100% {
-    transform: translateY(-10%);
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateY(-10%); }
 }
 @-webkit-keyframes gemFloatXY {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateY(10%);
-  }
-  100% {
-    transform: translateX(-10%);
-  }
+  0% { transform: translateX(0); }
+  50% { transform: translateY(10%); }
+  100% { transform: translateX(-10%); }
 }
-
 </style>
