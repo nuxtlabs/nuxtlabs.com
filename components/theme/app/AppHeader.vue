@@ -5,12 +5,8 @@
         class="flex items-center"
         :to="localePath('/')"
       >
-        <!-- "mr-4 lg:mr-0" to optically center logo text -->
         <Logo :setings="settings" logoPath="/img/logo.svg"
           class="h-6 lg:h-8 mb-2 lg:mb-0" />
-        <!-- Mobile -->
-        <!-- Logo :setings="settings" logoPath="icon.png"
-          class="lg:hidden h-10 w-14 sm:h-14 sm:w-18 md:h-20 md:w-24 lg:w-4/5 lg:h-8" / -->
       </Link>
 
       <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
@@ -82,7 +78,10 @@ export default defineComponent({
     const settings = computed(() => $docus.settings.value)
     const isHome = computed(() => route.value.path === '/')
 
-    return { settings, isHome }
+    return {
+      settings,
+      isHome
+    }
   }
 })
 </script>
