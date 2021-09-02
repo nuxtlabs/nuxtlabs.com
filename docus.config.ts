@@ -6,10 +6,6 @@ export default {
     credits: true,
     socialImage: false,
     theme: {
-      header: {
-        logo: true,
-        title: false
-      },
       colors: {
         primary: '#FFFFFF', //white
       },

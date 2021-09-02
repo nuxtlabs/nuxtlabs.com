@@ -21,7 +21,7 @@ In January 2020, NuxtLabs raised $2M (pre-seed) to build a team of Nuxt experts 
 
 ## Team
 
-![Nuxtlabs Team 2021](/img/team.jpg)
+![Nuxtlabs Team 2021](/img/team.jpg){width=1280 height=720}
 
 [NuxtLabs is a distributed company with a team based in 6 countries around the world.]{.text-gray-300 .block .text-center .-mt-1}
 

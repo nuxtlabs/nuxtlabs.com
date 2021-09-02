@@ -5,8 +5,7 @@
         class="flex items-center"
         :to="localePath('/')"
       >
-        <Logo :setings="settings" logoPath="/img/logo.svg"
-          class="h-6 lg:h-8 mb-2 lg:mb-0" />
+        <nuxt-img src="/img/logo.svg" class="h-6 lg:h-8 mb-2 lg:mb-0" alt="NuxtLabs" />
       </Link>
 
       <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
@@ -74,14 +73,10 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, route } = useContext()
-    const settings = computed(() => $docus.settings.value)
+    const { route } = useContext()
     const isHome = computed(() => route.value.path === '/')
 
-    return {
-      settings,
-      isHome
-    }
+    return { isHome }
   }
 })
 </script>
