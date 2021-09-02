@@ -2,8 +2,8 @@
   <ul>
     <li v-for="link in links" :key="link.name">
       <Link :to="link.href" :alt="link.name" blank class="relative z-50 gradient">{{ link.name }}</Link>
-      <div class="hidden lg:block absolute opacity-60 w-128 h-128 z-0 pointer-events-none -bottom-full -left-full">
-        <img :src="`/img/socialGradients/${link.gradientImg}.svg`" :alt="link.alt" class="relative" />
+      <div class="hidden lg:block absolute opacity-70 w-full h-1/2 z-0 pointer-events-none -bottom-full -left-full">
+        <img :src="`/img/socialGradients/${link.gradientImg}.svg`" :alt="link.alt" class="relative w-1/2 2xl:w-2/5" />
       </div>
     </li>
   </ul>
@@ -53,7 +53,7 @@ export default defineComponent({
   }
   &:hover {
     ~ div {
-      @apply -bottom-60 -left-60
+      @apply -bottom-65 2xl:-bottom-55 -left-75
     }
   }
 }
