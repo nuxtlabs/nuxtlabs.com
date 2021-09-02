@@ -18,7 +18,7 @@
           animation: vueTelescopeAnimDesktopIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1);
         }
       }
-      .barLeft, .barMid, .barBottom {
+      .vue-telescope-bar {
         opacity: 1;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
@@ -36,7 +36,7 @@
           animation:vueTelescopeAnimDesktopOut 300ms forwards cubic-bezier(0.83, 0, 0.17, 1);
         }
       }
-    .barLeft, .barMid, .barBottom {
+    .vue-telescope-bar {
       opacity: 1;
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
