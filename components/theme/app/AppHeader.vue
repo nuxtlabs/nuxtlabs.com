@@ -5,7 +5,10 @@
         class="flex items-center"
         :to="localePath('/')"
       >
-        <nuxt-img src="/img/logo.svg" class="h-6 lg:h-8 mb-2 lg:mb-0" alt="NuxtLabs" />
+      <h1 class="h-0 w-0 overflow-hidden">
+        NuxtLabs
+      </h1>
+      <nuxt-img src="/img/logo.svg" class="h-6 lg:h-8 mb-2 lg:mb-0" alt="NuxtLabs" />
       </Link>
 
       <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
