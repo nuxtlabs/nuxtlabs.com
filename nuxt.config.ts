@@ -5,7 +5,7 @@ import { withDocus } from '@docus/app'
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: 'NuxtLabs - %s',
+    title: 'NuxtLabs: Intuitive Web Development',
     link: [
       {
         rel: 'stylesheet',
@@ -15,13 +15,13 @@ export default withDocus({
       { rel: 'icon', type: 'image/png', href: '/icon.png' }
     ],
     meta: [
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt.js' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtLabs' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: 'Nuxt.js'
-      }
+      { hid: 'og:image', property: 'og:image', content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg' },
+      { hid: 'og:image:alt', property: 'og:image:alt', content: 'NuxtLabs' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@nuxtlabs' },
+      { hid: 'twitter:image', property: 'og:image', content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg' },
     ],
     bodyAttrs: {
       class: ['min-w-xs']

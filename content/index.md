@@ -1,7 +1,7 @@
 ---
 template: Home
-title: 'Intuitive Web Development'
-description: 'The NuxtLabs company is an Open Source software company dedicated to build software focused on developer experience such as NuxtJS, Docus and Vue Telescope.'
+title: 'NuxtLabs: Intuitive Web Development'
+description: 'We build open source solutions focused on developer experience such as NuxtJS, Docus and Vue Telescope.'
 ---
 
 ::home-titles

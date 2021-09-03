@@ -1,7 +1,14 @@
 ---
 template: Project
-title: 'Docus'
+title: Docus by NuxtLabs
 description: 'The all-in-one solution for NuxtJS developers. Fully customisable theming system and file based content management system included. Create your next progressive web application with Docus now!'
+head.meta:
+  - hid: og:image
+    property: og:image
+    content: https://nuxtlabs.com/img/social/docus.jpg
+  - hid: twitter:image
+    name: twitter:image
+    content: https://nuxtlabs.com/img/social/docus.jpg
 logo: 'docus/docus-logo.svg'
 website: https://docus.com
 github: https://github.com/docusgen
