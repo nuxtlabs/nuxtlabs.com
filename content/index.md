@@ -16,7 +16,7 @@ description: 'We build open source solutions focused on developer experience suc
   :::home-title
   ---
   title: Docus
-  subTitle: Document-Driven Web Platform for web developpers.
+  subTitle: Document-Driven Web Platform for web developers.
   componentAnim: HomeDocusAnimations
   to: docus
   ---
