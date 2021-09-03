@@ -2,7 +2,7 @@
   <li>
     <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
       <div :id="`${componentAnim}Link`">
-        <NuxtLink :to="to" @mouseenter.native="mouseHover()" @mouseleave.native="mouseLeave()"
+        <NuxtLink :to="to" @mouseenter.native="!isTouchDevice && mouseHover" @mouseleave.native="!isTouchDevice && mouseLeave"
             class="text-white text-display-5 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </NuxtLink>
@@ -16,7 +16,7 @@
   </li>
 </template>
 <script lang="ts">
-import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+import { ref, defineComponent, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -39,14 +39,17 @@ export default defineComponent({
   },
   setup(props) {
     let currentTitle = null
+    let isTouchDevice = ref(false)
     let animsComponent = ['HomeNuxtAnimations', 'HomeDocusAnimations', 'HomeVueTelescopeAnimations']
 
     onMounted(() => {
       currentTitle = document.getElementById(`${props.componentAnim}Link`)
+      // Detect if screen is a mobile: https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
+      isTouchDevice.value = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))
     })
 
     //add animations class (not before to avoid animations start on load)
-    function mouseHover() {
+    function mouseHover(e) {
       currentTitle.classList.add(props.componentAnim)
 
       //opacity
@@ -56,13 +59,13 @@ export default defineComponent({
         } else {
           opacity(component, true)
         }
-      });
+      })
     }
 
     function mouseLeave() {
       animsComponent.forEach(component => {
         opacity(component)
-      });
+      })
     }
 
     function opacity(componentName: any, opacity: Boolean = false) {
@@ -73,6 +76,7 @@ export default defineComponent({
     }
 
     return {
+      isTouchDevice,
       mouseHover,
       mouseLeave
     }
