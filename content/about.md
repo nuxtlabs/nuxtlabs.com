@@ -37,4 +37,4 @@ Most of NuxtLabs projects are open source and will always be.
 We craft software focused on developer experience to solve modern web development constrains such as Web Vitals, SEO, Hybrid rendering and more. Our goal is to provide web developers the simplest way to build performant and blazing fast website.
 
 ## Incredible investors
-Since 2020, we are proundly backed by these amazing investors: First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage.
+Since January 2020, we are proundly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage.] for supporting us with our mission.
