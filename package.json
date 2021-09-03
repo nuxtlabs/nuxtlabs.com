@@ -6,18 +6,10 @@
     "generate": "nuxt generate",
     "start": "nuxt start"
   },
-  "resolutions": {
-    "@nuxt/components": "npm:@pi0/components",
-    "vue-server-renderer": "2.6.14",
-    "vue-template-compiler": "2.6.14"
-  },
-  "dependencies": {
+  "devDependencies": {
     "@docus/app": "^1.1.3",
     "@docus/theme": "^1.1.1",
     "@nuxt/typescript-build": "^2.1.0",
-    "paper": "^0.12.15"
-  },
-  "devDependencies": {
     "vue-plausible": "^1.2.1"
   }
 }

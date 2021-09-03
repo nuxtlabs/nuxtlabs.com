@@ -2,7 +2,7 @@
   <li>
     <div class="flex flex-col lg:flex-row-reverse items-center h-full text-center">
       <div :id="`${componentAnim}Link`">
-        <NuxtLink :to="to" @mouseenter.native="!isTouchDevice && mouseHover" @mouseleave.native="!isTouchDevice && mouseLeave"
+        <NuxtLink :to="to" @mouseenter.native="!isTouchDevice && mouseHover()" @mouseleave.native="!isTouchDevice && mouseLeave()"
             class="text-white text-display-5 sm:text-display-3 xl:text-display-2 2xl:text-display-1 title relative z-10 title-shadow text-center lg:text-right">
           <span>{{ title }}</span>
         </NuxtLink>
@@ -46,10 +46,11 @@ export default defineComponent({
       currentTitle = document.getElementById(`${props.componentAnim}Link`)
       // Detect if screen is a mobile: https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
       isTouchDevice.value = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0))
+      console.log('isTouchDevice', isTouchDevice.value)
     })
 
     //add animations class (not before to avoid animations start on load)
-    function mouseHover(e) {
+    function mouseHover() {
       currentTitle.classList.add(props.componentAnim)
 
       //opacity
