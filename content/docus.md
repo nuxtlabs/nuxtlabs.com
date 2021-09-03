@@ -8,7 +8,7 @@ github: https://github.com/docusgen
 twitter: https://twitter.com/docus_
 ---
 
-## Documents driven Web Framework
+## Document-Driven Web Framework and Platform
 
 Docus provides a simple and intuitive experience to build blazing fast progressive web application powered by NuxtJS. The goal is to decrease the number of decisions the programmer has to make and eliminate the complexity of having to configure all and each of the areas of website development. The immediate result is that you can create many more things in less time by focusing on content. Building a website from an idea has never been so simple.
 

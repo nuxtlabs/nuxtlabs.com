@@ -8,7 +8,7 @@ description: 'The NuxtLabs company is an Open Source software company dedicated 
   :::home-title
   ---
   title: Nuxtjs
-  subTitle: The Intuitive Vue Framework for modern web developers.
+  subTitle: The Intuitive Vue Framework for modern web applications.
   componentAnim: HomeNuxtAnimations
   to: nuxtjs
   ---
@@ -16,7 +16,7 @@ description: 'The NuxtLabs company is an Open Source software company dedicated 
   :::home-title
   ---
   title: Docus
-  subTitle: Documents driven Web framework and platform.
+  subTitle: Document-Driven Web Platform for web developpers.
   componentAnim: HomeDocusAnimations
   to: docus
   ---
