@@ -16,7 +16,7 @@ description: 'The NuxtLabs company is an Open Source software company dedicated 
   :::home-title
   ---
   title: Docus
-  subTitle: The progressive web applications platform and framework.
+  subTitle: Documents driven Web framework and platform.
   componentAnim: HomeDocusAnimations
   to: docus
   ---
