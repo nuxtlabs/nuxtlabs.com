@@ -22,3 +22,7 @@ Explore our showcase of websites build with Vue.js and use the filter to see pro
 
 ### Showcase collections
 Vue Telescope is made for the Vue community by the Vue community! Create your own Collections and bookmark any website made with Vue.js!
+
+::learn-more
+Learn more on https://vuetelescope.com
+::

@@ -29,12 +29,19 @@ In January 2020, NuxtLabs raised $2M (pre-seed) to build a team of Nuxt experts 
 ## Mission
 
 ### Open Source Software
+
 As developers, we believe in the importance and power of Open Source. Innovation in technology belongs to open source authors that have changed the path of companies - indeed many of careers have depended on them - Languages, Operating Systems, Frameworks and many more.
 
 Most of NuxtLabs projects are open source and will always be.
 
 ### Intuitive Web Development
+
 We craft software focused on developer experience to solve modern web development constrains such as Web Vitals, SEO, Hybrid rendering and more. Our goal is to provide web developers the simplest way to build performant and blazing fast website.
 
 ## Incredible investors
-Since January 2020, we are proundly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage.] for supporting us with our mission.
+
+Since January 2020, we are proundly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage for supporting us with our mission.
+
+::learn-more
+Follow our updates on https://twitter.com/NuxtLabs
+::
