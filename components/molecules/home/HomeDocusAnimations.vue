@@ -69,7 +69,8 @@
       }
     }
   }
-  //docus shape desktop
+
+  /* docus shape desktop */
   @keyframes fadeInShapeDesktopIn {
     from {
       opacity: 0;
@@ -86,7 +87,8 @@
       opacity: 0;
     }
   }
-  //docus shape mobile
+
+  /* docus shape mobile */
   @keyframes fadeInShapeMobileIn {
     from {
       opacity: 0;
@@ -104,7 +106,7 @@
     }
   }
 
-  //ghost animation mobile
+  /* ghost animation mobile */
   @keyframes ghostAnimMobileIn {
     0% {
       @apply -left-full;
@@ -121,7 +123,8 @@
       @apply -bottom-20 z-20;
     }
   }
-  //ghost animation dekstop
+
+  /* ghost animation dekstop */
   @keyframes ghostAnimMobileOut {
     0% {
       @apply left-10 z-20;
@@ -138,7 +141,8 @@
       @apply -bottom-full;
     }
   }
-  //ghost movement
+
+  /* ghost movement */
   @keyframes ghostFloatX {
     0% {
       transform: translateX(0);
