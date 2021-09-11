@@ -4,12 +4,18 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@docus/app": "^1.1.3",
     "@docus/theme": "^1.1.1",
     "@nuxt/typescript-build": "^2.1.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "vue-plausible": "^1.2.1"
   }
 }

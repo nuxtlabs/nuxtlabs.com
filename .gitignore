@@ -9,6 +9,5 @@ dist
 sw.*
 .env
 .output
-.husky
 package-lock.json
 yarn-error.log
