@@ -1,24 +1,49 @@
 <template>
-  <svg viewBox="0 0 242 242" fill="none" xmlns="http://www.w3.org/2000/svg" class="ghost">
-    <path d="M0 121C0 54.1735 54.1735 0 121 0V0C187.826 0 242 54.1735 242 121V121C242 187.826 187.826 242 121 242H0V121Z" fill="white"/>
-    <ellipse cx="107.919" cy="121.002" rx="26.1622" ry="26.1622" transform="rotate(-90 107.919 121.002)" fill="black" class="eye" />
-    <ellipse cx="186.405" cy="121.002" rx="26.1622" ry="26.1622" transform="rotate(-90 186.405 121.002)" fill="black" class="eye" />
+  <svg
+    viewBox="0 0 242 242"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="ghost"
+  >
+    <path
+      d="M0 121C0 54.1735 54.1735 0 121 0V0C187.826 0 242 54.1735 242 121V121C242 187.826 187.826 242 121 242H0V121Z"
+      fill="white"
+    />
+    <ellipse
+      cx="107.919"
+      cy="121.002"
+      rx="26.1622"
+      ry="26.1622"
+      transform="rotate(-90 107.919 121.002)"
+      fill="black"
+      class="eye"
+    />
+    <ellipse
+      cx="186.405"
+      cy="121.002"
+      rx="26.1622"
+      ry="26.1622"
+      transform="rotate(-90 186.405 121.002)"
+      fill="black"
+      class="eye"
+    />
   </svg>
 </template>
 <style lang="postcss" scoped>
-.eye {
+  .eye {
     background: black;
     -webkit-transform-origin: 50%;
     animation: blink 5s infinite 1s;
-}
+  }
 
-@-webkit-keyframes blink {
-    0%, 100% {
-        transform: scale(1, .05);
+  @-webkit-keyframes blink {
+    0%,
+    100% {
+      transform: scale(1, 0.05);
     }
     5%,
     95% {
-        transform: scale(1, 1);
+      transform: scale(1, 1);
     }
-}
+  }
 </style>

@@ -18,7 +18,7 @@
 }
 
 .title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -35,5 +35,5 @@
 .slide-from-bottom-to-top-enter,
 .slide-from-bottom-to-top-leave-to {
   opacity: 0;
-  transform: translate3d(0, 0px, 0px, -50px);
+  transform: translate3d(0, 0, 0, -50px);
 }
