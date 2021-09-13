@@ -47,4 +47,4 @@ export default {
       'd-container-content': 'd-container d-px-container',
     },
   },
-};
+}

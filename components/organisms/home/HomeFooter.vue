@@ -7,31 +7,31 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    props: {
-      contact: {
-        type: String,
-        default: 'Contact Us',
-      },
-      email: {
-        type: String,
-        default: 'hello@nuxtlabs.com',
-      },
+export default defineComponent({
+  props: {
+    contact: {
+      type: String,
+      default: 'Contact Us',
     },
-  });
+    email: {
+      type: String,
+      default: 'hello@nuxtlabs.com',
+    },
+  },
+})
 </script>
 
 <style lang="postcss">
-  .gradient {
+.gradient {
+  ~ div {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  &:hover {
     ~ div {
-      transition: all 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    &:hover {
-      ~ div {
-        @apply -bottom-60 -left-60;
-      }
+      @apply -bottom-60 -left-60;
     }
   }
+}
 </style>

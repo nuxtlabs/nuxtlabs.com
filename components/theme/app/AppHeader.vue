@@ -73,57 +73,53 @@
 </template>
 
 <script>
-  import {
-    computed,
-    defineComponent,
-    useContext,
-  } from '@nuxtjs/composition-api';
+import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    props: {
-      projects: {
-        type: Boolean,
-        default: false,
-      },
-      links: {
-        type: Array,
-        required: false,
-        default: () => [
-          {
-            title: 'About us',
-            href: '/about',
-          },
-        ],
-      },
-      articleLinks: {
-        type: Array,
-        required: false,
-        default: () => [
-          {
-            title: 'NuxtJS',
-            href: '/nuxtjs',
-          },
-          {
-            title: 'Docus',
-            href: '/docus',
-          },
-          {
-            title: 'Vue telescope',
-            href: '/vuetelescope',
-          },
-        ],
-      },
+export default defineComponent({
+  props: {
+    projects: {
+      type: Boolean,
+      default: false,
     },
-    setup() {
-      const { route } = useContext();
-      const isHome = computed(() => route.value.path === '/');
+    links: {
+      type: Array,
+      required: false,
+      default: () => [
+        {
+          title: 'About us',
+          href: '/about',
+        },
+      ],
+    },
+    articleLinks: {
+      type: Array,
+      required: false,
+      default: () => [
+        {
+          title: 'NuxtJS',
+          href: '/nuxtjs',
+        },
+        {
+          title: 'Docus',
+          href: '/docus',
+        },
+        {
+          title: 'Vue telescope',
+          href: '/vuetelescope',
+        },
+      ],
+    },
+  },
+  setup() {
+    const { route } = useContext()
+    const isHome = computed(() => route.value.path === '/')
 
-      return { isHome };
-    },
-  });
+    return { isHome }
+  },
+})
 </script>
 <style lang="postcss" scoped>
-  .nuxt-link-active {
-    color: white;
-  }
+.nuxt-link-active {
+  color: white;
+}
 </style>

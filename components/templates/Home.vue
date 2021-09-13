@@ -8,18 +8,18 @@
 </template>
 
 <script>
-  import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    props: {
-      page: {
-        type: Object,
-        required: true,
-      },
+export default defineComponent({
+  props: {
+    page: {
+      type: Object,
+      required: true,
     },
-    templateOptions: {
-      aside: false,
-      fluid: true,
-    },
-  });
+  },
+  templateOptions: {
+    aside: false,
+    fluid: true,
+  },
+})
 </script>

@@ -32,52 +32,52 @@
   </ul>
 </template>
 <script lang="ts">
-  import { defineComponent } from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api'
 
-  export default defineComponent({
-    setup() {
-      const links = [
-        {
-          name: 'GitHub',
-          href: 'https://github.com/nuxtlabs',
-          gradientImg: 'github',
-          alt: 'GitHub gradient effect',
-        },
-        {
-          name: 'Twitter',
-          href: 'https://twitter.com/nuxtlabs',
-          gradientImg: 'twitter',
-          alt: 'Twitter gradient effect',
-        },
-        {
-          name: 'YouTube',
-          href: 'https://www.youtube.com/c/NuxtLabs',
-          gradientImg: 'youtube',
-          alt: 'YouTube gradient effect',
-        },
-        {
-          name: 'LinkedIn',
-          href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
-          gradientImg: 'linkedin',
-          alt: 'LinkedIn gradient effect',
-        },
-      ];
+export default defineComponent({
+  setup() {
+    const links = [
+      {
+        name: 'GitHub',
+        href: 'https://github.com/nuxtlabs',
+        gradientImg: 'github',
+        alt: 'GitHub gradient effect',
+      },
+      {
+        name: 'Twitter',
+        href: 'https://twitter.com/nuxtlabs',
+        gradientImg: 'twitter',
+        alt: 'Twitter gradient effect',
+      },
+      {
+        name: 'YouTube',
+        href: 'https://www.youtube.com/c/NuxtLabs',
+        gradientImg: 'youtube',
+        alt: 'YouTube gradient effect',
+      },
+      {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/company/nuxtlabs/mycompany/',
+        gradientImg: 'linkedin',
+        alt: 'LinkedIn gradient effect',
+      },
+    ]
 
-      return {
-        links,
-      };
-    },
-  });
+    return {
+      links,
+    }
+  },
+})
 </script>
 <style lang="postcss">
-  .gradient {
+.gradient {
+  ~ div {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  &:hover {
     ~ div {
-      transition: all 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-    }
-    &:hover {
-      ~ div {
-        @apply -bottom-65 2xl:-bottom-55 -left-75;
-      }
+      @apply -bottom-65 2xl:-bottom-55 -left-75;
     }
   }
+}
 </style>

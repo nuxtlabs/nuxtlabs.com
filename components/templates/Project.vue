@@ -50,24 +50,24 @@
 </template>
 
 <script>
-  import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    props: {
-      page: {
-        type: Object,
-        required: true,
-      },
+export default defineComponent({
+  props: {
+    page: {
+      type: Object,
+      required: true,
     },
-    templateOptions: {
-      aside: false,
-      fluid: true,
-    },
-  });
+  },
+  templateOptions: {
+    aside: false,
+    fluid: true,
+  },
+})
 </script>
 
 <style scoped>
-  .cta {
-    @apply border-1 px-4 rounded py-2 font-medium border-gray-200 hover:bg-white hover:text-black;
-  }
+.cta {
+  @apply border-1 px-4 rounded py-2 font-medium border-gray-200 hover:bg-white hover:text-black;
+}
 </style>

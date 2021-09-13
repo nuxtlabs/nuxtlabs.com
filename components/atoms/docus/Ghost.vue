@@ -30,20 +30,20 @@
   </svg>
 </template>
 <style lang="postcss" scoped>
-  .eye {
-    background: black;
-    -webkit-transform-origin: 50%;
-    animation: blink 5s infinite 1s;
-  }
+.eye {
+  background: black;
+  -webkit-transform-origin: 50%;
+  animation: blink 5s infinite 1s;
+}
 
-  @-webkit-keyframes blink {
-    0%,
-    100% {
-      transform: scale(1, 0.05);
-    }
-    5%,
-    95% {
-      transform: scale(1, 1);
-    }
+@-webkit-keyframes blink {
+  0%,
+  100% {
+    transform: scale(1, 0.05);
   }
+  5%,
+  95% {
+    transform: scale(1, 1);
+  }
+}
 </style>

@@ -6,21 +6,17 @@
 </template>
 
 <script>
-  import {
-    computed,
-    defineComponent,
-    useContext,
-  } from '@nuxtjs/composition-api';
+import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    setup() {
-      const { $docus } = useContext();
+export default defineComponent({
+  setup() {
+    const { $docus } = useContext()
 
-      const layout = computed(() => $docus.layout.value);
+    const layout = computed(() => $docus.layout.value)
 
-      return {
-        layout,
-      };
-    },
-  });
+    return {
+      layout,
+    }
+  },
+})
 </script>

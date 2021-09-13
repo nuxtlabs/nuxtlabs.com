@@ -64,168 +64,168 @@
   </li>
 </template>
 <script lang="ts">
-  import { ref, defineComponent, onMounted } from '@nuxtjs/composition-api';
+import { ref, defineComponent, onMounted } from '@nuxtjs/composition-api'
 
-  export default defineComponent({
-    props: {
-      title: {
-        type: String,
-        default: '',
-      },
-      subTitle: {
-        type: String,
-        default: '',
-      },
-      componentAnim: {
-        type: String,
-        default: '',
-      },
-      to: {
-        type: String,
-        default: '',
-      },
+export default defineComponent({
+  props: {
+    title: {
+      type: String,
+      default: '',
     },
-    setup(props) {
-      let currentTitle = null;
-      const isTouchDevice = ref(false);
-      const animsComponent = [
-        'HomeNuxtAnimations',
-        'HomeDocusAnimations',
-        'HomeVueTelescopeAnimations',
-      ];
-
-      onMounted(() => {
-        currentTitle = document.getElementById(`${props.componentAnim}Link`);
-        // Detect if screen is a mobile: https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
-        isTouchDevice.value =
-          'ontouchstart' in window ||
-          navigator.maxTouchPoints > 0 ||
-          // @ts-ignore
-          navigator.msMaxTouchPoints > 0;
-      });
-
-      // add animations class (not before to avoid animations start on load)
-      function mouseHover() {
-        currentTitle.classList.add(props.componentAnim);
-
-        // opacity
-        animsComponent.forEach((component) => {
-          if (component === props.componentAnim) {
-            opacity(currentTitle);
-          } else {
-            opacity(component, true);
-          }
-        });
-      }
-
-      function mouseLeave() {
-        animsComponent.forEach((component) => {
-          opacity(component);
-        });
-      }
-
-      function opacity(componentName: any, opacity: Boolean = false) {
-        const title =
-          typeof componentName === 'string'
-            ? document.getElementById(`${componentName}Link`)
-            : componentName;
-        title.classList.add(opacity ? 'opacity-30' : 'opacity-100');
-        title.classList.remove(opacity ? 'opacity-100' : 'opacity-30');
-      }
-
-      return {
-        isTouchDevice,
-        mouseHover,
-        mouseLeave,
-      };
+    subTitle: {
+      type: String,
+      default: '',
     },
-  });
+    componentAnim: {
+      type: String,
+      default: '',
+    },
+    to: {
+      type: String,
+      default: '',
+    },
+  },
+  setup(props) {
+    let currentTitle = null
+    const isTouchDevice = ref(false)
+    const animsComponent = [
+      'HomeNuxtAnimations',
+      'HomeDocusAnimations',
+      'HomeVueTelescopeAnimations',
+    ]
+
+    onMounted(() => {
+      currentTitle = document.getElementById(`${props.componentAnim}Link`)
+      // Detect if screen is a mobile: https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
+      isTouchDevice.value =
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        // @ts-ignore
+        navigator.msMaxTouchPoints > 0
+    })
+
+    // add animations class (not before to avoid animations start on load)
+    function mouseHover() {
+      currentTitle.classList.add(props.componentAnim)
+
+      // opacity
+      animsComponent.forEach((component) => {
+        if (component === props.componentAnim) {
+          opacity(currentTitle)
+        } else {
+          opacity(component, true)
+        }
+      })
+    }
+
+    function mouseLeave() {
+      animsComponent.forEach((component) => {
+        opacity(component)
+      })
+    }
+
+    function opacity(componentName: any, opacity: Boolean = false) {
+      const title =
+        typeof componentName === 'string'
+          ? document.getElementById(`${componentName}Link`)
+          : componentName
+      title.classList.add(opacity ? 'opacity-30' : 'opacity-100')
+      title.classList.remove(opacity ? 'opacity-100' : 'opacity-30')
+    }
+
+    return {
+      isTouchDevice,
+      mouseHover,
+      mouseLeave,
+    }
+  },
+})
 </script>
 <style lang="postcss" scoped>
-  .HomeNuxtAnimations,
-  .HomeDocusAnimations,
-  .HomeVueTelescopeAnimations {
+.HomeNuxtAnimations,
+.HomeDocusAnimations,
+.HomeVueTelescopeAnimations {
+  ~ p {
+    animation: subTitleOut 0.5s forwards;
+  }
+  ~ hr {
+    animation: lineOut 0.5s forwards;
+  }
+  &:hover {
+    > a {
+      animation: colorTextIn 1s forwards;
+    }
     ~ p {
-      animation: subTitleOut 0.5s forwards;
+      animation: subTitleIn 1s forwards;
     }
     ~ hr {
-      animation: lineOut 0.5s forwards;
-    }
-    &:hover {
-      > a {
-        animation: colorTextIn 1s forwards;
-      }
-      ~ p {
-        animation: subTitleIn 1s forwards;
-      }
-      ~ hr {
-        animation: lineIn 1s forwards;
-      }
+      animation: lineIn 1s forwards;
     }
   }
+}
 
-  @keyframes colorTextIn {
-    from {
-      color: black;
-    }
-    to {
-      color: white;
-    }
+@keyframes colorTextIn {
+  from {
+    color: black;
   }
+  to {
+    color: white;
+  }
+}
 
-  @keyframes colorTextOut {
-    from {
-      color: white;
-    }
-    to {
-      color: black;
-    }
+@keyframes colorTextOut {
+  from {
+    color: white;
   }
+  to {
+    color: black;
+  }
+}
 
-  @-webkit-keyframes subTitleIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@-webkit-keyframes subTitleIn {
+  from {
+    opacity: 0;
   }
-  @-webkit-keyframes subTitleOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 1;
   }
+}
+@-webkit-keyframes subTitleOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
-  @-webkit-keyframes lineIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-    0% {
-      @apply w-2 2xl:w-4;
-    }
-    100% {
-      @apply w-12 2xl:w-16;
-    }
+@-webkit-keyframes lineIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+  0% {
+    @apply w-2 2xl:w-4;
+  }
+  100% {
+    @apply w-12 2xl:w-16;
+  }
+}
 
-  @-webkit-keyframes lineOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-    0% {
-      @apply w-12 2xl:w-16;
-    }
-    100% {
-      @apply w-2 2xl:w-4;
-    }
+@-webkit-keyframes lineOut {
+  from {
+    opacity: 1;
   }
+  to {
+    opacity: 0;
+  }
+  0% {
+    @apply w-12 2xl:w-16;
+  }
+  100% {
+    @apply w-2 2xl:w-4;
+  }
+}
 </style>

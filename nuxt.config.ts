@@ -1,5 +1,5 @@
-import { resolve } from 'path';
-import { withDocus } from '@docus/app';
+import { resolve } from 'path'
+import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -9,7 +9,8 @@ export default withDocus({
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
       },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'icon', type: 'image/png', href: '/icon.png' },
@@ -59,15 +60,15 @@ export default withDocus({
     generate: {
       async done() {
         try {
-          if (!process.env.VERCEL) return;
+          if (!process.env.VERCEL) return
 
-          const { copy } = await import('fs-extra').then((r) => r.default || r);
-          const src = resolve(__dirname, '.vercel_build_output');
-          const dest = resolve(__dirname, '../.vercel_build_output');
-          await copy(src, dest);
+          const { copy } = await import('fs-extra').then((r) => r.default || r)
+          const src = resolve(__dirname, '.vercel_build_output')
+          const dest = resolve(__dirname, '../.vercel_build_output')
+          await copy(src, dest)
         } catch {
           // eslint-disable-next-line no-console
-          console.log('Issue copying `.vercel_build_output` to project root.');
+          console.log('Issue copying `.vercel_build_output` to project root.')
         }
       },
     },
@@ -115,4 +116,4 @@ export default withDocus({
       domain: process.env.PLAUSIBLE_DOMAIN,
     },
   },
-});
+})

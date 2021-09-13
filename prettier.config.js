@@ -1,6 +1,6 @@
 module.exports = {
   $schema: 'http://json.schemastore.org/prettierrc',
-  semi: true,
+  semi: false,
   arrowParens: 'always',
   singleQuote: true,
   trailingComma: 'all',
@@ -9,6 +9,6 @@ module.exports = {
   insertPragma: false,
   tabWidth: 2,
   useTabs: false,
-  vueIndentScriptAndStyle: true,
+  vueIndentScriptAndStyle: false,
   endOfLine: 'lf',
-};
+}

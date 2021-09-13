@@ -1,4 +1,4 @@
-import colors from 'windicss/colors';
+import colors from 'windicss/colors'
 
 export default {
   theme: {
@@ -76,4 +76,4 @@ export default {
       lineHeight: '2rem',
     },
   },
-};
+}

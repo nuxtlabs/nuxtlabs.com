@@ -32,89 +32,90 @@
   </div>
 </template>
 <style lang="postcss" scoped>
-  .HomeVueTelescopeAnimations {
-    &:hover {
-      ~ div {
-        #vue-telescope {
-          animation: vueTelescopeAnimMobileIn 600ms forwards
-            cubic-bezier(0.83, 0, 0.17, 1);
-          @screen lg {
-            animation: vueTelescopeAnimDesktopIn 600ms forwards
-              cubic-bezier(0.83, 0, 0.17, 1);
-          }
-        }
-        .vue-telescope-bar {
-          animation: dashBarIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1);
-        }
-      }
-    }
+.HomeVueTelescopeAnimations {
+  &:hover {
     ~ div {
       #vue-telescope {
-        animation: vueTelescopeAnimMobileOut 300ms forwards
+        animation: vueTelescopeAnimMobileIn 600ms forwards
           cubic-bezier(0.83, 0, 0.17, 1);
         @screen lg {
-          animation: vueTelescopeAnimDesktopOut 300ms forwards
+          animation: vueTelescopeAnimDesktopIn 600ms forwards
             cubic-bezier(0.83, 0, 0.17, 1);
         }
       }
       .vue-telescope-bar {
-        @apply opacity-100 absolute transform h-full w-full stroke-25 lg:stroke-32;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: dashBarOut 300ms forwards cubic-bezier(0.83, 0, 0.17, 1);
-        z-index: 2;
+        animation: dashBarIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1);
       }
     }
   }
-  //bar animations
-  @keyframes dashBarIn {
-    from {
+  ~ div {
+    #vue-telescope {
+      animation: vueTelescopeAnimMobileOut 300ms forwards
+        cubic-bezier(0.83, 0, 0.17, 1);
+      @screen lg {
+        animation: vueTelescopeAnimDesktopOut 300ms forwards
+          cubic-bezier(0.83, 0, 0.17, 1);
+      }
+    }
+    .vue-telescope-bar {
+      @apply opacity-100 absolute transform h-full w-full stroke-25 lg:stroke-32;
+
+      stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-  @keyframes dashBarOut {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 1000;
+      animation: dashBarOut 300ms forwards cubic-bezier(0.83, 0, 0.17, 1);
+      z-index: 2;
     }
   }
-  //logo vt anim desktop
-  @-webkit-keyframes vueTelescopeAnimDesktopIn {
-    0% {
-      @apply -bottom-full;
-    }
-    100% {
-      @apply -bottom-30 lg:-bottom-40;
-    }
+}
+//bar animations
+@keyframes dashBarIn {
+  from {
+    stroke-dashoffset: 1000;
   }
-  @-webkit-keyframes vueTelescopeAnimDesktopOut {
-    0% {
-      @apply -bottom-30 lg:-bottom-40;
-    }
-    100% {
-      @apply -bottom-full;
-    }
+  to {
+    stroke-dashoffset: 0;
   }
-  //logo vt anim mobile
-  @-webkit-keyframes vueTelescopeAnimMobileIn {
-    0% {
-      @apply -left-full opacity-0;
-    }
-    100% {
-      @apply -left-50 bottom-17 opacity-30;
-    }
+}
+@keyframes dashBarOut {
+  from {
+    stroke-dashoffset: 0;
   }
-  @-webkit-keyframes vueTelescopeAnimMobileOut {
-    0% {
-      @apply -left-50 bottom-17 opacity-30;
-    }
-    100% {
-      @apply -left-full opacity-0;
-    }
+  to {
+    stroke-dashoffset: 1000;
   }
+}
+//logo vt anim desktop
+@-webkit-keyframes vueTelescopeAnimDesktopIn {
+  0% {
+    @apply -bottom-full;
+  }
+  100% {
+    @apply -bottom-30 lg:-bottom-40;
+  }
+}
+@-webkit-keyframes vueTelescopeAnimDesktopOut {
+  0% {
+    @apply -bottom-30 lg:-bottom-40;
+  }
+  100% {
+    @apply -bottom-full;
+  }
+}
+//logo vt anim mobile
+@-webkit-keyframes vueTelescopeAnimMobileIn {
+  0% {
+    @apply -left-full opacity-0;
+  }
+  100% {
+    @apply -left-50 bottom-17 opacity-30;
+  }
+}
+@-webkit-keyframes vueTelescopeAnimMobileOut {
+  0% {
+    @apply -left-50 bottom-17 opacity-30;
+  }
+  100% {
+    @apply -left-full opacity-0;
+  }
+}
 </style>
