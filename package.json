@@ -15,13 +15,17 @@
     "lint:prettier": "prettier --check '**/*.{js,ts,vue}' --ignore-path .gitignore",
     "lint:prettier:fix": "prettier --write '**/*.{js,ts,vue}' --ignore-path .gitignore",
     "lint:css": "stylelint '**/*.{css,vue}' --ignore-path .gitignore",
-    "lint:css:fix": "stylelint --fix '**/*.{css,vue}' --ignore-path .gitignore"
+    "lint:css:fix": "stylelint --fix '**/*.{css,vue}' --ignore-path .gitignore",
+    "clean:build": "rimraf dist && rimraf .nuxt",
+    "clean:lhci": "rimraf .lighthouseci",
+    "lhci": "lhci autorun"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@docus/app": "^1.1.3",
     "@docus/theme": "^1.1.1",
+    "@lhci/cli": "^0.8.1",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
