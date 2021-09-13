@@ -1,6 +1,9 @@
 <template>
   <div class="absolute inset-0 flex h-screen overflow-hidden">
-    <DocusContent :document="page" class="w-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16" />
+    <DocusContent
+      :document="page"
+      class="w-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
+    />
   </div>
 </template>
 
@@ -11,12 +14,12 @@ export default defineComponent({
   props: {
     page: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   templateOptions: {
     aside: false,
-    fluid: true
-  }
+    fluid: true,
+  },
 })
 </script>

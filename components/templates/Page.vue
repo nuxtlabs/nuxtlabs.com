@@ -11,12 +11,12 @@ export default defineComponent({
   props: {
     page: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   templateOptions: {
     aside: false,
-    fluid: false
-  }
+    fluid: false,
+  },
 })
 </script>

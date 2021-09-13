@@ -14,6 +14,25 @@
       "noUnusedLocals": true,
       "resolveJsonModule": true,
       "allowSyntheticDefaultImports": true,
+      "paths": {
+        "~/*": ["./*"],
+        "@/*": ["./*"]
+      },
       "types": ["@types/node", "@nuxt/types", "nuxt-windicss"]
-    }
+    },
+    "include": [
+      // JavaScript
+      "components/**/*.js",
+      // Vue
+      "components/**/*.vue",
+      // TypeScript
+      "components/**/*.ts",
+      "nuxt.config.ts",
+    ],
+    "exclude": [
+      "node_modules",
+      ".nuxt",
+      "dist",
+      "static",
+    ]
   }

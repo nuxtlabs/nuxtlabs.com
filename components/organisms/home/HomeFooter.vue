@@ -13,13 +13,13 @@ export default defineComponent({
   props: {
     contact: {
       type: String,
-      default: 'Contact Us'
+      default: 'Contact Us',
     },
     email: {
       type: String,
-      default: 'hello@nuxtlabs.com'
-    }
-  }
+      default: 'hello@nuxtlabs.com',
+    },
+  },
 })
 </script>
 
@@ -30,7 +30,7 @@ export default defineComponent({
   }
   &:hover {
     ~ div {
-      @apply -bottom-60 -left-60
+      @apply -bottom-60 -left-60;
     }
   }
 }

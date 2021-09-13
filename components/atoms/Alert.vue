@@ -1,5 +1,8 @@
 <template>
-  <div class="p-4 mt-4 mb-4 rounded-lg alert text-sm leading-loose" :class="[type]">
+  <div
+    class="p-4 mt-4 mb-4 rounded-lg alert text-sm leading-loose"
+    :class="[type]"
+  >
     <div class="flex items-center space-x-4">
       <div>
         <Component :is="iconComponent" class="w-5 h-5" />
@@ -23,19 +26,27 @@ export default defineComponent({
       type: String,
       default: 'info',
       validator(value) {
-        return ['info', 'success', 'warning', 'danger', 'next', 'star'].includes(value)
-      }
-    }
+        return [
+          'info',
+          'success',
+          'warning',
+          'danger',
+          'next',
+          'star',
+        ].includes(value)
+      },
+    },
   },
   setup(props) {
-    const iconComponent = computed(() => {
-      return `IconAlert${props.type.charAt(0).toUpperCase() + props.type.slice(1)}`
-    })
+    const iconComponent = computed(
+      () =>
+        `IconAlert${props.type.charAt(0).toUpperCase() + props.type.slice(1)}`,
+    )
 
     return {
-      iconComponent
+      iconComponent,
     }
-  }
+  },
 })
 </script>
 

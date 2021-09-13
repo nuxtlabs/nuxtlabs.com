@@ -9,32 +9,50 @@ export default withDocus({
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'
+        href:
+          // eslint-disable max-len
+          'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
       },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'icon', type: 'image/png', href: '/icon.png' }
+      { rel: 'icon', type: 'image/png', href: '/icon.png' },
     ],
     meta: [
       { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtLabs' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg',
+      },
       { hid: 'og:image:alt', property: 'og:image:alt', content: 'NuxtLabs' },
-      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
       { hid: 'twitter:site', name: 'twitter:site', content: '@nuxtlabs' },
-      { hid: 'twitter:image', property: 'og:image', content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg' },
+      {
+        hid: 'twitter:image',
+        property: 'og:image',
+        content: 'https://nuxtlabs.com/img/social/nuxtlabs.jpg',
+      },
     ],
     bodyAttrs: {
-      class: ['min-w-xs']
-    }
+      class: ['min-w-xs'],
+    },
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: [
+    // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    'vue-plausible'
+    // https://go.nuxtjs.dev/stylelint
+    '@nuxtjs/stylelint-module',
+    // https://www.npmjs.com/package/vue-plausible
+    'vue-plausible',
   ],
   windicss: {
     root: resolve(__dirname),
-    config: resolve(__dirname, 'windi.config.js')
+    config: resolve(__dirname, 'windi.config.js'),
   },
   /**
    * Add image domains for nuxt-image on Vercel
@@ -53,19 +71,28 @@ export default withDocus({
           // eslint-disable-next-line no-console
           console.log('Issue copying `.vercel_build_output` to project root.')
         }
-      }
-    }
+      },
+    },
   },
   vite: {
     server: {
       fs: {
-        strict: false
+        strict: false,
       },
       optimizeDeps: {
         exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-        include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url']
-      }
-    }
+        include: [
+          'defu',
+          'theme-colors',
+          'cookie',
+          'js-cookie',
+          'clipboard',
+          'property-information',
+          'ufo',
+          'url',
+        ],
+      },
+    },
   },
   image: {
     screens: {
@@ -73,7 +100,7 @@ export default withDocus({
       avatarLg: 48,
       logo: 32,
       migration: 536,
-      blogImage: 864
+      blogImage: 864,
     },
     domains: [
       'pbs.twimg.com',
@@ -83,11 +110,11 @@ export default withDocus({
       'unsplash.com',
       'user-images.githubusercontent.com',
       'abs.twimg.com',
-    ]
+    ],
   },
   publicRuntimeConfig: {
     plausible: {
-      domain: process.env.PLAUSIBLE_DOMAIN
-    }
-  }
+      domain: process.env.PLAUSIBLE_DOMAIN,
+    },
+  },
 })

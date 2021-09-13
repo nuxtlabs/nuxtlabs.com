@@ -15,8 +15,8 @@ export default defineComponent({
     const layout = computed(() => $docus.layout.value)
 
     return {
-      layout
+      layout,
     }
-  }
+  },
 })
 </script>
