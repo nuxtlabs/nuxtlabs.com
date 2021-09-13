@@ -1,7 +1,8 @@
 ---
 template: Project
-title: NuxtJS Story - NuxtLabs
+title: NuxtJS
 description: 'The Intuitive Vue framework created by Alexandre Chopin and Sébastien Chopin in 2016. Already adopted by over 5 millions developers around the world.'
+head.title: NuxtJS Story - NuxtLabs
 head.meta:
   - hid: og:image
     property: og:image
