@@ -54,5 +54,11 @@ jobs:
       - name: Run linter(s) 👀
         run: npm run lint
 
-      - name: Generate the static docs site ⚡️
-        run: npm run build
+      - name: Generate the static site ⚡️
+        run: npm run clean:build && npm run build && npm run generate
+
+      - name: Run Lighthouse CI 🚀
+        run: npm run clean:lhci && npm run lhci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
