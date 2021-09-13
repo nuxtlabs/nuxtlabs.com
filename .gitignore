@@ -11,3 +11,5 @@ sw.*
 .output
 package-lock.json
 yarn-error.log
+# Lighthouse artifcats
+.lighthouseci
