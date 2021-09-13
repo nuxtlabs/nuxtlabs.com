@@ -182,7 +182,7 @@ export default defineComponent({
   }
 }
 
-@-webkit-keyframes subTitleIn {
+@keyframes subTitleIn {
   from {
     opacity: 0;
   }
@@ -190,7 +190,7 @@ export default defineComponent({
     opacity: 1;
   }
 }
-@-webkit-keyframes subTitleOut {
+@keyframes subTitleOut {
   from {
     opacity: 1;
   }
@@ -199,7 +199,7 @@ export default defineComponent({
   }
 }
 
-@-webkit-keyframes lineIn {
+@keyframes lineIn {
   from {
     opacity: 0;
   }
@@ -214,7 +214,7 @@ export default defineComponent({
   }
 }
 
-@-webkit-keyframes lineOut {
+@keyframes lineOut {
   from {
     opacity: 1;
   }

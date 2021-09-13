@@ -67,7 +67,6 @@
     }
   }
 }
-//bar animations
 @keyframes dashBarIn {
   from {
     stroke-dashoffset: 1000;
@@ -84,8 +83,7 @@
     stroke-dashoffset: 1000;
   }
 }
-//logo vt anim desktop
-@-webkit-keyframes vueTelescopeAnimDesktopIn {
+@keyframes vueTelescopeAnimDesktopIn {
   0% {
     @apply -bottom-full;
   }
@@ -93,7 +91,7 @@
     @apply -bottom-30 lg:-bottom-40;
   }
 }
-@-webkit-keyframes vueTelescopeAnimDesktopOut {
+@keyframes vueTelescopeAnimDesktopOut {
   0% {
     @apply -bottom-30 lg:-bottom-40;
   }
@@ -101,8 +99,7 @@
     @apply -bottom-full;
   }
 }
-//logo vt anim mobile
-@-webkit-keyframes vueTelescopeAnimMobileIn {
+@keyframes vueTelescopeAnimMobileIn {
   0% {
     @apply -left-full opacity-0;
   }
@@ -110,7 +107,7 @@
     @apply -left-50 bottom-17 opacity-30;
   }
 }
-@-webkit-keyframes vueTelescopeAnimMobileOut {
+@keyframes vueTelescopeAnimMobileOut {
   0% {
     @apply -left-50 bottom-17 opacity-30;
   }

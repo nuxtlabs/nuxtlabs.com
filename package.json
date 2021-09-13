@@ -10,12 +10,12 @@
     "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:css",
     "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix && npm run lint:css:fix",
     "lint:js": "npm run lint:eslint && npm run lint:prettier",
-    "lint:eslint": "eslint \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
-    "lint:eslint:fix": "eslint --fix \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --check \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
-    "lint:prettier:fix": "prettier --write \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
-    "lint:css": "stylelint '**/*.{css,scss,sass}' --ignore-path .gitignore",
-    "lint:css:fix": "stylelint --fix '**/*.{css,scss,sass}' --ignore-path .gitignore"
+    "lint:eslint": "eslint '**/*.{js,ts,vue}' --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --fix '**/*.{js,ts,vue}' --ignore-path .gitignore",
+    "lint:prettier": "prettier --check '**/*.{js,ts,vue}' --ignore-path .gitignore",
+    "lint:prettier:fix": "prettier --write '**/*.{js,ts,vue}' --ignore-path .gitignore",
+    "lint:css": "stylelint '**/*.{css,vue}' --ignore-path .gitignore",
+    "lint:css:fix": "stylelint --fix '**/*.{css,vue}' --ignore-path .gitignore"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",

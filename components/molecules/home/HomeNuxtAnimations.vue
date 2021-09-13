@@ -46,23 +46,10 @@
 </template>
 <style lang="postcss" scoped>
 .HomeNuxtAnimations {
-  ~ div {
-    #nuxtGradient,
-    #gem1,
-    #gem2,
-    #gem3,
-    #gem4,
-    #gem5 {
-      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
-      z-index: 1;
-    }
-  }
   &:hover {
     ~ div {
       #nuxtLogo {
         animation: fadeInLogoMobileIn 1s forwards;
-      }
-      #nuxtLogo {
         @screen lg {
           animation: fadeInLogoDesktopIn 1s forwards;
         }
@@ -97,6 +84,15 @@
     }
   }
   ~ div {
+    #nuxtGradient,
+    #gem1,
+    #gem2,
+    #gem3,
+    #gem4,
+    #gem5 {
+      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
+      z-index: 1;
+    }
     #nuxtLogo {
       animation: fadeInLogoMobileOut 0.5s forwards;
       @screen lg {
@@ -130,7 +126,6 @@
     }
   }
 }
-//nuxt logo desktop
 @keyframes fadeInLogoDesktopIn {
   from {
     opacity: 0;
@@ -147,7 +142,6 @@
     opacity: 0;
   }
 }
-//nuxt logo mobile
 @keyframes fadeInLogoMobileOut {
   from {
     opacity: 20%;
@@ -164,8 +158,7 @@
     opacity: 20%;
   }
 }
-//gem
-@-webkit-keyframes gem1AnimIn {
+@keyframes gem1AnimIn {
   0% {
     @apply -bottom-full;
   }
@@ -173,7 +166,7 @@
     @apply bottom-1/4;
   }
 }
-@-webkit-keyframes gem1AnimOut {
+@keyframes gem1AnimOut {
   0% {
     @apply bottom-1/4;
   }
@@ -182,7 +175,7 @@
   }
 }
 
-@-webkit-keyframes gem2AnimIn {
+@keyframes gem2AnimIn {
   0% {
     @apply -bottom-full;
   }
@@ -190,7 +183,7 @@
     @apply bottom-1/3 z-20;
   }
 }
-@-webkit-keyframes gem2AnimOut {
+@keyframes gem2AnimOut {
   0% {
     @apply bottom-1/3 z-20;
   }
@@ -199,7 +192,7 @@
   }
 }
 
-@-webkit-keyframes gem3AnimIn {
+@keyframes gem3AnimIn {
   0% {
     @apply -bottom-full;
   }
@@ -207,7 +200,7 @@
     @apply bottom-1/12;
   }
 }
-@-webkit-keyframes gem3AnimOut {
+@keyframes gem3AnimOut {
   0% {
     @apply bottom-1/12;
   }
@@ -216,7 +209,7 @@
   }
 }
 
-@-webkit-keyframes gem4AnimIn {
+@keyframes gem4AnimIn {
   0% {
     @apply -bottom-full;
   }
@@ -224,7 +217,7 @@
     @apply bottom-1/3 z-20;
   }
 }
-@-webkit-keyframes gem4AnimOut {
+@keyframes gem4AnimOut {
   0% {
     @apply bottom-1/3 z-20;
   }
@@ -233,7 +226,7 @@
   }
 }
 
-@-webkit-keyframes gem5AnimIn {
+@keyframes gem5AnimIn {
   0% {
     @apply -bottom-full;
   }
@@ -241,7 +234,7 @@
     @apply bottom-10;
   }
 }
-@-webkit-keyframes gem5AnimOut {
+@keyframes gem5AnimOut {
   0% {
     @apply bottom-10;
   }
@@ -249,8 +242,7 @@
     @apply -bottom-full;
   }
 }
-//gem movement
-@-webkit-keyframes gemFloatY {
+@keyframes gemFloatY {
   0% {
     transform: translateY(0);
   }
@@ -261,7 +253,7 @@
     transform: translateY(-10%);
   }
 }
-@-webkit-keyframes gemFloatX {
+@keyframes gemFloatX {
   0% {
     transform: translateX(0);
   }
@@ -272,7 +264,7 @@
     transform: translateX(-10%);
   }
 }
-@-webkit-keyframes gemFloatYX {
+@keyframes gemFloatYX {
   0% {
     transform: translateY(0);
   }
@@ -283,7 +275,7 @@
     transform: translateY(-10%);
   }
 }
-@-webkit-keyframes gemFloatXY {
+@keyframes gemFloatXY {
   0% {
     transform: translateX(0);
   }

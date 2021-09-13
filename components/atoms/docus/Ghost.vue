@@ -36,7 +36,7 @@
   animation: blink 5s infinite 1s;
 }
 
-@-webkit-keyframes blink {
+@keyframes blink {
   0%,
   100% {
     transform: scale(1, 0.05);
