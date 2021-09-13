@@ -2,18 +2,14 @@ module.exports = {
   ci: {
     collect: {
       settings: {
-        blockedUrlPatterns: [
-          'https://*.googleapis.com',
-        ],
+        blockedUrlPatterns: ['https://*.googleapis.com'],
         preset: 'desktop',
         throttling: {
           cpuSlowdownMultiplier: 0,
         },
       },
       isSinglePageApplication: true,
-      url: [
-        'http://localhost:4000',
-      ],
+      url: ['http://localhost:4000'],
       startServerCommand: 'npm run start',
       numberOfRuns: 2,
     },
@@ -31,4 +27,4 @@ module.exports = {
       target: 'temporary-public-storage',
     },
   },
-};
+}
