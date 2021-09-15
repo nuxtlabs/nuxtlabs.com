@@ -31,7 +31,7 @@
         left-0
         right-0
         object-cover
-        opacity-80
+        opacity-0
       "
     />
     <img
@@ -55,7 +55,7 @@
         }
       }
       #nuxtGradient {
-        @apply bottom-0;
+        @apply bottom-0 opacity-80;
       }
       #gem1 {
         animation: gem1AnimIn 600ms forwards cubic-bezier(0.83, 0, 0.17, 1),
