@@ -9,7 +9,7 @@ h1.d-heading-title {
   font-size: 62px !important;
   line-height: 120% !important;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     bottom: 0;
