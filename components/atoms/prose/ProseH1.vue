@@ -5,7 +5,7 @@
 </template>
 <style lang="postcss" scoped>
 h1.d-heading-title {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 62px !important;
   line-height: 120% !important;
 }
