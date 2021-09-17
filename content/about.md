@@ -5,21 +5,33 @@ description: 'NuxtLabs was founded in 2017 by Alexandre Chopin and Sébastien Ch
 ---
 
 ::ProseH1
-From a passion to a company <span class="inline-block h-1 background-white w-full">ddd</span>
+[From a passion to a company]{.bg-black .pr-12}
 ::
 
-## Story
+::about-content-section{.w-3/4 .border-l-2 .border-white .mt-32 .mb-48}
+---
+category: Story 
+title: The Founders
+---
 
-### The founders
+[Alexandre Chopin](https://twitter.com/iamnuxt) and [Sébastien Chopin](https://twitter.com/atinux) discovered their passion for computers and web development deep within the Pyrenees Mountains [(heritage reflected in the NuxtLabs logo if you haven’t noticed!)]{.text-gray-200}. They taught themselves how to code as kids and designed websites at night, weekends and during school holidays.
 
-[Alexandre Chopin](https://twitter.com/iamnuxt) and [Sébastien Chopin](https://twitter.com/atinux) discovered their passion for computers and web development deep within the Pyrenees Mountains [(heritage reflected in the NuxtLabs logo if you haven’t noticed!)]{.text-gray-200}. They taught themselves how to code as kids and designed websites at night, weekends and during school holidays. They worked on their first external project together, creating a browser game website built with PHP, HTML, CSS and jQuery - this fortunately covered part of their college studies! They both had the entrepreneurial bug at this point.
+They worked on their first external project together, creating a browser game website built with PHP, HTML, CSS and jQuery - this fortunately covered part of their college studies! They both had the entrepreneurial bug at this point.
+::
 
-### The company
+::pyrenees-landscape
+::
+
+::about-content-section{.w-3/4 .border-r-2 .border-white .mt-96 .mb-48 .text-right .ml-auto}
+---
+category: Story 
+title: The Company
+---
 
 NuxtLabs is born in 2017 few months after the production release of [NuxtJS](/nuxtjs) and the need of many companies for Nuxt training and consultancy such as Adobe, Accor, BackMarket, Bershka, Lequipe, Sephora, Ubisoft and many others.
 
 In January 2020, NuxtLabs raised $2M (pre-seed) to build a team of Nuxt experts working full time on Open Source and business solutions around it.
-
+::
 
 ## Team
 

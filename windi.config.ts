@@ -24,6 +24,9 @@ export default {
       transitionProperty: {
         height: 'height',
       },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
   shortcuts: {
