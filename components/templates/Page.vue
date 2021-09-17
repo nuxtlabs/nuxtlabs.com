@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 sm:py-16 max-w-2xl mx-auto px-4">
+  <div class="py-8 sm:py-16 max-w-4xl mx-auto px-4">
     <DocusContent :document="page" />
   </div>
 </template>
