@@ -37,7 +37,6 @@ export default defineComponent({
     const activeProject = ref(null)
 
     function setActiveProject(project) {
-      console.log('AAAAA', project)
       activeProject.value = project.title
     }
     return {
