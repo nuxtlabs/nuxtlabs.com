@@ -1,5 +1,5 @@
 <template>
-  <section class="p-12">
+  <section class="sm:p-6 lg:p-12">
     <h2 class="uppercase font-bold opacity-70 mb-2">
       {{ category }}
     </h2>

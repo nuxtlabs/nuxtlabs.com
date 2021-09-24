@@ -26,12 +26,12 @@ You can manually submit your site or any site built using any of the Vue.js fram
 
 With the [Vue Telescope Browser extensions](https://github.com/nuxtlabs/vue-telescope-extensions) available for Firefox, Chrome and Edge, you can see informations about the website without leaving the page! Just by clicking on the extention icon and you will see what framework the page is using, what UI/CSS library and so much more.
 
-
 ### Explore websites
+
 Explore our showcase of websites build with Vue.js and use the filter to see projects built with a particular framework and/or UI library. You can also filter by plugins as well as Nuxt modules.
 
-
 ### Showcase collections
+
 Vue Telescope is made for the Vue community by the Vue community! Create your own Collections and bookmark any website made with Vue.js!
 
 ::learn-more
