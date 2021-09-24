@@ -1,9 +1,10 @@
 <template>
-  <div class="absolute inset-0 flex h-screen overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-screen">
     <DocusContent
       :document="page"
-      class="w-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
+      class="w-full h-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
     />
+    <!-- <OldHomeFooter /> -->
   </div>
 </template>
 

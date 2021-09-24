@@ -33,7 +33,7 @@
 .eye {
   background: black;
   -webkit-transform-origin: 50%;
-  animation: blink 5s infinite 1s;
+  animation: blink 5s infinite 0.25s;
 }
 
 @keyframes blink {

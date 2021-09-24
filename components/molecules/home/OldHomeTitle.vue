@@ -89,9 +89,9 @@ export default defineComponent({
     let currentTitle = null
     const isTouchDevice = ref(false)
     const animsComponent = [
-      'HomeNuxtAnimations',
-      'HomeDocusAnimations',
-      'HomeVueTelescopeAnimations',
+      'OldHomeNuxtAnimations',
+      'OldHomeDocusAnimations',
+      'OldHomeVueTelescopeAnimations',
     ]
 
     onMounted(() => {
@@ -141,10 +141,11 @@ export default defineComponent({
   },
 })
 </script>
+
 <style lang="postcss" scoped>
-.HomeNuxtAnimations,
-.HomeDocusAnimations,
-.HomeVueTelescopeAnimations {
+.OldHomeNuxtAnimations,
+.OldHomeDocusAnimations,
+.OldHomeVueTelescopeAnimations {
   ~ p {
     animation: subTitleOut 0.5s forwards;
   }

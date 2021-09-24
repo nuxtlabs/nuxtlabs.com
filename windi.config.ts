@@ -24,6 +24,9 @@ export default {
       transitionProperty: {
         height: 'height',
       },
+      spacing: {
+        'double-screen': '200vw',
+      },
     },
   },
   shortcuts: {
