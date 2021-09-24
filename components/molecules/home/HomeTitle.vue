@@ -18,8 +18,8 @@
             text-center
             lg:text-right
           "
-          @mouseenter.native="!isTouchDevice && mouseHover()"
-          @mouseleave.native="!isTouchDevice && mouseLeave()"
+          @mouseenter.native="mouseHover"
+          @mouseleave.native="mouseLeave"
         >
           <span>{{ title }}</span>
         </NuxtLink>
