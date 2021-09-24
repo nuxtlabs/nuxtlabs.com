@@ -18,8 +18,8 @@
             text-center
             lg:text-right
           "
-          @mouseenter.native="mouseHover"
-          @mouseleave.native="mouseLeave"
+          @pointerenter.native="pointerEnter"
+          @pointerleave.native="pointerLeave"
         >
           <span>{{ title }}</span>
         </NuxtLink>
@@ -64,7 +64,7 @@
   </li>
 </template>
 <script lang="ts">
-import { ref, defineComponent, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -87,7 +87,6 @@ export default defineComponent({
   },
   setup(props) {
     let currentTitle = null
-    const isTouchDevice = ref(false)
     const animsComponent = [
       'HomeNuxtAnimations',
       'HomeDocusAnimations',
@@ -96,16 +95,11 @@ export default defineComponent({
 
     onMounted(() => {
       currentTitle = document.getElementById(`${props.componentAnim}Link`)
-      // Detect if screen is a mobile: https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/4819886#4819886
-      isTouchDevice.value =
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        // @ts-ignore
-        navigator.msMaxTouchPoints > 0
     })
 
     // add animations class (not before to avoid animations start on load)
-    function mouseHover() {
+    function pointerEnter(e: PointerEvent) {
+      if (e.pointerType === 'touch') return
       currentTitle.classList.add(props.componentAnim)
 
       // opacity
@@ -118,7 +112,8 @@ export default defineComponent({
       })
     }
 
-    function mouseLeave() {
+    function pointerLeave(e: PointerEvent) {
+      if (e.pointerType === 'touch') return
       animsComponent.forEach((component) => {
         opacity(component)
       })
@@ -134,9 +129,8 @@ export default defineComponent({
     }
 
     return {
-      isTouchDevice,
-      mouseHover,
-      mouseLeave,
+      pointerEnter,
+      pointerLeave,
     }
   },
 })
