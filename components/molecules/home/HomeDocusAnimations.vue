@@ -1,9 +1,11 @@
 <template>
   <div ref="root" class="pointer-events-none fixed top-0 left-0 w-full h-full">
-    <div class="absolute bottom-0 right-1/5 xl:right-1/3">
+    <div
+      class="absolute bottom-24 sm:bottom-0 left-1/2 md:right-1/5 xl:right-1/3"
+    >
       <DocusGhostAnimation
         :show-animation="showAnimation"
-        class="h-72 inline-block"
+        class="h-54 md:h-72 inline-block"
       />
     </div>
 
@@ -14,7 +16,7 @@
       />
     </div>
 
-    <div class="absolute top-50 left-0 h-96">
+    <div class="absolute top-1/2 md:top-1/4 left-0 h-48 md:h-96">
       <DocusFiguresAnimation
         :show-animation="showAnimation"
         class="h-full w-full"

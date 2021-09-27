@@ -9,7 +9,6 @@
         justify-between
         mx-auto
         px-4
-        sm:px-5
         lg:px-16
       "
     >

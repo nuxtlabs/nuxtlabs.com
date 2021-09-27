@@ -45,7 +45,7 @@ export default defineComponent({
       },
       {
         top: -15,
-        left: -26,
+        left: -36,
         deg: -33,
         height: 20,
         transformOrigin: 'right',

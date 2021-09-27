@@ -1,9 +1,9 @@
 <template>
   <div class="pointer-events-none fixed top-0 left-0 w-full h-full">
-    <div class="absolute top-50 left-0">
+    <div class="absolute top-1/2 md:top-1/3 left-1/2 md:-left-6">
       <NuxtLogoAnimation
         :show-animation="showAnimation"
-        class="h-72 overflow-visible"
+        class="h-54 md:h-72 overflow-visible"
       />
     </div>
     <NuxtGemsAnimation :show-animation="showAnimation" />

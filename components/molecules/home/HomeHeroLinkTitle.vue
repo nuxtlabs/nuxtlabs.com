@@ -1,23 +1,17 @@
 <template>
   <span class="relative flex items-center">
-    <span class="contents absolute left-0 -translate-x-full">
-      <HomeHeroLinkSubtitleAnimation
-        class="mx-4"
-        :show-animation="showAnimation"
-        :sub-title="subTitle"
-      />
-    </span>
     <span
       :style="{
         '-webkit-text-fill-color': showAnimation ? 'white' : 'black',
       }"
       class="
         title
-        text-white text-display-5
+        uppercase
+        font-inter font-black
+        text-center text-white text-display-4
         sm:text-display-3
         xl:text-display-2
         2xl:text-display-1
-        whitespace-nowrap
         group-hover:text-white
         transition-colors
         duration-500
@@ -54,4 +48,10 @@ export default defineComponent({
 .title {
   -webkit-text-stroke: 1px white;
 }
+
+/* .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+} */
 </style>

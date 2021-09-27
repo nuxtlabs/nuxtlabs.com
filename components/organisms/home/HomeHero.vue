@@ -1,9 +1,9 @@
 <template>
   <section
-    class="h-full flex items-center justify-end overflow-hidden relative"
+    class="h-full flex items-center justify-center overflow-hidden relative"
   >
     <nav class="w-full">
-      <ul class="text-right w-full">
+      <ul class="w-full">
         <li
           v-for="project in projects"
           :key="project.to"
