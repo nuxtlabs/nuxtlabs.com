@@ -1,12 +1,12 @@
 <template>
   <section class="sm:p-6 lg:p-12">
     <h2 class="uppercase font-bold opacity-70 mb-2">
-      {{ category }}
+      <Markdown use="category" unwrap="p" />
     </h2>
     <h3 class="text-3xl font-bold mb-3">
-      {{ title }}
+      <Markdown use="title" unwrap="p" />
     </h3>
-    <Markdown />
+    <Markdown use="content" />
   </section>
 </template>
 <script lang="ts">

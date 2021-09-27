@@ -2,7 +2,11 @@
   <section class="p-4 md:p-6 lg:p-12 w-full">
     <img
       :src="`img/about/IWDBackground.svg`"
-      class="hidden lg:block w-full absolute -z-1 left-0"
+      class="hidden lg:block 2xl:hidden w-full absolute -z-1 inset-x-0"
+    />
+    <img
+      :src="`img/about/IWDBackground_wide.svg`"
+      class="hidden 2xl:block w-full absolute -z-1 inset-x-0"
     />
     <div
       class="

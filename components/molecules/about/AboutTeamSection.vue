@@ -11,7 +11,7 @@
         w-full
         absolute
         -z-1
-        left-0
+        inset-x-0
         transform
         -translate-x-1/2
         top-3/5

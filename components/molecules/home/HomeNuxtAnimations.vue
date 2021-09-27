@@ -28,8 +28,7 @@
         w-full
         h-full
         -bottom-full
-        left-0
-        right-0
+        inset-x-0
         object-cover
         opacity-0
       "

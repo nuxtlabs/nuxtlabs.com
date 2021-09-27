@@ -9,7 +9,7 @@
     >
     <img
       :src="`img/about/endOfPage.svg`"
-      class="absolute w-full bottom-0 left-0 opacity-50"
+      class="absolute w-full bottom-0 opacity-50 inset-x-0"
     />
   </div>
 </template>

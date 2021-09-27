@@ -11,12 +11,12 @@
         opacity-50
         font-bold
       "
-      >Pyrenees</span
+      >Pyrénées</span
     >
     <img
       :src="`img/about/pyrenees_line.svg`"
       alt="Pyrénées horizon line"
-      class="w-full absolute -z-1 left-0 mb-32"
+      class="w-full absolute -z-1 inset-x-0 mb-32"
     />
   </div>
 </template>
