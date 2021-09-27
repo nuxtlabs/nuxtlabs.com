@@ -50,6 +50,17 @@ export default withDocus({
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
   ],
+  pwa: {
+    manifest: {
+      name: 'NuxtLabs',
+      short_name: 'NuxtLabs',
+      description: 'Intuitive Web Development',
+      background_color: '#000000',
+      theme_color: '#000000',
+    },
+    // meta: false,
+    icon: true,
+  },
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js'),
