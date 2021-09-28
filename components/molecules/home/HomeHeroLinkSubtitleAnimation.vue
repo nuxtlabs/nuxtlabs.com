@@ -20,8 +20,9 @@
         text-lg
         xl:text-xl
         2xl:text-2xl
-        font-sans font-normal
+        font-mono font-normal
         max-w-96
+        2xl:max-w-112
       "
       >{{ subTitle }}</span
     >

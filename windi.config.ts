@@ -5,7 +5,7 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      black: '#000',
+      black: '#080808',
       white: '#fff',
       blue: colors.lightBlue,
       green: colors.emerald,
