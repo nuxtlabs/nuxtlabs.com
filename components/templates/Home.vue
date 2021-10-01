@@ -4,7 +4,6 @@
       :document="page"
       class="w-full h-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
     />
-    <!-- <OldHomeFooter /> -->
   </div>
 </template>
 

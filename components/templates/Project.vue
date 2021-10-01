@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 sm:py-16 max-w-2xl mx-auto px-4">
+  <div ref="root" class="py-8 sm:py-16 max-w-2xl mx-auto px-4">
     <NuxtImg
       :src="`img/${page.logo}`"
       :alt="page.title"
@@ -50,7 +50,8 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { useMotion } from '@vueuse/motion'
 
 export default defineComponent({
   props: {
@@ -63,11 +64,24 @@ export default defineComponent({
     aside: false,
     fluid: true,
   },
+  setup() {
+    const root = ref(null)
+    useMotion(root, {
+      initial: {
+        opacity: 0,
+      },
+      enter: {
+        opacity: 1,
+      },
+    })
+
+    return { root }
+  },
 })
 </script>
 
 <style scoped>
 .cta {
-  @apply border-1 px-4 rounded py-2 font-medium border-gray-700 hover:bg-white hover:text-black;
+  @apply border-1 px-5 rounded py-2 font-medium border-gray-700 hover:bg-white hover:text-black;
 }
 </style>
