@@ -68,6 +68,7 @@ export default defineComponent({
             initial: {
               opacity: 0,
               scale: 0,
+              rotate: 25,
             },
             enter: {
               transition: {
@@ -76,12 +77,13 @@ export default defineComponent({
                 ease: 'easeOut',
               },
               opacity: 1,
-              y: 0,
               scale: 1,
+              rotate: 0,
             },
             leave: {
               opacity: 0,
               scale: 0,
+              rotate: -25,
               transition: {
                 duration: 250,
                 ease: 'easeIn',
