@@ -49,6 +49,8 @@ export default withDocus({
     '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
+    // https://motion.vueuse.org
+    'nuxt-use-motion',
   ],
   pwa: {
     manifest: {
