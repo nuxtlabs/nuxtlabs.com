@@ -7,7 +7,7 @@ export default {
       current: 'currentColor',
       black: '#080808',
       white: '#fff',
-      blue: colors.lightBlue,
+      blue: colors.sky,
       green: colors.emerald,
       red: colors.red,
       rose: colors.rose,
