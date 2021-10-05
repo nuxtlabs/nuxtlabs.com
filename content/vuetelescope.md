@@ -14,6 +14,7 @@ logo: 'vuetelescope/vue-telescope.svg'
 website: https://vuetelescope.com
 github: https://github.com/nuxtlabs/vue-telescope-analyzer
 twitter: https://twitter.com/VueTelescope
+logoAnimation: VueTelescopeLogoAnimation
 ---
 
 ## Discover website made with Vue

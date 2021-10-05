@@ -5,21 +5,17 @@
         flex
         h-full
         flex-none
-        text-gray-400
         justify-between
         mx-auto
         px-4
-        sm:px-5
-        lg:px-16
+        xl:px-8
+        2xl:px-16
+        font-mono
       "
     >
-      <Link class="flex items-center" :to="localePath('/')">
+      <Link class="flex flex-1 items-center w-1/6" :to="localePath('/')">
         <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
-        <nuxt-img
-          src="/img/logo.svg"
-          class="h-6 lg:h-8 mb-2 lg:mb-0"
-          alt="NuxtLabs"
-        />
+        <nuxt-img src="/img/logo.svg" class="h-6 lg:h-8" alt="NuxtLabs" />
       </Link>
 
       <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
@@ -40,13 +36,16 @@
             capitalize
             group
             hover:text-white
+            text-gray-500
+            whitespace-nowrap
           "
           :to="href"
         >
           {{ title }}
         </Link>
       </div>
-      <div class="flex items-center">
+
+      <div class="flex items-center justify-end flex-1">
         <Link
           v-for="{ title, href } in links"
           :key="title"

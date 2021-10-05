@@ -14,6 +14,7 @@ logo: 'docus/docus-logo.svg'
 website: https://docus.com
 github: https://github.com/docusgen
 twitter: https://twitter.com/docus_
+logoAnimation: DocusGhostAnimation
 ---
 
 ## Document-Driven Web Framework and Platform

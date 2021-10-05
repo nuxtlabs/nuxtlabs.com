@@ -1,10 +1,14 @@
 <template>
-  <div class="w-full flex flex-col space-y-1">
-    <div class="relative z-10 font-bold">{{ contact }}</div>
+  <div class="w-full flex flex-col space-y-1 font-mono">
+    <div class="relative z-10 font-medium text-gray-400">{{ contact }}</div>
     <div class="relative z-10">
-      <a :href="`mailto:${email}`">{{ email }}</a>
+      <a
+        :href="`mailto:${email}`"
+        class="text-gray-300 font-medium hover:text-white"
+        >{{ email }}</a
+      >
     </div>
-    <SocialLinks class="flex text-base space-x-4" />
+    <SocialLinks class="flex text-base space-x-4 text-gray-200 font-medium" />
   </div>
 </template>
 
@@ -24,16 +28,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="postcss">
-.gradient {
-  ~ div {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  &:hover {
-    ~ div {
-      @apply -bottom-60 -left-60;
-    }
-  }
-}
-</style>

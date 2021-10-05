@@ -1,36 +1,28 @@
 <template>
   <ul>
     <li v-for="link in links" :key="link.name">
-      <Link
-        :to="link.href"
-        :alt="link.name"
-        blank
-        class="relative z-50 gradient"
-        >{{ link.name }}</Link
-      >
-      <div
-        class="
-          hidden
-          lg:block
-          absolute
-          opacity-70
-          w-full
-          h-1/2
-          z-0
-          pointer-events-none
-          -bottom-full
-          -left-full
-        "
-      >
+      <Link :to="link.href" :alt="link.name" blank class="relative group">
+        {{ link.name }}
         <img
           :src="`/img/socialGradients/${link.gradientImg}.svg`"
           :alt="link.alt"
-          class="relative w-1/2 2xl:w-2/5"
+          class="
+            pointer-events-none
+            opacity-0
+            group-hover:opacity-100
+            fixed
+            -bottom-1/2
+            -left-1/5
+            w-1/2
+            2xl:w-2/5
+            transition-opacity
+          "
         />
-      </div>
+      </Link>
     </li>
   </ul>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 
@@ -69,6 +61,7 @@ export default defineComponent({
   },
 })
 </script>
+
 <style lang="postcss">
 .gradient {
   ~ div {

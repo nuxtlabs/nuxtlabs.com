@@ -5,9 +5,9 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      black: '#000',
+      black: '#080808',
       white: '#fff',
-      blue: colors.lightBlue,
+      blue: colors.sky,
       green: colors.emerald,
       red: colors.red,
       rose: colors.rose,
@@ -16,16 +16,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: 'DM Sans',
+        sans: 'DM Sans, sans-serif',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
-        inter: 'Inter',
+        inter: 'Inter, sans-serif',
       },
       transitionProperty: {
         height: 'height',
       },
-      zIndex: {
-        '-1': '-1',
+      spacing: {
+        'double-screen': '200vw',
+        'fill-available': '-webkit-fill-available',
       },
     },
   },
