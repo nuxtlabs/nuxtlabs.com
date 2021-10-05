@@ -26,6 +26,7 @@ export default {
       },
       spacing: {
         'double-screen': '200vw',
+        'fill-available': '-webkit-fill-available',
       },
     },
   },

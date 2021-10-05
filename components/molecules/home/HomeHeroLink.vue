@@ -35,7 +35,7 @@
 
     <component
       :is="project.componentAnim"
-      v-if="showAnimation"
+      v-show="showAnimation"
       :show-animation="showAnimation"
       class="-z-1"
     />
@@ -59,11 +59,15 @@ export default defineComponent({
 
     const { width: titleWidth } = useElementBounding(title)
 
-    function mouseEnterHandler() {
+    function mouseEnterHandler(e) {
+      if (e.pointerType === 'touch') return
+
       showAnimation.value = true
       emit('active', props.project)
     }
-    function mouseLeaveHandler() {
+    function mouseLeaveHandler(e) {
+      if (e.pointerType === 'touch') return
+
       showAnimation.value = false
       emit('active', false)
     }
