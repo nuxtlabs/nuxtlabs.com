@@ -1,11 +1,9 @@
 <template>
   <div ref="root" class="py-8 sm:py-16 max-w-2xl mx-auto px-4">
-    <NuxtImg
-      :src="`img/${page.logo}`"
-      :alt="page.title"
-      width="80"
-      height="80"
-      class="mx-auto mb-2"
+    <component
+      :is="page.logoAnimation"
+      :show-animation="true"
+      class="h-24 w-24 mx-auto mb-12"
     />
     <h1
       class="
