@@ -11,8 +11,8 @@
       md:justify-end
       py-2
     "
-    @mouseenter.native="mouseEnterHandler"
-    @mouseleave.native="mouseLeaveHandler"
+    @pointerenter.native="mouseEnterHandler"
+    @pointerleave.native="mouseLeaveHandler"
   >
     <span
       v-if="titleWidth"
@@ -35,6 +35,7 @@
 
     <component
       :is="project.componentAnim"
+      v-if="showAnimation"
       :show-animation="showAnimation"
       class="-z-1"
     />
