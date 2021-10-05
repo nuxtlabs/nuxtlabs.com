@@ -32,7 +32,7 @@
         y1="76.783"
         x2="383.402"
         y2="76.783"
-        stroke="black"
+        stroke="#080808"
         stroke-width="30"
         stroke-dasharray="384"
       />
@@ -42,7 +42,7 @@
         y1="7.76367"
         x2="113.056"
         y2="283.587"
-        stroke="black"
+        stroke="#080808"
         stroke-width="30"
         stroke-dasharray="305"
       />
