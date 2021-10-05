@@ -38,7 +38,7 @@ export default withDocus({
       },
     ],
     bodyAttrs: {
-      class: ['min-w-xs'],
+      class: ['min-w-xs overflow-y-scroll'],
     },
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
@@ -49,7 +49,20 @@ export default withDocus({
     '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
+    // https://motion.vueuse.org
+    'nuxt-use-motion',
   ],
+  pwa: {
+    manifest: {
+      name: 'NuxtLabs',
+      short_name: 'NuxtLabs',
+      description: 'Intuitive Web Development',
+      background_color: '#000000',
+      theme_color: '#000000',
+    },
+    // meta: false,
+    icon: true,
+  },
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js'),

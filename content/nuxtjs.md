@@ -14,6 +14,7 @@ logo: 'nuxt/nuxt-logo.svg'
 website: https://nuxtjs.org
 github: https://github.com/nuxt
 twitter: https://twitter.com/nuxt_js
+logoAnimation: NuxtLogoAnimation
 ---
 
 ## The Intuitive Vue framework.

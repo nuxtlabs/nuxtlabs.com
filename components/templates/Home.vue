@@ -1,8 +1,18 @@
 <template>
-  <div class="absolute inset-0 flex h-screen overflow-hidden">
+  <div
+    class="
+      absolute
+      top-0
+      left-0
+      w-full
+      min-h-fill-available
+      hack-safari
+      h-screen
+    "
+  >
     <DocusContent
       :document="page"
-      class="w-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
+      class="w-full h-full flex flex-col justify-end p-6 xl:p-8 2xl:p-16"
     />
   </div>
 </template>
@@ -23,3 +33,11 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+@supports (-webkit-touch-callout: none) {
+  .hack-safari {
+    height: -webkit-fill-available;
+  }
+}
+</style>
