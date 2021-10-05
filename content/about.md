@@ -47,7 +47,7 @@ In January 2020, NuxtLabs raised $2M (pre-seed) to build a team of Nuxt experts 
 
 :peak-landscape
 
-::about-content-section{.w-full .lg:w-3/4 .sm:border-l-2 .border-white .relative .top-24 .md:top-44 .mt-40 .lg:mt-60 .mb-0 .md:mb-12 .lg:mb-60 }
+::about-content-section{.w-full .lg:w-3/4 .sm:border-l-2 .border-white .relative .top-24 .mt-62 .md:top-44 .lg:mt-60 .mb-0 .md:mb-12 .lg:mb-60 }
 
 #category
 Mission
