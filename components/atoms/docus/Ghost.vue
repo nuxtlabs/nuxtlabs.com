@@ -15,7 +15,7 @@
       rx="26.1622"
       ry="26.1622"
       transform="rotate(-90 107.919 121.002)"
-      fill="black"
+      fill="#080808"
       class="eye"
     />
     <ellipse
@@ -24,7 +24,7 @@
       rx="26.1622"
       ry="26.1622"
       transform="rotate(-90 186.405 121.002)"
-      fill="black"
+      fill="#080808"
       class="eye"
     />
   </svg>
