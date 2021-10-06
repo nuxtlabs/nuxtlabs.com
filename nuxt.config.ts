@@ -65,7 +65,11 @@ export default withDocus({
   },
   windicss: {
     root: resolve(__dirname),
-    config: resolve(__dirname, 'windi.config.js'),
+    config: resolve(__dirname, 'windi.config.ts'),
+  },
+  generate: {
+    // TODO: remove this, current hotfix since Docus does not detect the other links
+    routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
   /**
    * Add image domains for nuxt-image on Vercel
