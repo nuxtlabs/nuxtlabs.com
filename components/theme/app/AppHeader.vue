@@ -61,6 +61,8 @@
             capitalize
             group
             hover:text-white
+            text-sm
+            xs:text-base
           "
           :to="href"
         >

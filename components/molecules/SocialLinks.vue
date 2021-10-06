@@ -1,7 +1,12 @@
 <template>
   <ul>
     <li v-for="link in links" :key="link.name">
-      <Link :to="link.href" :alt="link.name" blank class="relative group">
+      <Link
+        :to="link.href"
+        :alt="link.name"
+        blank
+        class="relative group text-sm xs:text-base"
+      >
         {{ link.name }}
         <img
           :src="`/img/socialGradients/${link.gradientImg}.svg`"
@@ -9,7 +14,7 @@
           class="
             pointer-events-none
             opacity-0
-            group-hover:opacity-100
+            group-hover:opacity-60
             fixed
             -bottom-1/2
             -left-1/5
@@ -69,7 +74,7 @@ export default defineComponent({
   }
   &:hover {
     ~ div {
-      @apply -bottom-65 2xl:-bottom-55 -left-75;
+      @apply -bottom-65 2xl:-bottom-55 -left-65;
     }
   }
 }

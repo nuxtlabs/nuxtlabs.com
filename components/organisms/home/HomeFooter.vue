@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col space-y-1 font-mono">
+  <div class="w-full flex flex-col space-y-1 font-mono text-sm xs:text-base">
     <div class="relative z-10 font-medium text-gray-400">{{ contact }}</div>
     <div class="relative z-10">
       <a

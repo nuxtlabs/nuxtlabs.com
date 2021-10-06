@@ -78,6 +78,4 @@ Incredible investors
 Since January 2020, we are proundly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage for supporting us with our mission.
 ::
 
-::learn-more
-[Follow our updates and see what’s next on]{.sm:text-center .mb-4 .block}
-::
+::about-footer
