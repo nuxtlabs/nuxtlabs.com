@@ -23,7 +23,7 @@ They worked on their first external project together, creating a browser game we
 
 :pyrenees-landscape
 
-::about-content-section{.w-full .lg:w-3/4 .sm:border-l-2 .md:border-l-0 .md:border-r-2 .border-white .mt-32 .sm:mt-48 .md:mt-60 .lg:mt-96 .mb-24 .md:mb-24 .lg:mb-48 .text-left .md:text-right .ml-auto}
+::about-content-section{.w-full .lg:w-3/4 .sm:border-l-2 .md:border-l-0 .md:border-r-2 .border-white .mt-32 .sm:mt-48 .md:mt-60 .lg:mt-96 .2xl:mt-128 .mb-24 .md:mb-24 .lg:mb-48 .text-left .md:text-right .ml-auto}
 #category
 Story
 
