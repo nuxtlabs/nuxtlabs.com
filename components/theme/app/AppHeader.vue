@@ -35,8 +35,8 @@
             lg:text-lg
             capitalize
             group
-            hover:text-white
-            text-gray-500
+            hover:text-white hover:opacity-100
+            opacity-70
             whitespace-nowrap
           "
           :to="href"
@@ -61,6 +61,8 @@
             capitalize
             group
             hover:text-white
+            text-sm
+            xs:text-base
           "
           :to="href"
         >
@@ -119,6 +121,6 @@ export default defineComponent({
 </script>
 <style lang="postcss" scoped>
 .nuxt-link-active {
-  color: white;
+  opacity: 1;
 }
 </style>

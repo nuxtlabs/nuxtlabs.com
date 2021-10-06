@@ -2,13 +2,14 @@
   <span class="relative flex items-center">
     <span
       :style="{
-        '-webkit-text-fill-color': showAnimation ? 'white' : 'black',
+        '-webkit-text-fill-color': showAnimation ? 'white' : '#080808',
       }"
       class="
         title
         uppercase
         font-inter font-black
-        text-center text-white text-display-4
+        text-center text-white text-display-5
+        xs:text-display-4
         sm:text-display-3
         xl:text-display-2
         2xl:text-display-1
