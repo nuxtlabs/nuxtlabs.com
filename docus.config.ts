@@ -15,7 +15,7 @@ export default {
       'd-body-text-color': 'text-white',
       'd-header':
         'sticky w-full top-0 z-50 d-bg-header d-blur-header h-header ',
-      'd-heading-title': 'text-3xl sm:text-4xl lg:text-6xl',
+      'd-heading-title': 'text-2xl xs:text-3xl sm:text-4xl lg:text-6xl',
       'd-primary-text-hover': 'text-gray-600 dark:text-cloud-lighter',
       'd-prose-code-inline-bg': 'bg-gray-800',
       'd-prose-code-bg': 'bg-gray-900',

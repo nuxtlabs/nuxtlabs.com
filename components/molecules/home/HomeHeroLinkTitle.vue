@@ -7,7 +7,7 @@
       class="
         title
         uppercase
-        font-inter font-black
+        font-black
         text-center text-white text-display-5
         xs:text-display-4
         sm:text-display-3

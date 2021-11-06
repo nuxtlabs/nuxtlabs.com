@@ -1,33 +1,6 @@
 <template>
-  <section
-    class="
-      relative
-      sm:p-8
-      lg:p-12
-      w-full
-      opacity-0
-      transition-opacity
-      duration-600
-    "
-    :class="[isVisible && 'opacity-100']"
-  >
-    <h2 ref="scrollTarget" class="text-3xl font-bold text-center">The Team</h2>
-    <Markdown />
-    <img
-      :src="`img/about/teamWorld.svg`"
-      alt="Position of every team member on a map"
-      class="
-        hidden
-        md:block
-        w-full
-        absolute
-        -z-1
-        inset-x-0
-        transform
-        -translate-x-1/2
-        top-3/5
-      "
-    />
+  <section ref="scrollTarget" class="flex mt-16 mb-48">
+    <AboutContentTemplate :is-visible="isVisible" />
   </section>
 </template>
 

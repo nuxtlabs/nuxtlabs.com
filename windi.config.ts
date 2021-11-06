@@ -20,9 +20,11 @@ export default {
         serif: 'DM Serif Display',
         mono: 'DM Mono',
         inter: 'Inter, sans-serif',
+        roobert: 'Roobert, sans-serif',
       },
       transitionProperty: {
         height: 'height',
+        width: 'width',
       },
       spacing: {
         'double-screen': '200vw',
