@@ -16,6 +16,7 @@
         transition-transform
         origin-top
         duration-600
+        delay-100
       "
       :class="[
         align === 'left' && 'left-0',
@@ -24,7 +25,7 @@
       ]"
     ></span>
     <div
-      class="transition-all transform duration-400 delay-200"
+      class="transition-all transform duration-400 delay-300"
       :class="[
         align === 'left' && 'sm:ml-10 md:ml-16 lg:ml-20 text-left',
         align === 'right' && 'sm:mr-10 md:mr-16 lg:mr-20 sm:text-right',
