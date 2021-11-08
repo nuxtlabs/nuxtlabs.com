@@ -35,7 +35,7 @@
   transform: translate3d(0, 0, 0, -50px);
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Roobert';
   src: url('~/assets/fonts/Roobert/RoobertTRIAL-Light.woff2') format('woff2'),
     url('~/assets/fonts/Roobert/RoobertTRIAL-Light.woff') format('woff');
@@ -82,4 +82,4 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-}
+} */
