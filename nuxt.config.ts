@@ -38,7 +38,7 @@ export default withDocus({
       },
     ],
     bodyAttrs: {
-      class: ['min-w-xs overflow-y-scroll'],
+      class: ['min-w-xs overflow-y-scroll font-roobert'],
     },
   },
   css: [resolve(__dirname, './assets/nuxt.css')],

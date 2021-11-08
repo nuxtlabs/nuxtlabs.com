@@ -20,7 +20,7 @@
         text-lg
         xl:text-xl
         2xl:text-2xl
-        font-mono font-normal
+        font-normal
         max-w-96
         2xl:max-w-112
       "

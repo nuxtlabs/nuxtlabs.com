@@ -78,7 +78,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .cta {
   @apply border-1 px-5 rounded py-2 font-medium border-gray-700 hover:bg-white hover:text-black;
 }

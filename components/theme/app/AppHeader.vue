@@ -1,49 +1,39 @@
 <template>
-  <header class="d-header">
-    <nav
-      class="
-        flex
-        h-full
-        flex-none
-        justify-between
-        mx-auto
-        px-4
-        xl:px-8
-        2xl:px-16
-        font-mono
-      "
-    >
+  <header class="d-header d-container-content">
+    <nav class="flex h-full flex-none justify-between mx-auto">
       <Link class="flex flex-1 items-center w-1/6" :to="localePath('/')">
         <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
         <nuxt-img src="/img/logo.svg" class="h-6 lg:h-8" alt="NuxtLabs" />
       </Link>
 
-      <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
-        <Link
-          v-for="{ title, href } in articleLinks"
-          :key="title"
-          :aria-label="title"
-          class="
-            relative
-            flex
-            items-center
-            justify-center
-            h-full
-            px-4
-            font-medium
-            text-center
-            lg:text-lg
-            capitalize
-            group
-            hover:text-white hover:opacity-100
-            opacity-70
-            whitespace-nowrap
-          "
-          :to="href"
-        >
-          {{ title }}
-        </Link>
-      </div>
+      <transition name="fade">
+        <div v-if="!isHome" class="justify-center flex-1 hidden lg:flex">
+          <Link
+            v-for="{ title, href } in articleLinks"
+            :key="title"
+            :aria-label="title"
+            class="
+              relative
+              flex
+              items-center
+              justify-center
+              h-full
+              px-4
+              font-semibold
+              text-center
+              lg:text-xl
+              capitalize
+              group
+              hover:text-white hover:opacity-100
+              opacity-70
+              whitespace-nowrap
+            "
+            :to="href"
+          >
+            {{ title }}
+          </Link>
+        </div>
+      </transition>
 
       <div class="flex items-center justify-end flex-1">
         <Link
@@ -55,14 +45,14 @@
             flex
             items-center
             h-full
-            font-medium
+            font-semibold
             text-center
-            lg:text-lg
+            lg:text-xl
             capitalize
             group
             hover:text-white
-            text-sm
-            xs:text-base
+            text-base
+            xs:text-lg
           "
           :to="href"
         >

@@ -1,7 +1,7 @@
 :root {
-    --header-height: theme('spacing.14');
-    --docs-scroll-margin-block: calc(var(--header-height) + 4rem);
-    --blogpost-scroll-margin-block: calc(var(--header-height));
+  --header-height: theme('spacing.14');
+  --docs-scroll-margin-block: calc(var(--header-height) + 4rem);
+  --blogpost-scroll-margin-block: calc(var(--header-height));
 }
 
 @screen md {
@@ -17,9 +17,12 @@
   }
 }
 
-.title-shadow {
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  color: black;
+.title-stroke {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+}
+.title-stroke-filled {
+  -webkit-text-fill-color: white;
 }
 
 .slide-from-bottom-to-top-enter-active,
@@ -30,4 +33,53 @@
 .slide-from-bottom-to-top-leave-to {
   opacity: 0;
   transform: translate3d(0, 0, 0, -50px);
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-Light.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-Regular.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-Medium.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-SemiBold.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-Bold.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roobert';
+  src: url('~/assets/fonts/Roobert/RoobertTRIAL-Heavy.woff2') format('woff2'),
+    url('~/assets/fonts/Roobert/RoobertTRIAL-Heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
