@@ -1,5 +1,5 @@
 <template>
-  <div ref="scrollTarget" class="flex mb-8">
+  <div ref="scrollTarget" class="inline-flex">
     <span
       ref="mountainName"
       class="
@@ -21,7 +21,7 @@
     >
 
     <svg
-      class="w-full absolute -z-1 inset-x-0 mb-32"
+      class="w-full absolute z-0 inset-x-0 mb-32"
       viewBox="0 0 1440 584"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -94,20 +94,18 @@ export default defineComponent({
     )
 
     onMounted(() => {
-      // console.log('wtf', mountainName.value?.clientHeight)
-
       mountainNameInstance.value = useMotion(mountainName, {
         initial: {
           y: 0,
           opacity: 0,
-          rotateX: 80,
-          rotateY: 8,
+          // rotateX: 80,
+          // rotateY: 8,
         },
         in: {
           y: -(mountainName.value?.clientHeight / 2),
           opacity: 0.1,
-          rotateX: 0,
-          rotateY: 0,
+          // rotateX: 0,
+          // rotateY: 0,
           transition: {
             delay: 600,
             duration: 600,
@@ -137,29 +135,6 @@ export default defineComponent({
     })
 
     lineInstance.apply('initial')
-
-    // // mountain name animation
-
-    // function setLineOneInstance() {
-    //   lineOneInstance.value = useMotion(lineOne, {
-    //     initial: {
-    //       y: lineOne.value?.clientHeight,
-    //       opacity: 0,
-    //       rotateX: 80,
-    //       rotateY: 8,
-    //     },
-    //     enter: {
-    //       y: 0,
-    //       opacity: 1,
-    //       rotateX: 0,
-    //       rotateY: 0,
-    //       transition: {
-    //         duration: 400,
-    //         ease: 'circOut',
-    //       },
-    //     },
-    //   })
-    // }
 
     return { scrollTarget, isVisible, line, mountainName }
   },

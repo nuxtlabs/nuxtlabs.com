@@ -54,9 +54,9 @@ export default defineComponent({
         initial: {
           y: titleText.value?.clientHeight,
           opacity: 0,
-          rotateX: 40,
+          rotateX: -40,
           rotateY: 4,
-          rotateZ: 4,
+          rotateZ: -4,
           scale: 0.9,
         },
         enter: {
