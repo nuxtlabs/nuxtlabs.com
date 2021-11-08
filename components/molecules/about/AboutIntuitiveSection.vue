@@ -1,5 +1,8 @@
 <template>
-  <section ref="scrollTarget" class="flex flex-col mt-16 mb-48">
+  <section
+    ref="scrollTarget"
+    class="flex flex-col mt-24 md:mt-36 lg:mt-48 mb-24 md:mb-36 lg:mb-48"
+  >
     <div class="flex flex-col sm:flex-row items-center">
       <ul
         class="
@@ -36,6 +39,8 @@
         font-bold
         text-2xl
         mt-24
+        md:mt-36
+        lg:mt-48
         mx-auto
         max-w-50rem
         opacity-0

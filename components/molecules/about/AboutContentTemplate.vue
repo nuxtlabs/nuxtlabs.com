@@ -15,7 +15,7 @@
         transform
         transition-transform
         origin-top
-        duration-400
+        duration-600
       "
       :class="[
         align === 'left' && 'left-0',
@@ -26,14 +26,14 @@
     <div
       class="transition-all transform duration-400 delay-200"
       :class="[
-        align === 'left' && 'sm:ml-20 text-left',
-        align === 'right' && 'sm:mr-20 sm:text-right',
+        align === 'left' && 'sm:ml-10 md:ml-16 lg:ml-20 text-left',
+        align === 'right' && 'sm:mr-10 md:mr-16 lg:mr-20 sm:text-right',
 
         isVisible
           ? 'opacity-100 translate-x-0'
           : 'opacity-0 ' +
-            ((align === 'left' && '-translate-x-2') ||
-              (align === 'right' && 'translate-x-2')),
+            ((align === 'left' && 'sm:-translate-x-2') ||
+              (align === 'right' && 'sm:translate-x-2')),
       ]"
     >
       <span class="block uppercase font-bold opacity-70 mb-2">

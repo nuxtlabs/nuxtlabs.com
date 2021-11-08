@@ -7,7 +7,12 @@
         transform
         right-8
         -z-1
-        text-12xl
+        text-5xl
+        xs:text-6xl
+        sm:text-8xl
+        md:text-9xl
+        lg:text-11xl
+        xl:text-12xl
         uppercase
         font-bold
         leading-none

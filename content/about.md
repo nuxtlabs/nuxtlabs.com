@@ -21,7 +21,7 @@ They worked on their first external project together, creating a browser game we
 
 ::
 
-:pyrenees-landscape
+:pyrenees-landscape-animation
 
 ::about-company-section
 

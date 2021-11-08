@@ -2,8 +2,8 @@
   <section
     class="
       relative
-      sm:p-8
-      lg:p-12
+      sm:px-8
+      lg:px-12
       w-full
       opacity-0
       transition-opacity
@@ -11,7 +11,9 @@
     "
     :class="[isVisible && 'opacity-100']"
   >
-    <h2 ref="scrollTarget" class="text-3xl font-bold text-center">The Team</h2>
+    <h2 ref="scrollTarget" class="text-3xl font-bold text-center mb-3">
+      The Team
+    </h2>
     <Markdown />
     <img
       :src="`img/about/teamWorld.svg`"

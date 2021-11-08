@@ -1,5 +1,9 @@
 <template>
-  <section ref="scrollTarget" class="flex mt-48 mb-48">
+  <section
+    ref="scrollTarget"
+    class="flex mt-24 md:mt-36 lg:mt-48 mb-24 md:mb-36 lg:mb-48"
+  >
+    <!-- mt-8 md:mt-14 lg:mt-16  -->
     <AboutContentTemplate :is-visible="isVisible" align="right" />
   </section>
 </template>

@@ -1,9 +1,10 @@
 <template>
   <h1
     class="
-      text-2xl
-      xs:text-3xl
-      sm:text-4xl
+      text-4xl
+      xs:text-5xl
+      sm:text-6xl
+      md:text-7xl
       lg:text-8xl
       uppercase
       font-extrabold
@@ -14,7 +15,13 @@
     <span class="overflow-hidden">
       <span
         ref="lineOne"
-        class="animate-one transform translate-y-full origin-left"
+        class="
+          animate-one
+          transform
+          translate-y-full
+          origin-left
+          whitespace-nowrap
+        "
       >
         From a <span class="title-stroke-filled">&nbsp;passion&nbsp;</span>
       </span>
@@ -38,6 +45,8 @@
         <span
           ref="line"
           class="
+            opacity-0
+            sm:opacity-100
             absolute
             bottom-2.5
             -right-12
@@ -48,7 +57,8 @@
             translate-x-full
             origin-left
             transition-width
-            duration-400
+            duration-600
+            delay-150
           "
         ></span>
       </span>
@@ -72,10 +82,12 @@ export default defineComponent({
     const lineTwoInstance = ref()
 
     onMounted(() => {
+      // animate line
       const lineWidth =
         lineContainer.value?.clientWidth - lineParent.value?.clientWidth
       line.value.style.width = lineWidth + 'px'
 
+      // animate title
       setLineOneInstance()
       setLineTwoInstance()
     })
@@ -85,18 +97,20 @@ export default defineComponent({
         initial: {
           y: lineOne.value?.clientHeight,
           opacity: 0,
-          rotateX: 80,
-          rotateY: 8,
-          // rotateZ: 4,
+          rotateX: 40,
+          rotateY: 4,
+          rotateZ: 4,
+          scale: 0.9,
         },
         enter: {
           y: 0,
           opacity: 1,
           rotateX: 0,
           rotateY: 0,
-          // rotateZ: 0,
+          rotateZ: 0,
+          scale: 1,
           transition: {
-            duration: 300,
+            duration: 600,
             ease: 'circOut',
           },
         },
@@ -108,19 +122,21 @@ export default defineComponent({
         initial: {
           y: lineTwo.value?.clientHeight,
           opacity: 0,
-          rotateX: 80,
+          rotateX: 40,
           rotateY: 8,
-          // rotateZ: 4,
+          rotateZ: 4,
+          scale: 0.9,
         },
         enter: {
           y: 0,
           opacity: 1,
           rotateX: 0,
           rotateY: 0,
-          // rotateZ: 0,
+          rotateZ: 0,
+          scale: 1,
           transition: {
-            delay: 50,
-            duration: 300,
+            delay: 15,
+            duration: 600,
             ease: 'circOut',
           },
         },
@@ -193,12 +209,12 @@ h1 >>> {
   }
 } */
 
-@keyframes line {
+/* @keyframes line {
   from {
     width: 0%;
   }
   to {
     width: 100%;
   }
-}
+} */
 </style>
