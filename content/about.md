@@ -84,7 +84,7 @@ Mission
 Incredible investors
 
 #content
-Since January 2020, we are proundly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage for supporting us with our mission.
+Since January 2020, we are proudly backed by amazing investors, thanks to First Minute Capital, Kima Venture, Eduardo Ronzano and Renaud Visage for supporting us with our mission.
 
 ::
 
