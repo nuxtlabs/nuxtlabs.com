@@ -6,14 +6,7 @@
       class="h-24 w-24 mx-auto mb-12"
     />
     <h1
-      class="
-        text-3xl
-        sm:text-4xl
-        text-center text-white
-        font-semibold
-        tracking-tight
-        pb-8
-      "
+      class="text-3xl sm:text-4xl text-center text-white font-semibold tracking-tight pb-8"
     >
       {{ page.title }}
     </h1>
@@ -48,8 +41,8 @@
 </template>
 
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref } from '#app'
 
 export default defineComponent({
   props: {

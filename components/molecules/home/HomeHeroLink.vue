@@ -1,16 +1,7 @@
 <template>
   <NuxtLink
     :to="project.to"
-    class="
-      group
-      w-full
-      relative
-      flex
-      items-center
-      justify-center
-      md:justify-end
-      py-2
-    "
+    class="group w-full relative flex items-center justify-center md:justify-end py-2"
     @pointerenter.native="mouseEnterHandler"
     @pointerleave.native="mouseLeaveHandler"
   >
@@ -43,8 +34,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { useElementBounding } from '@vueuse/core'
+import { defineComponent, ref } from '#app'
 
 export default defineComponent({
   props: {

@@ -5,19 +5,7 @@
   >
     <div class="flex flex-col sm:flex-row items-center">
       <ul
-        class="
-          flex
-          sm:flex-col
-          md:flex-row md:mr-12
-          w-full
-          mb-8
-          lg:mb-0 lg:w-1/3
-          items-center
-          justify-center
-          opacity-0
-          transition-opacity
-          duration-600
-        "
+        class="flex sm:flex-col md:flex-row md:mr-12 w-full mb-8 lg:mb-0 lg:w-1/3 items-center justify-center opacity-0 transition-opacity duration-600"
         :class="[isVisible && 'opacity-100']"
       >
         <li
@@ -34,19 +22,7 @@
       <AboutContentTemplate :is-visible="isVisible" />
     </div>
     <blockquote
-      class="
-        text-center
-        font-bold
-        text-2xl
-        mt-24
-        md:mt-36
-        lg:mt-48
-        mx-auto
-        max-w-50rem
-        opacity-0
-        transition-opacity
-        duration-1200
-      "
+      class="text-center font-bold text-2xl mt-24 md:mt-36 lg:mt-48 mx-auto max-w-50rem opacity-0 transition-opacity duration-1200"
       :class="[isVisible && 'opacity-100']"
     >
       <Markdown use="quote" unwrap="p" />
@@ -55,8 +31,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, onBeforeUnmount } from '@nuxtjs/composition-api'
 import { useIntersectionObserver } from '@vueuse/core'
+import { defineComponent, ref, onBeforeUnmount } from '#app'
 
 export default defineComponent({
   setup() {

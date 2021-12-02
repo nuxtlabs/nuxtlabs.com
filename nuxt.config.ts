@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { withDocus } from '@docus/app'
+import { withDocus } from 'docus'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -43,8 +43,6 @@ export default withDocus({
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
@@ -63,10 +61,6 @@ export default withDocus({
     // meta: false,
     icon: true,
   },
-  windicss: {
-    root: resolve(__dirname),
-    config: resolve(__dirname, 'windi.config.ts'),
-  },
   generate: {
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
@@ -75,6 +69,7 @@ export default withDocus({
    * Add image domains for nuxt-image on Vercel
    */
   hooks: {
+    // @ts-ignore
     generate: {
       async done() {
         try {
@@ -96,19 +91,19 @@ export default withDocus({
       fs: {
         strict: false,
       },
-      optimizeDeps: {
-        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-        include: [
-          'defu',
-          'theme-colors',
-          'cookie',
-          'js-cookie',
-          'clipboard',
-          'property-information',
-          'ufo',
-          'url',
-        ],
-      },
+    },
+    optimizeDeps: {
+      exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+      include: [
+        'defu',
+        'theme-colors',
+        'cookie',
+        'js-cookie',
+        'clipboard',
+        'property-information',
+        'ufo',
+        'url',
+      ],
     },
   },
   image: {

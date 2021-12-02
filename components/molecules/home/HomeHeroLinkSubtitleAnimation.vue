@@ -1,29 +1,10 @@
 <template>
   <span
     ref="subtitle"
-    class="
-      flex
-      items-center
-      pointer-events-none
-      bg-black bg-opacity-50
-      rounded-lg
-      px-2
-      py-2
-      h-min
-      blur-sm
-      text-gray-200
-    "
+    class="flex items-center pointer-events-none bg-black bg-opacity-50 rounded-lg px-2 py-2 h-min blur-sm text-gray-200"
   >
     <span
-      class="
-        flex-1
-        text-lg
-        xl:text-xl
-        2xl:text-2xl
-        font-normal
-        max-w-96
-        2xl:max-w-112
-      "
+      class="flex-1 text-lg xl:text-xl 2xl:text-2xl font-normal max-w-96 2xl:max-w-112"
       >{{ subTitle }}</span
     >
     <span ref="line" class="bg-gray-200 h-2px ml-8 mr-4 block"></span>
@@ -31,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, watch } from '#app'
 
 export default defineComponent({
   props: {

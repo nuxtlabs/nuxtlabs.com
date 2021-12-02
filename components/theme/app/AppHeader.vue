@@ -12,22 +12,7 @@
             v-for="{ title, href } in articleLinks"
             :key="title"
             :aria-label="title"
-            class="
-              relative
-              flex
-              items-center
-              justify-center
-              h-full
-              px-4
-              font-semibold
-              text-center
-              lg:text-xl
-              capitalize
-              group
-              hover:text-white hover:opacity-100
-              opacity-70
-              whitespace-nowrap
-            "
+            class="relative flex items-center justify-center h-full px-4 font-semibold text-center lg:text-xl capitalize group hover:text-white hover:opacity-100 opacity-70 whitespace-nowrap"
             :to="href"
           >
             {{ title }}
@@ -40,20 +25,7 @@
           v-for="{ title, href } in links"
           :key="title"
           :aria-label="title"
-          class="
-            relative
-            flex
-            items-center
-            h-full
-            font-semibold
-            text-center
-            lg:text-xl
-            capitalize
-            group
-            hover:text-white
-            text-base
-            xs:text-lg
-          "
+          class="relative flex items-center h-full font-semibold text-center lg:text-xl capitalize group hover:text-white text-base xs:text-lg"
           :to="href"
         >
           {{ title }}
@@ -64,7 +36,7 @@
 </template>
 
 <script>
-import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useRoute } from '#app'
 
 export default defineComponent({
   props: {
@@ -102,7 +74,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const { route } = useContext()
+    const route = useRoute()
     const isHome = computed(() => route.value.path === '/')
 
     return { isHome }

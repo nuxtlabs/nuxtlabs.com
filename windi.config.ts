@@ -1,6 +1,7 @@
 import colors from 'windicss/colors'
+import { defineConfig } from 'windicss/helpers'
 
-export default {
+export default defineConfig({
   theme: {
     colors: {
       transparent: 'transparent',
@@ -82,4 +83,4 @@ export default {
       lineHeight: '2rem',
     },
   },
-}
+})
