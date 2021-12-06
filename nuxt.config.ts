@@ -129,6 +129,44 @@ export default withDocus({
       'abs.twimg.com',
     ],
   },
+  // uncomment when we'll using nuxtlabs / ui module
+  /* ui: {
+    colors: {
+      black: '#080808',
+    },
+    unocss: {
+      theme: {
+        fontFamily: {
+          sans: '"DM Sans", sans-serif',
+          serif: 'DM Serif Display',
+          mono: 'DM Mono',
+          inter: 'Inter, sans-serif'
+        },
+        transitionProperty: {
+          height: 'height',
+          width: 'width',
+        },
+        spacing: {
+          'double-screen': '200vw',
+          'fill-available': '-webkit-fill-available',
+        },
+      },
+      shortcuts: {
+        'text-display-6': ['1.875rem', '2.25rem'],
+        'text-display-5': ['2.25rem', '2.5rem'],
+        'text-display-4': ['3rem', '3rem'],
+        'text-display-3': ['3.75rem', '3.75rem'],
+        'text-display-2': ['4.5rem', '4.5rem'],
+        'text-display-1': ['6rem', '6rem'],
+        'text-body-xs': ['0.75rem', '1rem'],
+        'text-body-sm': ['0.875rem', '1.25rem'],
+        'text-body-base': ['1rem', '1.5rem'],
+        'text-body-lg': ['1.125rem', '1.75rem'],
+        'text-body-xl': ['1.25rem', '1.75rem'],
+        'text-body-2xl': ['1.5rem', '2rem']
+      }
+    }
+  }, */
   publicRuntimeConfig: {
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN,
