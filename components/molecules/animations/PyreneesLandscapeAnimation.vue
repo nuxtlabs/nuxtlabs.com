@@ -96,7 +96,7 @@ export default defineComponent({
           opacity: 0,
         },
         in: {
-          y: -(mountainName.value?.clientHeight / 2),
+          y: -(mountainName.value?.clientHeight / 3),
           opacity: 0.5,
           transition: {
             delay: 600,
