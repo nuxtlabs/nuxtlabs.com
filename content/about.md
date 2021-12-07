@@ -15,7 +15,7 @@ Story
 The Founders
 
 #content
-[Alexandre Chopin](https://twitter.com/iamnuxt) and [Sébastien Chopin](https://twitter.com/atinux) discovered their passion for computers and web development deep within the Pyrenees Mountains [(heritage reflected in the NuxtLabs logo if you haven’t noticed!)]{.text-gray-200}. They taught themselves how to code as kids and designed websites at night, weekends and during school holidays.
+[Alexandre Chopin](https://twitter.com/iamnuxt) and [Sébastien Chopin](https://twitter.com/atinux) discovered their passion for computers and web development deep within the Pyrenees Mountains [(heritage reflected in the NuxtLabs logo if you haven’t noticed!)]{.text-gray-800}. They taught themselves how to code as kids and designed websites at night, weekends and during school holidays.
 
 They worked on their first external project together, creating a browser game website built with PHP, HTML, CSS and jQuery - this fortunately covered part of their college studies! They both had the entrepreneurial bug at this point.
 
@@ -42,7 +42,7 @@ In January 2020, NuxtLabs raised $2M (pre-seed) to build a team of Nuxt experts 
 
 ![Nuxtlabs Team 2021](/img/team.jpg){width=1280 height=720}
 
-[NuxtLabs is a distributed company with a team based in 6 countries around the world.]{.text-gray-300 .block .text-center .-mt-1 .mb-24 .sm:mb-0}
+[NuxtLabs is a distributed company with a team based in 6 countries around the world.]{.text-gray-700 .block .text-center .-mt-1 .mb-24 .sm:mb-0}
 ::
 
 ::about-open-source-section

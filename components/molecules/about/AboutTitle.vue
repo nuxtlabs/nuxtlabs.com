@@ -50,7 +50,7 @@
             absolute
             bottom-2.5
             -right-12
-            bg-white
+            bg-black
             h-0.5
             w-0
             transform
@@ -143,24 +143,6 @@ export default defineComponent({
       })
     }
 
-    // const lineInstance = useMotion(line, {
-    //   initial: {
-    //     width: 0,
-    //   },
-    //   in: {
-    //     width: 200,
-    //   },
-    // })
-
-    // lineInstance.apply('initial')
-
-    // onMounted(() => {
-    //   lineInstance.set('initial')
-    //   setTimeout(() => {
-    //     lineInstance.apply('in')
-    //   }, 500)
-    // })
-
     return { lineOne, lineTwo, lineContainer, lineParent, line }
   },
 })
@@ -168,53 +150,8 @@ export default defineComponent({
 
 <style scoped lang="postcss">
 h1 >>> {
-  > span {
-    /* &:last-child {
-      &:after {
-        content: '';
-        @apply sticky ml-16 bg-white h-0.5 top-1/2 transform -translate-y-1/2;
-        animation: line 500ms forwards 350ms;
-      }
-    } */
-  }
   span {
     display: flex;
   }
 }
-
-/* .line {
-  position: relative;
-  &:after {
-    content: '';
-    @apply sticky ml-16 bg-white h-0.5 bottom-0 transformm translate-y-1/2;
-    animation: line 500ms forwards 350ms;
-  }
-} */
-
-/* .animate-one {
-  animation: slide-up 500ms forwards;
-}
-.animate-two {
-  animation: slide-up 500ms forwards 100ms;
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-} */
-
-/* @keyframes line {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-} */
 </style>
