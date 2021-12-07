@@ -9,7 +9,6 @@
       uppercase
       font-extrabold
       flex flex-col
-      title-stroke
     "
   >
     <span class="overflow-hidden">
@@ -48,10 +47,10 @@
             opacity-0
             sm:opacity-100
             absolute
-            bottom-2.5
+            bottom-10
             -right-12
             bg-black
-            h-0.5
+            h-2
             w-0
             transform
             translate-x-full
