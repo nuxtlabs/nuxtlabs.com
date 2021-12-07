@@ -7,38 +7,32 @@ export default {
   socialImage: false,
   theme: {
     colors: {
-      primary: '#FFFFFF', // white
+      primary: '#000000', // white
     },
     shortcuts: {
-      'd-logo': 'w-auto h-6 md:h-7 text-white',
-      'd-body-bg': 'bg-black',
-      'd-body-text-color': 'text-white',
+      'd-logo': 'w-auto h-6 md:h-7 text-black',
+      'd-body-bg': 'bg-white',
+      'd-body-text-color': 'text-black',
       'd-header':
         'sticky w-full top-0 z-50 d-bg-header d-blur-header h-header ',
       'd-heading-title': 'text-2xl xs:text-3xl sm:text-4xl lg:text-6xl',
-      'd-primary-text-hover': 'text-gray-600 dark:text-cloud-lighter',
-      'd-prose-code-inline-bg': 'bg-gray-800',
-      'd-prose-code-bg': 'bg-gray-900',
-      'd-bg-header': 'bg-black bg-opacity-75',
-      'd-page-mobile-toc-bg': 'd-body-bg bg-opacity-80 dark:bg-opacity-80',
-      'd-aside-header-bg': 'bg-dark',
-      'd-active-aside-navigation-item-bg':
-        'bg-primary-50 dark:bg-secondary-darkest',
-      'd-active-aside-navigation-item-text':
-        'text-primary-500 dark:text-primary-400 ',
-      'd-code-group-header-bg': 'bg-gray-800',
-      'd-code-group-tab': 'bg-gray-700',
-      'd-prose-code-filename-bg': 'bg-gray-700',
-      'd-prose-code-filename-text': 'text-gray-400',
-      'd-prose-thead-border':
-        'border-b border-gray-200 dark:border-secondary-dark',
-      'd-prose-tr-border':
-        'border-b border-gray-100 dark:border-secondary-darker',
-      'd-prose-blockquote-border':
-        'border-l-2 border-gray-200 dark:border-secondary-darker',
-      'd-tertiary-text': 'text-gray-400 dark:text-cloud-dark',
-      'd-prose-hr-border':
-        'border-t border-gray-100 dark:border-secondary-darker',
+      'd-primary-text-hover': 'text-gray-400',
+      'd-prose-code-inline-bg': 'bg-gray-200',
+      'd-prose-code-bg': 'bg-gray-50',
+      'd-bg-header': 'bg-white',
+      'd-page-mobile-toc-bg': 'd-body-bg',
+      'd-aside-header-bg': 'bg-white',
+      'd-active-aside-navigation-item-bg': 'bg-primary-900',
+      'd-active-aside-navigation-item-text': 'text-primary-500',
+      'd-code-group-header-bg': 'bg-gray-200',
+      'd-code-group-tab': 'bg-gray-300',
+      'd-prose-code-filename-bg': 'bg-gray-300',
+      'd-prose-code-filename-text': 'text-gray-600',
+      'd-prose-thead-border': 'border-b border-gray-800',
+      'd-prose-tr-border': 'border-b border-gray-900',
+      'd-prose-blockquote-border': 'border-l-2 border-gray-800',
+      'd-tertiary-text': 'text-cloud-dark',
+      'd-prose-hr-border': 'border-t border-secondary-darker',
       'd-prose-ul-li-bullet': 'd-secondary-bg',
       'd-scrollbar': '',
       // Container
