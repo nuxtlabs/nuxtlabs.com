@@ -19,7 +19,6 @@ export default {
         sans: 'DM Sans, sans-serif',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
-        inter: 'Inter, sans-serif',
         // roobert: 'Roobert, sans-serif',
       },
       transitionProperty: {
