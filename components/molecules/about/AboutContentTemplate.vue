@@ -4,20 +4,7 @@
     :class="[align === 'left' && 'mr-auto', align === 'right' && 'ml-auto']"
   >
     <span
-      class="
-        hidden
-        sm:block
-        absolute
-        top-0
-        w-0.5
-        bg-primary-900
-        h-full
-        transform
-        transition-transform
-        origin-top
-        duration-600
-        delay-100
-      "
+      class="hidden sm:block absolute top-0 w-0.5 bg-primary-900 h-full transform transition-transform origin-top duration-600 delay-100"
       :class="[
         align === 'left' && 'left-0',
         align === 'right' && 'right-0',
@@ -48,8 +35,8 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

@@ -24,16 +24,7 @@
       class="z-30 rounded-md shadow-xl"
     >
       <div
-        class="
-          overflow-y-auto
-          rounded-md
-          divide-y
-          py-1
-          divide-gray-100
-          dark:divide-gray-700
-          bg-white
-          dark:bg-secondary-darkest
-        "
+        class="overflow-y-auto rounded-md divide-y py-1 divide-gray-100 dark:divide-gray-700 bg-white dark:bg-secondary-darkest"
         :class="dropdownMenuClass"
         role="menu"
         aria-orientation="vertical"
@@ -61,10 +52,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { createPopper } from '@popperjs/core'
 import { directive as onClickaway } from 'vue-clickaway'
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   directives: {

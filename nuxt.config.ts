@@ -1,5 +1,5 @@
-import { resolve } from 'path'
-import { withDocus } from '@docus/app'
+import { resolve } from 'pathe'
+import { withDocus } from 'docus'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -43,15 +43,14 @@ export default withDocus({
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
     // https://motion.vueuse.org
     'nuxt-use-motion',
   ],
+  // TODO: Fix PWA Module
   pwa: {
     manifest: {
       name: 'NuxtLabs',
@@ -63,18 +62,16 @@ export default withDocus({
     // meta: false,
     icon: true,
   },
-  windicss: {
-    root: resolve(__dirname),
-    config: resolve(__dirname, 'windi.config.ts'),
-  },
   generate: {
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
   /**
    * Add image domains for nuxt-image on Vercel
+   * TODO: Check if this is still needed
    */
   hooks: {
+    // @ts-ignore
     generate: {
       async done() {
         try {
@@ -88,26 +85,6 @@ export default withDocus({
           // eslint-disable-next-line no-console
           console.log('Issue copying `.vercel_build_output` to project root.')
         }
-      },
-    },
-  },
-  vite: {
-    server: {
-      fs: {
-        strict: false,
-      },
-      optimizeDeps: {
-        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-        include: [
-          'defu',
-          'theme-colors',
-          'cookie',
-          'js-cookie',
-          'clipboard',
-          'property-information',
-          'ufo',
-          'url',
-        ],
       },
     },
   },
@@ -129,44 +106,6 @@ export default withDocus({
       'abs.twimg.com',
     ],
   },
-  // uncomment when we'll using nuxtlabs / ui module
-  /* ui: {
-    colors: {
-      black: '#080808',
-    },
-    unocss: {
-      theme: {
-        fontFamily: {
-          sans: '"DM Sans", sans-serif',
-          serif: 'DM Serif Display',
-          mono: 'DM Mono',
-          inter: 'Inter, sans-serif'
-        },
-        transitionProperty: {
-          height: 'height',
-          width: 'width',
-        },
-        spacing: {
-          'double-screen': '200vw',
-          'fill-available': '-webkit-fill-available',
-        },
-      },
-      shortcuts: {
-        'text-display-6': ['1.875rem', '2.25rem'],
-        'text-display-5': ['2.25rem', '2.5rem'],
-        'text-display-4': ['3rem', '3rem'],
-        'text-display-3': ['3.75rem', '3.75rem'],
-        'text-display-2': ['4.5rem', '4.5rem'],
-        'text-display-1': ['6rem', '6rem'],
-        'text-body-xs': ['0.75rem', '1rem'],
-        'text-body-sm': ['0.875rem', '1.25rem'],
-        'text-body-base': ['1rem', '1.5rem'],
-        'text-body-lg': ['1.125rem', '1.75rem'],
-        'text-body-xl': ['1.25rem', '1.75rem'],
-        'text-body-2xl': ['1.5rem', '2rem']
-      }
-    }
-  }, */
   publicRuntimeConfig: {
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN,

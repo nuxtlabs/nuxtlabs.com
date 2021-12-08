@@ -1,14 +1,6 @@
 <template>
   <div
-    class="
-      absolute
-      top-0
-      left-0
-      w-full
-      min-h-fill-available
-      hack-safari
-      h-screen
-    "
+    class="absolute top-0 left-0 w-full min-h-fill-available hack-safari h-screen"
   >
     <DocusContent
       :document="page"
@@ -17,8 +9,8 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

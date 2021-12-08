@@ -5,17 +5,14 @@
   </div>
 </template>
 
-<script>
-import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent } from '#app'
+import { useDocusLayout } from '#docus'
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
-
-    const layout = computed(() => $docus.layout.value)
-
     return {
-      layout,
+      layout: useDocusLayout(),
     }
   },
 })

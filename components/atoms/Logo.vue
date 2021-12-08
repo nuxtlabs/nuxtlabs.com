@@ -13,8 +13,10 @@
   </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from '#app'
+
+export default defineComponent({
   methods: {
     home() {
       if (this.$docus.currentPath.value === '/') {
@@ -23,5 +25,5 @@ export default {
       }
     },
   },
-}
+})
 </script>

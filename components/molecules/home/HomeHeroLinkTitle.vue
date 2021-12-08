@@ -5,22 +5,7 @@
       :style="{
         '-webkit-text-fill-color': showAnimation ? 'white' : '#080808',
       }"
-      class="
-        title
-        uppercase
-        font-primary-900
-        text-center text-white text-display-4
-        xs:text-display-3
-        sm:text-display-2
-        xl:text-display-2
-        2xl:text-display-1
-        group-hover:text-white
-        transition-colors
-        duration-500
-        ease-in-out
-        origin-right
-        opacity-0
-      "
+      class="title uppercase font-primary-900 text-center text-white text-display-4 xs:text-display-3 sm:text-display-2 xl:text-display-2 2xl:text-display-1 group-hover:text-white transition-colors duration-500 ease-in-out origin-right opacity-0"
     >
       {{ title }}
     </span>
@@ -28,8 +13,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
   props: {

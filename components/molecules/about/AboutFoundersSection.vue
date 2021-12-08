@@ -7,9 +7,9 @@
   </section>
 </template>
 
-<script>
-import { defineComponent, ref, onBeforeUnmount } from '@nuxtjs/composition-api'
+<script lang="ts">
 import { useIntersectionObserver } from '@vueuse/core'
+import { defineComponent, ref, onBeforeUnmount } from '#app'
 
 export default defineComponent({
   setup() {

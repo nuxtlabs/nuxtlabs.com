@@ -11,21 +11,7 @@
         <img
           :src="`/img/socialGradients/${link.gradientImg}.svg`"
           :alt="link.alt"
-          class="
-            pointer-events-none
-            opacity-0
-            group-hover:opacity-40
-            fixed
-            -left-2/5
-            -bottom-2/5
-            md:-left-2/5 md:-bottom-1/2
-            lg:-bottom-3/5 lg:-left-1/2
-            xl:-bottom-4/5
-            2xl:-bottom-4/6 2xl:-left-2/7
-            w-full
-            2xl:w-3/5
-            transition-opacity
-          "
+          class="pointer-events-none opacity-0 group-hover:opacity-40 fixed -left-2/5 -bottom-2/5 md:-left-2/5 md:-bottom-1/2 lg:-bottom-3/5 lg:-left-1/2 xl:-bottom-4/5 2xl:-bottom-4/6 2xl:-left-2/7 w-full 2xl:w-3/5 transition-opacity"
         />
       </Link>
     </li>
@@ -33,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   setup() {

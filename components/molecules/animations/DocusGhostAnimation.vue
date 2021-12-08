@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, onMounted } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, watch, onMounted } from '#app'
 
 export default defineComponent({
   props: {

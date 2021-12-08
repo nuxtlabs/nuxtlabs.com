@@ -1,26 +1,11 @@
 <template>
   <h1
-    class="
-      text-4xl
-      xs:text-5xl
-      sm:text-6xl
-      md:text-7xl
-      lg:text-8xl
-      uppercase
-      font-extrabold
-      flex flex-col
-    "
+    class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-extrabold flex flex-col"
   >
     <span class="overflow-hidden">
       <span
         ref="lineOne"
-        class="
-          animate-one
-          transform
-          translate-y-full
-          origin-left
-          whitespace-nowrap
-        "
+        class="animate-one transform translate-y-full origin-left whitespace-nowrap"
       >
         From a <span class="title-stroke-filled">&nbsp;passion&nbsp;</span>
       </span>
@@ -29,45 +14,23 @@
       <span ref="lineParent" class="relative">
         <span
           ref="lineTwo"
-          class="
-            animate-two
-            transform
-            translate-y-full
-            whitespace-nowrap
-            relative
-            origin-left
-          "
+          class="animate-two transform translate-y-full whitespace-nowrap relative origin-left"
         >
           to a
           <span class="title-stroke-filled">&nbsp;company </span>
         </span>
         <span
           ref="line"
-          class="
-            opacity-0
-            sm:opacity-100
-            absolute
-            bottom-10
-            -right-12
-            bg-primary-900
-            h-2
-            w-0
-            transform
-            translate-x-full
-            origin-left
-            transition-width
-            duration-600
-            delay-150
-          "
+          class="opacity-0 sm:opacity-100 absolute bottom-10 -right-12 bg-primary-900 h-2 w-0 transform translate-x-full origin-left transition-width duration-600 delay-150"
         ></span>
       </span>
     </span>
   </h1>
 </template>
 
-<script>
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+<script lang="ts">
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
   setup() {

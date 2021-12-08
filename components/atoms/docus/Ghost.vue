@@ -29,6 +29,7 @@
     />
   </svg>
 </template>
+
 <style lang="postcss" scoped>
 .eye {
   background: primary-900;

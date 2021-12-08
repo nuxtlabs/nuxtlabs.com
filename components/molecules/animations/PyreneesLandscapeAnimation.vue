@@ -2,22 +2,7 @@
   <div ref="scrollTarget" class="inline-flex">
     <span
       ref="mountainName"
-      class="
-        absolute
-        transform
-        right-8
-        -z-1
-        text-5xl
-        xs:text-6xl
-        sm:text-8xl
-        md:text-9xl
-        lg:text-11xl
-        xl:text-12xl
-        uppercase
-        font-bold
-        leading-none
-        text-black
-      "
+      class="absolute transform right-8 -z-1 text-5xl xs:text-6xl sm:text-8xl md:text-9xl lg:text-11xl xl:text-12xl uppercase font-bold leading-none text-black"
       >Pyrénées</span
     >
 
@@ -56,14 +41,9 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  ref,
-  onBeforeUnmount,
-  onMounted,
-} from '@nuxtjs/composition-api'
 import { useIntersectionObserver } from '@vueuse/core'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onBeforeUnmount, onMounted } from '#app'
 
 export default defineComponent({
   setup() {

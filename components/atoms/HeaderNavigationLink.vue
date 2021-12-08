@@ -14,8 +14,8 @@
   </Component>
 </template>
 
-<script>
-import { defineComponent, computed, useRoute } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, computed, useRoute } from '#app'
 
 export default defineComponent({
   props: {
@@ -38,6 +38,7 @@ export default defineComponent({
   },
   setup(props) {
     const route = useRoute()
+
     const linkProps = computed(() => {
       const { to, href } = props.link
       if (to?.length) {
@@ -58,8 +59,8 @@ export default defineComponent({
     })
 
     const currentSlug = computed(() => {
-      return route.value.path !== '/' && route?.value?.params?.pathMatch
-        ? route.value.params.pathMatch.split('/')[0]
+      return route.path !== '/' && route?.params?.pathMatch
+        ? route.params.pathMatch.split('/')[0]
         : null
     })
 

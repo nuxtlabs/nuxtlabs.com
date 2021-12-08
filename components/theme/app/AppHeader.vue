@@ -11,16 +11,7 @@
       <!-- links -->
       <transition name="fade">
         <div
-          class="
-            font-medium
-            justify-center
-            items-center
-            lg:space-x-8
-            xl:space-x-12
-            flex-1
-            hidden
-            lg:flex
-          "
+          class="font-medium justify-center items-center lg:space-x-8 xl:space-x-12 flex-1 hidden lg:flex"
         >
           <ul v-for="(link, index) in links" :key="index">
             <li>
@@ -88,11 +79,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useRoute, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useRoute, computed } from '#app'
 
 export default defineComponent({
   setup() {
     const route = useRoute()
+
     const links = [
       {
         title: 'Solutions',
