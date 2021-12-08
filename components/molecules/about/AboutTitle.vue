@@ -49,7 +49,7 @@
             absolute
             bottom-10
             -right-12
-            bg-black
+            bg-primary-900
             h-2
             w-0
             transform

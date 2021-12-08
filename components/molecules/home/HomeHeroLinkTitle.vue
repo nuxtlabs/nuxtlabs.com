@@ -8,7 +8,7 @@
       class="
         title
         uppercase
-        font-black
+        font-primary-900
         text-center text-white text-display-4
         xs:text-display-3
         sm:text-display-2

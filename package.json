@@ -43,6 +43,8 @@
     "vue-plausible": "^1.2.1"
   },
   "dependencies": {
-    "nuxt-use-motion": "2.0.0-beta.5"
+    "@popperjs/core": "^2.11.0",
+    "nuxt-use-motion": "2.0.0-beta.5",
+    "vue-clickaway": "^2.2.2"
   }
 }

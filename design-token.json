@@ -1,0 +1,128 @@
+{
+  "gray": {
+    "50": {
+      "value": "#f4f3f3",
+      "type": "color"
+    },
+    "100": {
+      "value": "#e9e8e8",
+      "type": "color"
+    },
+    "200": {
+      "value": "#dedcdc",
+      "type": "color"
+    },
+    "300": {
+      "value": "#d4d1d1",
+      "type": "color"
+    },
+    "400": {
+      "value": "#9d9797",
+      "type": "color"
+    },
+    "500": {
+      "value": "#888080",
+      "type": "color"
+    },
+    "600": {
+      "value": "#655f5f",
+      "type": "color"
+    },
+    "700": {
+      "value": "#4e4949",
+      "type": "color"
+    },
+    "800": {
+      "value": "#373434",
+      "type": "color"
+    },
+    "900": {
+      "value": "#201e1e",
+      "type": "color"
+    }
+  },
+  "primary": {
+    "50": {
+      "value": "#ededee",
+      "type": "color"
+    },
+    "100": {
+      "value": "#bfbfc5",
+      "type": "color"
+    },
+    "200": {
+      "value": "#94949e",
+      "type": "color"
+    },
+    "300": {
+      "value": "#7f7f8b",
+      "type": "color"
+    },
+    "400": {
+      "value": "#6b6b76",
+      "type": "color"
+    },
+    "500": {
+      "value": "#585860",
+      "type": "color"
+    },
+    "600": {
+      "value": "#44444b",
+      "type": "color"
+    },
+    "700": {
+      "value": "#313136",
+      "type": "color"
+    },
+    "800": {
+      "value": "#1d1d20",
+      "type": "color"
+    },
+    "900": {
+      "value": "#0a0a0b",
+      "type": "color"
+    }
+  },
+  "red": {
+    "50": {
+      "value": "#ffdbd9",
+      "type": "color"
+    },
+    "100": {
+      "value": "#ffb7b3",
+      "type": "color"
+    },
+    "200": {
+      "value": "#ff948d",
+      "type": "color"
+    },
+    "300": {
+      "value": "#ff7066",
+      "type": "color"
+    },
+    "400": {
+      "value": "#ff4c40",
+      "type": "color"
+    },
+    "500": {
+      "value": "#ff281a",
+      "type": "color"
+    },
+    "600": {
+      "value": "#e10e00",
+      "type": "color"
+    },
+    "700": {
+      "value": "#a90a00",
+      "type": "color"
+    },
+    "800": {
+      "value": "#700700",
+      "type": "color"
+    },
+    "900": {
+      "value": "#380300",
+      "type": "color"
+    }
+  }
+}

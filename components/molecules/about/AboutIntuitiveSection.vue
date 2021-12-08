@@ -22,9 +22,9 @@
       >
         <li
           v-for="project in [
-            `img/about/nuxtJSLogo.svg`,
-            `img/about/docusLogo.svg`,
-            `img/about/VTLogo.svg`,
+            `img/products/nuxtJSLogo.svg`,
+            `img/products/docusLogo.svg`,
+            `img/products/VTLogo.svg`,
           ]"
           :key="project"
         >

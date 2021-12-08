@@ -31,7 +31,7 @@
 </template>
 <style lang="postcss" scoped>
 .eye {
-  background: black;
+  background: primary-900;
   -webkit-transform-origin: 50%;
   animation: blink 3s infinite 0.25s;
 }

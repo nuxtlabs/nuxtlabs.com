@@ -7,7 +7,18 @@ export default {
   socialImage: false,
   theme: {
     colors: {
-      primary: '#000000', // white
+      primary: {
+        50: '#ededee',
+        100: '#bfbfc5',
+        200: '#94949e',
+        300: '#7f7f8b',
+        400: '#6b6b76',
+        500: '#585860',
+        600: '#44444b',
+        700: '#313136',
+        800: '#1d1d20',
+        900: '#0a0a0b',
+      },
     },
     shortcuts: {
       'd-logo': 'w-auto h-6 md:h-7 text-black',
@@ -36,7 +47,7 @@ export default {
       'd-prose-ul-li-bullet': 'd-secondary-bg',
       'd-scrollbar': '',
       // Container
-      'd-max-w-container': 'max-w-12xl',
+      'd-max-w-container': 'max-w-7xl',
       'd-px-container': 'px-4 sm:px-8',
       'd-container': 'd-max-w-container mx-auto',
       'd-container-content': 'd-container d-px-container',

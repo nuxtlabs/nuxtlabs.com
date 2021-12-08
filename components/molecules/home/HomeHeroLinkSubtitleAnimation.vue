@@ -5,7 +5,7 @@
       flex
       items-center
       pointer-events-none
-      bg-black bg-opacity-50
+      bg-primary-900 bg-opacity-50
       rounded-lg
       px-2
       py-2

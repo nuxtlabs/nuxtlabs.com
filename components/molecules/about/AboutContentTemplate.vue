@@ -10,7 +10,7 @@
         absolute
         top-0
         w-0.5
-        bg-black
+        bg-primary-900
         h-full
         transform
         transition-transform
