@@ -2,13 +2,15 @@
   <!-- eslint-disable-next-line vue/require-component-is -->
   <Component
     v-bind="buttonProps"
-    :class="buttonClass ? buttonClass : ['app-button', size, variant]"
+    :class="[
+      { 'inline-flex items-center': iconPath || iconComponent },
+      buttonClass ? buttonClass : ['app-button', size, variant],
+    ]"
   >
-    <Component :is="icon" v-if="icon" class="mr-2 icon" :class="size" />
-
     <Markdown unwrap="p" />
+    <Component :is="iconComponent" v-if="iconComponent" :class="iconClass" />
 
-    <IconExternalLink v-if="externalIcon" class="ml-2 icon" :class="size" />
+    <img v-if="iconPath" :src="iconPath" :class="iconClass" />
   </Component>
 </template>
 
@@ -37,13 +39,17 @@ export default defineComponent({
       type: String,
       default: '',
     },
-    icon: {
+    iconComponent: {
       type: String,
       default: '',
     },
-    externalIcon: {
+    iconPath: {
       type: String,
       default: '',
+    },
+    iconClass: {
+      type: String,
+      default: 'w-4 h-4',
     },
     variant: {
       type: String,
@@ -94,13 +100,6 @@ export default defineComponent({
   }
   &.white {
     @apply border-gray-400 hover:bg-primary-900 hover:text-white;
-  }
-}
-
-.icon {
-  @apply w-4 h-4;
-  &.large {
-    @apply w-5 h-5;
   }
 }
 </style>

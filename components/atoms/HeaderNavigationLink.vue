@@ -15,7 +15,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, useRoute } from '#app'
+import { defineComponent, computed } from '#app'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -33,11 +34,11 @@ export default defineComponent({
     },
     inactiveClass: {
       type: String,
-      default: 'hover:d-primary-text-hover',
+      default: 'hover:text-gray-700',
     },
   },
   setup(props) {
-    const route = useRoute()
+    const { currentSlug } = useNav()
 
     const linkProps = computed(() => {
       const { to, href } = props.link
@@ -56,12 +57,6 @@ export default defineComponent({
           is: 'span',
         }
       }
-    })
-
-    const currentSlug = computed(() => {
-      return route.path !== '/' && route?.params?.pathMatch
-        ? route.params.pathMatch.split('/')[0]
-        : null
     })
 
     return {

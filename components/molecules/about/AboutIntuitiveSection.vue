@@ -16,7 +16,7 @@
           ]"
           :key="project"
         >
-          <img :src="project" alt="Logo of NuxtJS" class="h-24 w-24" />
+          <img :src="project" alt="Logo of NuxtJS" class="w-24" />
         </li>
       </ul>
       <AboutContentTemplate :is-visible="isVisible" />

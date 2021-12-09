@@ -14,7 +14,7 @@
   >
     <div class="flex items-center w-full" :class="mainLinkClass">
       <slot name="trigger" :toggle="toggle" :open="open" />
-      <img v-if="icon" :src="`/img/chevronBottom.svg`" class="h-5 w-5" />
+      <img v-if="icon" :src="`/img/chevron-bottom.svg`" class="h-5 w-5" />
     </div>
 
     <div

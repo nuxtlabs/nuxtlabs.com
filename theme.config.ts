@@ -45,5 +45,18 @@ export default defineThemeConfig({
     'd-px-container': 'px-4 sm:px-8',
     'd-container': 'd-max-w-container mx-auto',
     'd-container-content': 'd-container d-px-container',
+    // Illustration
+    landscape: 'absolute m-auto w-full',
+    'landscape-bottom': 'landscape bottom-0',
+    'landscape-top': 'landscape bottom-full',
+    'landscape-mobile': 'sm:hidden',
+    'landscape-tablet': 'hidden sm:block lg:hidden',
+    'landscape-desktop': 'hidden lg:block',
+    'landscape-bottom-mobile': 'landscape-bottom landscape-mobile',
+    'landscape-bottom-tablet': 'landscape-bottom landscape-tablet',
+    'landscape-bottom-desktop': 'landscape-bottom landscape-desktop',
+    'landscape-top-mobile': 'landscape-top landscape-mobile',
+    'landscape-top-tablet': 'landscape-top landscape-tablet',
+    'landscape-top-desktop': 'landscape-top landscape-desktop',
   },
 })
