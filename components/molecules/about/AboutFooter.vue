@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-40">
     <p class="sm:text-center mb-4 block">
       Follow our updates and see what’s next on
     </p>

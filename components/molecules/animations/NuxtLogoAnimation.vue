@@ -1,38 +1,31 @@
 <template>
   <svg
-    ref="root"
-    viewBox="0 0 116 78"
+    width="333"
+    height="324"
+    viewBox="0 0 333 324"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g>
-      <path
-        d="M36.7378 4.15814C39.9976 -1.3823 48.1451 -1.3823 51.4048 4.15814L86.9233 64.5371C90.183 70.0776 86.1093 77.0028 79.591 77.0028H8.5504C2.03216 77.0028 -2.04159 70.0776 1.21692 64.5371L36.7378 4.15814Z"
-        fill="white"
-      />
-      <path
-        ref="smallTriangle"
-        d="M69.1921 15.1219L69.1921 15.122L40.1301 64.522L40.1298 64.5225C35.6251 72.1818 41.3431 81.5028 50.0087 81.5028H108.132C116.797 81.5028 122.516 72.1815 118.009 64.5219L88.9493 15.1221L88.9492 15.1219C84.5421 7.63142 73.5992 7.63142 69.1921 15.1219Z"
-        fill="white"
-        stroke="#080808"
-        stroke-width="9"
-      />
-    </g>
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M62.7895 17.8765C49.2773 -5.35659 15.4969 -5.35662 1.98477 17.8764L-145.277 271.081C-158.789 294.314 -141.899 323.355 -114.874 323.355H0.0864105C-11.4613 313.263 -15.7375 295.805 -6.99899 280.825L104.53 89.6461L62.7895 17.8765Z"
+      fill="#0A0A0B"
+    />
+    <path
+      ref="smallTriangle"
+      d="M156.097 73.418C167.28 54.4091 195.236 54.4092 206.418 73.418L328.29 280.585C339.472 299.594 325.494 323.355 303.129 323.355H59.3863C37.0213 323.355 23.0433 299.594 34.2257 280.585L156.097 73.418Z"
+      fill="#0A0A0B"
+    />
   </svg>
 </template>
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, watch } from '#app'
+import { defineComponent, ref } from '#app'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const root = ref(null)
     const smallTriangle = ref(null)
 
@@ -44,10 +37,6 @@ export default defineComponent({
       eenter: {
         scale: 1,
         opacity: 1,
-      },
-      leave: {
-        scale: 0.25,
-        opacity: 0,
       },
     })
 
@@ -76,20 +65,19 @@ export default defineComponent({
     })
 
     rootInstance.apply('initial')
+    rootInstance.apply('eenter')
+    smallTriangleInstance.set('initial')
+    smallTriangleInstance.apply('enter')
 
-    watch(
+    /* watch(
       () => props.showAnimation,
       (nVal) => {
-        if (nVal) {
-          rootInstance.apply('eenter')
-          smallTriangleInstance.set('initial')
-          smallTriangleInstance.apply('enter')
-        } else {
-          rootInstance.apply('leave')
-        }
+        rootInstance.apply('eenter')
+        smallTriangleInstance.set('initial')
+        smallTriangleInstance.apply('enter')
       },
       { immediate: true },
-    )
+    ) */
 
     return {
       smallTriangle,
