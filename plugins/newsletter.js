@@ -1,9 +1,10 @@
 import { $fetch } from 'ohmyfetch'
-import { ref, useNuxtApp } from '#app'
+import { ref, useRuntimeConfig, useRoute } from '#app'
 
 export function useNewsletter() {
   // @ts-ignore
-  const { query, $config } = useNuxtApp()
+  const $config = useRuntimeConfig()
+  const route = useRoute()
   const email = ref('')
   const newsletterResult = ref('')
   const pending = ref(false)
@@ -50,8 +51,8 @@ export function useNewsletter() {
       .finally(() => (pending.value = false))
   }
 
-  if (query.value.hash && query.value.email) {
-    confirmSubscribtion(query.value.email)
+  if (route.query.value?.hash && route.query.value?.email) {
+    confirmSubscribtion(route.query.value?.email)
   }
 
   const newsletterError = (err) => {

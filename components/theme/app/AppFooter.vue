@@ -12,7 +12,7 @@
       src="/img/footer/footer-illustration.svg"
       class="landscape-top-desktop select-none"
     />
-    <div class="absolute w-full inset-x-0 bg-gray-900 z-0 h-full" />
+    <div class="absolute w-full inset-x-0 bg-primary-900 h-full" />
     <div
       class="flex h-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex-col justify-center pt-12"
     >
@@ -51,22 +51,14 @@
               weekly.</span
             >
             <form class="flex gap-x-3" @submit.prevent="subscribe">
-              <UInput
+              <AppInput
                 v-model="email"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                base-class="flex-1 max-w-92 bg-gray-900 border-none"
-                class="border border-white rounded-md"
-                required
+                placeholder="Email"
+                class="bg-transparent"
               />
-              <UButton
-                type="submit"
-                label="Subscribe"
-                :loading="pending"
-                loading-icon="heroicons-outline:refresh"
-                variant="black-hover"
-              />
+              <AppButton type="submit" variant="dark" submit>
+                {{ pending ? 'Subscribing...' : 'Subscribe' }}
+              </AppButton>
             </form>
           </div>
         </div>
@@ -81,10 +73,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch } from '#app'
+import { defineComponent, watch, useNuxtApp } from '#app'
 import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
-import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
   props: {
@@ -96,7 +87,7 @@ export default defineComponent({
   setup() {
     const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
-    const { add: addNotification } = useNotifications()
+    const { $notifications } = useNuxtApp()
 
     watch(newsletterResult, (newVal) => {
       if (newVal !== '') showNotification(newVal)
@@ -150,7 +141,7 @@ export default defineComponent({
           break
       }
 
-      addNotification({
+      $notifications.add({
         title: 'Newsletter',
         description: notificationOptions.text,
         type: notificationOptions.type,
@@ -160,11 +151,83 @@ export default defineComponent({
       newsletterResult.value = ''
     }
 
+    const footerItems = [
+      {
+        title: 'Solutions',
+        items: [
+          {
+            title: 'NuxtJS',
+            href: 'https://nuxtjs.org/',
+          },
+          {
+            title: 'Docus',
+            href: 'https://docus.com/',
+          },
+          {
+            title: 'Vue Telescope',
+            href: 'https://vuetelescope.com/',
+          },
+        ],
+      },
+      {
+        title: 'Partners',
+        items: [
+          {
+            title: 'Technology',
+            to: '/technology-partner',
+          },
+          {
+            title: 'Agency',
+            to: '/agency-partner',
+          },
+          {
+            title: 'Education',
+            to: '/education-partner',
+          },
+        ],
+      },
+      {
+        title: 'Company',
+        items: [
+          {
+            title: 'About',
+            href: 'https://nuxtlabs.com/about',
+          },
+          {
+            title: 'Blog',
+            href: 'https://nuxtlabs.com/blog',
+          },
+          {
+            title: 'Design',
+            href: 'https://nuxtlabs.com/design',
+          },
+        ],
+      },
+      {
+        title: 'Legal',
+        items: [
+          {
+            title: 'Claim',
+            to: '/claim',
+          },
+          {
+            title: 'Privacy',
+            to: '/privacy',
+          },
+          {
+            title: 'Terms',
+            to: '/terms',
+          },
+        ],
+      },
+    ]
+
     return {
       email,
       isHome,
       subscribe,
       pending,
+      footerItems,
     }
   },
 })

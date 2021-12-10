@@ -14,6 +14,7 @@
       </div>
     </div>
     <AppFooter />
+    <Notifications />
   </div>
 </template>
 

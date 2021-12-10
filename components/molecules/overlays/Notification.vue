@@ -17,8 +17,8 @@
       <AppButton
         button-class="ml-4 self-start focus:outline-none hover:text-gray-500 focus:text-gray-500 text-gray-900"
         icon-path="/img/navigation/close.svg"
-        icon-class="w-4 h-4"
-        @click.stop="close"
+        icon-class="w-5 h-5"
+        @click.native.stop="close"
       >
       </AppButton>
     </div>
@@ -41,7 +41,6 @@ import {
   ref,
   useNuxtApp,
 } from '#app'
-import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -83,7 +82,6 @@ export default defineComponent({
     const ticker = ref(null)
     const remainingTime = ref(props.timeout)
     const { $timer, $ticker } = useNuxtApp()
-    const { isHome } = useNav()
 
     // computed
     const iconName = computed(() => {
@@ -101,22 +99,22 @@ export default defineComponent({
     const iconColorClass = computed(() => {
       return (
         {
-          warning: 'text-orange-400',
+          warning: 'text-yellow-700',
           info: 'text-blue-400',
           success: 'text-green-400',
           error: 'text-red-400',
-        }[props.type] || 'text-gray-400'
+        }[props.type] || 'text-primary-400'
       )
     })
 
     const progressBarColorClass = computed(() => {
       return (
         {
-          warning: 'bg-orange-400',
+          warning: 'bg-yellow-700',
           info: 'bg-blue-400',
           success: 'bg-green-400',
           error: 'bg-red-400',
-        }[props.type] || 'bg-gray-400'
+        }[props.type] || 'bg-primary-400'
       )
     })
 
@@ -180,7 +178,6 @@ export default defineComponent({
       onMouseover,
       onMouseout,
       close,
-      isHome,
     }
   },
 })

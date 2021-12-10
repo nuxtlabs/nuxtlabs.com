@@ -66,6 +66,7 @@ export default withDocus({
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
+  plugins: ['~/plugins/nav', '~/plugins/timer', '~/plugins/notifications'],
   /**
    * Add image domains for nuxt-image on Vercel
    * TODO: Check if this is still needed
