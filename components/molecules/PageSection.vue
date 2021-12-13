@@ -8,9 +8,10 @@
     <div :class="sectionClass">
       <slot />
       <div :class="contentClass">
-        <span class="font-semibold" :class="titleSizeClass">
-          <Markdown use="title" />
-        </span>
+        <Markdown use="contentImage" />
+        <h2 class="font-semibold" :class="titleSizeClass">
+          <Markdown use="title" unwrap="p" />
+        </h2>
         <p
           :class="[
             { 'text-lg': !hero },
@@ -19,11 +20,9 @@
           ]"
           class="leading-relaxed"
         >
-          <Markdown use="description" />
+          <Markdown use="description" unwrap="p" />
         </p>
-        <div v-if="$slots.content">
-          <Markdown use="content" />
-        </div>
+        <Markdown use="content" unwrap="p" />
         <div
           v-if="$slots.grid"
           class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-8 pt-12"
@@ -68,6 +67,10 @@ export default defineComponent({
     descriptionWidth: {
       type: String,
       default: 'md:w-2/3',
+    },
+    containerClass: {
+      type: String,
+      default: '',
     },
     textSize: {
       type: String,
@@ -115,6 +118,7 @@ export default defineComponent({
 
     const containerClass = computed(() => {
       return [
+        props.containerClass,
         'flex flex-col justify-center',
         props.hero ? 'space-y-6' : 'space-y-4',
         {

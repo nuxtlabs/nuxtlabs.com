@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" class="w-full h-full">
+  <div>
     <img
       v-for="(gem, i) in gemItems"
       ref="gems"
@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, watch, onMounted } from '#app'
+import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
   props: {
@@ -22,34 +22,41 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props, { emit }) {
+  setup() {
     const gemItems = [
       {
-        top: 40,
+        // 4
+        top: 80,
         left: 40,
       },
       {
-        top: 80,
+        // 2
+        top: 50,
         left: 18,
       },
       {
-        top: 30,
+        // 3
+        top: 20,
         left: 30,
       },
       {
-        top: 30,
+        // 6
+        top: 60,
         left: 65,
       },
       {
-        top: 70,
+        // 5
+        top: 0,
         left: 60,
       },
       {
-        top: 15,
+        // 1
+        top: 0,
         left: 8,
       },
       {
-        top: 85,
+        // 7
+        top: 40,
         left: 85,
       },
     ]
@@ -80,36 +87,15 @@ export default defineComponent({
               scale: 1,
               rotate: 0,
             },
-            leave: {
-              opacity: 0,
-              scale: 0,
-              rotate: -25,
-              transition: {
-                duration: 250,
-                ease: 'easeIn',
-                onComplete: () => emit('on-complete'),
-              },
-            },
           }),
         )
       })
 
-      watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            rootInstance.set({ opacity: 1 })
-            instances.forEach((instance) => {
-              instance.set('initial')
-              instance.apply('enter')
-            })
-          } else {
-            instances.forEach((instance) => {
-              instance.apply('leave')
-            })
-          }
-        },
-      )
+      instances.forEach((instance) => {
+        rootInstance.set({ opacity: 1 })
+        instance.set('initial')
+        instance.apply('enter')
+      })
     })
 
     return {

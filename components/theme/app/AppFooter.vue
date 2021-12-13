@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative mt-28">
+  <footer class="relative mt-40">
     <img
       src="/img/footer/footer-illustration-mobile.svg"
       class="landscape-top-mobile select-none"
