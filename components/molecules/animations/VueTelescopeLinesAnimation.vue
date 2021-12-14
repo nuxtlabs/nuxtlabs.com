@@ -4,9 +4,9 @@
       v-for="(line, i) in lineItems"
       :key="i"
       ref="lines"
-      class="absolute w-double-screen bg-red-500 rounded-full"
+      class="absolute w-double-screen rounded-full"
       :style="{
-        background: '#4DDFB5',
+        background: '#0A0A0B',
         top: `${line.top}%`,
         left: `${line.left}%`,
         transform: `rotate(${line.deg}deg)`,
@@ -18,35 +18,29 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, watch, onMounted } from '#app'
+import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const lineItems = [
       {
-        top: 24,
-        left: -10,
-        deg: 6,
-        height: 10,
-        transformOrigin: 'left',
-      },
-      {
-        top: 77,
-        left: -18,
-        deg: -42,
+        top: 150,
+        left: -5,
+        deg: -50,
         height: 16,
         transformOrigin: 'left',
       },
       {
-        top: -15,
-        left: -36,
-        deg: -33,
+        top: 4,
+        left: -3,
+        deg: -3,
+        height: 16,
+        transformOrigin: 'left',
+      },
+      {
+        top: 120,
+        left: -80,
+        deg: 40,
         height: 20,
         transformOrigin: 'right',
       },
@@ -69,18 +63,16 @@ export default defineComponent({
                 duration: 500,
               },
             },
-            leave: {
-              scaleX: 0,
-              height: 0,
-              // transition: {
-              //   duration: 500,
-              // },
-            },
           }),
         )
       })
 
-      watch(
+      instances.forEach((instance) => {
+        instance.set('initial')
+        instance.apply('eenter')
+      })
+
+      /* watch(
         () => props.showAnimation,
         (nVal) => {
           if (nVal) {
@@ -95,7 +87,7 @@ export default defineComponent({
           }
         },
         { immediate: true },
-      )
+      ) */
     })
 
     return {

@@ -54,6 +54,7 @@ export default defineConfig({
     },
   },
   shortcuts: {
+    'h-blur': 'filter blur-8',
     'text-display-6': {
       fontSize: '1.875rem',
       lineHeight: '2.25rem',

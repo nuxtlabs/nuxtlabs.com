@@ -7,7 +7,7 @@
   >
     <path
       d="M0 121C0 54.1735 54.1735 0 121 0V0C187.826 0 242 54.1735 242 121V121C242 187.826 187.826 242 121 242H0V121Z"
-      fill="white"
+      fill="black"
     />
     <ellipse
       cx="107.919"
@@ -15,7 +15,7 @@
       rx="26.1622"
       ry="26.1622"
       transform="rotate(-90 107.919 121.002)"
-      fill="#080808"
+      fill="white"
       class="eye"
     />
     <ellipse
@@ -24,7 +24,7 @@
       rx="26.1622"
       ry="26.1622"
       transform="rotate(-90 186.405 121.002)"
-      fill="#080808"
+      fill="white"
       class="eye"
     />
   </svg>

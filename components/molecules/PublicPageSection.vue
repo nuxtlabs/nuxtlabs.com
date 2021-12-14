@@ -2,33 +2,41 @@
   <section class="relative font-sans" :class="sectionClass">
     <!-- container -->
     <div
-      class="flex items-center justify-center w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"
+      class="flex items-center w-full mx-auto max-w-7xl"
       :class="[
         containerClass,
         containerImgPosition
-          ? `space-x-4 ${
+          ? `justify-between ${
               containerImgPosition === 'left' ? 'flex-row' : 'flex-row-reverse'
             }`
-          : '',
+          : 'justify-center',
       ]"
     >
+      <!-- container image -->
       <Markdown use="containerImage" unwrap="p" />
-      <!-- content with direction -->
+      <!-- content -->
       <div
         class="flex flex-col justify-center space-y-4"
-        :class="[contentClass, contentPositionClass]"
+        :class="[
+          contentClass,
+          contentPositionClass,
+          { 'w-4/5': containerImgPosition },
+        ]"
       >
-        <!-- Image -->
+        <!-- content Image -->
         <Markdown use="contentImage" unwrap="p" />
-        <!-- title -->
-        <h2 class="text-3xl font-semibold">
+        <!-- content title -->
+        <h2 class="text-2xl font-semibold">
           <Markdown use="contentTitle" unwrap="p" />
         </h2>
-        <!-- description -->
-        <p class="text-lg md:w-2/3">
+        <!-- content description -->
+        <p
+          class="text-lg text-gray-500"
+          :class="containerImgPosition ? 'w-full' : 'md:w-2/3'"
+        >
           <Markdown use="contentDescription" unwrap="p" />
         </p>
-        <!-- content -->
+        <!-- content footer -->
         <Markdown use="contentFooter" unwrap="p" />
       </div>
     </div>

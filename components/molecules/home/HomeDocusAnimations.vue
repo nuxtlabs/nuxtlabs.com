@@ -1,49 +1,33 @@
 <template>
-  <div ref="root" class="pointer-events-none fixed top-0 left-0 w-full h-full">
+  <div class="pointer-events-none w-full h-full">
     <div
-      class="absolute bottom-24 sm:bottom-0 left-1/2 md:right-1/5 xl:right-1/3"
+      class="absolute bottom-24 sm:bottom-0 -left-4 md:right-1/5 xl:right-1/3"
     >
-      <DocusGhostAnimation
-        :show-animation="showAnimation"
-        class="h-54 md:h-72 inline-block"
-      />
+      <DocusGhostAnimation class="h-54 md:h-72 inline-block" />
     </div>
 
-    <div class="absolute top-4 right-10 h-48 transform rotate-90">
-      <DocusFiguresAnimation
-        :show-animation="showAnimation"
-        class="h-full w-full"
-      />
+    <div class="absolute -top-32 left-0 h-48 transform rotate-90">
+      <DocusFiguresAnimation class="h-full w-full" />
     </div>
 
-    <div class="absolute top-1/2 md:top-1/4 left-0 h-48 md:h-96">
-      <DocusFiguresAnimation
-        :show-animation="showAnimation"
-        class="h-full w-full"
-        @on-complete="closeRoot"
-      />
+    <div class="absolute top-4 right-10 h-48 md:h-96">
+      <DocusFiguresAnimation class="h-full w-full" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, watch, onMounted } from '#app'
+import { defineComponent, ref } from '#app'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const root = ref(null)
 
     const rootInstance = useMotion(root)
-    rootInstance.set({ opacity: 0 })
+    rootInstance.set({ opacity: 1 })
 
-    onMounted(() => {
+    /* onMounted(() => {
       watch(
         () => props.showAnimation,
         (nVal) => {
@@ -55,15 +39,10 @@ export default defineComponent({
         },
         { immediate: true },
       )
-    })
-
-    function closeRoot() {
-      rootInstance.set({ opacity: 0 })
-    }
+    }) */
 
     return {
       root,
-      closeRoot,
     }
   },
 })

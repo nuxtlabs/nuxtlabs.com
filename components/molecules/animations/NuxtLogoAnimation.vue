@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref } from '#app'
+import { defineComponent, onMounted, ref } from '#app'
 
 export default defineComponent({
   setup() {
@@ -63,10 +63,12 @@ export default defineComponent({
       },
     })
 
-    rootInstance.apply('initial')
-    rootInstance.apply('eenter')
-    smallTriangleInstance.set('initial')
-    smallTriangleInstance.apply('enter')
+    onMounted(() => {
+      rootInstance.apply('initial')
+      rootInstance.apply('eenter')
+      smallTriangleInstance.set('initial')
+      smallTriangleInstance.apply('enter')
+    })
 
     return {
       smallTriangle,

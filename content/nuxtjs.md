@@ -10,8 +10,6 @@ head.meta:
   - hid: twitter:image
     name: twitter:image
     content: https://nuxtlabs.com/img/social/nuxtjs.jpg
-logo: 'nuxt/nuxt-logo.svg'
-logoAnimation: NuxtLogoAnimation
 ---
 
 ::ProductsHero
@@ -94,6 +92,20 @@ contentPosition: 'right'
 Developer hapiness and experience
 #contentDescription
 [Automatic vue-router configuration based on file system detection is the first and most popular feature of the framework. With the efforts of our community and contributors around the world, over time our framework became ready for production. Every feature and bug fix since has been made with the sole purpose of improving the performance and experience for all our users.]{.text-primary-500}
+::
+
+::PublicPageSection
+#contentTitle
+[Embrace DX]{.text-3xl}
+#contentDescription
+[Send us an email to partners@nuxtlabs.com and we will get in touch with you for the details and implementation or direclty apply to the program.]{.text-primary-900}
+#contentFooter
+  :::AppButton
+  ---
+  to: 'https://nuxtjs.org'
+  ---
+  Go to website
+  :::
 ::
 
 <!-- ## The Intuitive Vue framework.

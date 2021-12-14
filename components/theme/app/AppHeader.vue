@@ -1,5 +1,6 @@
 <template>
-  <header class="d-header">
+  <!-- TODO: override d-header class when docus v3 -->
+  <header class="sticky w-full top-0 z-50 filter blur-12 h-header">
     <nav class="flex items-center mx-auto h-full d-container-content">
       <!-- mobile menu !-->
       <div class="lg:hidden flex sm:flex-1 justify-start mr-4">
