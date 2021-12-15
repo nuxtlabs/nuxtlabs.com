@@ -1,47 +1,65 @@
 <template>
-  <section
-    class="h-full flex items-center justify-center overflow-hidden relative"
-  >
-    <nav class="w-full">
-      <ul class="w-full">
-        <li
-          v-for="project in projects"
-          :key="project.to"
-          class="w-full transition-opacity"
-          :class="[
-            !activeProject
-              ? 'opacity-100'
-              : activeProject && project.title === activeProject
-              ? 'opacity-100'
-              : 'opacity-30',
-          ]"
-        >
-          <HomeHeroLink :project="project" @active="setActiveProject($event)" />
-        </li>
-      </ul>
-    </nav>
+  <section class="relative pb-8">
+    <img
+      v-for="(star, index) in stars"
+      :key="index"
+      src="/img/home/hero-stars.svg"
+      alt="star"
+      class="absolute"
+      :style="{
+        top: `${star.top}%`,
+        left: `${star.left}%`,
+        height: `${star.height}rem`,
+        width: `${star.width}rem`,
+      }"
+    />
+    <div
+      class="max-w-7xl mx-auto py-20 mb-60 flex flex-col space-y-8 items-center justify-center text-center"
+    >
+      <h1 class="font-semibold text-6xl">
+        <Markdown use="title" unwrap="p" />
+      </h1>
+
+      <p class="font-semibold text-2xl">
+        <Markdown use="description" unwrap="p" />
+      </p>
+    </div>
+    <img
+      src="/img/home/hero-landscape.svg"
+      alt="landscape"
+      class="absolute landscape-bottom-desktop"
+    />
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '#app'
+import { defineComponent } from '#app'
 
 export default defineComponent({
-  props: {
-    projects: {
-      type: Array,
-      required: true,
-    },
-  },
   setup() {
-    const activeProject = ref(null)
+    const stars = [
+      {
+        top: 0,
+        left: 14,
+        width: 2,
+        height: 2,
+      },
+      {
+        top: 48,
+        left: 8,
+        width: 3,
+        height: 3,
+      },
+      {
+        top: 24,
+        left: 90,
+        width: 2.5,
+        height: 2.5,
+      },
+    ]
 
-    function setActiveProject(project) {
-      activeProject.value = project.title
-    }
     return {
-      setActiveProject,
-      activeProject,
+      stars,
     }
   },
 })

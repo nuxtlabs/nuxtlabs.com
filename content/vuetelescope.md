@@ -15,9 +15,9 @@ head.meta:
 ::ProductsHero
 ---
 #animation
-  :::HomeVueTelescopeAnimations
+  :::VueTelescopeAnimations
   :::
-#logo
+#image
 ![Vue telescope Team 2021](/img/products/VTLogo.svg){.h-28 .w-28 .lg:hidden}
 #title
 Vue Telescope

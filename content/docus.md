@@ -15,9 +15,9 @@ head.meta:
 ::ProductsHero
 ---
 #animation
-  :::HomeDocusAnimations
+  :::DocusAnimations
   :::
-#logo
+#image
 ![Docus Team 2021](/img/products/docusLogo.svg){.h-28 .w-28 .lg:hidden}
 #title
 Docus

@@ -1,10 +1,10 @@
 <template>
-  <div ref="root" class="relative">
+  <div ref="root" class="relative overflow-hidden">
     <Markdown use="animation" unwrap="p" />
     <div
       class="max-w-7xl mx-auto py-20 flex flex-col space-y-8 items-center justify-center text-center"
     >
-      <Markdown use="logo" unwrap="p" />
+      <Markdown use="image" unwrap="p" />
       <h1 class="font-semibold text-5xl">
         <Markdown use="title" unwrap="p" />
       </h1>

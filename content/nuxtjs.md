@@ -15,9 +15,9 @@ head.meta:
 ::ProductsHero
 ---
 #animation
-  :::HomeNuxtAnimations
+  :::NuxtAnimations
   :::
-#logo
+#image
 ![Nuxtlabs Team 2021](/img/products/nuxtJSLogo.svg){.h-28 .w-28 .md:hidden}
 #title
 NuxtJS
