@@ -2,12 +2,14 @@
   <section class="relative font-sans" :class="sectionClass">
     <!-- container -->
     <div
-      class="flex items-center w-full mx-auto max-w-7xl"
+      class="flex flex-col items-center w-full mx-auto max-w-7xl"
       :class="[
         containerClass,
         containerImgPosition
-          ? `justify-between ${
-              containerImgPosition === 'left' ? 'flex-row' : 'flex-row-reverse'
+          ? `justify-center md:justify-between ${
+              containerImgPosition === 'left'
+                ? 'md:flex-row'
+                : 'md:flex-row-reverse'
             }`
           : 'justify-center',
       ]"
@@ -26,12 +28,12 @@
         <!-- content Image -->
         <Markdown use="contentImage" unwrap="p" />
         <!-- content title -->
-        <h2 class="text-2xl font-semibold">
+        <h2 class="text-xl sm:text-2xl font-semibold">
           <Markdown use="contentTitle" unwrap="p" />
         </h2>
         <!-- content description -->
         <p
-          class="text-lg text-gray-500"
+          class="text-md sm:text-lg text-gray-500"
           :class="containerImgPosition ? 'w-full' : 'md:w-2/3'"
         >
           <Markdown use="contentDescription" unwrap="p" />
@@ -65,8 +67,8 @@ export default defineComponent({
     },
     containerImgPosition: {
       type: String,
-      default: '',
-      validator: (value) => ['', 'left', 'right'].includes(value as string),
+      default: null,
+      validator: (value) => ['left', 'right'].includes(value as string),
     },
     containerClass: {
       type: String,
@@ -76,10 +78,10 @@ export default defineComponent({
   setup(props) {
     const contentPositionClass = computed(() => {
       return [
+        'text-center items-center',
         {
-          left: 'text-left',
-          center: 'items-center text-center',
-          right: 'items-end text-right',
+          left: 'md:items-start md:text-left',
+          right: 'md:items-end md:text-right',
         }[props.contentPosition],
       ].join(' ')
     })

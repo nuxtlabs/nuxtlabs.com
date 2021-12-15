@@ -18,13 +18,13 @@
     >
       <path
         d="M213.428 344.175C203.805 360.841 179.749 360.841 170.127 344.175L3.53901 55.6358C-6.08349 38.9691 5.94461 18.1357 25.1896 18.1357H358.365C377.61 18.1357 389.638 38.969 380.016 55.6357L213.428 344.175Z"
-        fill="#0A0A0B"
+        fill="#313136"
       />
     </mask>
     <g mask="url(#mask0)">
       <path
         d="M213.428 344.175C203.805 360.841 179.749 360.841 170.127 344.175L3.53901 55.6358C-6.08349 38.9691 5.94461 18.1357 25.1896 18.1357H358.365C377.61 18.1357 389.638 38.969 380.016 55.6357L213.428 344.175Z"
-        fill="#0A0A0B"
+        fill="#313136"
       />
       <line
         ref="verticalLine"
@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref } from '#app'
+import { defineComponent, onMounted, ref } from '#app'
 
 export default defineComponent({
   setup() {
@@ -84,7 +84,7 @@ export default defineComponent({
         strokeWidth: 30,
         transition: {
           strokeWidth: {
-            delay: 200,
+            delay: 300,
           },
         },
       },
@@ -100,35 +100,17 @@ export default defineComponent({
         strokeWidth: 30,
         transition: {
           strokeWidth: {
-            delay: 200,
+            delay: 300,
           },
         },
       },
     })
 
-    rootInstance.apply('initial')
-    verticalLineInstance.apply('initial')
-    horizontalLineInstance.apply('initial')
-    rootInstance.apply('eenter')
-    verticalLineInstance.apply('eenter')
-    horizontalLineInstance.apply('eenter')
-
-    /* watch(
-      () => props.showAnimation,
-      (nVal) => {
-        if (nVal) {
-          rootInstance.set('initial')
-          verticalLineInstance.set('initial')
-          horizontalLineInstance.set('initial')
-          rootInstance.apply('eenter')
-          verticalLineInstance.apply('eenter')
-          horizontalLineInstance.apply('eenter')
-        } else {
-          rootInstance.apply('leave')
-        }
-      },
-      { immediate: true },
-    ) */
+    onMounted(() => {
+      rootInstance.apply('eenter')
+      verticalLineInstance.apply('eenter')
+      horizontalLineInstance.apply('eenter')
+    })
 
     return {
       root,

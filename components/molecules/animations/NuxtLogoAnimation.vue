@@ -16,7 +16,6 @@
       ref="smallTriangle"
       d="M156.097 73.418C167.28 54.4091 195.236 54.4092 206.418 73.418L328.29 280.585C339.472 299.594 325.494 323.355 303.129 323.355H59.3863C37.0213 323.355 23.0433 299.594 34.2257 280.585L156.097 73.418Z"
       fill="#0A0A0B"
-      stroke="white"
     />
   </svg>
 </template>
@@ -53,20 +52,18 @@ export default defineComponent({
         y: 0,
         transition: {
           strokeWidth: {
-            delay: 250,
+            delay: 350,
           },
           y: {
             delay: 250,
           },
-          duration: 250,
+          duration: 350,
         },
       },
     })
 
     onMounted(() => {
-      rootInstance.apply('initial')
       rootInstance.apply('eenter')
-      smallTriangleInstance.set('initial')
       smallTriangleInstance.apply('enter')
     })
 

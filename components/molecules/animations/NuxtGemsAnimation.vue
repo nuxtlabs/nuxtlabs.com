@@ -5,14 +5,15 @@
       ref="gems"
       :key="i"
       :src="`img/nuxt/gem${i + 1}.svg`"
-      class="absolute"
+      class="absolute -z-1"
       :style="{ top: `${gem.top}%`, left: `${gem.left}%` }"
     />
   </div>
 </template>
 
 <script lang="ts">
-import { useMotion } from '@vueuse/motion'
+import { MaybeRef } from '@vueuse/shared'
+import { PermissiveTarget, useMotion } from '@vueuse/motion'
 import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
@@ -26,7 +27,7 @@ export default defineComponent({
     const gemItems = [
       {
         // 4
-        top: 80,
+        top: 90,
         left: 40,
       },
       {
@@ -69,7 +70,7 @@ export default defineComponent({
 
     onMounted(() => {
       const instances = []
-      gems.value.forEach((gem, i) => {
+      gems.value.forEach((gem: MaybeRef<PermissiveTarget>, i: number) => {
         instances.push(
           useMotion(gem, {
             initial: {
@@ -79,8 +80,8 @@ export default defineComponent({
             },
             enter: {
               transition: {
-                duration: 250,
-                delay: i * 50,
+                duration: 350,
+                delay: i * 100,
                 ease: 'easeOut',
               },
               opacity: 1,
@@ -93,7 +94,6 @@ export default defineComponent({
 
       instances.forEach((instance) => {
         rootInstance.set({ opacity: 1 })
-        instance.set('initial')
         instance.apply('enter')
       })
     })

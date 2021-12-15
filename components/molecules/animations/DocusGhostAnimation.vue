@@ -41,20 +41,7 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      ghostMascotInstance.set('initial')
       ghostMascotInstance.apply('enter')
-      /* watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            ghostMascotInstance.set('initial')
-            ghostMascotInstance.apply('enter')
-          } else {
-            ghostMascotInstance.apply('leave')
-          }
-        },
-        { immediate: true },
-      ) */
     })
 
     return {

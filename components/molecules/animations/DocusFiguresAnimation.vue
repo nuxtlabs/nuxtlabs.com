@@ -109,25 +109,8 @@ export default defineComponent({
       )
 
       instances.forEach((instance) => {
-        instance.set('initial')
         instance.apply('enter')
       })
-
-      /* watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            instances.forEach((instance) => {
-              instance.set('initial')
-              instance.apply('enter')
-            })
-          } else {
-            instances.forEach((instance) => {
-              instance.apply('leave')
-            })
-          }
-        },
-      ) */
     })
 
     return {

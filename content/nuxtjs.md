@@ -14,9 +14,11 @@ head.meta:
 
 ::ProductsHero
 ---
-#logo
+#animation
   :::HomeNuxtAnimations
   :::
+#logo
+![Nuxtlabs Team 2021](/img/products/nuxtJSLogo.svg){.h-28 .w-28 .md:hidden}
 #title
 NuxtJS
 #description
@@ -62,16 +64,17 @@ of Next.js.]{.font-semibold .text-md .md:w-2/3}
 ::PublicPageSection
 ---
 contentPosition: 'center'
-contentClass: 'my-12 py-12 bg-gray-900 rounded-md'
+contentClass: 'my-12 py-12 px-4 md:px-0 bg-gray-900 rounded-md'
 ---
 #contentImage
 ![stars](/img/products/nuxt-stars.svg){.h-16 .w-16}
 #contentTitle
-[Why the Nuxt name ?]{.text-white}
+[Why the Nuxt name ?]{.text-white }
 #contentDescription
-[Once we had created the repository on GitHub to open source our code, we had our first challenge: find a name for our project! We tried couples of names on npm who were already taken. In the end we landed on NUXT which was short and explicit. React & Next made us realize that Vue, Nuxt was a natural fit for us. It is like Next.js but for Vue.js.]{.text-white .md:w-2/3}
+[Once we had created the repository on GitHub to open source our code, we had our first challenge: find a name for our project! We tried couples of names on npm who were already taken. In the end we landed on NUXT which was short and explicit. React & Next made us realize that Vue, Nuxt was a natural fit for us. It is like Next.js but for Vue.js.]{ .text-white .md:w-2/3 }
 ::
 
+<!-- performance section -->
 ::PublicPageSection
 ---
 contentPosition: 'left'
@@ -84,6 +87,7 @@ Performance, modularity
 [Our credo is "Convention over Configuration" to help solve some of the difficulties involved in Vue.js application development.]{.font-semibold .text-md .md:w-2/3}
 ::
 
+<!-- developer hapiness section -->
 ::PublicPageSection
 ---
 contentPosition: 'right'
@@ -94,6 +98,7 @@ Developer hapiness and experience
 [Automatic vue-router configuration based on file system detection is the first and most popular feature of the framework. With the efforts of our community and contributors around the world, over time our framework became ready for production. Every feature and bug fix since has been made with the sole purpose of improving the performance and experience for all our users.]{.text-primary-500}
 ::
 
+<!-- Embrace DX section -->
 ::PublicPageSection
 #contentTitle
 [Embrace DX]{.text-3xl}

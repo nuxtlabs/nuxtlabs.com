@@ -14,9 +14,11 @@ head.meta:
 
 ::ProductsHero
 ---
-#logo
+#animation
   :::HomeVueTelescopeAnimations
   :::
+#logo
+![Vue telescope Team 2021](/img/products/VTLogo.svg){.h-28 .w-28 .lg:hidden}
 #title
 Vue Telescope
 #description
@@ -61,19 +63,20 @@ containerImgPosition: 'left'
 containerClass: 'bg-primary-900 text-white px-0 rounded-md mt-20 mb-48'
 ---
 #containerImage
-![puzzle](/img/products/vt-puzzle.svg){ .h-60 .self-end }
+![puzzle](/img/products/vt-puzzle.svg){ .h-60 self-end .hidden .md:block }
+![puzzle](/img/products/vt-puzzle-full.svg){ .h-48 .md:hidden }
 #contentTitle
 Browser extension
 #contentDescription
 [With the Vue Telescope Browser extensions available for Firefox, Chrome and Edge, you can see informations about the website without leaving the page! Just by clicking on the extention icon and you will see what framework the page is using, what UI/CSS library and so much more.
-]{.text-white}
+]{.text-white .pr-4}
 ::
 
 <!-- explore section -->
 ::PublicPageSection
 ---
 contentPosition: 'left'
-contentClass: 'py-10 pl-2/5'
+contentClass: 'py-10 xl:pl-2/5'
 ---
 #contentTitle
 Explode websites
@@ -88,7 +91,7 @@ contentPosition: 'right'
 contentClass: 'pt-10'
 ---
 #absoluteImage
-![screens](/img/products/vt-screens.svg){ .absolute .-left-4 .-top-56 .max-h-max }
+![screens](/img/products/vt-screens.svg){ .absolute .-left-4 .-top-56 .max-h-max .opacity-20 }
 #contentTitle
 Showcase collections
 #contentDescription

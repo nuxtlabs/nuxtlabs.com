@@ -4,9 +4,9 @@
       v-for="(line, i) in lineItems"
       :key="i"
       ref="lines"
-      class="absolute w-double-screen rounded-full"
+      class="absolute w-double-screen rounded-full bg-primary-900 -z-1"
       :style="{
-        background: '#0A0A0B',
+        opacity: `${line.opacity}%`,
         top: `${line.top}%`,
         left: `${line.left}%`,
         transform: `rotate(${line.deg}deg)`,
@@ -24,22 +24,25 @@ export default defineComponent({
   setup() {
     const lineItems = [
       {
-        top: 150,
-        left: -5,
-        deg: -50,
+        opacity: 20,
+        top: 50,
+        left: -7,
+        deg: 10,
         height: 16,
         transformOrigin: 'left',
       },
       {
+        opacity: 30,
         top: 4,
-        left: -3,
+        left: -8,
         deg: -3,
         height: 16,
         transformOrigin: 'left',
       },
       {
+        opacity: 10,
         top: 120,
-        left: -80,
+        left: -70,
         deg: 40,
         height: 20,
         transformOrigin: 'right',
@@ -68,26 +71,8 @@ export default defineComponent({
       })
 
       instances.forEach((instance) => {
-        instance.set('initial')
         instance.apply('eenter')
       })
-
-      /* watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            instances.forEach((instance) => {
-              instance.set('initial')
-              instance.apply('eenter')
-            })
-          } else {
-            instances.forEach((instance) => {
-              instance.apply('leave')
-            })
-          }
-        },
-        { immediate: true },
-      ) */
     })
 
     return {
