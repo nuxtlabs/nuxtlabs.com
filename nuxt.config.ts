@@ -115,7 +115,7 @@ export default withDocus({
         strict: false,
       },
       optimizeDeps: {
-        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+        exclude: ['vue-demi', '@vueuse/integrations', 'ohmyfetch'],
         include: [
           'defu',
           'theme-colors',
