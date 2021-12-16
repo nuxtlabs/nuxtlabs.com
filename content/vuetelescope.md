@@ -59,10 +59,10 @@ Vue Telescope can detect any website built with Vue.js frameworks, like Nuxt, Gr
 ---
 contentPosition: 'left'
 contentClass: 'py-10'
-containerImgPosition: 'left'
+containerContentAlign: 'left'
 containerClass: 'bg-primary-900 text-white px-0 rounded-md mt-20 mb-48'
 ---
-#containerImage
+#container
 ![puzzle](/img/products/vt-puzzle.svg){ .h-60 self-end .hidden .md:block }
 ![puzzle](/img/products/vt-puzzle-full.svg){ .h-48 .md:hidden }
 #contentTitle

@@ -60,9 +60,9 @@ Building a website from an idea has never been so simple.
 ::PublicPageSection
 ---
 contentPosition: 'left'
-containerImgPosition: 'left'
+containerContentAlign: 'left'
 ---
-#containerImage
+#container
 ![docus flower](/img/products/docus-petals-external.svg){.h-32 .w-32}
 #contentTitle
 Write content
@@ -76,9 +76,9 @@ Secondly, the Markdown syntax is the best markup language that is appealing to h
 ::PublicPageSection
 ---
 contentPosition: 'left'
-containerImgPosition: 'right'
+containerContentAlign: 'right'
 ---
-#containerImage
+#container
 ![docus flower](/img/products/docus-petals-internal.svg){.h-32 .w-32}
 #contentTitle
 Customizable theme

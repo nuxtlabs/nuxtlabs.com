@@ -4,7 +4,7 @@
     v-bind="buttonProps"
     :class="[
       { 'inline-flex items-center': iconPath || iconComponent },
-      buttonClass ? buttonClass : ['app-button', size, variant],
+      buttonClass ? buttonClass : ['app-button', size, variant, customClass],
     ]"
   >
     <Markdown unwrap="p" />
@@ -39,6 +39,10 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    customClass: {
+      type: String,
+      default: '',
+    },
     iconComponent: {
       type: String,
       default: '',
@@ -55,7 +59,7 @@ export default defineComponent({
       type: String,
       default: 'dark',
       validator(value) {
-        return ['dark', 'white'].includes(value as any)
+        return ['dark', 'dark-border', 'white'].includes(value as any)
       },
     },
   },
@@ -96,7 +100,10 @@ export default defineComponent({
     @apply text-base leading-6;
   }
   &.dark {
-    @apply border-gray-700 bg-primary-900 text-white hover:bg-white hover:text-black;
+    @apply border-white bg-primary-900 text-white hover:bg-white hover:text-black;
+  }
+  &.dark-border {
+    @apply border-primary-900 text-primary-900 hover:bg-primary-50;
   }
   &.white {
     @apply border-gray-400 hover:bg-primary-900 hover:text-white;

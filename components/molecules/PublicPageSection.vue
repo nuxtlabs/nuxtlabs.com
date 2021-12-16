@@ -1,13 +1,18 @@
 <template>
   <section class="relative font-sans px-4" :class="sectionClass">
+    <!-- dark bg -->
+    <div
+      v-if="darkMode"
+      class="absolute w-full inset-x-0 bg-primary-900 z-0 h-full -z-1"
+    />
     <!-- container -->
     <div
       class="flex flex-col items-center w-full mx-auto max-w-7xl"
       :class="[
         containerClass,
-        containerImgPosition
+        containerContentAlign
           ? `justify-center md:justify-between ${
-              containerImgPosition === 'left'
+              containerContentAlign === 'left'
                 ? 'md:flex-row'
                 : 'md:flex-row-reverse'
             }`
@@ -15,14 +20,15 @@
       ]"
     >
       <!-- container image -->
-      <Markdown use="containerImage" unwrap="p" />
+      <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
         class="flex flex-col justify-center space-y-4"
         :class="[
           contentClass,
           contentPositionClass,
-          { 'w-4/5': containerImgPosition },
+          { 'w-4/5': containerContentAlign },
+          { 'text-white z-10': darkMode },
         ]"
       >
         <!-- content Image -->
@@ -33,8 +39,11 @@
         </h2>
         <!-- content description -->
         <p
-          class="text-md sm:text-lg text-gray-500"
-          :class="containerImgPosition ? 'w-full' : 'md:w-2/3'"
+          class="text-md sm:text-lg"
+          :class="[
+            containerContentAlign ? 'w-full' : 'md:w-2/3',
+            darkMode ? 'text-white' : 'text-primary-500',
+          ]"
         >
           <Markdown use="contentDescription" unwrap="p" />
         </p>
@@ -65,7 +74,7 @@ export default defineComponent({
       type: String,
       default: '',
     },
-    containerImgPosition: {
+    containerContentAlign: {
       type: String,
       default: null,
       validator: (value) => ['left', 'right'].includes(value as string),
@@ -73,6 +82,10 @@ export default defineComponent({
     containerClass: {
       type: String,
       default: '',
+    },
+    darkMode: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
