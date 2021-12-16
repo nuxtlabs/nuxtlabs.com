@@ -19,11 +19,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '#app'
-import { useDocusLayout } from '#docus'
+import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
+    const { $docus } = useContext()
+
+    const layout = computed(() => $docus.layout.value)
+
     const headerLinks = [
       {
         title: 'Solutions',
@@ -96,7 +99,7 @@ export default defineComponent({
     return {
       socialLinks,
       headerLinks,
-      layout: useDocusLayout(),
+      layout,
     }
   },
 })

@@ -51,7 +51,12 @@
 </template>
 
 <script>
-import { defineComponent, ref, watch, useNuxtApp } from '#app'
+import {
+  defineComponent,
+  ref,
+  watch,
+  useContext,
+} from '@nuxtjs/composition-api'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -62,7 +67,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { $menu } = useNuxtApp()
+    const { $menu } = useContext()
     const { currentSlug } = useNav()
     const nav = ref(null)
     const openedLink = ref(null)

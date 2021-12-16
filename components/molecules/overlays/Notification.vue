@@ -39,8 +39,8 @@ import {
   onMounted,
   onBeforeUnmount,
   ref,
-  useNuxtApp,
-} from '#app'
+  useContext,
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -81,7 +81,7 @@ export default defineComponent({
     const timer = ref(null)
     const ticker = ref(null)
     const remainingTime = ref(props.timeout)
-    const { $timer, $ticker } = useNuxtApp()
+    const { $timer, $ticker } = useContext()
 
     // computed
     const iconName = computed(() => {

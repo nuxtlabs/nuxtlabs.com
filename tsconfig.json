@@ -16,11 +16,9 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "~/*": ["./*"],
-      "@/*": ["./*"],
-      "#app": ["./node_modules/@nuxt/bridge/dist/runtime"],
-      "#docus": ["./node_modules/docus/dist/runtime"]
+      "@/*": ["./*"]
     },
-    "types": ["@types/node", "nuxt-windicss"]
+    "types": ["@types/node", "@nuxt/types", "nuxt-windicss"]
   },
   "include": [
     // JavaScript

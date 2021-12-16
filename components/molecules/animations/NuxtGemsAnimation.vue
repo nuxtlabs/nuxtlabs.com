@@ -12,9 +12,8 @@
 </template>
 
 <script lang="ts">
-import { MaybeRef } from '@vueuse/shared'
-import { PermissiveTarget, useMotion } from '@vueuse/motion'
-import { defineComponent, ref, onMounted } from '#app'
+import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -70,7 +69,7 @@ export default defineComponent({
 
     onMounted(() => {
       const instances = []
-      gems.value.forEach((gem: MaybeRef<PermissiveTarget>, i: number) => {
+      gems.value.forEach((gem, i: number) => {
         instances.push(
           useMotion(gem, {
             initial: {

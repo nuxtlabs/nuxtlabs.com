@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" class="relative overflow-hidden">
+  <div ref="root" class="relative">
     <Markdown use="animation" unwrap="p" />
     <div
       class="max-w-7xl mx-auto py-20 flex flex-col space-y-8 items-center justify-center text-center"

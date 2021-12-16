@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { useIntersectionObserver } from '@vueuse/core'
-import { defineComponent, ref, onBeforeUnmount } from '#app'
+import { defineComponent, ref, onBeforeUnmount } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {

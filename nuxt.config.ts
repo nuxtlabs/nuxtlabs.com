@@ -1,5 +1,5 @@
-import { resolve } from 'pathe'
-import { withDocus } from 'docus'
+import { resolve } from 'path'
+import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -44,7 +44,8 @@ export default withDocus({
   css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: [
     // https://go.nuxtjs.dev/stylelint
-    // '@nuxtjs/stylelint-module',
+    '@nuxt/typescript-build',
+    '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
     // https://motion.vueuse.org
@@ -62,15 +63,16 @@ export default withDocus({
     // meta: false,
     icon: true,
   },
+  windicss: {
+    root: resolve(__dirname),
+    config: resolve(__dirname, 'windi.config.ts'),
+  },
   generate: {
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
   plugins: ['~/plugins/nav', '~/plugins/timer', '~/plugins/notifications'],
-  /**
-   * Add image domains for nuxt-image on Vercel
-   * TODO: Check if this is still needed
-   */
+
   hooks: {
     // @ts-ignore
     generate: {
@@ -106,6 +108,26 @@ export default withDocus({
       'user-images.githubusercontent.com',
       'abs.twimg.com',
     ],
+  },
+  vite: {
+    server: {
+      fs: {
+        strict: false,
+      },
+      optimizeDeps: {
+        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+        include: [
+          'defu',
+          'theme-colors',
+          'cookie',
+          'js-cookie',
+          'clipboard',
+          'property-information',
+          'ufo',
+          'url',
+        ],
+      },
+    },
   },
   publicRuntimeConfig: {
     plausible: {

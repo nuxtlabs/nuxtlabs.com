@@ -1,5 +1,5 @@
 <template>
-  <section class="relative font-sans" :class="sectionClass">
+  <section class="relative font-sans px-4" :class="sectionClass">
     <!-- container -->
     <div
       class="flex flex-col items-center w-full mx-auto max-w-7xl"
@@ -47,7 +47,7 @@
   </section>
 </template>
 <script lang="ts">
-import { defineComponent, computed } from '#app'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {

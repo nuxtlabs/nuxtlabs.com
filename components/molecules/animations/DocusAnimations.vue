@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref } from '#app'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
@@ -28,20 +28,6 @@ export default defineComponent({
 
     const rootInstance = useMotion(root)
     rootInstance.set({ opacity: 1 })
-
-    /* onMounted(() => {
-      watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            rootInstance.set({ opacity: 1 })
-          } else {
-            //
-          }
-        },
-        { immediate: true },
-      )
-    }) */
 
     return {
       root,

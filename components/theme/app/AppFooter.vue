@@ -73,7 +73,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch, useNuxtApp } from '#app'
+import { defineComponent, watch, useContext } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
 
@@ -87,7 +87,7 @@ export default defineComponent({
   setup() {
     const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
-    const { $notifications } = useNuxtApp()
+    const { $notifications } = useContext()
 
     watch(newsletterResult, (newVal) => {
       if (newVal !== '') showNotification(newVal)

@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, onMounted } from '#app'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {

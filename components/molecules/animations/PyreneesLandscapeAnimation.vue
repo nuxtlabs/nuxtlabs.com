@@ -43,7 +43,12 @@
 <script>
 import { useIntersectionObserver } from '@vueuse/core'
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, ref, onBeforeUnmount, onMounted } from '#app'
+import {
+  defineComponent,
+  ref,
+  onBeforeUnmount,
+  onMounted,
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {

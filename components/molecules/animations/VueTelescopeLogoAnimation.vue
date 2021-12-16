@@ -52,7 +52,7 @@
 
 <script lang="ts">
 import { useMotion } from '@vueuse/motion'
-import { defineComponent, onMounted, ref } from '#app'
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {

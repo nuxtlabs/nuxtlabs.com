@@ -1,10 +1,9 @@
+import { ref, useContext } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
-import { ref, useRuntimeConfig, useRoute } from '#app'
 
 export function useNewsletter() {
   // @ts-ignore
-  const $config = useRuntimeConfig()
-  const route = useRoute()
+  const { query, $config } = useContext()
   const email = ref('')
   const newsletterResult = ref('')
   const pending = ref(false)
@@ -51,8 +50,8 @@ export function useNewsletter() {
       .finally(() => (pending.value = false))
   }
 
-  if (route.query.value?.hash && route.query.value?.email) {
-    confirmSubscribtion(route.query.value?.email)
+  if (query.value.hash && query.value.email) {
+    confirmSubscribtion(query.value.email)
   }
 
   const newsletterError = (err) => {
