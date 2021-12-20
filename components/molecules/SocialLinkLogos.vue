@@ -1,12 +1,8 @@
 <template>
-  <ul class="flex items-center justify-center space-x-4">
-    <li v-for="link in socialLinks" :key="link.title">
+  <ul class="flex items-center justify-center">
+    <li v-for="link in socialLinks" :key="link.alt">
       <Link :to="link.href" :aria-label="link.alt">
-        <component
-          :is="link.icon"
-          :alt="link.icon.alt"
-          class="w-6 h-6 hover:text-gray-700"
-        />
+        <component :is="link.icon" :alt="link.alt" :class="iconClass" />
       </Link>
     </li>
   </ul>
@@ -19,6 +15,10 @@ export default defineComponent({
     socialLinks: {
       type: Array,
       default: () => [],
+    },
+    iconClass: {
+      type: String,
+      default: 'w-6 h-6 hover:text-primary-700',
     },
   },
 })

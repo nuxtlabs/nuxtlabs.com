@@ -17,7 +17,7 @@ Discover how we can make it work together 👇
 darkMode: true
 ---
 #contentTitle
-[Our solutions]{ .text-5xl }
+[Our solutions]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #contentDescription
 Our goal is to make developer experience better, shape the web as it must be
 ::
@@ -28,11 +28,13 @@ Our goal is to make developer experience better, shape the web as it must be
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'left'
-contentClass: 'w-1/2 pb-8'
+contentClass: 'lg:w-1/2 pb-8'
 containerClass: 'py-20'
 ---
 #container
-![Nuxt illustration](/img/home/nuxt-illustration.svg){.z-10 .h-76}
+::HomeNuxtAnimations
+::
+<!--![Nuxt illustration](/img/home/nuxt-illustration.svg){.z-10 .lg:h-76} -->
 #contentTitle
 [NuxtJS]{ .text-4xl }
 #contentDescription
@@ -40,8 +42,7 @@ containerClass: 'py-20'
 #contentFooter
   :::AppButton
   ---
-  customClass: 'mt-12
-  '
+  customClass: 'mt-12'
   to: '/nuxtjs'
   aria-label: 'nuxtjs'
   ---
@@ -55,11 +56,11 @@ containerClass: 'py-20'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-contentClass: 'w-2/5'
+contentClass: 'lg:w-2/5'
 containerClass: 'py-20'
 ---
 #container
-![Docus illustration](/img/home/docus-illustration.svg){.z-10 .h-64}
+![Docus illustration](/img/home/docus-illustration.svg){.z-10 .lg:h-64 .pb-8 md:pb-0}
 #contentTitle
 [Docus]{ .text-4xl }
 #contentDescription
@@ -80,11 +81,13 @@ containerClass: 'py-20'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'left'
-contentClass: 'w-1/2'
+contentClass: 'lg:w-1/2'
 containerClass: 'pt-20 pb-40'
 ---
 #container
-![Vue telescope illustration](/img/home/vt-illustration.svg){.z-10 .h-80}
+::HomeVueTelescopeAnimations
+::
+<!-- ![Vue telescope illustration](/img/home/vt-illustration.svg){.z-10 .lg:h-80 .pb-8 md:pb-0} -->
 #contentTitle
 [Vue telescope]{ .text-4xl }
 #contentDescription
@@ -102,12 +105,15 @@ containerClass: 'pt-20 pb-40'
 <!-- Partners section -->
 ::PublicPageSection
 ---
-contentClass: 'py-60'
+contentClass: 'py-80'
 ---
+#animations
+::HomePartnersAnimations
+::
 #contentTitle
-[Trusted by big companies]{ .text-5xl }
+[Trusted by big companies]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #contentDescription
-[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch.]{ .flex .items-center .justify-center .px-40 }
+[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch.]{ .flex .items-center .justify-center .xl:px-40 }
 #contentFooter
   :::AppButton
   ---
@@ -125,10 +131,10 @@ contentClass: 'py-60'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-
+containerClass: 'pt-20 md:pt-0'
 ---
 #contentTitle
-[Some stats text]{ .text-5xl }
+[Some stats text]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #container
   :::StatsNumber{ .text-white .z-10 .w-1/2 }
   ---
@@ -147,11 +153,11 @@ containerContentAlign: 'right'
 contentClass: 'py-40'
 ---
 #contentTitle
-[Be part of the Nuxt adventure]{ .text-5xl }
+[Be part of the Nuxt adventure]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #contentDescription
 [Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch.]{ .flex .items-center .justify-center .px-32 }
 #contentFooter
-  :::PartnersList{ .pb-16 }
+  :::PartnersList{ .pb-16 .pt-12 .md:pt-0 }
   ---
     partners:
         - title: 'Technology partner'
@@ -177,22 +183,29 @@ contentClass: 'py-40'
 
 ::PublicPageSection
 ---
-contentClass: 'py-20'
+containerClass: 'mb-40 lg:mb-10'
 ---
 #contentTitle
-[Join us]{ .text-5xl }
+[Join us]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #contentDescription
-[You can follow us on those social medias to have all of our updates, events, announcements and much more !]{ .text-primary-900 }
+[You can follow us on those social medias to have all of our updates, events, announcements and much more !]{ .text-primary-900 .pb-12 }
 #contentFooter
-  :::ProductSocialLinks
+  :::SocialLinkLogos{ .space-x-12 .pt-8 }
   ---
+    iconClass: 'text-primary-100 hover:text-primary-700 w-10 h-10'
     socialLinks:
-      - label: 'Website'
-        href: 'https://docus.com'
-      - label: 'Github'
-        href: 'https://github.com/docusgen'
-      - label: 'Twitter'
-        href: '_https://twitter.com/docus_'
+      - icon: 'IconGitHub'
+        href: 'https://github.com/nuxtlabs'
+        alt: 'NuxtLabs Github'
+      - icon: 'IconTwitter'
+        href: 'https://twitter.com/nuxtlabs'
+        alt: 'NuxtLabs Twitter'
+      - icon: 'IconYoutube'
+        href: 'https://www.youtube.com/c/NuxtLabs'
+        alt: 'NuxtLabs Youtube'
+      - icon: 'IconLinkedIn'
+        href: 'https://www.linkedin.com/company/nuxtlabs/'
+        alt: 'NuxtLabs LinkedIn'
   ---
   :::
 ::

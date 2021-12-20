@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="flex flex-col md:flex-row space-y-8 md:space-x-16 md:space-x-0 justify-center items-end"
+    class="flex flex-col md:flex-row space-y-8 md:space-x-16 space-x-0 justify-center items-end"
   >
     <li
       v-for="partner in partners"

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 sm:py-16 mx-auto overflow-hidden">
+  <div class="py-8 sm:py-16 mx-auto">
     <!-- component
       :is="page.logoAnimation"
       :show-animation="true"

@@ -8,7 +8,7 @@
         >{{ email }}</a
       >
     </div>
-    <HeaderSocialLinks
+    <SocialLinksLogo
       class="flex text-base space-x-4 text-gray-200 font-medium"
     />
   </div>

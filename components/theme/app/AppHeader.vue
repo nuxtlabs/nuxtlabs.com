@@ -1,6 +1,8 @@
 <template>
   <!-- TODO: override d-header class when docus v3 -->
-  <header class="sticky w-full top-0 z-50 filter blur-12 h-header">
+  <header
+    class="sticky w-full bg-white top-0 z-50 filter blur-12 h-header mix-blend-difference"
+  >
     <nav class="flex items-center mx-auto h-full d-container-content">
       <!-- mobile menu !-->
       <div class="lg:hidden flex sm:flex-1 justify-start mr-4">
@@ -79,7 +81,10 @@
       <!-- social + button -->
       <div class="flex items-center justify-end space-x-8 sm:flex-1">
         <!-- social links -->
-        <HeaderSocialLinks :social-links="socialLinks" class="hidden lg:flex" />
+        <SocialLinkLogos
+          :social-links="socialLinks"
+          class="hidden lg:flex space-x-4"
+        />
         <!-- button -->
         <AppButton to="/"> Login </AppButton>
       </div>

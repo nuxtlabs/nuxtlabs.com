@@ -26,7 +26,10 @@
                 icon-class="ml-3 w-6 h-6"
                 @click.native.stop="$menu.toggle"
               />
-              <HeaderSocialLinks :social-links="socialLinks" class="mr-4" />
+              <SocialLinkLogos
+                :social-links="socialLinks"
+                class="space-x-4 mr-4"
+              />
             </div>
 
             <AsideHeaderNavigation :header-links="headerLinks" />

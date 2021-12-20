@@ -1,10 +1,10 @@
 <template>
-  <section class="relative font-sans px-4" :class="sectionClass">
-    <!-- dark bg -->
-    <div
-      v-if="darkMode"
-      class="absolute w-full inset-x-0 bg-primary-900 z-0 h-full -z-1"
-    />
+  <section
+    class="relative font-sans px-4"
+    :class="[sectionClass, darkMode ? 'bg-primary-900' : 'bg-white']"
+  >
+    <!-- animations -->
+    <Markdown use="animations" unwrap="p" />
     <!-- container -->
     <div
       class="flex flex-col items-center w-full mx-auto max-w-7xl"
@@ -19,11 +19,11 @@
           : 'justify-center',
       ]"
     >
-      <!-- container image -->
+      <!-- container -->
       <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
-        class="flex flex-col justify-center space-y-4"
+        class="flex flex-col justify-center space-y-4 px-4"
         :class="[
           contentClass,
           contentPositionClass,
