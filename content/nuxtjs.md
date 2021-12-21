@@ -39,7 +39,7 @@ The Intuitive Vue Framework
 ::
 
 <!-- How we started section -->
-::PublicPageSection
+::public-page-section
 ---
 contentPosition: 'center'
 ---
@@ -61,7 +61,7 @@ of Next.js.]{.font-semibold .text-md .md:w-2/3}
 ::
 
 <!-- Why the nuxt name section -->
-::PublicPageSection
+::public-page-section
 ---
 contentPosition: 'center'
 contentClass: 'my-12 py-12 px-4 md:px-0 bg-gray-900 rounded-md'
@@ -75,7 +75,7 @@ contentClass: 'my-12 py-12 px-4 md:px-0 bg-gray-900 rounded-md'
 ::
 
 <!-- performance section -->
-::PublicPageSection
+::public-page-section
 ---
 contentPosition: 'left'
 ---
@@ -88,7 +88,7 @@ Performance, modularity
 ::
 
 <!-- developer hapiness section -->
-::PublicPageSection
+::public-page-section
 ---
 contentPosition: 'right'
 ---
@@ -99,7 +99,7 @@ Developer hapiness and experience
 ::
 
 <!-- Embrace DX section -->
-::PublicPageSection
+::public-page-section
 #contentTitle
 [Embrace DX]{.text-3xl}
 #contentDescription

@@ -140,7 +140,7 @@ export default defineComponent({
         } else {
           clearInterval(counter)
         }
-      }, 10)
+      }, 15)
     }
 
     instances.forEach((instance) => {

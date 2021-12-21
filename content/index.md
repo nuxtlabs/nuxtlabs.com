@@ -4,7 +4,7 @@ title: 'NuxtLabs: Intuitive Web Development'
 description: 'We build open source solutions focused on developer experience such as NuxtJS, Docus and Vue Telescope.'
 ---
 
-::HomeHero
+::home-hero
 #title
 [We are]{ .text-primary-500 } Open Source Project<br />[builders &]{ .text-primary-500 } Vue.js [experts]{ .text-primary-500 .leading-normal }
 #description
@@ -12,7 +12,7 @@ Discover how we can make it work together 👇
 ::
 
 <!-- Our goals section -->
-::PublicPageSection
+::public-page-section
 ---
 darkMode: true
 ---
@@ -23,7 +23,7 @@ Our goal is to make developer experience better, shape the web as it must be
 ::
 
 <!-- NuxtJS section -->
-::PublicPageSection
+::public-page-section
 ---
 darkMode: true
 contentPosition: 'left'
@@ -32,7 +32,7 @@ contentClass: 'lg:w-1/2 pb-8'
 containerClass: 'py-20'
 ---
 #container
-::HomeNuxtAnimations
+::home-nuxt-animations
 ::
 <!--![Nuxt illustration](/img/home/nuxt-illustration.svg){.z-10 .lg:h-76} -->
 #contentTitle
@@ -51,7 +51,7 @@ containerClass: 'py-20'
 ::
 
 <!-- Docus section -->
-::PublicPageSection
+::public-page-section
 ---
 darkMode: true
 contentPosition: 'left'
@@ -60,7 +60,9 @@ contentClass: 'lg:w-2/5'
 containerClass: 'py-20'
 ---
 #container
-![Docus illustration](/img/home/docus-illustration.svg){.z-10 .lg:h-64 .pb-8 md:pb-0}
+<!-- ![Docus illustration](/img/home/docus-illustration.svg){.z-10 .lg:h-64 .pb-8 md:pb-0} -->
+::home-docus-animations
+::
 #contentTitle
 [Docus]{ .text-4xl }
 #contentDescription
@@ -76,7 +78,7 @@ containerClass: 'py-20'
 ::
 
 <!-- Vue Telescope section -->
-::PublicPageSection
+::public-page-section
 ---
 darkMode: true
 contentPosition: 'left'
@@ -85,7 +87,7 @@ contentClass: 'lg:w-1/2'
 containerClass: 'pt-20 pb-40'
 ---
 #container
-::HomeVueTelescopeAnimations
+::home-vue-telescope-animations
 ::
 <!-- ![Vue telescope illustration](/img/home/vt-illustration.svg){.z-10 .lg:h-80 .pb-8 md:pb-0} -->
 #contentTitle
@@ -103,7 +105,7 @@ containerClass: 'pt-20 pb-40'
 ::
 
 <!-- Partners section -->
-::PublicPageSection
+::public-page-section
 ---
 contentClass: 'py-80'
 ---
@@ -126,7 +128,7 @@ contentClass: 'py-80'
 ::
 
 <!-- Stats section -->
-::PublicPageSection
+::public-page-section
 ---
 darkMode: true
 contentPosition: 'left'
@@ -148,7 +150,7 @@ containerClass: 'pt-20 md:pt-0'
 ::
 
 <!-- Adventure section -->
-::PublicPageSection
+::public-page-section
 ---
 contentClass: 'py-40'
 ---
@@ -181,7 +183,7 @@ contentClass: 'py-40'
   :::
 ::
 
-::PublicPageSection
+::public-page-section
 ---
 containerClass: 'mb-40 lg:mb-10'
 ---
