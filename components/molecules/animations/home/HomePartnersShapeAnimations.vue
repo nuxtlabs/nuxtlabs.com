@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <div
       v-for="(shape, index) in shapes"
       :key="index"
-      class="absolute transform"
+      class="hidden sm:absolute transform"
       :style="{
         top: `${shape.top}%`,
         left: `${shape.left}%`,

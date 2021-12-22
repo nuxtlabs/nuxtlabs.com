@@ -7,7 +7,11 @@
       :key="partner.title"
       class="flex flex-col items-center justify-center"
     >
-      <img :src="partner.imgPath" :alt="partner.title" class="w-40 h-40" />
+      <Component
+        :is="partner.animComponent"
+        :alt="partner.title"
+        class="h-40 w-40"
+      />
       <h5 class="font-semibold text-primary-900 text-2xl">
         {{ partner.title }}
       </h5>

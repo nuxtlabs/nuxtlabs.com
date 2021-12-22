@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative font-sans px-4"
+    class="relative font-sans px-4 overflow-hidden"
     :class="[sectionClass, darkMode ? 'bg-primary-900' : 'bg-white']"
   >
     <!-- animations -->

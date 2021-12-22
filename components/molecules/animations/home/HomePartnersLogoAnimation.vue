@@ -1,19 +1,33 @@
 <template>
   <div>
-    <img
+    <div
+      v-for="(logo, index) in partnersLogos"
+      :key="index"
+      class="relative h-40 w-40"
+    >
+      <Component
+        :is="logo.component"
+        ref="partners"
+        class="absolute mx-auto"
+        :class="`top-${logo.mobileTop} sm:top-${logo.top} left-1/2 sm:left-${logo.left}`"
+      />
+
+      <!-- img
       v-for="(logo, index) in partnersLogos"
       ref="partners"
       :key="index"
       :src="`/img/home/partners/${logo.name}`"
       alt="partners logo"
-      class="absolute"
+      class="block sm:absolute"
+      :class="`sm:top-${logo.top} sm:left-${logo.left}`"
       :style="{
-        top: `${logo.top}%`,
-        left: `${logo.left}%`,
+        //top: `${logo.top}%`,
+        //left: `${logo.left}%`,
         height: `${logo.height}rem`,
         width: `${logo.width}rem`,
       }"
-    />
+    /-->
+    </div>
     <div ref="scrollTarget" class="absolute bottom-40" />
   </div>
 </template>
@@ -31,25 +45,33 @@ export default defineComponent({
   setup() {
     const partnersLogos = [
       {
-        top: 20,
-        left: 20,
-        name: 'vercel.svg',
+        mobileTop: '1/2',
+        mobileLeft: '1/2',
+        top: '20',
+        left: '1/2',
+        component: 'Vercel',
       },
       {
-        top: 70,
-        left: 20,
-        name: 'github.svg',
+        mobileTop: '1/3',
+        mobileLeft: '1/2',
+        top: '70',
+        left: '20',
+        component: 'Github',
+      },
+      /* {
+        mobileTop: '20',
+        mobileLeft: '2/5',
+        top: '10',
+        left: '60',
+        component: 'netlify.svg',
       },
       {
-        top: 10,
-        left: 60,
-        name: 'netlify.svg',
-      },
-      {
-        top: 68,
-        left: 70,
-        name: 'google-chrome.svg',
-      },
+        mobileTop: '0',
+        mobileLeft: '0',
+        top: '68',
+        left: '70',
+        component: 'google-chrome.svg',
+      }, */
     ]
 
     const root = ref(null)

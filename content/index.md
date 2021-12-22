@@ -164,13 +164,13 @@ contentClass: 'py-40'
     partners:
         - title: 'Technology partner'
           description: 'A technology partner is a service that empowers Nuxt development.'
-          imgPath: '/img/home/partners/technology-partner.svg'
+          animComponent: 'HomeTechnologyAnimations'
         - title: 'Agency partner'
           description: 'A technology partner is a service that empowers Nuxt development.'
-          imgPath: '/img/home/partners/agency-partner.svg'
+          animComponent: 'HomeAgencyAnimations'
         - title: 'Education partner'
           description: 'A technology partner is a service that empowers Nuxt development.'
-          imgPath: '/img/home/partners/education-partner.svg'
+          animComponent: 'HomeEducationAnimations'
   ---
   :::
   :::AppButton
