@@ -38,7 +38,7 @@ export default defineComponent({
             to: '/nuxtjs',
             slug: 'nuxtjs',
             icon: {
-              name: 'nuxtJSLogo.svg',
+              path: '/img/products/nuxtJSLogo.svg',
               alt: 'NuxtJS logo',
             },
           },
@@ -49,7 +49,7 @@ export default defineComponent({
             to: '/docus',
             slug: 'docus',
             icon: {
-              name: 'docusLogo.svg',
+              path: '/img/products/docusLogo.svg',
               alt: 'Docus logo',
             },
           },
@@ -60,7 +60,7 @@ export default defineComponent({
             to: '/vuetelescope',
             slug: 'vuetelescope',
             icon: {
-              name: 'VTLogo.svg',
+              path: '/img/products/VTLogo.svg',
               alt: 'Vue telescope logo',
             },
           },
@@ -72,9 +72,43 @@ export default defineComponent({
         slug: 'partners',
       },
       {
-        title: 'About us',
-        to: '/about',
-        slug: 'about',
+        title: 'Discover',
+        subLinks: [
+          {
+            title: 'Company',
+            description: 'Know more about Nuxt Labs story & team',
+            to: '/discover/about',
+            slug: 'about',
+            icon: {
+              path: '/img/navigation/building.svg',
+              alt: 'company building image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+          {
+            title: 'Blog',
+            description: 'Our latest updates, announcements & future events',
+            to: '/discover/blog',
+            slug: 'blog',
+            icon: {
+              path: 'img/navigation/book.svg',
+              alt: 'Blog book image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+          {
+            title: 'Vue Telescope',
+            description:
+              'Discover how NuxtLabs products can change your day-to-day ',
+            to: '/discover/case-studies',
+            slug: 'case-studies',
+            icon: {
+              path: 'img/navigation/telescope.svg',
+              alt: 'case studies telescope image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+        ],
       },
     ]
 

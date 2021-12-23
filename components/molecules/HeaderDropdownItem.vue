@@ -2,9 +2,9 @@
   <div class="py-1 px-2 rounded-md w-full hover:bg-gray-100">
     <div class="flex space-x-2 items-center w-full">
       <img
-        :src="`/img/products/${icon.name}`"
+        :src="icon.path"
         :alt="icon.alt"
-        class="w-12 h-12"
+        :class="icon.class || 'w-12 h-12'"
       />
       <div>
         <h5 class="font-bold text-md">
