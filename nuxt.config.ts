@@ -71,7 +71,12 @@ export default withDocus({
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
-  plugins: ['~/plugins/nav', '~/plugins/timer', '~/plugins/notifications'],
+  plugins: [
+    '~/plugins/nav',
+    '~/plugins/timer',
+    '~/plugins/notifications',
+    '~/plugins/mq',
+  ],
 
   hooks: {
     // @ts-ignore

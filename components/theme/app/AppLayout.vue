@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full">
+  <div class="overflow-hidden w-full">
     <AppHeader :header-links="headerLinks" :social-links="socialLinks" />
     <div class="lg:flex" :class="{ 'd-container': layout.aside }">
       <AppAside

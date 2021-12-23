@@ -3,7 +3,8 @@
     <div
       v-for="(shape, index) in shapes"
       :key="index"
-      class="hidden sm:absolute transform"
+      class="absolute transform"
+      :class="shape.class || ''"
       :style="{
         top: `${shape.top}%`,
         left: `${shape.left}%`,
@@ -32,11 +33,12 @@ export default defineComponent({
     const shapes = [
       {
         top: 45,
-        left: 15,
+        left: 10,
         width: 4,
         height: 4,
         component: 'Round',
         strokeDashoffset: 200,
+        class: 'hidden lg:block',
       },
       {
         top: 20,
@@ -45,6 +47,7 @@ export default defineComponent({
         height: 4,
         component: 'RoundSmall',
         strokeDashoffset: 150,
+        class: 'hidden sm:block',
       },
       {
         top: 20,
@@ -53,6 +56,7 @@ export default defineComponent({
         height: 4,
         component: 'CurvedLine',
         strokeDashoffset: 50,
+        class: 'hidden lg: block',
       },
       {
         top: 85,
@@ -62,6 +66,7 @@ export default defineComponent({
         component: 'CurvedLine',
         rotate: 120,
         strokeDashoffset: 50,
+        class: 'hidden sm:block',
       },
       {
         top: 60,
@@ -71,6 +76,7 @@ export default defineComponent({
         component: 'CurvedLine',
         rotate: 40,
         strokeDashoffset: 50,
+        class: 'hidden sm:block',
       },
       {
         top: 5,
@@ -80,6 +86,7 @@ export default defineComponent({
         component: 'SquareMedium',
         strokeDashoffset: 400,
         rotate: 45,
+        class: 'hidden sm:block',
       },
       {
         top: 35,
@@ -89,6 +96,7 @@ export default defineComponent({
         component: 'Square',
         strokeDashoffset: 400,
         rotate: 45,
+        class: 'hidden lg:block',
       },
       {
         top: 80,
@@ -98,6 +106,7 @@ export default defineComponent({
         component: 'SquareSmall',
         strokeDashoffset: 400,
         rotate: 45,
+        class: 'hidden sm:block',
       },
       {
         top: 80,
@@ -107,6 +116,7 @@ export default defineComponent({
         component: 'StadiumSmall',
         strokeDashoffset: 400,
         rotate: 45,
+        class: 'hidden sm:block',
       },
       {
         top: 10,
@@ -116,6 +126,7 @@ export default defineComponent({
         component: 'Stadium',
         strokeDashoffset: 400,
         rotate: 45,
+        class: 'hidden sm:block',
       },
     ]
 

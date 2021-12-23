@@ -107,7 +107,7 @@ containerClass: 'pt-20 pb-40'
 <!-- Partners section -->
 ::public-page-section
 ---
-contentClass: 'py-80'
+contentClass: 'py-60 sm:py-80'
 ---
 #animations
 ::HomePartnersAnimations
@@ -157,7 +157,7 @@ contentClass: 'py-40'
 #contentTitle
 [Be part of the Nuxt adventure]{ .text-3xl .sm:text-4xl .md:text-5xl }
 #contentDescription
-[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch.]{ .flex .items-center .justify-center .px-32 }
+[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch.]{ .flex .items-center .justify-center .lg:px-24 .xl:px-32 }
 #contentFooter
   :::PartnersList{ .pb-16 .pt-12 .md:pt-0 }
   ---
