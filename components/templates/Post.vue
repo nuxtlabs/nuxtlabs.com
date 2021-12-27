@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative py-16 sm:py-24">
+    <div class="relative py-16 sm:py-24 2xl:pb-40">
       <div class="relative max-w-3xl mx-auto">
         <AppLink
           :to="
@@ -26,43 +26,21 @@
             {{ page.description }}
           </p>
 
-          <div class="flex items-center sm:flex-row">
-            <time
-              v-if="page.date"
-              :datetime="page.date"
-              class="mr-2 text-sm font-medium text-primary-400"
-            >
-              {{ formatDateByLocale('en', page.date) }}
-            </time>
+          <div class="flex items-center justify-between sm:flex-row">
+            <div>
+              <span class="font-semibold text-primary-400">
+                {{ page.category }}
+              </span>
 
-            <div
-              v-if="page.authors && page.authors.length"
-              class="text-sm text-primary-400"
-            >
-              |
-            </div>
-            <div class="flex ml-4 sm:ml-2">
-              <AppLink
-                v-for="(author, index) in page.authors"
-                :key="index"
-                :href="author.link"
-                rel="noopener noindex nofollow"
-                class="flex items-center justify-end -ml-2 sm:ml-0 sm:mr-2 hover:text-primary-700"
+              <time
+                v-if="page.date"
+                :datetime="page.date"
+                class="mr-2 font-semibold text-primary-400"
               >
-                <NuxtImg
-                  class="inline-block w-8 h-8 border rounded-full text-primary-400 sm:mr-1"
-                  height="32"
-                  width="32"
-                  loading="lazy"
-                  :src="author.avatarUrl"
-                  :alt="author.name"
-                  :title="author.name"
-                />
-                <span class="hidden text-sm font-medium sm:inline-block">
-                  {{ author.name }}
-                </span>
-              </AppLink>
+                - {{ formatDateByLocale('en', page.date) }}
+              </time>
             </div>
+            <ArticleAuthor v-if="page.authors" :authors="page.authors" />
           </div>
         </div>
       </div>

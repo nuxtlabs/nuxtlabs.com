@@ -10,7 +10,7 @@
         left: `${shape.left}%`,
         height: `${shape.height}rem`,
         width: `${shape.width}rem`,
-        transform: shape.rotate ? `rotate(${shape.rotate}deg)` : none,
+        transform: shape.rotate ? `rotate(${shape.rotate}deg)` : 'none',
       }"
     >
       <Component :is="shape.component" ref="partnersShape" />

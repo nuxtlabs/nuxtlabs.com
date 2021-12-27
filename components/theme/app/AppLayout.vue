@@ -97,7 +97,7 @@ export default defineComponent({
             },
           },
           {
-            title: 'Vue Telescope',
+            title: 'Case studies',
             description:
               'Discover how NuxtLabs products can change your day-to-day ',
             to: '/discover/case-studies',
