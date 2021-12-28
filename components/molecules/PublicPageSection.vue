@@ -10,6 +10,7 @@
       class="flex flex-col items-center w-full mx-auto max-w-7xl"
       :class="[
         containerClass,
+        { 'text-white': darkMode },
         containerContentAlign
           ? `justify-center md:justify-between ${
               containerContentAlign === 'left'
@@ -23,7 +24,7 @@
       <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
-        class="flex flex-col justify-center space-y-4 px-4"
+        class="flex flex-col justify-center space-y-4 px-4 w-full"
         :class="[
           contentClass,
           contentPositionClass,

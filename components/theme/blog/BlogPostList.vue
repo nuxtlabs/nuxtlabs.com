@@ -1,30 +1,40 @@
 <template>
-  <div class="flex">
-    <div class="w-3/4 pr-8">
-      <AppLink
-        v-for="article in articles"
-        :key="article.id"
-        :to="`/blog/${categories[selectedCategory.index]}/${article.slug}`"
-      >
-        <BlogArticlePreview :article="article" />
-      </AppLink>
-    </div>
-    <aside class="w-1/4">
-      <div class="font-semibold text-primary-900 text-xl pb-4">Categories</div>
-      <div
-        v-for="(categ, index) in categories"
-        :key="index"
-        class="cursor-pointer"
-        :class="
-          selectedCategory.index === index
-            ? 'text-primary-900'
-            : 'text-primary-200'
-        "
-        @click="selectCategory(index)"
-      >
-        {{ categ }}
+  <div>
+    <div class="flex flex-col-reverse lg:flex-row lg:justify-between relative">
+      <div class="w-3/4">
+        <AppLink
+          v-for="article in articles"
+          :key="article.id"
+          :to="`/blog/${categories[selectedCategory.index]}/${article.slug}`"
+        >
+          <BlogArticlePreview :article="article" />
+        </AppLink>
       </div>
-    </aside>
+      <div>
+        <div class="lg:w-1/4 sticky top-24">
+          <div class="font-semibold text-primary-900 text-xl pb-4">
+            Categories
+          </div>
+          <div
+            class="flex flex-row space-x-4 pb-12 lg:pb-0 lg:flex-col lg:space-x-0"
+          >
+            <div
+              v-for="(categ, index) in categories"
+              :key="index"
+              class="cursor-pointer px-2 border rounded rounded-xl lg:border-none"
+              :class="
+                selectedCategory.index === index
+                  ? 'text-primary-900 border-primary-900'
+                  : 'text-primary-200 border-primary-200'
+              "
+              @click="selectCategory(index)"
+            >
+              {{ categ }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

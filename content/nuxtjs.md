@@ -1,5 +1,5 @@
 ---
-template: Project
+template: Product
 title: NuxtJS
 description: 'The Intuitive Vue Framework'
 head.title: NuxtJS Story - NuxtLabs

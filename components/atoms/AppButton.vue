@@ -59,7 +59,9 @@ export default defineComponent({
       type: String,
       default: 'dark',
       validator(value) {
-        return ['dark', 'dark-border', 'white'].includes(value as any)
+        return ['dark', 'dark-border', 'dark-border-hover', 'white'].includes(
+          value as any,
+        )
       },
     },
   },
@@ -100,7 +102,7 @@ export default defineComponent({
     @apply text-base leading-6;
   }
   &.dark {
-    @apply border-white bg-primary-900 text-white hover:bg-white hover:text-black;
+    @apply border-white bg-primary-900 text-white hover:bg-white hover:text-primary-900 hover:border hover:border-primary-900;
   }
   &.dark-border {
     @apply border-primary-900 text-primary-900 hover:bg-primary-50;

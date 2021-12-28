@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden w-full">
+  <div class="w-full">
     <AppHeader :header-links="headerLinks" :social-links="socialLinks" />
     <div class="lg:flex" :class="{ 'd-container': layout.aside }">
       <AppAside
@@ -24,7 +24,6 @@ import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
 export default defineComponent({
   setup() {
     const { $docus } = useContext()
-
     const layout = computed(() => $docus.layout.value)
 
     const headerLinks = [
@@ -70,6 +69,41 @@ export default defineComponent({
         title: 'Partners',
         to: '/partners',
         slug: 'partners',
+        subLinks: [
+          {
+            title: 'Technology',
+            description: '',
+            to: '/partners/technology',
+            slug: 'technology',
+            icon: {
+              path: '/img/navigation/building.svg',
+              alt: 'company building image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+          {
+            title: 'Agency',
+            description: '',
+            to: '/partners/agency',
+            slug: 'agency',
+            icon: {
+              path: '/img/navigation/book.svg',
+              alt: 'Blog book image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+          {
+            title: 'Education',
+            description: '',
+            to: '/partners/education',
+            slug: 'education',
+            icon: {
+              path: '/img/navigation/book.svg',
+              alt: 'Blog book image',
+              class: 'h-8 w-8 mr-2',
+            },
+          },
+        ],
       },
       {
         title: 'Discover',
@@ -91,7 +125,7 @@ export default defineComponent({
             to: '/discover/blog',
             slug: 'blog',
             icon: {
-              path: 'img/navigation/book.svg',
+              path: '/img/navigation/book.svg',
               alt: 'Blog book image',
               class: 'h-8 w-8 mr-2',
             },
@@ -103,7 +137,7 @@ export default defineComponent({
             to: '/discover/case-studies',
             slug: 'case-studies',
             icon: {
-              path: 'img/navigation/telescope.svg',
+              path: '/img/navigation/telescope.svg',
               alt: 'case studies telescope image',
               class: 'h-8 w-8 mr-2',
             },

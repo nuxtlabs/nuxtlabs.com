@@ -1,5 +1,5 @@
 ---
-template: Project
+template: Product
 title: 'NuxtLabs: Intuitive Web Development'
 description: 'We build open source solutions focused on developer experience such as NuxtJS, Docus and Vue Telescope.'
 ---

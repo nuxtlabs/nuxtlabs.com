@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 sm:py-16 mx-auto">
+  <div class="py-8 sm:py-28 mx-auto">
     <DocusContent :document="page" class="docus-content" />
   </div>
 </template>

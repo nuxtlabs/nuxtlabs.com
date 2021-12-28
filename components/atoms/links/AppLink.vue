@@ -1,11 +1,11 @@
 <template>
-  <Link v-bind="attrs" @click.native="copyEmailToClipboard">
+  <Link v-bind="attrs">
     <slot />
   </Link>
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -27,8 +27,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { i18n, $clipboard } = useContext()
-
     const attrs = computed(() => {
       if (props.href.length) {
         return {
@@ -45,24 +43,7 @@ export default defineComponent({
       }
     })
 
-    function copyEmailToClipboard(e) {
-      let email
-      if (props.href?.startsWith('mailto:')) {
-        email = props.href.replace('mailto:', '')
-      } else if (props.to?.startsWith('mailto:')) {
-        email = props.to.replace('mailto:', '')
-      }
-
-      if (email) {
-        if ($clipboard.copy(email, i18n.t('common.email_address_copied'))) {
-          // Clipboard supported
-          e.preventDefault()
-        }
-      }
-    }
-
     return {
-      copyEmailToClipboard,
       attrs,
     }
   },
