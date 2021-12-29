@@ -34,7 +34,6 @@ containerClass: 'py-20'
 #container
 ::home-nuxt-animations
 ::
-<!--![Nuxt illustration](/img/home/nuxt-illustration.svg){.z-10 .lg:h-76} -->
 #contentTitle
 [NuxtJS]{ .text-4xl }
 #contentDescription
@@ -60,7 +59,6 @@ contentClass: 'lg:w-2/5'
 containerClass: 'py-20'
 ---
 #container
-<!-- ![Docus illustration](/img/home/docus-illustration.svg){.z-10 .lg:h-64 .pb-8 md:pb-0} -->
 ::home-docus-animations
 ::
 #contentTitle

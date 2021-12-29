@@ -1,7 +1,7 @@
 <template>
   <component :is="component">
-    <img v-if="icon" :src="`/img/marketing/home/${icon}`" :class="iconClass" />
-    <h5 v-if="$slots.title" class="font-semibold text-xl">
+    <img v-if="iconPath" :src="iconPath" :class="iconClass" />
+    <h5 class="font-semibold text-xl">
       <Markdown use="title" unwrap="p" />
     </h5>
     <p class="block text-lg pb-2">
@@ -12,7 +12,7 @@
 </template>
 <script setup>
 defineProps({
-  icon: {
+  iconPath: {
     type: String,
     required: true,
   },

@@ -50,6 +50,10 @@
         </p>
         <!-- content footer -->
         <Markdown use="contentFooter" unwrap="p" />
+        <!-- grid -->
+        <ul class="grid" :class="gridClass">
+          <Markdown use="grid" />
+        </ul>
       </div>
     </div>
     <!-- image absolute -->
@@ -87,6 +91,10 @@ export default defineComponent({
     darkMode: {
       type: Boolean,
       default: false,
+    },
+    gridClass: {
+      type: String,
+      default: 'grid-cols-1 md:grid-cols-2 gap-16 lg:gap-8 pt-12',
     },
   },
   setup(props) {

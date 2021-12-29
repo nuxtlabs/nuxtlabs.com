@@ -6,16 +6,27 @@
       <h1 class="font-bold text-display-4">
         <Markdown use="title" unwrap="p" />
       </h1>
-      <p class="w-full lg:w-2/3">
+      <p class="w-full lg:w-2/3 text-lg">
         <Markdown use="description" unwrap="p" />
       </p>
       <div>
         <Markdown use="button" unwrap="p" />
       </div>
-      <p class="font-semibold pt-16">
+      <p class="font-semibold text-lg" :class="slots.button ? 'pt-16' : 'pt-4'">
         Discover how we can make it work together 👇
       </p>
     </div>
-    <Markdown use="landscape" unwrap="p" />
+    <Markdown use="image" unwrap="p" />
   </div>
 </template>
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  setup(_, context) {
+    return {
+      slots: context.slots,
+    }
+  },
+})
+</script>

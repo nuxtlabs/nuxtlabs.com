@@ -4,7 +4,9 @@
     :to="to"
     :blank="blank"
   >
-    <span class="font-bold">{{ name }}</span>
+    <p class="font-bold">
+      <Markdown use="text" unwrap="p" />
+    </p>
     <span
       class="absolute hidden sm:block -bottom-2 h-0.5 w-4 group-hover:w-full transition-all"
       :class="underlineCustomClass"
@@ -16,10 +18,6 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
-    name: {
-      type: String,
-      required: true,
-    },
     to: {
       type: String,
       required: true,

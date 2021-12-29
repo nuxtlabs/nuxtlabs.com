@@ -76,7 +76,7 @@ export default {
       'd-container': 'd-max-w-container mx-auto',
       'd-container-content': 'd-container d-px-container',
       // Illustration
-      landscape: 'absolute m-auto w-full',
+      landscape: 'absolute m-auto w-full inset-x-0',
       'landscape-bottom': 'landscape bottom-0',
       'landscape-top': 'landscape bottom-full',
       'landscape-mobile': 'sm:hidden',
