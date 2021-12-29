@@ -100,16 +100,40 @@ contentClass: 'py-40'
 Be visible to the Nuxt Community
 #contentDescription
 [By becoming an official Nuxt partner, you will be featured on nuxtjs.org]{ .block .md:w-2/3 }
+#contentFooter
+  :::ul{ .flex .flex-col .space-y-2 .sm:space-y-0 .sm:flex-row .space-x-0 .sm:space-x-4 .font-medium .items-center .sm:items-start }
+    ::::marketing-home-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-64 }
+    ---
+    icon: 'focus.svg'
+    component: 'li'
+    ---
+    #description
+    Gain credibility with your audience
+    ::::
+    ::::marketing-home-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-64 }
+    ---
+    icon: 'growth-graph.svg'
+    component: 'li'
+    ---
+    #description
+    Generate leads for your business
+    ::::
+  :::
 #absoluteImage
 ![round](img/marketing/home/big-circle.svg){ .absolute .mx-auto .-right-8 .-top-24 .lg:-top-36 .xl:-top-40 .opacity-20 .md:opacity-100 .md:w-68 .lg:w-96 .xl:w-104 .2xl:w-108 .select-none }
 ::
-<!-- <img
-        loading="lazy"
-        :src="`/assets/img/home/big-circle.svg`"
-        class="absolute mx-auto -right-8 -top-24 lg:-top-36 xl:-top-40 opacity-20 md:opacity-100 md:w-68 lg:w-96 xl:w-104 2xl:w-108"
-        alt="A circle image"
-      /> -->
+
 <!-- insider section -->
+::public-page-section
+---
+contentPosition: 'center'
+darkMode: true
+---
+#absoluteImage
+![landscape](img/marketing/home/landscape-insider-mobile.svg){ .landscape-top-mobile .select-none }
+![landscape](img/marketing/home/landscape-insider-tablet.svg){ .landscape-top-tablet .select-none }
+![landscape](img/marketing/home/black-top-wave.svg){ .landscape-top-desktop .select-none }
+::
 <!-- forces section -->
 <!-- plan section -->
 <!-- next step section -->

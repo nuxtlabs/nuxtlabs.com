@@ -4,7 +4,7 @@
     <h5 v-if="$slots.title" class="font-semibold text-xl">
       <Markdown use="title" unwrap="p" />
     </h5>
-    <p v-if="$slots.description">
+    <p class="block text-lg pb-2">
       <Markdown use="description" unwrap="p" />
     </p>
     <Markdown use="content" unwrap="p" />
