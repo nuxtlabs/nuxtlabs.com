@@ -24,7 +24,7 @@ Since 2016, Nuxt has grown to become the most important Vue framework. We are no
 ::
 
 <!-- numbers section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'center'
 darkMode: true
@@ -32,54 +32,54 @@ darkMode: true
 #container
   :::marketing-home-numbers
   #numbersLeft
-    ::::marketing-number-card
-    ---
-    link: '#'
-    borderClass: 'md:border-r md:border-r-2 border-b border-b-2'
-    ---
-    #title
-    downloads/months
-    #number
-    +1.7M
-    #linkText
-    npm stats
-    ::::
-    ::::marketing-number-card
-    ---
-    link: '#'
-    borderClass: 'border-b border-b-2 md:border-r md:border-r-2 md:border-b-0'
-    ---
-    #title
-    github stars
-    #number
-    +38k
-    #linkText
-    Github
-    ::::
+  ::::marketing-number-card
+  ---
+  to: '#'
+  borderClass: 'md:border-r md:border-r-2 border-b border-b-2'
+  ---
+  #title
+  downloads/months
+  #number
+  +1.7M
+  #linkText
+  npm stats
+  ::::
+  ::::marketing-number-card
+  ---
+  to: '#'
+  borderClass: 'border-b border-b-2 md:border-r md:border-r-2 md:border-b-0'
+  ---
+  #title
+  github stars
+  #number
+  +38k
+  #linkText
+  Github
+  ::::
   #numbersRight
-    ::::marketing-number-card
-    ---
-    link: '#'
-    borderClass: 'border-b border-b-2'
-    ---
-    #title
-    unique visitors
-    #number
-    +500k
-    #linkText
-    nuxtjs.org
-    ::::
-    ::::marketing-number-card
-    ---
-    link: '#'
-    ---
-    #title
-    websites running
-    #number
-    +49k
-    #linkText
-    See the trends
-    ::::
+  ::::marketing-number-card
+  ---
+  to: '#'
+  borderClass: 'border-b border-b-2'
+  ---
+  #title
+  unique visitors
+  #number
+  +500k
+  #linkText
+  nuxtjs.org
+  ::::
+  ::::marketing-number-card
+  ---
+  to: '#'
+  ---
+  #title
+  websites running
+  #number
+  +49k
+  #linkText
+  See the trends
+  ::::
   #title
   Some numbers
   #description
@@ -95,7 +95,7 @@ darkMode: true
 ::
 
 <!-- community section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 contentClass: 'py-40'
@@ -127,7 +127,7 @@ Be visible to the Nuxt Community
 ::
 
 <!-- insider section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'center'
 darkMode: true
@@ -168,7 +168,7 @@ Being a Nuxt partner offers some early insights to our work
 ::
 
 <!-- forces section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'pt-40 pb-54'
 contentPosition: 'left'
@@ -199,7 +199,7 @@ Let’s join our forces
 ::
 
 <!-- plan section -->
-::public-page-section
+::section-template
 ---
 gridClass: 'grid md:grid-cols-3 gap-20'
 ---
@@ -268,4 +268,6 @@ What’s is the best plan for you ?
 ::marketing-footer
 #title
 Become part of Nuxt journey.
+#buttonText
+Apply to program
 ::

@@ -10,7 +10,12 @@ export function useNav() {
       : null
   })
 
+  const isPartner = computed(() => {
+    return route.value.path.includes('/partners')
+  })
+
   return {
     currentSlug,
+    isPartner,
   }
 }

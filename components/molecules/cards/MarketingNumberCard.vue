@@ -11,12 +11,12 @@
         <Markdown use="number" unwrap="p" />
       </p>
       <MarketingLink
-        :to="link"
+        :to="to"
         blank
         underline-custom-class="hidden sm:block right-0 bg-white"
         class="underline sm:no-underline self-center sm:self-end"
       >
-        <Markdown use="linkText" unxrap="p" />
+        <Markdown use="linkText" unwrap="p" />
       </MarketingLink>
     </div>
   </div>
@@ -26,7 +26,7 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
-    link: {
+    to: {
       type: String,
       required: true,
     },

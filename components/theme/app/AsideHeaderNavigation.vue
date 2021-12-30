@@ -2,7 +2,7 @@
   <nav ref="nav" class="flex flex-col gap-0 py-4 px-4 sm:px-6">
     <template v-for="(link, index) in headerLinks">
       <div
-        v-if="link.subLinks && link.subLinks.length"
+        v-if="link.items && link.items.length"
         :key="index"
         class="flex flex-col"
       >
@@ -27,7 +27,7 @@
         </div>
         <div v-show="openedLink === index" class="pl-2 pb-2 gap-2">
           <HeaderNavigationLink
-            v-for="(subLink, subIndex) in link.subLinks"
+            v-for="(subLink, subIndex) in link.items"
             :key="subIndex"
             :link="subLink"
             class="rounded-md px-2 py-1 text-sm"
@@ -77,7 +77,7 @@ export default defineComponent({
         for (const [index, link] of props.headerLinks.entries()) {
           if (
             link.to === currentSlug.value ||
-            link.subLinks?.some((item) => item.to === currentSlug.value)
+            link.items?.some((item) => item.to === currentSlug.value)
           ) {
             openedLink.value = index
             break

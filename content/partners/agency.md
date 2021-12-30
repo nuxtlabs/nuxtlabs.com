@@ -16,7 +16,7 @@ Become an agency partner
 ::
 
 <!-- Visibility section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 containerContentAlign: 'rigth'
@@ -38,7 +38,7 @@ Generate leads by being listed and promoted on the website as an official partne
 ::
 
 <!-- advantages section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'center'
 darkMode: true
@@ -71,7 +71,7 @@ Agency partners advantages
   :::
 ::
 <!-- certification section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'pt-20 pb-10'
 ---
@@ -92,4 +92,6 @@ On top of that, you will get access to an optional annual Nuxt Expert certificat
 The next step
 #description
 Send us an email to partners@nuxtlabs.com and we will get in touch with you for the details and implementation or direclty apply to the program.
+#buttonText
+Apply to program
 ::

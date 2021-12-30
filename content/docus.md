@@ -39,7 +39,7 @@ Content Management Studio
 ::
 
 <!-- description section -->
-::public-page-section
+::section-template
 #contentImage
 ![petal](/img/products/docus-petal-small.svg){.h-12 .w-12}
 #contentDescription
@@ -47,7 +47,7 @@ Content Management Studio
 ::
 
 <!-- goal section -->
-::public-page-section
+::section-template
 #contentTitle
 The goal
 #contentDescription
@@ -57,7 +57,7 @@ Building a website from an idea has never been so simple.
 ::
 
 <!-- write content section  -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 containerContentAlign: 'left'
@@ -73,7 +73,7 @@ Secondly, the Markdown syntax is the best markup language that is appealing to h
 ::
 
 <!-- customizable theme section  -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 containerContentAlign: 'right'
@@ -87,7 +87,7 @@ Create content-less Vue components allows you to build fully customizable and re
 ::
 
 <!-- production ready section -->
-::public-page-section
+::section-template
 #contentTitle
 [Production ready]{.text-3xl}
 #contentDescription

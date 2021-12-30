@@ -26,11 +26,7 @@
           :to="localePath('/')"
         >
           <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
-          <nuxt-img
-            src="/img/logo.svg"
-            class="h-6 sm:h-8 w-auto"
-            alt="NuxtLabs"
-          />
+          <nuxt-img src="/img/logo.svg" class="h-full w-auto" alt="NuxtLabs" />
         </Link>
         <!-- links -->
         <transition name="fade">
@@ -44,13 +40,14 @@
                   :to="link.to"
                   :aria-label="link.title"
                   class="hover:text-gray-700"
+                  :class="{ 'font-semibold': isPartner }"
                 >
                   {{ link.title }}
                 </Link>
                 <div v-else>
                   <Dropdown
                     :key="index"
-                    :items="[link.subLinks]"
+                    :items="[link.items]"
                     main-link-class="mx-2"
                     placement="bottom"
                     mode="hover"
@@ -58,7 +55,7 @@
                     dropdown-class="w-max"
                     :open-delay="0"
                     :items-class="`py-1 grid grid-cols-${Math.round(
-                      link.subLinks.length / 3,
+                      link.items.length / 3,
                     )}`"
                   >
                     <template #trigger>
@@ -98,7 +95,7 @@
       </div>
       <HeaderSubMenu
         v-if="isPartner"
-        :links="headerLinks[1].subLinks"
+        :links="headerLinks[1].partnersItems"
         class="h-2/5"
       />
     </nav>
@@ -106,7 +103,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, useRoute } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -120,11 +118,9 @@ export default defineComponent({
     },
   },
   setup() {
-    const route = useRoute()
-    const isPartner = computed(() => route.value.path.includes('/partners'))
+    const { isPartner } = useNav()
 
     return {
-      route,
       isPartner,
     }
   },

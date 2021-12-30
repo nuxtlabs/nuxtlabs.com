@@ -5,7 +5,7 @@
     :blank="blank"
   >
     <p class="font-bold">
-      <Markdown use="text" unwrap="p" />
+      <Markdown unwrap="p" />
     </p>
     <span
       class="absolute hidden sm:block -bottom-2 h-0.5 w-4 group-hover:w-full transition-all"

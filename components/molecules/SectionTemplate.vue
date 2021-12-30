@@ -1,5 +1,6 @@
 <template>
   <section
+    ref="scrollTarget"
     class="relative font-sans px-4 overflow-hidden"
     :class="[sectionClass, darkMode ? 'bg-primary-900' : 'bg-white']"
   >
@@ -24,8 +25,13 @@
       <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
-        class="flex flex-col justify-center space-y-4 px-4 w-full"
+        class="flex flex-col justify-center space-y-4 px-4 w-full transition-all transform duration-400 delay-300"
         :class="[
+          content.isVisible
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 ' +
+              ((contentPositionClass === 'left' && 'sm:-translate-x-2') ||
+                (contentPositionClass === 'right' && 'sm:translate-x-2')),
           contentClass,
           contentPositionClass,
           { 'w-4/5': containerContentAlign },
@@ -61,7 +67,14 @@
   </section>
 </template>
 <script lang="ts">
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { useIntersectionObserver } from '@vueuse/core'
+import {
+  defineComponent,
+  computed,
+  ref,
+  onBeforeUnmount,
+  reactive,
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -98,6 +111,9 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const scrollTarget = ref()
+    const content = reactive({ isVisible: false })
+
     const contentPositionClass = computed(() => {
       return [
         'text-center items-center',
@@ -108,8 +124,25 @@ export default defineComponent({
       ].join(' ')
     })
 
+    const { stop } = useIntersectionObserver(
+      scrollTarget,
+      ([{ isIntersecting }]) => {
+        if (!content.isVisible && isIntersecting) {
+          content.isVisible = true
+          stop()
+        }
+      },
+      { threshold: 0.2 },
+    )
+
+    onBeforeUnmount(() => {
+      stop()
+    })
+
     return {
       contentPositionClass,
+      scrollTarget,
+      content,
     }
   },
 })

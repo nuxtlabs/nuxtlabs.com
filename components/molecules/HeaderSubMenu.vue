@@ -8,7 +8,7 @@
         'link-active': $route.path === link.to || $route.path === `${link.to}/`,
       }"
     >
-      {{ link.title }}
+      <span class="font-medium">{{ link.title }}</span>
     </AppLink>
   </div>
 </template>

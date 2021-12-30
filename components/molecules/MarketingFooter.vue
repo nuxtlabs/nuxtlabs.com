@@ -10,6 +10,8 @@
       <Markdown use="description" unwrap="p" />
     </p>
 
-    <AppButton to="#">Apply to program</AppButton>
+    <AppButton to="#">
+      <Markdown use="buttonText" unwrap="p" />
+    </AppButton>
   </div>
 </template>

@@ -18,7 +18,7 @@ Partner with NuxtLabs to enable joint users to do their best work.]{ .block .lg:
 ::
 
 <!-- Integrations section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 containerContentAlign: 'right'
@@ -38,12 +38,11 @@ Third-party integrations and cloud providers, such as Netlify or Vercel, provide
   to: 'https://nuxtjs.org'
   underlineCustomClass: 'hidden sm:block left-0 bg-white'
   ---
-  #text
   Browse our Integrations section on nuxtjs.org
   :::
 ::
 <!-- Square section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'right'
 containerContentAlign: 'left'
@@ -63,13 +62,12 @@ In the recent years, the CMS market turned headless, to focus on content creatio
   to: 'https://nuxtjs.org'
   underlineCustomClass: 'hidden sm:block right-0 bg-white'
   ---
-  #text
   Read the storyblok guide for Nuxt
   :::
 ::
 
 <!-- Advantages section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'pt-40 pb-40'
 ---
@@ -129,7 +127,7 @@ Becoming a Technology Partner gives your company multiple advantages
 ::
 
 <!-- Description section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 ---
@@ -137,10 +135,12 @@ darkMode: true
 [On top of that, becoming a technology partner will lead to a tweet every year to showcase our collaboration and how make the web faster and better together.]{ .text-lg .font-semibold .block .lg:px-40 }
 ::
 
+<!-- apply to program -->
 ::marketing-footer
 #title
 The next step
 #description
 Send us an email to partners@nuxtlabs.com and we will get in touch with you for the details and implementation or direclty apply to the program.
+#buttonText
+Apply to program
 ::
-<!-- apply to program -->

@@ -12,7 +12,7 @@ Discover how we can make it work together 👇
 ::
 
 <!-- Our goals section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 ---
@@ -23,7 +23,7 @@ Our goal is to make developer experience better, shape the web as it must be
 ::
 
 <!-- NuxtJS section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 contentPosition: 'left'
@@ -50,7 +50,7 @@ containerClass: 'py-20'
 ::
 
 <!-- Docus section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 contentPosition: 'left'
@@ -76,7 +76,7 @@ containerClass: 'py-20'
 ::
 
 <!-- Vue Telescope section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 contentPosition: 'left'
@@ -87,7 +87,6 @@ containerClass: 'pt-20 pb-40'
 #container
 ::home-vue-telescope-animations
 ::
-<!-- ![Vue telescope illustration](/img/home/vt-illustration.svg){.z-10 .lg:h-80 .pb-8 md:pb-0} -->
 #contentTitle
 [Vue telescope]{ .text-4xl }
 #contentDescription
@@ -103,7 +102,7 @@ containerClass: 'pt-20 pb-40'
 ::
 
 <!-- Partners section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'py-60 sm:py-80'
 ---
@@ -126,7 +125,7 @@ contentClass: 'py-60 sm:py-80'
 ::
 
 <!-- Stats section -->
-::public-page-section
+::section-template
 ---
 darkMode: true
 contentPosition: 'left'
@@ -148,7 +147,7 @@ containerClass: 'pt-20 md:pt-0'
 ::
 
 <!-- Adventure section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'py-40'
 ---
@@ -181,7 +180,7 @@ contentClass: 'py-40'
   :::
 ::
 
-::public-page-section
+::section-template
 ---
 containerClass: 'mb-40 lg:mb-10'
 ---

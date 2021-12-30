@@ -39,7 +39,7 @@ Unveil websites made with Vue
 ::
 
 <!-- discover section -->
-::public-page-section
+::section-template
 #contentTitle
 Discover website made with Vue
 #contentDescription
@@ -47,7 +47,7 @@ Vue Telescope can detect any website built with Vue.js frameworks, like Nuxt, Gr
 ::
 
 <!-- description section -->
-::public-page-section
+::section-template
 #contentImage
 ![arrow](/img/products/vt-arrow.svg){.h-12 .w-12}
 #contentDescription
@@ -55,7 +55,7 @@ Vue Telescope can detect any website built with Vue.js frameworks, like Nuxt, Gr
 ::
 
 <!-- browser extension section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 contentClass: 'py-10'
@@ -73,7 +73,7 @@ Browser extension
 ::
 
 <!-- explore section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'left'
 contentClass: 'py-10 xl:pl-2/5'
@@ -85,7 +85,7 @@ Explode websites
 ::
 
 <!-- showcases section -->
-::public-page-section
+::section-template
 ---
 contentPosition: 'right'
 contentClass: 'pt-10'
@@ -100,7 +100,7 @@ Create your own Collections and bookmark any website made with Vue.js!]
 ::
 
 <!-- discover section -->
-::public-page-section
+::section-template
 ---
 contentClass: 'pt-56 pb-20'
 ---
