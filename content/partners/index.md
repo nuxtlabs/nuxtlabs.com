@@ -27,6 +27,7 @@ Since 2016, Nuxt has grown to become the most important Vue framework. We are no
 ::section-template
 ---
 contentPosition: 'center'
+containerClass: 'pt-28'
 darkMode: true
 ---
 #container

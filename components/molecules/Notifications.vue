@@ -15,7 +15,7 @@
           v-bind="notification"
           :class="notification.click && 'cursor-pointer'"
           @click.native="notification.click && notification.click(notification)"
-          @close="$notifications.remove(notification.id)"
+          @close="remove(notification.id)"
         />
       </div>
     </div>

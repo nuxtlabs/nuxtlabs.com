@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const lineItems = [
       {
-        opacity: 20,
+        opacity: 5,
         top: 50,
         left: -7,
         deg: 10,
@@ -32,7 +32,7 @@ export default defineComponent({
         transformOrigin: 'left',
       },
       {
-        opacity: 30,
+        opacity: 5,
         top: 4,
         left: -8,
         deg: -3,
@@ -40,7 +40,7 @@ export default defineComponent({
         transformOrigin: 'left',
       },
       {
-        opacity: 10,
+        opacity: 5,
         top: 120,
         left: -70,
         deg: 40,

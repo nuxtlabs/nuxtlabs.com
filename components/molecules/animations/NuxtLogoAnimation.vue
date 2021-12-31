@@ -52,12 +52,12 @@ export default defineComponent({
         y: 0,
         transition: {
           strokeWidth: {
-            delay: 350,
+            delay: 500,
           },
           y: {
             delay: 250,
           },
-          duration: 350,
+          duration: 500,
         },
       },
     })

@@ -21,13 +21,13 @@
           />
         </div>
         <!-- logo -->
-        <Link
+        <AppLink
           class="flex flex-1 w-1/6 justify-center lg:justify-start"
           :to="localePath('/')"
         >
           <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
           <nuxt-img src="/img/logo.svg" class="h-full w-auto" alt="NuxtLabs" />
-        </Link>
+        </AppLink>
         <!-- links -->
         <transition name="fade">
           <div
@@ -35,7 +35,7 @@
           >
             <ul v-for="(link, index) in headerLinks" :key="index">
               <li>
-                <Link
+                <AppLink
                   v-if="link.to"
                   :to="link.to"
                   :aria-label="link.title"
@@ -43,7 +43,7 @@
                   :class="{ 'font-semibold': isPartner }"
                 >
                   {{ link.title }}
-                </Link>
+                </AppLink>
                 <div v-else>
                   <Dropdown
                     :key="index"

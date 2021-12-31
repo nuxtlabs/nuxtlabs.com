@@ -21,7 +21,7 @@
           class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 pb-16 gap-y-12"
         >
           <div
-            v-for="item in footerItems"
+            v-for="item in footerLinks"
             :key="item.title"
             class="flex flex-col gap-5"
           >
@@ -35,9 +35,9 @@
                 class="font-light text-gray-50"
                 >{{ link.title }}</a
               >
-              <NuxtLink v-else :to="link.to" class="font-light text-gray-50">{{
+              <AppLink v-else :to="link.to" class="font-light text-gray-50">{{
                 link.title
-              }}</NuxtLink>
+              }}</AppLink>
             </div>
           </div>
           <div
@@ -73,21 +73,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch, useContext } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  watch,
+  useContext,
+  ref,
+  useFetch,
+} from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
+import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
-  props: {
-    links: {
-      type: Array,
-      default: () => [],
-    },
-  },
   setup() {
     const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
-    const { $notifications } = useContext()
+    const { $docus } = useContext()
+    const { add } = useNotifications()
+    const footerLinks = ref([])
+
+    useFetch(async () => {
+      const footer = await $docus
+        .search('/collections/navigation/', { deep: true })
+        .where({ slug: { $in: 'footer' } })
+        .fetch()
+
+      footerLinks.value = footer[0].links
+    })
 
     watch(newsletterResult, (newVal) => {
       if (newVal !== '') showNotification(newVal)
@@ -141,7 +153,7 @@ export default defineComponent({
           break
       }
 
-      $notifications.add({
+      add({
         title: 'Newsletter',
         description: notificationOptions.text,
         type: notificationOptions.type,
@@ -151,83 +163,12 @@ export default defineComponent({
       newsletterResult.value = ''
     }
 
-    const footerItems = [
-      {
-        title: 'Solutions',
-        items: [
-          {
-            title: 'NuxtJS',
-            href: 'https://nuxtjs.org/',
-          },
-          {
-            title: 'Docus',
-            href: 'https://docus.com/',
-          },
-          {
-            title: 'Vue Telescope',
-            href: 'https://vuetelescope.com/',
-          },
-        ],
-      },
-      {
-        title: 'Partners',
-        items: [
-          {
-            title: 'Technology',
-            to: '/technology-partner',
-          },
-          {
-            title: 'Agency',
-            to: '/agency-partner',
-          },
-          {
-            title: 'Education',
-            to: '/education-partner',
-          },
-        ],
-      },
-      {
-        title: 'Company',
-        items: [
-          {
-            title: 'About',
-            href: 'https://nuxtlabs.com/about',
-          },
-          {
-            title: 'Blog',
-            href: 'https://nuxtlabs.com/blog',
-          },
-          {
-            title: 'Design',
-            href: 'https://nuxtlabs.com/design',
-          },
-        ],
-      },
-      {
-        title: 'Legal',
-        items: [
-          {
-            title: 'Claim',
-            to: '/claim',
-          },
-          {
-            title: 'Privacy',
-            to: '/privacy',
-          },
-          {
-            title: 'Terms',
-            to: '/terms',
-          },
-        ],
-      },
-    ]
-
     return {
       email,
       isHome,
       subscribe,
       pending,
-      footerItems,
+      footerLinks,
     }
   },
 })

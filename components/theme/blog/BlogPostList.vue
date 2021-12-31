@@ -2,16 +2,19 @@
   <div>
     <div class="flex flex-col-reverse lg:flex-row lg:justify-between relative">
       <div class="w-3/4">
-        <AppLink
-          v-for="article in articles"
-          :key="article.id"
-          :to="`/blog/${categories[selectedCategory.index]}/${article.slug}`"
-        >
-          <BlogArticlePreview :article="article" />
-        </AppLink>
+        <div v-if="articles && articles.length">
+          <AppLink
+            v-for="article in articles"
+            :key="article.id"
+            :to="`/blog/${categories[selectedCategory.index]}/${article.slug}`"
+          >
+            <BlogArticlePreview :article="article" />
+          </AppLink>
+        </div>
+        <div v-else class="text-display-6">Comming soon...</div>
       </div>
       <div>
-        <div class="lg:w-1/4 sticky top-24">
+        <div class="lg:w-1/4 sticky top-24 lg:h-92">
           <div class="font-semibold text-primary-900 text-xl pb-4">
             Categories
           </div>

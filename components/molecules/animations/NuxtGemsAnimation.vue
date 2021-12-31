@@ -26,7 +26,7 @@ export default defineComponent({
     const gemItems = [
       {
         // 4
-        top: 90,
+        top: 70,
         left: 40,
       },
       {

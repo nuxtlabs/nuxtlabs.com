@@ -68,9 +68,9 @@ export default defineComponent({
       eenter: {
         scale: 1,
         opacity: 1,
-        // transition: {
-        //   duration: 500,
-        // },
+        transition: {
+          duration: 500,
+        },
       },
     })
 

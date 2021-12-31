@@ -1,9 +1,9 @@
 <template>
   <ul class="flex items-center justify-center">
     <li v-for="link in socialLinks" :key="link.alt">
-      <Link :to="link.href" :aria-label="link.alt">
+      <AppLink :to="link.href" :aria-label="link.alt">
         <component :is="link.icon" :alt="link.alt" :class="iconClass" />
-      </Link>
+      </AppLink>
     </li>
   </ul>
 </template>
