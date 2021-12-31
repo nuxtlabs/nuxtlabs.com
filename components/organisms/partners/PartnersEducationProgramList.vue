@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex flex-col pt-12">
     <div class="hidden sm:block absolute left-1/2 w-0.5 h-full bg-white" />
-    <MarketingEducationProgram
+    <PartnersEducationProgram
       v-for="(program, index) in programList"
       :key="program.title"
       :right-position="program.right"
@@ -20,7 +20,7 @@
           {{ item }}
         </li>
       </template>
-    </MarketingEducationProgram>
+    </PartnersEducationProgram>
   </div>
 </template>
 <script lang="ts">

@@ -10,14 +10,14 @@
       <p class="text-5xl font-bold pb-2">
         <Markdown use="number" unwrap="p" />
       </p>
-      <MarketingLink
+      <LinkUnderline
         :to="to"
         blank
         underline-custom-class="hidden sm:block right-0 bg-white"
         class="underline sm:no-underline self-center sm:self-end"
       >
         <Markdown use="linkText" unwrap="p" />
-      </MarketingLink>
+      </LinkUnderline>
     </div>
   </div>
 </template>

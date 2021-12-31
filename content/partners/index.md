@@ -1,10 +1,10 @@
 ---
 title: Join the Nuxt partners program
 description: Since 2016, Nuxt has grown to become the most important Vue framework. We are now opening the NuxtLabs partnership programs to empower technology partners, agencies and teachers willing to get the most of the Nuxt framework, its ecosystem and the other NuxtLabs projects.
-template: marketing
+template: partners
 ---
 
-::marketing-hero
+::partners-hero
 #title
 Join the Nuxt partners program
 #description
@@ -18,9 +18,9 @@ Since 2016, Nuxt has grown to become the most important Vue framework. We are no
   Apply to program
   ::
 #image
-![landscape](img/marketing/home/landscape-mobile.svg){ .landscape-bottom-mobile .select-none }
-![landscape](img/marketing/home/landscape-tablet.svg){ .landscape-bottom-tablet .select-none }
-![landscape](img/marketing/home/landscape.svg){ .landscape-bottom-desktop .select-none }
+![landscape](/img/partners/home/landscape-mobile.svg){ .landscape-bottom-mobile .select-none }
+![landscape](/img/partners/home/landscape-tablet.svg){ .landscape-bottom-tablet .select-none }
+![landscape](/img/partners/home/landscape.svg){ .landscape-bottom-desktop .select-none }
 ::
 
 <!-- numbers section -->
@@ -30,9 +30,9 @@ contentPosition: 'center'
 darkMode: true
 ---
 #container
-  :::marketing-home-numbers
+  :::partners-home-number
   #numbersLeft
-  ::::marketing-number-card
+  ::::partners-card-number
   ---
   to: '#'
   borderClass: 'md:border-r md:border-r-2 border-b border-b-2'
@@ -44,7 +44,7 @@ darkMode: true
   #linkText
   npm stats
   ::::
-  ::::marketing-number-card
+  ::::partners-card-number
   ---
   to: '#'
   borderClass: 'border-b border-b-2 md:border-r md:border-r-2 md:border-b-0'
@@ -57,7 +57,7 @@ darkMode: true
   Github
   ::::
   #numbersRight
-  ::::marketing-number-card
+  ::::partners-card-number
   ---
   to: '#'
   borderClass: 'border-b border-b-2'
@@ -69,7 +69,7 @@ darkMode: true
   #linkText
   nuxtjs.org
   ::::
-  ::::marketing-number-card
+  ::::partners-card-number
   ---
   to: '#'
   ---
@@ -105,17 +105,17 @@ Be visible to the Nuxt Community
 #contentDescription
 [By becoming an official Nuxt partner, you will be featured on nuxtjs.org]{ .block .md:w-2/3 }
 #grid
-  ::::marketing-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-72 }
+  ::::partners-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-72 }
   ---
-  iconPath: '/img/marketing/home/focus.svg'
+  iconPath: '/img/partners/home/focus.svg'
   component: 'li'
   ---
   #description
   [Gain credibility with your audience]{ .font-semibold }
   ::::
-  ::::marketing-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-72 }
+  ::::partners-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-72 }
   ---
-  iconPath: '/img/marketing/home/growth-graph.svg'
+  iconPath: '/img/partners/home/growth-graph.svg'
   component: 'li'
   ---
   #description
@@ -123,7 +123,7 @@ Be visible to the Nuxt Community
   ::::
 
 #absoluteImage
-![round](img/marketing/home/big-circle.svg){ .absolute .mx-auto .-right-8 .-top-24 .lg:-top-36 .xl:-top-40 .opacity-20 .md:opacity-100 .md:w-68 .lg:w-96 .xl:w-104 .2xl:w-108 .select-none }
+![round](/img/partners/home/big-circle.svg){ .absolute .mx-auto .-right-8 .-top-24 .lg:-top-36 .xl:-top-40 .opacity-20 .md:opacity-100 .md:w-68 .lg:w-96 .xl:w-104 .2xl:w-108 .select-none }
 ::
 
 <!-- insider section -->
@@ -134,18 +134,18 @@ darkMode: true
 contentClass: 'pt-20 pb-60'
 ---
 #absoluteImage
-![wave](/img/marketing/home/black-top-wave.svg){ .absolute .inset-x-0 .w-full .h-12 .inset-x-0 .-top-8 .select-none }
-![rock](img/marketing/home/landscape-insider-mobile.svg){ .landscape-bottom-mobile .select-none }
-![rock](img/marketing/home/landscape-insider-tablet.svg){ .landscape-bottom-tablet .select-none }
-![rock](img/marketing/home/landscape-insider.svg){ .landscape-bottom-desktop .select-none }
+![wave](/img/partners/home/black-top-wave.svg){ .absolute .inset-x-0 .w-full .h-12 .inset-x-0 .-top-8 .select-none }
+![rock](/img/partners/home/landscape-insider-mobile.svg){ .landscape-bottom-mobile .select-none }
+![rock](/img/partners/home/landscape-insider-tablet.svg){ .landscape-bottom-tablet .select-none }
+![rock](/img/partners/home/landscape-insider.svg){ .landscape-bottom-desktop .select-none }
 #contentTitle
 Become an insider
 #contentDescription
 Being a Nuxt partner offers some early insights to our work
 #grid
-  :::marketing-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
+  :::partners-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
   ---
-  iconPath: '/img/marketing/home/key.svg'
+  iconPath: '/img/partners/home/key.svg'
   iconClass: 'h-10 w-10 mb-2'
   component: 'li'
   ---
@@ -154,9 +154,9 @@ Being a Nuxt partner offers some early insights to our work
   #description
   [Early access to our new updates, including Nuxt 3, our new Nuxt Modukes and Docus our CMS]{ .text-base }
   :::
-  :::marketing-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
+  :::partners-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
   ---
-  iconPath: '/img/marketing/home/typing.svg'
+  iconPath: '/img/partners/home/typing.svg'
   iconClass: 'h-10 w-10 mb-2'
   component: 'li'
   ---
@@ -174,23 +174,23 @@ contentClass: 'pt-40 pb-54'
 contentPosition: 'left'
 ---
 #absoluteImage
-![join](/img/marketing/home/forces.svg){ .absolute .-right-0 .top-12 .opacity-10 .lg:opacity-100 .w-108 .sm:w-1/2 .lg:w-2/5 .2xl:w-2/7 }
+![join](/img/partners/home/forces.svg){ .absolute .-right-0 .top-12 .opacity-10 .lg:opacity-100 .w-108 .sm:w-1/2 .lg:w-2/5 .2xl:w-2/7 }
 #contentTitle
 Let’s join our forces
 #contentDescription
 [Let's improve our collaboration to get the most of our partnership]{ .lg:w-3/5 .block}
 #grid
-  ::::marketing-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-80 }
+  ::::partners-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-80 }
   ---
-  iconPath: '/img/marketing/home/adjust.svg'
+  iconPath: '/img/partners/home/adjust.svg'
   component: 'li'
   ---
   #description
   [Collaborate together on release timelines]{ .font-semibold }
   ::::
-  ::::marketing-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-80 }
+  ::::partners-card{ .flex .items-center .space-x-4 .border-1 .border-primary-700 .p-4 .rounded-md .w-full .sm:max-w-80 }
   ---
-  iconPath: '/img/marketing/home/backup.svg'
+  iconPath: '/img/partners/home/backup.svg'
   component: 'li'
   ---
   #description
@@ -206,9 +206,9 @@ gridClass: 'grid md:grid-cols-3 gap-20'
 #contentTitle
 What’s is the best plan for you ?
 #grid
-  :::marketing-card{ .flex .flex-col .space-y-3 .items-center .text-center }
+  :::partners-card{ .flex .flex-col .space-y-3 .items-center .text-center }
   ---
-  iconPath: '/img/marketing/home/screen.svg'
+  iconPath: '/img/partners/home/screen.svg'
   component: 'li'
   ---
   #title
@@ -224,9 +224,9 @@ What’s is the best plan for you ?
     Start a collaboration
     ::::
   :::
-  :::marketing-card{ .flex .flex-col .space-y-3 .items-center .text-center }
+  :::partners-card{ .flex .flex-col .space-y-3 .items-center .text-center }
   ---
-  iconPath: '/img/marketing/home/paint.svg'
+  iconPath: '/img/partners/home/paint.svg'
   component: 'li'
   ---
   #title
@@ -242,9 +242,9 @@ What’s is the best plan for you ?
     Start a collaboration
     ::::
   :::
-  :::marketing-card{ .flex .flex-col .space-y-3 .items-center .text-center }
+  :::partners-card{ .flex .flex-col .space-y-3 .items-center .text-center }
   ---
-  iconPath: '/img/marketing/home/hat.svg'
+  iconPath: '/img/partners/home/hat.svg'
   component: 'li'
   ---
   #title
@@ -265,7 +265,7 @@ What’s is the best plan for you ?
 ::
 
 <!-- apply to program -->
-::marketing-footer
+::partners-footer
 #title
 Become part of Nuxt journey.
 #buttonText

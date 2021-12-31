@@ -130,7 +130,7 @@ contentClass: 'py-60 sm:py-80'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-containerClass: 'pt-20 md:pt-0'
+containerClass: ''
 ---
 #contentTitle
 [Some stats text]{ .text-3xl .sm:text-4xl .md:text-5xl }

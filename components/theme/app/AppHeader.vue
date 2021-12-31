@@ -93,7 +93,7 @@
           <AppButton to="/"> Login </AppButton>
         </div>
       </div>
-      <HeaderSubMenu
+      <HeaderPartnersSubMenu
         v-if="isPartner"
         :links="headerLinks[1].partnersItems"
         class="h-2/5"

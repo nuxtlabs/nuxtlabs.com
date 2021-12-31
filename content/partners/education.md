@@ -1,18 +1,18 @@
 ---
 title: Become an education partner
 description: An education partner provides high-quality Nuxt training and workshop, backed by official Nuxt materials, always up-to-date.
-template: marketing
+template: partners
 ---
 
-::marketing-hero
+::partners-hero
 #title
 Become an education partner
 #description
 [An education partner provides high-quality Nuxt training and workshop, backed by official Nuxt materials, always up-to-date.]{ .block .lg:w-2/3}
 #image
-![telepheric](/img/marketing/education/telepheric-mobile.svg){ .landscape-bottom-mobile .select-none }
-![telepheric](/img/marketing/education/telepheric-tablet.svg){ .landscape-bottom-tablet .select-none }
-![telepheric](/img/marketing/education/telepheric.svg){ .landscape-bottom-desktop .select-none }
+![telepheric](/img/partners/education/telepheric-mobile.svg){ .landscape-bottom-mobile .select-none }
+![telepheric](/img/partners/education/telepheric-tablet.svg){ .landscape-bottom-tablet .select-none }
+![telepheric](/img/partners/education/telepheric.svg){ .landscape-bottom-desktop .select-none }
 ::
 
 ::section-template
@@ -24,11 +24,11 @@ The Education Partner Program
 #contentDescription
 The first step of the Education partner program is to teach your trainers with a dedicated workshop freely provided by a member of NuxtLabs. This session lasts 2 to 3 days and topics can be re-ordered, depending on a previous assessment of the trainees level.
 #absoluteImage
-![landscape](/img/marketing/education/bottom-white-mobile.svg){ .landscape-bottom-mobile .select-none }
-![landscape](/img/marketing/education/bottom-white-tablet.svg){ .landscape-bottom-tablet .select-none  }
-![landscape](/img/marketing/education/bottom-white.svg){ .landscape-bottom-desktop .select-none  }
+![landscape](/img/partners/education/bottom-white-mobile.svg){ .landscape-bottom-mobile .select-none }
+![landscape](/img/partners/education/bottom-white-tablet.svg){ .landscape-bottom-tablet .select-none  }
+![landscape](/img/partners/education/bottom-white.svg){ .landscape-bottom-desktop .select-none  }
 #contentFooter
-  :::marketing-education-program-list
+  :::partners-education-program-list
   ---
   programList:
     - day: 'Day 1'
@@ -88,7 +88,7 @@ containerClass: 'pt-20'
 darkMode: true
 ---
 #absoluteImage
-![integration illustration](/img/marketing/education/validated.svg){ .absolute .-left-28 .lg:left-0 .bottom-0 .top-3 .m-auto .w-80 .lg:w-108 .opacity-20 .lg:opacity-100 }
+![integration illustration](/img/partners/education/validated.svg){ .absolute .-left-28 .lg:left-0 .bottom-0 .top-3 .m-auto .w-80 .lg:w-108 .opacity-20 .lg:opacity-100 }
 #contentTitle
 Nuxt official material
 #contentDescription
@@ -117,7 +117,7 @@ We provide our partners up-to-date training materials, those training material c
 ::
 
 <!-- apply to program -->
-::marketing-footer{ .pt-40 }
+::partners-footer{ .pt-40 }
 #title
 The next step
 #description
