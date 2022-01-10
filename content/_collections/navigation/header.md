@@ -55,7 +55,7 @@ links:
     items:
       - title: 'Company'
         description: 'Know more about Nuxt Labs story & team'
-        to: '/discover/about'
+        to: '/about'
         slug: 'about'
         icon:
           path: '/img/navigation/building.svg'
@@ -63,7 +63,7 @@ links:
           class: 'h-8 w-8 mr-2'
       - title: 'Blog'
         description: 'Our latest updates announcements & future events'
-        to: '/discover/blog'
+        to: '/blog'
         slug: 'blog'
         icon:
           path: '/img/navigation/book.svg'
@@ -72,7 +72,7 @@ links:
       - title: 'Case studies'
         description:
           'Discover how NuxtLabs products can change your day-to-day '
-        to: '/discover/case-studies'
+        to: '/case-studies'
         slug: 'case-studies'
         icon:
           path: '/img/navigation/telescope.svg'

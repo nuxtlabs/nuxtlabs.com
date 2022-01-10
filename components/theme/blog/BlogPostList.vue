@@ -6,7 +6,9 @@
           <AppLink
             v-for="article in articles"
             :key="article.id"
-            :to="`/blog/${categories[selectedCategory.index]}/${article.slug}`"
+            :to="`/blog/${selectedCategory.category.toLowerCase()}/${
+              article.slug
+            }`"
           >
             <BlogArticlePreview :article="article" />
           </AppLink>
@@ -26,11 +28,11 @@
               :key="index"
               class="cursor-pointer px-2 border rounded rounded-xl lg:border-none"
               :class="
-                selectedCategory.index === index
+                selectedCategory.category === categ
                   ? 'text-primary-900 border-primary-900'
                   : 'text-primary-200 border-primary-200'
               "
-              @click="selectCategory(index)"
+              @click="selectCategory(categ)"
             >
               {{ categ }}
             </div>
@@ -47,39 +49,56 @@ import {
   useContext,
   ref,
   useFetch,
+  watch,
+  useRoute,
   reactive,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
     const { $docus } = useContext()
+    const $router = useRoute()
     const blog = ref()
     const categories = ref()
     const articles = ref()
-    const selectedCategory = reactive({ index: 0 })
+    const selectedCategory = reactive({ category: '' })
 
     useFetch(async () => {
-      blog.value = await $docus
-        .search('/discover/blog', { deep: false })
-        .fetch()
+      blog.value = await $docus.search('/blog', { deep: false }).fetch()
 
       categories.value = blog.value.categories
 
-      getArticles(0)
+      selectedCategory.category = ($router.hash || '#Releases').substr(1)
+
+      getArticles()
     })
 
-    async function getArticles(index) {
+    async function getArticles() {
       articles.value = await $docus
-        .search(`/collections`, { deep: true })
-        .where({ category: { $in: categories.value[index] } })
+        .search(`/blog`, { deep: true })
+        .where({ category: { $in: selectedCategory.category } })
         .fetch()
     }
 
-    function selectCategory(index) {
-      selectedCategory.index = index
+    function selectCategory(category) {
+      selectedCategory.category = category
 
-      getArticles(index)
+      getArticles()
     }
+
+    watch(selectedCategory, (newVal) => {
+      const url = $router.value.path
+      let hash = ''
+      if (newVal) {
+        hash = `#${newVal.category.toLowerCase()}`
+      }
+
+      window.history.pushState('', '', `${url}${hash}`)
+    })
+
+    watch($router, ({ hash }) => {
+      selectedCategory.category = (hash || '').substr(1)
+    })
 
     return {
       categories,

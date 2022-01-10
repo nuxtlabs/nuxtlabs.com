@@ -3,16 +3,13 @@
     <div class="relative py-16 sm:py-24 2xl:pb-40">
       <div class="relative max-w-3xl mx-auto">
         <AppLink
-          :to="
-            page.to.lastIndexOf('/') !== 0
-              ? page.to.substr(0, page.to.lastIndexOf('/'))
-              : '/'
-          "
+          :to="backUrl"
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
             class="text-sm font-medium leading-none sm:text-base text-primary-900 hover:text-primary-700"
           >
+            {{ backUrl }}
             ← Back
           </span>
         </AppLink>
@@ -71,7 +68,12 @@
 </template>
 
 <script>
-import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  onMounted,
+  computed,
+  useRoute,
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -80,7 +82,9 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
+    const $router = useRoute()
+
     onMounted(() => {
       if (window.location.hash) {
         const hash = window.location.hash.replace('#', '')
@@ -145,7 +149,13 @@ export default defineComponent({
       })
     }
 
+    const backUrl = computed(() => {
+      const firstPath = $router.value.path.split('/')[1]
+      return `/${firstPath}#${props.page.category.toLowerCase()}`
+    })
+
     return {
+      backUrl,
       formatDateByLocale,
     }
   },
