@@ -20,10 +20,7 @@
         <p class="text-primary-400">
           {{ article.description }}
         </p>
-        <AppLink
-          :to="`/discover/case-studies/${article.slug}`"
-          class="font-semibold"
-        >
+        <AppLink :to="`/case-studies/${article.slug}`" class="font-semibold">
           Read more
         </AppLink>
       </div>
@@ -45,10 +42,7 @@
         <p class="text-primary-400">
           {{ article.description }}
         </p>
-        <AppLink
-          :to="`/discover/case-studies/${article.slug}`"
-          class="font-semibold"
-        >
+        <AppLink :to="`/case-studies/${article.slug}`" class="font-semibold">
           Read more
         </AppLink>
       </div>

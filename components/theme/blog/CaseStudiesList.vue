@@ -25,7 +25,7 @@ export default defineComponent({
 
     useFetch(async () => {
       articles.value = await $docus
-        .search('/collections/case-studies/', { deep: true })
+        .search('/case-studies/', { deep: true })
         .where({ template: { $ne: '' } })
         .fetch()
     })

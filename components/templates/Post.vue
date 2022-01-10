@@ -9,7 +9,6 @@
           <span
             class="text-sm font-medium leading-none sm:text-base text-primary-900 hover:text-primary-700"
           >
-            {{ backUrl }}
             ← Back
           </span>
         </AppLink>
@@ -150,8 +149,9 @@ export default defineComponent({
     }
 
     const backUrl = computed(() => {
-      const firstPath = $router.value.path.split('/')[1]
-      return `/${firstPath}#${props.page.category.toLowerCase()}`
+      return props.page.category
+        ? `/${$router.value.path.split('/')[1]}#${props.page.category}`
+        : props.page.to.substr(0, props.page.to.lastIndexOf('/'))
     })
 
     return {

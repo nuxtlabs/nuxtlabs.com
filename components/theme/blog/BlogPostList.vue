@@ -28,7 +28,7 @@
               :key="index"
               class="cursor-pointer px-2 border rounded rounded-xl lg:border-none"
               :class="
-                selectedCategory.category === categ
+                selectedCategory.category === categ.toLowerCase()
                   ? 'text-primary-900 border-primary-900'
                   : 'text-primary-200 border-primary-200'
               "
@@ -52,12 +52,15 @@ import {
   watch,
   useRoute,
   reactive,
+  computed,
+  useRouter,
 } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
     const { $docus } = useContext()
-    const $router = useRoute()
+    const route = useRoute()
+    const router = useRouter()
     const blog = ref()
     const categories = ref()
     const articles = ref()
@@ -68,7 +71,7 @@ export default defineComponent({
 
       categories.value = blog.value.categories
 
-      selectedCategory.category = ($router.hash || '#Releases').substr(1)
+      selectedCategory.category = (hash.value || '#Releases').substr(1)
 
       getArticles()
     })
@@ -86,18 +89,21 @@ export default defineComponent({
       getArticles()
     }
 
+    const hash = computed(() => route.value.hash)
+
     watch(selectedCategory, (newVal) => {
-      const url = $router.value.path
       let hash = ''
       if (newVal) {
         hash = `#${newVal.category.toLowerCase()}`
       }
 
-      window.history.pushState('', '', `${url}${hash}`)
+      router.push({
+        hash,
+      })
     })
 
-    watch($router, ({ hash }) => {
-      selectedCategory.category = (hash || '').substr(1)
+    watch(hash, (newVal) => {
+      selectedCategory.category = (newVal || '').substr(1)
     })
 
     return {
