@@ -73,7 +73,7 @@ Agency partners advantages
 <!-- certification section -->
 ::section-template
 ---
-contentClass: 'pt-20 pb-10'
+contentClass: 'pt-28 pb-20'
 ---
 #contentTitle
 Nuxt certification

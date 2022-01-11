@@ -94,7 +94,7 @@ Nuxt official material
 #contentDescription
 We provide our partners up-to-date training materials, those training material can be updated according to potential changes to the framework. In that case, you will be notified and receive the new materials.
 #contentFooter
-  :::div{ .flex .pt-4 .pb-8 .flex-col .justify-center .space-y-4 .space-x-0 .md:flex-row .md:space-x-4 .md:space-y-0 }
+  :::div{ .flex .pt-4 .pb-20 .flex-col .justify-center .space-y-4 .space-x-0 .md:flex-row .md:space-x-4 .md:space-y-0 }
     ::::app-button{ disabled .cursor-default }
     ---
     variant: 'white'

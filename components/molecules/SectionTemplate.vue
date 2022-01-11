@@ -21,7 +21,7 @@
           : 'justify-center',
       ]"
     >
-      <!-- container -->
+      <!-- container slot -->
       <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
@@ -41,11 +41,12 @@
         <!-- content Image -->
         <Markdown use="contentImage" unwrap="p" />
         <!-- content title -->
-        <h2 class="text-xl sm:text-2xl font-semibold">
+        <h2 v-if="titleSlot" class="text-xl sm:text-2xl font-semibold">
           <Markdown use="contentTitle" unwrap="p" />
         </h2>
         <!-- content description -->
         <p
+          v-if="descriptionSlot"
           class="text-md sm:text-lg"
           :class="[
             containerContentAlign ? 'w-full' : 'md:w-2/3',
@@ -57,7 +58,7 @@
         <!-- content footer -->
         <Markdown use="contentFooter" unwrap="p" />
         <!-- grid -->
-        <ul class="grid" :class="gridClass">
+        <ul v-if="gridSlot" class="grid" :class="gridClass">
           <Markdown use="grid" />
         </ul>
       </div>
@@ -110,7 +111,7 @@ export default defineComponent({
       default: 'grid-cols-1 md:grid-cols-2 gap-16 lg:gap-8 pt-12',
     },
   },
-  setup(props) {
+  setup(props, context) {
     const scrollTarget = ref()
     const content = reactive({ isVisible: false })
 
@@ -123,6 +124,10 @@ export default defineComponent({
         }[props.contentPosition],
       ].join(' ')
     })
+
+    const gridSlot = computed(() => context.slots.grid)
+    const titleSlot = computed(() => context.slots.contentTitle)
+    const descriptionSlot = computed(() => context.slots.contentDescription)
 
     const { stop } = useIntersectionObserver(
       scrollTarget,
@@ -143,6 +148,9 @@ export default defineComponent({
       contentPositionClass,
       scrollTarget,
       content,
+      gridSlot,
+      titleSlot,
+      descriptionSlot,
     }
   },
 })

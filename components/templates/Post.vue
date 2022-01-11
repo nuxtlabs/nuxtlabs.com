@@ -36,7 +36,7 @@
                 - {{ formatDateByLocale('en', page.date) }}
               </time>
             </div>
-            <ArticleAuthor v-if="page.authors" :authors="page.authors" />
+            <BlogArticleAuthor v-if="page.authors" :authors="page.authors" />
           </div>
         </div>
       </div>

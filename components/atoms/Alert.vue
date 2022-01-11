@@ -66,7 +66,7 @@ export default defineComponent({
     }
   }
   &.info {
-    @apply bg-blue-600 bg-opacity-60 text-blue-100;
+    @apply bg-blue-500 bg-opacity-60 text-blue-100;
     >>> {
       code {
         @apply bg-blue-700 shadow-none text-current;
@@ -92,7 +92,7 @@ export default defineComponent({
     }
   }
   &.warning {
-    @apply bg-yellow-700 text-yellow-100 opacity-80;
+    @apply bg-yellow-600 text-yellow-100 opacity-80;
     >>> {
       code {
         @apply bg-yellow-600 shadow-none text-current;

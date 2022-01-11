@@ -58,7 +58,7 @@ Vue Telescope can detect any website built with Vue.js frameworks, like Nuxt, Gr
 ::section-template
 ---
 contentPosition: 'left'
-contentClass: 'py-10'
+contentClass: 'py-0'
 containerContentAlign: 'left'
 containerClass: 'bg-primary-900 text-white px-0 rounded-md mt-20 mb-48'
 ---
@@ -69,9 +69,11 @@ containerClass: 'bg-primary-900 text-white px-0 rounded-md mt-20 mb-48'
 Browser extension
 #contentDescription
 [With the Vue Telescope Browser extensions available for Firefox, Chrome and Edge, you can see informations about the website without leaving the page! Just by clicking on the extention icon and you will see what framework the page is using, what UI/CSS library and so much more.
-]{.text-white .pr-4}
+]{.text-white .pr-4 }
 ::
 
+::section
+![screens](/img/products/vt-screens.svg){ .absolute .-left-4 .max-h-max .opacity-20 .xl:opacity-100 .z-10 }
 <!-- explore section -->
 ::section-template
 ---
@@ -90,13 +92,12 @@ Explode websites
 contentPosition: 'right'
 contentClass: 'pt-10'
 ---
-#absoluteImage
-![screens](/img/products/vt-screens.svg){ .absolute .-left-4 .-top-56 .max-h-max .opacity-20 }
 #contentTitle
 Showcase collections
 #contentDescription
 [Vue Telescope is made for the Vue community by the Vue community.
-Create your own Collections and bookmark any website made with Vue.js!]
+Create your own Collections and bookmark any website made with Vue.js!]{ .pl-6 }
+::
 ::
 
 <!-- discover section -->

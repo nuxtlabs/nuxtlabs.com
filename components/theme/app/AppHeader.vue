@@ -1,7 +1,7 @@
 <template>
   <!-- TODO: override d-header class when docus v3 -->
   <header
-    class="sticky w-full bg-white top-0 z-50 filter blur-12 mix-blend-difference"
+    class="sticky w-full bg-white top-0 z-50 filter blur-18 mix-blend-difference"
     :class="isPartner ? 'h-30' : 'h-20'"
   >
     <nav

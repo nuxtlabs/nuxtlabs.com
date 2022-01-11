@@ -130,7 +130,7 @@ contentClass: 'py-60 sm:py-80'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-contentClass: 'pt-24 pb-10'
+contentClass: 'py-24'
 containerClass: 'pt-20 md:pt-0'
 
 ---

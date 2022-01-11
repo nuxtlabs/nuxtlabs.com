@@ -91,6 +91,7 @@ Performance, modularity
 ::section-template
 ---
 contentPosition: 'right'
+containerClass: 'pb-24'
 ---
 #contentTitle
 Developer hapiness and experience

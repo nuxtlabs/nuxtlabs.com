@@ -61,7 +61,7 @@ export default {
       'd-active-aside-navigation-item-text': 'text-primary-500',
       'd-code-group-header-bg': 'bg-gray-200',
       'd-code-group-tab': 'bg-gray-300',
-      'd-prose-code-filename-bg': 'bg-primary-300',
+      'd-prose-code-filename-bg': 'bg-primary-100',
       'd-prose-code-filename-text': 'text-gray-600',
       'd-prose-thead-border': 'border-b border-gray-800',
       'd-prose-tr-border': 'border-b border-gray-900',
