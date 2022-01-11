@@ -1,8 +1,11 @@
 <template>
   <!-- TODO: override d-header class when docus v3 -->
   <header
-    class="sticky w-full bg-white top-0 z-50 border-b border-primary-200"
-    :class="isPartner ? 'h-30' : 'h-20'"
+    class="sticky w-full bg-white top-0 z-50"
+    :class="[
+      isPartner ? 'h-30' : 'h-20',
+      { 'border-b border-primary-50': scroll },
+    ]"
   >
     <nav
       class="flex flex-col mx-auto d-container-content h-full justify-center"
@@ -103,7 +106,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+} from '@nuxtjs/composition-api'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -119,9 +127,18 @@ export default defineComponent({
   },
   setup() {
     const { isPartner } = useNav()
+    const scroll = ref(false)
+
+    onMounted(() => window.addEventListener('scroll', handleScroll))
+
+    onBeforeUnmount(() => window.removeEventListener('scroll', handleScroll))
+
+    const handleScroll = () => (scroll.value = window.scrollY > 0)
 
     return {
       isPartner,
+      handleScroll,
+      scroll,
     }
   },
 })
