@@ -19,7 +19,7 @@ Become an agency partner
 ::section-template
 ---
 contentPosition: 'left'
-containerContentAlign: 'rigth'
+containerContentAlign: 'right'
 contentClass: 'lg:w-1/2'
 containerClass: 'pt-20 pb-10'
 darkMode: true

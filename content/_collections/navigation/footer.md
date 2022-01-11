@@ -8,23 +8,22 @@ links:
         href: 'https://docus.com/'
       - title: 'Vue Telescope'
         href: 'https://vuetelescope.com/'
-
   - title: 'Partners'
     items:
       - title: 'Technology'
-        to: '/technology-partner'
+        to: '/partners/technology'
       - title: 'Agency'
-        to: '/agency-partner'
+        to: '/partners/agency'
       - title: 'Education'
-        to: '/education-partner'
+        to: '/partners/education'
   - title: 'Company'
     items:
       - title: 'About'
-        href: 'https://nuxtlabs.com/about'
+        to: '/about'
       - title: 'Blog'
-        href: 'https://nuxtlabs.com/blog'
+        to: '/blog'
       - title: 'Design'
-        href: 'https://nuxtlabs.com/design'
+        to: '/design'
 
   - title: 'Legal'
     items:

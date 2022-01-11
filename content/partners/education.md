@@ -82,7 +82,7 @@ Our partnership agreement is based [on a commission per trainee]{ .font-semibold
 ::section-template
 ---
 contentPosition: 'left'
-containerContentAlign: 'center'
+containerContentAlign: 'right'
 contentClass: 'lg:w-3/5 lg:px-6 xl:w-2/3'
 containerClass: 'pt-20'
 darkMode: true
@@ -118,6 +118,9 @@ We provide our partners up-to-date training materials, those training material c
 
 <!-- apply to program -->
 ::partners-footer{ .pt-40 }
+---
+to: 'mailto:partners@nuxtlabs.com'
+---
 #title
 The next step
 #description
