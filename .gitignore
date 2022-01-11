@@ -8,6 +8,7 @@ coverage
 dist
 sw.*
 .env
+!.env.example
 .output
 package-lock.json
 yarn-error.log

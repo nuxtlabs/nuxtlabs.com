@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="toc.length"
-    class="sticky z-10 px-4 text-sm border-dashed top-header d-border-header blur-18 d-page-mobile-toc-bg mix-blend-difference"
+    class="sticky z-10 px-4 text-sm border-dashed top-header d-border-header d-blur-header d-page-mobile-toc-bg"
   >
     <button
       class="relative z-10 flex items-center w-full text-sm py-4 font-semibold text-primary-900 focus:outline-none"
