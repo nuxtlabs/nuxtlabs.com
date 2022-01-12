@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pointer-events-none h-full w-full flex justify-center md:justify-start lg:pl-60"
+    class="pointer-events-none h-full lg:h-72 w-full flex justify-center md:justify-start pl-8 sm:pl-12 md:pl-18 lg:pl-60"
   >
     <svg fill="none" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
       <rect

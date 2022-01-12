@@ -25,7 +25,7 @@ containerClass: 'pt-20 pb-10'
 darkMode: true
 ---
 #container
-::div{.flex .flex-col .items-center .lg:items-end .space-y-4 .w-full .lg:w-2/3}
+::div{.flex .flex-col .items-center .lg:items-end .space-y-4 .w-full .pt-8 md:pt-0 .lg:w-2/3}
   ![integration illustration](/img/partners/agency/badge.svg){ .w-48 .sm:w-1/3 .md:w-44 .lg:w-60 }
   :::p{ .text-white .text-center .w-48 .sm:w-1/3 .md:w-44 .lg:w-60 .text-sm }
     Get the Official Nuxt Partner badge to showcase on your website

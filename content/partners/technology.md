@@ -47,7 +47,7 @@ Third-party integrations and cloud providers, such as Netlify or Vercel, provide
 contentPosition: 'right'
 containerContentAlign: 'left'
 contentClass: 'lg:w-1/2'
-containerClass: 'pt-20'
+containerClass: 'py-20 md:pb-0'
 darkMode: true
 ---
 #container

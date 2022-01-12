@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col-reverse lg:flex-row lg:justify-between relative">
-      <div class="w-3/4">
+      <div class="lg:w-3/4">
         <div v-if="articles && articles.length">
           <AppLink
             v-for="article in articles"
@@ -20,13 +20,11 @@
           <div class="font-semibold text-primary-900 text-xl pb-4">
             Categories
           </div>
-          <div
-            class="flex flex-row space-x-4 pb-12 lg:pb-0 lg:flex-col lg:space-x-0"
-          >
+          <div class="flex flex-wrap pb-12 lg:pb-0 lg:flex-col">
             <div
               v-for="(categ, index) in categories"
               :key="index"
-              class="cursor-pointer px-2 border rounded rounded-xl lg:border-none"
+              class="cursor-pointer px-2 border rounded rounded-xl lg:border-none mb-2 lg:mb-0 mr-2 lg:mr-0 self-start"
               :class="
                 selectedCategory.category === categ.toLowerCase()
                   ? 'text-primary-900 border-primary-900'

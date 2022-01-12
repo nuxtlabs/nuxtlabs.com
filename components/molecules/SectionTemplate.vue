@@ -8,7 +8,7 @@
     <Markdown use="animations" unwrap="p" />
     <!-- container -->
     <div
-      class="flex flex-col items-center w-full mx-auto max-w-7xl"
+      class="flex flex-col-reverse items-center w-full mx-auto max-w-7xl"
       :class="[
         containerClass,
         { 'text-white': darkMode },

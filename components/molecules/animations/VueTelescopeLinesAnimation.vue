@@ -4,7 +4,7 @@
       v-for="(line, i) in lineItems"
       :key="i"
       ref="lines"
-      class="absolute w-double-screen rounded-full bg-primary-900 -z-1"
+      class="absolute w-double-screen rounded-full bg-primary-900 z-10"
       :style="{
         opacity: `${line.opacity}%`,
         top: `${line.top}%`,

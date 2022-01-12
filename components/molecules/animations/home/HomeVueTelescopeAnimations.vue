@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pointer-events-none h-full w-full flex justify-center md:justify-start pb-12 lg:pr-20"
+    class="pointer-events-none h-full w-full flex justify-center md:justify-start pb-12 pl-8 lg:pl-0 lg:pr-20 pt-8 lg:pt-0"
   >
     <svg fill="none" viewBox="-20 0 500 300" xmlns="http://www.w3.org/2000/svg">
       <path

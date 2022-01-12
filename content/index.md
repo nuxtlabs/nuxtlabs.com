@@ -55,7 +55,6 @@ containerClass: 'py-20'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-contentClass: 'lg:w-2/5'
 containerClass: 'py-20'
 ---
 #container
@@ -130,8 +129,8 @@ contentClass: 'py-60 sm:py-80'
 darkMode: true
 contentPosition: 'left'
 containerContentAlign: 'right'
-contentClass: 'py-24'
-containerClass: 'pt-20 md:pt-0'
+contentClass: 'pb-8 md:py-24'
+containerClass: 'py-20 md:py-0'
 
 ---
 #contentTitle

@@ -12,7 +12,7 @@ head.meta:
     content: https://nuxtlabs.com/img/social/docus.jpg
 ---
 
-::ProductsHero
+::ProductsHero{ .mb-4 }
 ---
 #animation
   :::DocusAnimations
