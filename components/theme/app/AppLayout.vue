@@ -55,7 +55,7 @@ export default defineComponent({
       },
       {
         icon: 'IconYoutube',
-        href: 'https://www.youtube.com/c/NuxtLabs',
+        href: 'https://www.youtube.com/c/NuxtLabs?sub_confirmation=1',
         alt: 'NuxtLabs Youtube',
       },
     ]

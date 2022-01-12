@@ -4,7 +4,7 @@
     <h5 class="font-semibold text-xl">
       <Markdown use="title" unwrap="p" />
     </h5>
-    <p class="block text-lg pb-2">
+    <p class="block text-lg">
       <Markdown use="description" unwrap="p" />
     </p>
     <Markdown use="content" unwrap="p" />

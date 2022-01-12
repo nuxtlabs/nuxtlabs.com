@@ -12,9 +12,15 @@
       <div>
         <Markdown use="button" unwrap="p" />
       </div>
-      <p class="font-semibold text-lg" :class="slots.button ? 'pt-16' : 'pt-4'">
-        Discover how we can make it work together 👇
-      </p>
+      <div
+        class="flex space-x-2 items-center"
+        :class="slots.button ? 'pt-16' : 'pt-4'"
+      >
+        <p class="font-semibold text-lg">
+          Discover how we can make it work together
+        </p>
+        <img :src="`/img/emoji-hand.svg`" alt="bottom arrow" class="h-6 w-6" />
+      </div>
     </div>
     <Markdown use="image" unwrap="p" />
   </div>

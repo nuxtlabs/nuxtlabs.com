@@ -1,10 +1,10 @@
 <template>
   <!-- TODO: override d-header class when docus v3 -->
   <header
-    class="sticky w-full bg-white top-0 z-50"
+    class="sticky w-full bg-white top-0 z-50 border-b"
     :class="[
       isPartner ? 'h-30' : 'h-20',
-      { 'border-b border-primary-50': scroll },
+      scroll ? 'border-primary-50' : 'border-transparent',
     ]"
   >
     <nav

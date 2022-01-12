@@ -25,6 +25,7 @@
       <Markdown use="container" unwrap="p" />
       <!-- content -->
       <div
+        v-if="hasContentSlot"
         class="flex flex-col justify-center space-y-4 px-4 w-full transition-all transform duration-400 delay-300"
         :class="[
           content.isVisible
@@ -128,6 +129,19 @@ export default defineComponent({
     const gridSlot = computed(() => context.slots.grid)
     const titleSlot = computed(() => context.slots.contentTitle)
     const descriptionSlot = computed(() => context.slots.contentDescription)
+    const contentFooterSlot = computed(() => context.slots.contentFooter)
+    const contentImageSlot = computed(() => context.slots.contentImage)
+
+    const hasContentSlot = computed(
+      () =>
+        gridSlot.value ||
+        titleSlot.value ||
+        descriptionSlot.value ||
+        contentFooterSlot.value ||
+        contentImageSlot.value,
+    )
+
+    console.log('hasContent', hasContentSlot.value)
 
     const { stop } = useIntersectionObserver(
       scrollTarget,
@@ -151,6 +165,7 @@ export default defineComponent({
       gridSlot,
       titleSlot,
       descriptionSlot,
+      hasContentSlot,
     }
   },
 })
