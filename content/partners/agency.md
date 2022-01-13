@@ -1,5 +1,5 @@
 ---
-title: Become an agency partner
+title: Become an Agency partner
 description: With more than +36k public live websites built with Nuxt, the demand for Nuxt experts grows. If you use Nuxt to solve your client's need or if you provide Nuxt expertise to in-house teams, being an official Nuxt Agency partner can be hugely beneficial to your business.
 template: partners
 ---
@@ -50,22 +50,22 @@ Agency partners advantages
   :::partners-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
   ---
   iconPath: '/img/partners/agency/list-format.svg'
-  iconClass: 'h-10 w-10 mb-2'
+  iconClass: 'h-12 w-12 mb-2'
   component: 'li'
   ---
   #title
-  [Partners page listing]{ .text-base }
+  [Partners page listing]{ .text-lg }
   #description
   [Gain visibility by being listed on our partners page on https://nuxtjs.org/partners with a card pointing on your website and detailing the geographic areas you cover]{ .text-base }
   :::
   :::partners-card{ .flex .flex-col .space-y-2 .items-center .sm:px-8 .lg:px-24 }
   ---
   iconPath: '/img/partners/agency/grid-layout.svg'
-  iconClass: 'h-10 w-10 mb-2'
+  iconClass: 'h-12 w-12 mb-2'
   component: 'li'
   ---
   #title
-  [marketing page]{ .text-base }
+  [Marketing page]{ .text-lg }
   #description
   [Get a dedicated marketing page on nuxtjs.org/partners with a contact form to generate leads ]{ .text-base }
   :::

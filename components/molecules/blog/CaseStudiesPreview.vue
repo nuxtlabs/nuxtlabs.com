@@ -39,7 +39,9 @@
         <h4 class="text-xl font-semibold">
           {{ article.title }}
         </h4>
-        <p class="text-primary-400">
+        <p
+          class="text-primary-400 block overflow-ellipsis break-words overflow-hidden max-h-18 leading-6"
+        >
           {{ article.description }}
         </p>
         <AppLink :to="`/case-studies/${article.slug}`" class="font-semibold">

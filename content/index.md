@@ -35,9 +35,9 @@ containerClass: 'py-20'
 ::home-nuxt-animations
 ::
 #contentTitle
-[NuxtJS]{ .text-4xl }
+[NuxtJS]{ .text-3xl }
 #contentDescription
-[An open source framework making web development]{ .text-primary-300 } [ simple ]{ .font-semibold } [ and]{ .text-primary-300 } [ powerful.]{ .font-semibold } [ Shipped with ]{ .text-primary-300 } [ plenty of features]{ .font-semibold } [ to boost]{ .text-primary-300 } [ developer productivity ]{ .font-semibold } [ and the end user experience.]{ .text-primary-300 }
+[An open source framework making web development]{ .text-primary-300 .text-xl } [ simple ]{ .font-semibold .text-xl } [ and]{ .text-primary-300 .text-xl } [ powerful.]{ .font-semibold .text-xl } [ Shipped with ]{ .text-primary-300 .text-xl } [ plenty of features]{ .font-semibold .text-xl } [ to boost]{ .text-primary-300 .text-xl } [ developer productivity ]{ .font-semibold .text-xl } [ and the end user experience.]{ .text-primary-300 .text-xl }
 #contentFooter
   :::AppButton
   ---
@@ -61,9 +61,9 @@ containerClass: 'py-20'
 ::home-docus-animations
 ::
 #contentTitle
-[Docus]{ .text-4xl }
+[Docus]{ .text-3xl }
 #contentDescription
-[White pages in]{ .text-primary-300 } [ markdown ]{ .font-semibold } [ use]{ .text-primary-300 } [ Vue components]{ .font-semibold } [, add ]{ .text-primary-300 } [ style]{ .font-semibold } [ and enjoy the power of Nuxt with a]{ .text-primary-300 } [ blaazing fast, evolved ]{ .font-semibold } [ developer expertience.]{ .text-primary-300 }
+[White pages in]{ .text-primary-300 .text-xl } [ markdown ]{ .font-semibold .text-xl } [ use]{ .text-primary-300 .text-xl } [ Vue components]{ .font-semibold .text-xl } [, add ]{ .text-primary-300 .text-xl } [ style]{ .font-semibold .text-xl } [ and enjoy the power of Nuxt with a]{ .text-primary-300 .text-xl } [ blaazing fast, evolved ]{ .font-semibold .text-xl } [ developer expertience.]{ .text-primary-300 .text-xl }
 #contentFooter
   :::AppButton
   ---
@@ -87,9 +87,9 @@ containerClass: 'pt-20 pb-40'
 ::home-vue-telescope-animations
 ::
 #contentTitle
-[Vue telescope]{ .text-4xl }
+[Vue telescope]{ .text-3xl }
 #contentDescription
-[Made for the Vue community by the Vue community,]{.text-primary-500 } [ reveal]{ .font-semibold } [ the Vue plugins and ]{ .text-primary-500 } [ technology stack ]{ .font-semibold } [ powering any website or explore our database of ]{ .text-primary-500 } [ 58k+ websites.]{ .font-semibold }
+[Made for the Vue community by the Vue community,]{.text-primary-500 .text-xl } [ reveal]{ .font-semibold .text-xl } [ the Vue plugins and ]{ .text-primary-500 .text-xl } [ technology stack ]{ .font-semibold .text-xl } [ powering any website or explore our database of ]{ .text-primary-500 .text-xl } [ 58k+ websites.]{ .font-semibold .text-xl }
 #contentFooter
   :::AppButton
   ---

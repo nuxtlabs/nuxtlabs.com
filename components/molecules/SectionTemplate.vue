@@ -141,8 +141,6 @@ export default defineComponent({
         contentImageSlot.value,
     )
 
-    console.log('hasContent', hasContentSlot.value)
-
     const { stop } = useIntersectionObserver(
       scrollTarget,
       ([{ isIntersecting }]) => {

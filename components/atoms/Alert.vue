@@ -53,14 +53,14 @@ export default defineComponent({
 <style lang="postcss" scoped>
 .alert {
   &.success {
-    @apply bg-green-900 text-green-200;
+    @apply bg-primary-900 text-primary-50;
     >>> {
       code {
-        @apply bg-green-700 shadow-none text-current;
+        @apply bg-primary-700 shadow-none text-current;
       }
       a:hover {
         code {
-          @apply border-green-400 dark:border-green-700;
+          @apply border-primary-400 dark:border-primary-700;
         }
       }
     }

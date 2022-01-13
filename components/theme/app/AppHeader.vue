@@ -70,7 +70,7 @@
                     <template #item="{ item }">
                       <HeaderNavigationLink
                         :link="item"
-                        class="px-2 py-1"
+                        class="px-4 py-2"
                         inactive-class="text-primary-900"
                       >
                         <HeaderDropdownItem
@@ -93,7 +93,9 @@
             class="hidden lg:flex space-x-4"
           />
           <!-- button -->
-          <AppButton to="/"> Login </AppButton>
+          <PartnersButton href="https://app.partners.com">
+            Login
+          </PartnersButton>
         </div>
       </div>
       <HeaderPartnersSubMenu

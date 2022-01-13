@@ -1,5 +1,5 @@
 ---
-title: Become a technology partner
+title: Become a Technology partner
 description: Technology Partners build integrations and solutions that enhance the developer experience and end-user performance. Partner with NuxtLabs to enable joint users to do their best work.
 template: partners
 ---
@@ -130,13 +130,14 @@ Becoming a Technology Partner gives your company multiple advantages
 ::section-template
 ---
 darkMode: true
+containerClass: 'py-20'
 ---
 #contentDescription
-[On top of that, becoming a technology partner will lead to a tweet every year to showcase our collaboration and how make the web faster and better together.]{ .text-lg .font-semibold .block .lg:px-40 }
+[On top of that, becoming a technology partner will lead to a tweet every year to showcase our collaboration and how make the web faster and better together.]{ .text-xl .font-semibold .block .lg:px-32 }
 ::
 
 <!-- apply to program -->
-::partners-footer
+::partners-footer{ .pt-40 .sm:pb-40 .lg:pb-20 }
 #title
 The next step
 #description

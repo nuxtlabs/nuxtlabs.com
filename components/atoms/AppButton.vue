@@ -70,12 +70,12 @@ export default defineComponent({
       const { to, href } = props
       if (to?.length) {
         return {
-          is: 'Link',
+          is: 'AppLink',
           to,
         }
       } else if (href?.length) {
         return {
-          is: 'Link',
+          is: 'AppLink',
           href,
         }
       } else {

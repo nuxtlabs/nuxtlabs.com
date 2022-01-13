@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-x-8 gap-y-12">
+  <div class="grid grid-cols-2 gap-x-8 gap-y-12 pb-40">
     <div
       v-for="(article, index) in articles"
       :key="article.id"

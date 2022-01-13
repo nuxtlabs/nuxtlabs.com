@@ -31,7 +31,7 @@ containerClass: 'pt-24 pb-36'
 darkMode: true
 ---
 #container
-  :::partners-home-number
+  :::partners-home-numbers
   #numbersLeft
   ::::partners-card-number
   ---
@@ -132,7 +132,7 @@ Be visible to the Nuxt Community
 ---
 contentPosition: 'center'
 darkMode: true
-contentClass: 'pt-20 pb-60'
+containerClass: 'pt-20 pb-40 lg:pb-60'
 ---
 #absoluteImage
 ![wave](/img/partners/home/black-top-wave.svg){ .absolute .inset-x-0 .w-full .h-12 .inset-x-0 .-top-8 .select-none }
@@ -266,7 +266,7 @@ What’s is the best plan for you ?
 ::
 
 <!-- apply to program -->
-::partners-footer
+::partners-footer{ pb-20 .sm:pb-40 .lg:pt-40 }
 #title
 Become part of Nuxt journey.
 #buttonText

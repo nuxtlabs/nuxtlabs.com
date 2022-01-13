@@ -135,6 +135,7 @@ export default withDocus({
     },
   },
   publicRuntimeConfig: {
+    nuxtlabsAppUrl: process.env.NUXTLABS_APP_URL,
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN,
     },

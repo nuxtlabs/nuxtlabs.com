@@ -11,13 +11,14 @@ Become an education partner
 [An education partner provides high-quality Nuxt training and workshop, backed by official Nuxt materials, always up-to-date.]{ .block .lg:w-2/3}
 #image
 ![telepheric](/img/partners/education/telepheric-mobile.svg){ .landscape-bottom-mobile .select-none }
-![telepheric](/img/partners/education/telepheric-tablet.svg){ .landscape-bottom-tablet .select-none }
-![telepheric](/img/partners/education/telepheric.svg){ .landscape-bottom-desktop .select-none }
+![telepheric](/img/partners/education/telepheric-tablet.svg){ .landscape .landscape-tablet .-bottom-1 .select-none }
+![telepheric](/img/partners/education/telepheric.svg){ .landscape .landscape-desktop .-bottom-1 .select-none }
 ::
 
 ::section-template
 ---
 darkMode: true
+containerClass: 'pb-40 sm:pb-24 md:pb-36 lg:pb-24 xl:pb-40'
 ---
 #contentTitle
 The Education Partner Program
