@@ -26,10 +26,11 @@
         <!-- logo -->
         <AppLink
           class="flex flex-1 w-1/6 justify-center lg:justify-start"
-          :to="localePath('/')"
+          to="/"
+          aria-label="homeLink"
         >
           <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
-          <nuxt-img src="/img/logo.svg" class="h-full w-auto" alt="NuxtLabs" />
+          <Logo />
         </AppLink>
         <!-- links -->
         <transition name="fade">

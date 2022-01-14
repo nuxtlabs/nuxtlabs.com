@@ -1,5 +1,5 @@
 ---
-template: Legal
+template: page
 title: 'Claim'
 description: 'Claim description'
 date: 2022-01-01

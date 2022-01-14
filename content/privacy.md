@@ -1,5 +1,5 @@
 ---
-template: Legal
+template: page
 title: 'Privacy'
 description: 'Privacy description'
 date: 2022-01-01

@@ -1,5 +1,5 @@
 ---
-template: Legal
+template: page
 title: 'Terms'
 description: 'Terms description'
 date: 2022-01-01
