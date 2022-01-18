@@ -16,7 +16,7 @@
       <Markdown use="socialLinks" unwrap="p" />
 
       <div class="md:pt-18">
-        <img :src="`/img/emoji-hand.svg`" alt="bottom arrow" class="h-6 w-6" />
+        <img :src="`/img/arrow-down.svg`" alt="bottom arrow" class="h-8 w-8" />
       </div>
     </div>
   </div>

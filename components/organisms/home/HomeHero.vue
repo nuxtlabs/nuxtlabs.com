@@ -7,10 +7,12 @@
       <h1 class="font-semibold text-4xl md:text-5xl lg:text-6xl">
         <Markdown use="title" unwrap="p" />
       </h1>
-
-      <p class="font-semibold text-xl lg:text-2xl">
-        <Markdown use="description" unwrap="p" />
-      </p>
+      <div class="flex space-x-2 items-center justify-center">
+        <p class="font-semibold text-xl lg:text-2xl">
+          <Markdown use="description" unwrap="p" />
+        </p>
+        <img src="/img/arrow-down.svg" class="w-8 h-8" />
+      </div>
     </div>
     <img
       src="/img/home/hero-landscape.svg"
