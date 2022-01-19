@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="d-container-content py-8 sm:py-16 md:pb-60 lg:pb-16 overflow-hidden"
-  >
+  <div class="d-container-content py-8 sm:py-16 md:pb-60 lg:pb-16">
     <PageHero>
       <template #title>
         {{ page.title }}
