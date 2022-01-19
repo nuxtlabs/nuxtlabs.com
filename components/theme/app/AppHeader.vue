@@ -30,7 +30,12 @@
           aria-label="homeLink"
         >
           <h1 class="h-0 w-0 overflow-hidden">NuxtLabs</h1>
-          <Logo />
+          <div
+            @click="scrollToTop"
+            @click.right.prevent="$router.push('/design')"
+          >
+            <img src="/img/logo.svg" alt="Nuxtlabs Logo" />
+          </div>
         </AppLink>
         <!-- links -->
         <transition name="fade">
@@ -138,10 +143,13 @@ export default defineComponent({
 
     const handleScroll = () => (scroll.value = window.scrollY > 0)
 
+    const scrollToTop = () => window.scrollTo(0, 0)
+
     return {
       isPartner,
       handleScroll,
       scroll,
+      scrollToTop,
     }
   },
 })
