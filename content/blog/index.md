@@ -5,10 +5,10 @@ blog: true
 heroDescription: false
 description: 'Blog description'
 categories:
- - Releases
+ #- Releases
  - Announcements
  - Events
- - Tutorials
+ # - Tutorials
 ---
 
 &nbsp;
