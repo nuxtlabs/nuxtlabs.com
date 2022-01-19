@@ -1,21 +1,15 @@
 <template>
   <div ref="ghostMascot">
-    <Ghost v-if="showAnimation" class="h-full" />
+    <Ghost class="h-full" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, onMounted } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const ghostMascot = ref(null)
 
     const ghostMascotInstance = useMotion(ghostMascot, {
@@ -47,18 +41,7 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            ghostMascotInstance.set('initial')
-            ghostMascotInstance.apply('enter')
-          } else {
-            ghostMascotInstance.apply('leave')
-          }
-        },
-        { immediate: true },
-      )
+      ghostMascotInstance.apply('enter')
     })
 
     return {

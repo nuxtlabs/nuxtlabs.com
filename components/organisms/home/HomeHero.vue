@@ -1,48 +1,23 @@
 <template>
-  <section
-    class="h-full flex items-center justify-center overflow-hidden relative"
-  >
-    <nav class="w-full">
-      <ul class="w-full">
-        <li
-          v-for="project in projects"
-          :key="project.to"
-          class="w-full transition-opacity"
-          :class="[
-            !activeProject
-              ? 'opacity-100'
-              : activeProject && project.title === activeProject
-              ? 'opacity-100'
-              : 'opacity-30',
-          ]"
-        >
-          <HomeHeroLink :project="project" @active="setActiveProject($event)" />
-        </li>
-      </ul>
-    </nav>
+  <section ref="root" class="relative pb-8 -z-1">
+    <HomeHeroAnimations />
+    <div
+      class="max-w-7xl mx-auto py-20 mb-20 lg:mb-60 flex flex-col space-y-8 items-center justify-center text-center"
+    >
+      <h1 class="font-semibold text-4xl md:text-5xl lg:text-6xl">
+        <Markdown use="title" unwrap="p" />
+      </h1>
+      <div class="flex space-x-2 items-center justify-center">
+        <p class="font-semibold text-xl lg:text-2xl">
+          <Markdown use="description" unwrap="p" />
+        </p>
+        <img src="/img/arrow-down.svg" class="w-8 h-8" />
+      </div>
+    </div>
+    <img
+      src="/img/home/hero-landscape.svg"
+      alt="landscape"
+      class="absolute landscape-bottom-desktop"
+    />
   </section>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
-
-export default defineComponent({
-  props: {
-    projects: {
-      type: Array,
-      required: true,
-    },
-  },
-  setup() {
-    const activeProject = ref(null)
-
-    function setActiveProject(project) {
-      activeProject.value = project.title
-    }
-    return {
-      setActiveProject,
-      activeProject,
-    }
-  },
-})
-</script>

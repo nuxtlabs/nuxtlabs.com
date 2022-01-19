@@ -1,6 +1,7 @@
+import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 
-export default {
+export default defineConfig({
   theme: {
     colors: {
       transparent: 'transparent',
@@ -9,18 +10,27 @@ export default {
       white: '#fff',
       blue: colors.sky,
       green: colors.emerald,
-      red: colors.red,
       rose: colors.rose,
       yellow: colors.amber,
       gray: colors.gray,
+      primary: {
+        '50': '#ededee',
+        '100': '#bfbfc5',
+        '200': '#94949e',
+        '300': '#7f7f8b',
+        '400': '#6b6b76',
+        '500': '#585860',
+        '600': '#44444b',
+        '700': '#313136',
+        '800': '#1d1d20',
+        '900': '#0a0a0b',
+      },
     },
     extend: {
       fontFamily: {
         sans: 'DM Sans, sans-serif',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
-        inter: 'Inter, sans-serif',
-        // roobert: 'Roobert, sans-serif',
       },
       transitionProperty: {
         height: 'height',
@@ -33,6 +43,7 @@ export default {
     },
   },
   shortcuts: {
+    'h-blur': 'filter blur-8',
     'text-display-6': {
       fontSize: '1.875rem',
       lineHeight: '2.25rem',
@@ -82,4 +93,4 @@ export default {
       lineHeight: '2rem',
     },
   },
-}
+})

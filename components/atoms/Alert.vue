@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -33,7 +33,7 @@ export default defineComponent({
           'danger',
           'next',
           'star',
-        ].includes(value)
+        ].includes(value as string)
       },
     },
   },
@@ -53,20 +53,20 @@ export default defineComponent({
 <style lang="postcss" scoped>
 .alert {
   &.success {
-    @apply bg-green-900 text-green-200;
+    @apply bg-primary-900 text-primary-50;
     >>> {
       code {
-        @apply bg-green-700 shadow-none text-current;
+        @apply bg-primary-700 shadow-none text-current;
       }
       a:hover {
         code {
-          @apply border-green-400 dark:border-green-700;
+          @apply border-primary-400 dark:border-primary-700;
         }
       }
     }
   }
   &.info {
-    @apply bg-blue-600 bg-opacity-60 text-blue-100;
+    @apply bg-blue-500 bg-opacity-60 text-blue-100;
     >>> {
       code {
         @apply bg-blue-700 shadow-none text-current;
@@ -92,7 +92,7 @@ export default defineComponent({
     }
   }
   &.warning {
-    @apply bg-yellow-700 text-yellow-100 opacity-80;
+    @apply bg-yellow-600 text-yellow-100 opacity-80;
     >>> {
       code {
         @apply bg-yellow-600 shadow-none text-current;

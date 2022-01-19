@@ -1,27 +1,11 @@
 <template>
   <h1
-    class="
-      text-4xl
-      xs:text-5xl
-      sm:text-6xl
-      md:text-7xl
-      lg:text-8xl
-      uppercase
-      font-extrabold
-      flex flex-col
-      title-stroke
-    "
+    class="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase font-extrabold flex flex-col"
   >
     <span class="overflow-hidden">
       <span
         ref="lineOne"
-        class="
-          animate-one
-          transform
-          translate-y-full
-          origin-left
-          whitespace-nowrap
-        "
+        class="animate-one transform translate-y-full origin-left whitespace-nowrap"
       >
         From a <span class="title-stroke-filled">&nbsp;passion&nbsp;</span>
       </span>
@@ -30,45 +14,23 @@
       <span ref="lineParent" class="relative">
         <span
           ref="lineTwo"
-          class="
-            animate-two
-            transform
-            translate-y-full
-            whitespace-nowrap
-            relative
-            origin-left
-          "
+          class="animate-two transform translate-y-full whitespace-nowrap relative origin-left"
         >
           to a
           <span class="title-stroke-filled">&nbsp;company </span>
         </span>
         <span
           ref="line"
-          class="
-            opacity-0
-            sm:opacity-100
-            absolute
-            bottom-2.5
-            -right-12
-            bg-white
-            h-0.5
-            w-0
-            transform
-            translate-x-full
-            origin-left
-            transition-width
-            duration-600
-            delay-150
-          "
+          class="opacity-0 sm:opacity-100 absolute bottom-10 -right-12 bg-primary-900 h-2 w-0 transform translate-x-full origin-left transition-width duration-600 delay-150"
         ></span>
       </span>
     </span>
   </h1>
 </template>
 
-<script>
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+<script lang="ts">
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
@@ -143,24 +105,6 @@ export default defineComponent({
       })
     }
 
-    // const lineInstance = useMotion(line, {
-    //   initial: {
-    //     width: 0,
-    //   },
-    //   in: {
-    //     width: 200,
-    //   },
-    // })
-
-    // lineInstance.apply('initial')
-
-    // onMounted(() => {
-    //   lineInstance.set('initial')
-    //   setTimeout(() => {
-    //     lineInstance.apply('in')
-    //   }, 500)
-    // })
-
     return { lineOne, lineTwo, lineContainer, lineParent, line }
   },
 })
@@ -168,53 +112,8 @@ export default defineComponent({
 
 <style scoped lang="postcss">
 h1 >>> {
-  > span {
-    /* &:last-child {
-      &:after {
-        content: '';
-        @apply sticky ml-16 bg-white h-0.5 top-1/2 transform -translate-y-1/2;
-        animation: line 500ms forwards 350ms;
-      }
-    } */
-  }
   span {
     display: flex;
   }
 }
-
-/* .line {
-  position: relative;
-  &:after {
-    content: '';
-    @apply sticky ml-16 bg-white h-0.5 bottom-0 transformm translate-y-1/2;
-    animation: line 500ms forwards 350ms;
-  }
-} */
-
-/* .animate-one {
-  animation: slide-up 500ms forwards;
-}
-.animate-two {
-  animation: slide-up 500ms forwards 100ms;
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-} */
-
-/* @keyframes line {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-} */
 </style>

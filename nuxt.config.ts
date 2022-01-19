@@ -43,22 +43,22 @@ export default withDocus({
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
+    '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
     // https://www.npmjs.com/package/vue-plausible
     'vue-plausible',
     // https://motion.vueuse.org
     'nuxt-use-motion',
   ],
+  // TODO: Fix PWA Module
   pwa: {
     manifest: {
       name: 'NuxtLabs',
       short_name: 'NuxtLabs',
       description: 'Intuitive Web Development',
-      background_color: '#000000',
-      theme_color: '#000000',
+      background_color: '#FFFFFF',
+      theme_color: '#FFFFFF',
     },
     // meta: false,
     icon: true,
@@ -71,10 +71,15 @@ export default withDocus({
     // TODO: remove this, current hotfix since Docus does not detect the other links
     routes: ['/', '/nuxtjs', '/docus', '/vuetelescope', '/about'],
   },
-  /**
-   * Add image domains for nuxt-image on Vercel
-   */
+  plugins: [
+    '~/plugins/nav',
+    '~/plugins/timer',
+    '~/plugins/notifications',
+    '~/plugins/mq',
+  ],
+
   hooks: {
+    // @ts-ignore
     generate: {
       async done() {
         try {
@@ -88,26 +93,6 @@ export default withDocus({
           // eslint-disable-next-line no-console
           console.log('Issue copying `.vercel_build_output` to project root.')
         }
-      },
-    },
-  },
-  vite: {
-    server: {
-      fs: {
-        strict: false,
-      },
-      optimizeDeps: {
-        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-        include: [
-          'defu',
-          'theme-colors',
-          'cookie',
-          'js-cookie',
-          'clipboard',
-          'property-information',
-          'ufo',
-          'url',
-        ],
       },
     },
   },
@@ -129,7 +114,28 @@ export default withDocus({
       'abs.twimg.com',
     ],
   },
+  vite: {
+    server: {
+      fs: {
+        strict: false,
+      },
+      optimizeDeps: {
+        exclude: ['vue-demi', '@vueuse/integrations', 'ohmyfetch'],
+        include: [
+          'defu',
+          'theme-colors',
+          'cookie',
+          'js-cookie',
+          'clipboard',
+          'property-information',
+          'ufo',
+          'url',
+        ],
+      },
+    },
+  },
   publicRuntimeConfig: {
+    nuxtlabsAppUrl: process.env.NUXTLABS_APP_URL,
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN,
     },

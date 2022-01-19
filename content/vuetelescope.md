@@ -1,5 +1,5 @@
 ---
-template: Project
+template: Product
 title: Vue Telescope
 description: 'Vue Telescope allows you to explore over 50,000 websites made with VueJS. Crawl the web with its browser extensions to add your websites and register new ones.'
 head.title: Vue Telescope by NuxtLabs
@@ -10,14 +10,114 @@ head.meta:
   - hid: twitter:image
     name: twitter:image
     content: https://nuxtlabs.com/img/social/vuetelescope.jpg
-logo: 'vuetelescope/vue-telescope.svg'
-website: https://vuetelescope.com
-github: https://github.com/nuxtlabs/vue-telescope-analyzer
-twitter: https://twitter.com/VueTelescope
-logoAnimation: VueTelescopeLogoAnimation
 ---
 
-## Discover website made with Vue
+::ProductsHero
+---
+#animation
+  :::VueTelescopeAnimations
+  :::
+#image
+![Vue telescope Team 2021](/img/products/VTLogo.svg){.h-28 .w-28 .lg:hidden}
+#title
+Vue Telescope
+#description
+Unveil websites made with Vue
+#socialLinks
+  :::ProductSocialLinks
+  ---
+    socialLinks:
+      - label: 'Website'
+        href: 'https://vuetelescope.com'
+      - label: 'Github'
+        href: 'https://github.com/nuxtlabs/vue-telescope-analyzer'
+      - label: 'Twitter'
+        href: 'https://twitter.com/VueTelescope'
+  ---
+  :::
+---
+::
+
+<!-- discover section -->
+::section-template
+#contentTitle
+Discover website made with Vue
+#contentDescription
+Vue Telescope can detect any website built with Vue.js frameworks, like Nuxt, Gridsome, Quasar or VuePress. It can also tell you which UI/CSS framework was used: TailwindCSS, Vuetify, Buefy etc. And much more!
+::
+
+<!-- description section -->
+::section-template
+#contentImage
+![arrow](/img/products/vt-arrow.svg){.h-12 .w-12}
+#contentDescription
+[You can manually submit your site or any site built using any of the Vue.js frameworks by adding it to the website.]{.font-semibold .text-gray-900}
+::
+
+<!-- browser extension section -->
+::section-template
+---
+contentPosition: 'left'
+contentClass: 'py-0'
+containerContentAlign: 'left'
+containerClass: 'bg-primary-900 text-white px-0 rounded-md mt-20 mb-48'
+---
+#container
+![puzzle](/img/products/vt-puzzle.svg){ .h-60 self-end .hidden .md:block }
+![puzzle](/img/products/vt-puzzle-full.svg){ .h-48 .md:hidden }
+#contentTitle
+Browser extension
+#contentDescription
+[With the Vue Telescope Browser extensions available for Firefox, Chrome and Edge, you can see informations about the website without leaving the page! Just by clicking on the extention icon and you will see what framework the page is using, what UI/CSS library and so much more.
+]{.text-white .pr-4 }
+::
+
+::section
+![screens](/img/products/vt-screens.svg){ .absolute .-left-4 .max-h-max .opacity-20 .xl:opacity-100 .z-10 }
+<!-- explore section -->
+::section-template
+---
+contentPosition: 'left'
+contentClass: 'py-10 xl:pl-2/5'
+---
+#contentTitle
+Explode websites
+#contentDescription
+[Explore our showcase of websites build with Vue.js and use the filter to see projects built with a particular framework and/or UI library. You can also filter by plugins as well as Nuxt modules.]
+::
+
+<!-- showcases section -->
+::section-template
+---
+contentPosition: 'right'
+contentClass: 'pt-10'
+---
+#contentTitle
+Showcase collections
+#contentDescription
+[Vue Telescope is made for the Vue community by the Vue community.
+Create your own Collections and bookmark any website made with Vue.js!]{ .pl-6 }
+::
+::
+
+<!-- discover section -->
+::section-template
+---
+contentClass: 'pt-56 pb-20'
+---
+#contentTitle
+[Discover all the Vue universe]{.text-3xl}
+#contentDescription
+[Docus generates a production ready progressive web application powered by NuxtJS.]{.text-primary-900}
+#contentFooter
+  :::AppButton
+  ---
+  to: 'https://vuetelescope.com'
+  ---
+  Go to website
+  :::
+::
+<!-- ## Discover website made with Vue
 
 [Vue Telescope](https://vuetelescope.com) can detect any website built with Vue.js frameworks, like Nuxt, Gridsome, Quasar or VuePress. It can also tell you which UI/CSS framework was used: TailwindCSS, Vuetify, Buefy etc. And much more!
 
@@ -34,7 +134,4 @@ Explore our showcase of websites build with Vue.js and use the filter to see pro
 ### Showcase collections
 
 Vue Telescope is made for the Vue community by the Vue community! Create your own Collections and bookmark any website made with Vue.js!
-
-::learn-more
-Learn more on https://vuetelescope.com
-::
+-->

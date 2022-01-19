@@ -18,13 +18,13 @@
     >
       <path
         d="M213.428 344.175C203.805 360.841 179.749 360.841 170.127 344.175L3.53901 55.6358C-6.08349 38.9691 5.94461 18.1357 25.1896 18.1357H358.365C377.61 18.1357 389.638 38.969 380.016 55.6357L213.428 344.175Z"
-        fill="white"
+        fill="#313136"
       />
     </mask>
     <g mask="url(#mask0)">
       <path
         d="M213.428 344.175C203.805 360.841 179.749 360.841 170.127 344.175L3.53901 55.6358C-6.08349 38.9691 5.94461 18.1357 25.1896 18.1357H358.365C377.61 18.1357 389.638 38.969 380.016 55.6357L213.428 344.175Z"
-        fill="white"
+        fill="#313136"
       />
       <line
         ref="verticalLine"
@@ -32,7 +32,7 @@
         y1="76.783"
         x2="383.402"
         y2="76.783"
-        stroke="#080808"
+        stroke="white"
         stroke-width="30"
         stroke-dasharray="384"
       />
@@ -42,7 +42,7 @@
         y1="7.76367"
         x2="113.056"
         y2="283.587"
-        stroke="#080808"
+        stroke="white"
         stroke-width="30"
         stroke-dasharray="305"
       />
@@ -51,17 +51,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const root = ref(null)
     const verticalLine = ref(null)
     const horizontalLine = ref(null)
@@ -74,13 +68,9 @@ export default defineComponent({
       eenter: {
         scale: 1,
         opacity: 1,
-        // transition: {
-        //   duration: 500,
-        // },
-      },
-      leave: {
-        scale: 0,
-        opacity: 0,
+        transition: {
+          duration: 500,
+        },
       },
     })
 
@@ -94,7 +84,7 @@ export default defineComponent({
         strokeWidth: 30,
         transition: {
           strokeWidth: {
-            delay: 200,
+            delay: 300,
           },
         },
       },
@@ -110,32 +100,17 @@ export default defineComponent({
         strokeWidth: 30,
         transition: {
           strokeWidth: {
-            delay: 200,
+            delay: 300,
           },
         },
       },
     })
 
-    rootInstance.apply('initial')
-    verticalLineInstance.apply('initial')
-    horizontalLineInstance.apply('initial')
-
-    watch(
-      () => props.showAnimation,
-      (nVal) => {
-        if (nVal) {
-          rootInstance.set('initial')
-          verticalLineInstance.set('initial')
-          horizontalLineInstance.set('initial')
-          rootInstance.apply('eenter')
-          verticalLineInstance.apply('eenter')
-          horizontalLineInstance.apply('eenter')
-        } else {
-          rootInstance.apply('leave')
-        }
-      },
-      { immediate: true },
-    )
+    onMounted(() => {
+      rootInstance.apply('eenter')
+      verticalLineInstance.apply('eenter')
+      horizontalLineInstance.apply('eenter')
+    })
 
     return {
       root,

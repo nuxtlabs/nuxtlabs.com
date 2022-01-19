@@ -4,9 +4,9 @@
       v-for="(line, i) in lineItems"
       :key="i"
       ref="lines"
-      class="absolute w-double-screen bg-red-500 rounded-full"
+      class="absolute w-double-screen rounded-full bg-primary-900 z-10"
       :style="{
-        background: '#4DDFB5',
+        opacity: `${line.opacity}%`,
         top: `${line.top}%`,
         left: `${line.left}%`,
         transform: `rotate(${line.deg}deg)`,
@@ -17,36 +17,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, onMounted } from '@nuxtjs/composition-api'
 import { useMotion } from '@vueuse/motion'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  props: {
-    showAnimation: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
+  setup() {
     const lineItems = [
       {
-        top: 24,
-        left: -10,
-        deg: 6,
-        height: 10,
-        transformOrigin: 'left',
-      },
-      {
-        top: 77,
-        left: -18,
-        deg: -42,
+        opacity: 5,
+        top: 50,
+        left: -7,
+        deg: 10,
         height: 16,
         transformOrigin: 'left',
       },
       {
-        top: -15,
-        left: -36,
-        deg: -33,
+        opacity: 5,
+        top: 4,
+        left: -8,
+        deg: -3,
+        height: 16,
+        transformOrigin: 'left',
+      },
+      {
+        opacity: 5,
+        top: 120,
+        left: -70,
+        deg: 40,
         height: 20,
         transformOrigin: 'right',
       },
@@ -69,33 +66,13 @@ export default defineComponent({
                 duration: 500,
               },
             },
-            leave: {
-              scaleX: 0,
-              height: 0,
-              // transition: {
-              //   duration: 500,
-              // },
-            },
           }),
         )
       })
 
-      watch(
-        () => props.showAnimation,
-        (nVal) => {
-          if (nVal) {
-            instances.forEach((instance) => {
-              instance.set('initial')
-              instance.apply('eenter')
-            })
-          } else {
-            instances.forEach((instance) => {
-              instance.apply('leave')
-            })
-          }
-        },
-        { immediate: true },
-      )
+      instances.forEach((instance) => {
+        instance.apply('eenter')
+      })
     })
 
     return {

@@ -1,0 +1,16 @@
+<svg width="454" height="228" viewBox="0 0 454 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Docus_illustration">
+<rect id="container" x="1.5" y="226.5" width="225" height="451" rx="4.5" transform="rotate(-90 1.5 226.5)" stroke="white" stroke-width="3"/>
+<path id="separator" d="M181 0.999878V228" stroke="white" stroke-width="3"/>
+<path id="dies" d="M25.5533 38.9999L26.228 35.8084H23.6019V33.7112H26.684L27.2493 31.0486H24.5685V28.9514H27.7052L28.38 25.8146H30.5684L29.8936 28.9514H33.3586L34.0334 25.8146H36.2218L35.5653 28.9514H37.9361V31.0486H35.1094L34.544 33.7112H36.9695V35.8084H34.0881L33.4134 38.9999H31.2067L31.8997 35.8084H28.4347L27.7599 38.9999H25.5533ZM28.8724 33.7112H32.3374L32.921 31.0486H29.456L28.8724 33.7112Z" fill="white"/>
+<line id="Line 1" x1="54.5001" y1="31.4999" x2="156.5" y2="31.4999" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line id="Line 3" x1="245.5" y1="59.4999" x2="393.5" y2="59.4999" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line id="Line 4" x1="268.5" y1="40.4999" x2="370.5" y2="40.4999" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<line id="Line 2" x1="23.5001" y1="58.4999" x2="156.5" y2="58.4999" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<rect id="fc-component" x="22.0001" y="88.9999" width="136" height="30" rx="5" stroke="white" stroke-width="2"/>
+<rect id="fc-image" x="215" y="88.9999" width="210" height="99" rx="5" stroke="white" stroke-width="2"/>
+<g id="Ghost_Flat_Light">
+<path id="Icon_Flat_Light" fill-rule="evenodd" clip-rule="evenodd" d="M296 137.5C296 124.521 306.521 114 319.5 114C332.479 114 343 124.521 343 137.5C343 150.479 332.479 161 319.5 161H296V137.5ZM316.96 132.419C319.766 132.419 322.041 134.694 322.041 137.5C322.041 140.306 319.766 142.581 316.96 142.581C314.153 142.581 311.879 140.306 311.879 137.5C311.879 134.694 314.153 132.419 316.96 132.419ZM337.284 137.5C337.284 134.694 335.009 132.419 332.203 132.419C329.396 132.419 327.122 134.694 327.122 137.5C327.122 140.306 329.396 142.581 332.203 142.581C335.009 142.581 337.284 140.306 337.284 137.5Z" fill="white"/>
+</g>
+</g>
+</svg>

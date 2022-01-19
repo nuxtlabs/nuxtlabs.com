@@ -1,38 +1,33 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "rootDir": ".",
-      "outDir": "./dist",
-      "strict": false,
-      "sourceMap": true,
-      "target": "ESNext",
-      "allowJs": true,
-      "module": "CommonJS",
-      "moduleResolution": "Node",
-      "lib": ["ESNext", "DOM"],
-      "esModuleInterop": true,
-      "noUnusedLocals": true,
-      "resolveJsonModule": true,
-      "allowSyntheticDefaultImports": true,
-      "paths": {
-        "~/*": ["./*"],
-        "@/*": ["./*"]
-      },
-      "types": ["@types/node", "@nuxt/types", "nuxt-windicss"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "./dist",
+    "strict": false,
+    "sourceMap": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "DOM"],
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "include": [
-      // JavaScript
-      "components/**/*.js",
-      // Vue
-      "components/**/*.vue",
-      // TypeScript
-      "components/**/*.ts",
-      "nuxt.config.ts",
-    ],
-    "exclude": [
-      "node_modules",
-      ".nuxt",
-      "dist",
-      "static",
-    ]
-  }
+    "types": ["@types/node", "@nuxt/types", "nuxt-windicss"]
+  },
+  "include": [
+    // JavaScript
+    "components/**/*.js",
+    // Vue
+    "components/**/*.vue",
+    // TypeScript
+    "components/**/*.ts",
+    "nuxt.config.ts"
+  ],
+  "exclude": ["node_modules", ".nuxt", "dist", "static"]
+}

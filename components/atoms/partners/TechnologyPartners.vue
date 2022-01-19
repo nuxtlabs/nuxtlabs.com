@@ -1,0 +1,54 @@
+<template>
+  <svg width="160" height="160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect
+      x="39.149"
+      y="7.763"
+      width="66.47"
+      height="47.215"
+      rx="6"
+      stroke="#BFBFC5"
+      stroke-width="3"
+    />
+    <rect
+      x="131.161"
+      y="43"
+      width="24.268"
+      height="24.268"
+      rx="5"
+      stroke="#BFBFC5"
+      stroke-width="3"
+    />
+    <rect
+      x="120.973"
+      y="106"
+      width="26.832"
+      height="26.832"
+      rx="3"
+      stroke="#BFBFC5"
+      stroke-width="3"
+    />
+    <rect
+      x="24.347"
+      y="106"
+      width="34.432"
+      height="34.432"
+      rx="6"
+      stroke="#BFBFC5"
+      stroke-width="3"
+    />
+    <rect
+      x="97.094"
+      y="10"
+      width="15.689"
+      height="15.689"
+      rx="3"
+      stroke="#BFBFC5"
+      stroke-width="3"
+    />
+    <circle cx="80" cy="80" r="34" fill="#EDEDEE" />
+    <path
+      d="M91.667 65H68.333a5 5 0 0 0-5 5v13.333a5 5 0 0 0 5 5h10v3.334h-6.666a1.667 1.667 0 0 0 0 3.333h16.666a1.667 1.667 0 0 0 0-3.333h-6.666v-3.334h10a5 5 0 0 0 5-5V70a5 5 0 0 0-5-5Zm1.666 18.333A1.666 1.666 0 0 1 91.667 85H68.333a1.666 1.666 0 0 1-1.666-1.667V70a1.666 1.666 0 0 1 1.666-1.667h23.334A1.666 1.666 0 0 1 93.333 70v13.333Z"
+      fill="#0A0A0B"
+    />
+  </svg>
+</template>
