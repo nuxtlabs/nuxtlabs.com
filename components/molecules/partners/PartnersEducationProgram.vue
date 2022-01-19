@@ -8,8 +8,8 @@
     ]"
   >
     <div
-      class="hidden sm:block absolute -right-2 h-4 w-4 bg-white rounded-full top-1/2"
-      :class="!rightPosition ? '-right-2' : '-left-2'"
+      class="hidden sm:block absolute h-4 w-4 bg-white rounded-full top-1/2"
+      :class="!rightPosition ? '-right-2.3' : '-left-1.6'"
     />
     <div
       class="flex flex-col space-y-4"
