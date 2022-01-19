@@ -59,7 +59,7 @@ export default defineComponent({
 
       categories.value = blog.value.categories
 
-      selectedCategory.category = (hash.value || '#Releases').substr(1)
+      selectedCategory.category = (hash.value || '#Announcements').substr(1)
 
       getArticles()
     })

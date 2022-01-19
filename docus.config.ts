@@ -70,6 +70,7 @@ export default {
       'd-prose-hr-border': 'border-t border-secondary-darker',
       'd-prose-ul-li-bullet': 'd-secondary-bg',
       'd-scrollbar': '',
+      'd-prose-a-text': 'text-primary-300',
       // Container
       'd-max-w-container': 'max-w-7xl',
       'd-px-container': 'px-4 sm:px-8',

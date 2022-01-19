@@ -1,15 +1,5 @@
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
-import tokens from './design-token.json'
-
-const colorTokens = Object.entries(tokens).reduce((acc, [key, value]) => {
-  acc[key] = Object.entries(value).reduce((color, [weight, hex]) => {
-    color[weight] = hex.value
-    return color
-  }, {})
-
-  return acc
-}, {})
 
 export default defineConfig({
   theme: {
@@ -35,7 +25,6 @@ export default defineConfig({
         '800': '#1d1d20',
         '900': '#0a0a0b',
       },
-      ...colorTokens,
     },
     extend: {
       fontFamily: {
